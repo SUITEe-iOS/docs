@@ -12,7 +12,7 @@
     "languages": [
       {
         "language": "en",
-        "pages": [
+        "groups": [
           {
             "group": "Getting Started",
             "pages": [
@@ -86,7 +86,7 @@
       },
       {
         "language": "de",
-        "pages": [
+        "groups": [
     {
       "group": "Erste Schritte",
       "pages": [
