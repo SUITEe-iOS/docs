@@ -86,7 +86,11 @@
       },
       {
         "language": "de",
-        "pages": []
+        "pages": [
+    {
+      "group": "Erste Schritte",
+      "pages": [
+        "de/index"]
       }
     ],
     "global": {
