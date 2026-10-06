@@ -9,75 +9,84 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "languages": [
       {
-        "group": "Getting Started",
+        "language": "en",
         "pages": [
-          "index",
-          "quickstart",
-          "getting-started/how-it-works",
-          "getting-started/key-benefits"
+          {
+            "group": "Getting Started",
+            "pages": [
+              "index",
+              "quickstart",
+              "getting-started/how-it-works",
+              "getting-started/key-benefits"
+            ]
+          },
+          {
+            "group": "Account & Login",
+            "pages": [
+              "account/login",
+              "account/forgot-password",
+              "account/otp-verification",
+              "account/settings"
+            ]
+          },
+          {
+            "group": "Admin Dashboard",
+            "pages": [
+              "dashboard/overview",
+              "dashboard/activity-centre",
+              "dashboard/rooms",
+              "dashboard/booking",
+              "dashboard/devices",
+              "dashboard/access-management",
+              "dashboard/users-management",
+              "dashboard/email-services",
+              "dashboard/explore",
+              "dashboard/settings",
+              "dashboard/properties-and-units",
+              "dashboard/reservations",
+              "dashboard/energy-management"
+            ]
+          },
+          {
+            "group": "Smart Devices",
+            "pages": [
+              "devices/smart-locks",
+              "devices/thermostats",
+              "devices/sensors",
+              "devices/gateways",
+              "devices/lights-and-switches"
+            ]
+          },
+          {
+            "group": "Guest Journey & PMS",
+            "pages": [
+              "guest-journey/before-arrival",
+              "guest-journey/check-in-and-stay",
+              "guest-journey/pms-integration"
+            ]
+          },
+          {
+            "group": "Setup & Security",
+            "pages": [
+              "operations/installation",
+              "operations/security"
+            ]
+          },
+          {
+            "group": "Support & Reference",
+            "pages": [
+              "support/troubleshooting",
+              "support/faq",
+              "support/glossary"
+            ]
+          }
         ]
       },
       {
-        "group": "Account & Login",
-        "pages": [
-          "account/login",
-          "account/forgot-password",
-          "account/otp-verification",
-          "account/settings"
-        ]
-      },
-      {
-        "group": "Admin Dashboard",
-        "pages": [
-          "dashboard/overview",
-          "dashboard/activity-centre",
-          "dashboard/rooms",
-          "dashboard/booking",
-          "dashboard/devices",
-          "dashboard/access-management",
-          "dashboard/users-management",
-          "dashboard/email-services",
-          "dashboard/explore",
-          "dashboard/settings",
-          "dashboard/properties-and-units",
-          "dashboard/reservations",
-          "dashboard/energy-management"
-        ]
-      },
-      {
-        "group": "Smart Devices",
-        "pages": [
-          "devices/smart-locks",
-          "devices/thermostats",
-          "devices/sensors",
-          "devices/gateways",
-          "devices/lights-and-switches"
-        ]
-      },
-      {
-        "group": "Guest Journey & PMS",
-        "pages": [
-          "guest-journey/before-arrival",
-          "guest-journey/check-in-and-stay",
-          "guest-journey/pms-integration"
-        ]
-      },
-      {
-        "group": "Setup & Security",
-        "pages": [
-          "operations/installation",
-          "operations/security"
-        ]
-      },
-      {
-        "group": "Support & Reference",
-        "pages": [
-          "support/troubleshooting",
-          "support/faq",
-          "support/glossary"
-        ]
+        "language": "de",
+        "pages": []
       }
     ],
     "global": {
@@ -121,7 +130,6 @@
   "footer": {
     "socials": {
       "website": "https://suite-e.com",
-      "linkedin": "https://linkedin.com/company/suite-e"
     }
   }
 }
