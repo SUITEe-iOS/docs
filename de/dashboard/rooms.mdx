@@ -1,0 +1,268 @@
+---
+title: "Zimmer"
+description: "Erstellen und verwalten Sie alle Zimmer und Einheiten in Ihrer Unterkunft — sehen Sie Zimmerzahlen ein, konfigurieren Sie Zimmerdetails und fügen Sie neue Zimmer direkt über das Dashboard hinzu."
+---
+
+Auf der Seite **Zimmer** erstellen, sehen und verwalten Sie jedes Zimmer und jede Einheit in Ihrer Unterkunft. Von hier aus sehen Sie, wie viele Zimmer aktiv oder inaktiv sind, und fügen neue Zimmer mit vollständiger Konfiguration hinzu — Basisinformationen, Zugangsdaten, Zimmerlayout und IoT-Integration.
+
+Navigieren Sie zu dieser Seite unter:
+
+[https://hotel.suite-e.com/rooms](https://hotel.suite-e.com/rooms)
+
+---
+
+## Seitenübersicht
+
+<Frame>
+  <img src="/images/rooms-overview.png" alt="Zimmer Seitenkopf mit Titel, Untertitel, Zimmer hinzufügen Schaltfläche und drei Statistikkarten: Zimmer gesamt 276, Aktive 151, Inaktive 125" />
+</Frame>
+
+### Seitentitel und Untertitel
+
+Die Seitenüberschrift lautet **Zimmer** mit dem Untertitel *Zimmer für Ihre Immobilie verwalten*.
+
+Ein kleines **Info-Symbol ⓘ** befindet sich neben dem Untertitel — wenn Sie mit der Maus darüber fahren, wird ein Tooltip mit zusätzlichem Kontext darüber angezeigt, was auf dieser Seite verwaltet wird.
+
+---
+
+### Statistikkarten
+
+Oben auf der Seite geben Ihnen drei Zusammenfassungskarten einen sofortigen Überblick über alle Zimmer in der Unterkunft:
+
+| Karte | Anzahl | Bedeutung |
+| :--- | :--- | :--- |
+| **Zimmer gesamt** | `276` | Die Gesamtzahl aller Zimmer und Einheiten, die unter dieser Unterkunft über alle Etagen und Gebäudebereiche hinweg registriert sind. Jedes Zimmer — ob aktiv, inaktiv oder in Konfiguration — wird hier gezählt. |
+| **Aktive Zimmer** | `151` | Zimmer, die derzeit aktiviert und nutzbar sind — Geräte sind zugewiesen, der Zugang ist konfiguriert und Gäste können darin gebucht werden. Dargestellt mit einem grünen Häkchen-Symbol. |
+| **Inaktive Zimmer** | `125` | Zimmer, die im System existieren, aber derzeit deaktiviert sind — sie können nicht gebucht oder Gästen zugewiesen werden, bis sie reaktiviert werden. Dargestellt mit einem durchgestrichenen Auge-Symbol. Häufige Gründe: in Renovierung, außer Betrieb oder noch nicht vollständig konfiguriert. |
+
+<Info>
+  Aktive und inaktive Zimmer ergeben zusammen immer die Gesamtzahl. Wenn Sie nach dem Hinzufügen oder Deaktivieren von Zimmern eine Abweichung sehen, aktualisieren Sie die Seite, um die Zähler zu aktualisieren.
+</Info>
+
+---
+
+### Schaltfläche Zimmer hinzufügen
+
+In der oberen rechten Ecke der Seite befindet sich die orangefarbene Schaltfläche **+ Zimmer hinzufügen**.
+
+Ein Klick auf diese Schaltfläche öffnet das Formular **Zimmer hinzufügen** — ein mehrteiliges Modal, in dem Sie alle Details eines neuen Zimmers konfigurieren, bevor Sie es im System speichern. Das Formular besteht aus vier Abschnitten: **Basisinformationen**, **Zugangsdaten**, **Zimmerkonfiguration** und **IoT-Konfiguration**.
+
+Das vollständige Formular wird unten im Detail erklärt.
+
+---
+
+## Formular Zimmer hinzufügen
+
+Wenn Sie auf **+ Zimmer hinzufügen** klicken, erscheint ein Modal. Es enthält alle Felder, die zur Konfiguration eines neuen Zimmers von Grund auf benötigt werden. Scrollen Sie im Modal nach unten, um alle Abschnitte auszufüllen.
+
+### Abschnitt 1 — Basisinformationen
+
+<Frame>
+  <img src="/images/rooms-add-basic-info.png" alt="Modal Zimmer hinzufügen zeigt den Abschnitt Basisinformationen mit Immobilien-Dropdown, Zimmername und Zimmencode Feldern nebeneinander sowie Beschreibungs-Textbereich" />
+</Frame>
+
+Der erste Abschnitt erfasst die wesentliche Identität des Zimmers. Alle mit `*` markierten Felder sind Pflichtfelder.
+
+| Feld | Erforderlich | Beschreibung |
+| :--- | :--- | :--- |
+| **Immobilie** | Ja `*` | Ein Dropdown-Menü, das mit der aktuell aktiven Unterkunft vorausgefüllt ist — z. B. **Property No-PMS**. Wenn Ihr Konto mehrere Unterkünfte verwaltet, wählen Sie aus, zu welcher Unterkunft dieses Zimmer gehört. |
+| **Zimmername** | Ja `*` | Der Name des Zimmers, wie er im gesamten System angezeigt wird — z. B. `UNIT-3`, `Room 104`, `Parkplatz1`. So wird das Zimmer in Reservierungen, Gerätezuweisungen und im Aktivitäts-Feed identifiziert. |
+| **Zimmencode** | Ja `*` | Ein eindeutiger Kurzcode für das Zimmer. Dies ist eine numerische oder alphanumerische Kennung, die intern von SUITEe für PMS-Zuordnung, IoT-Routing und Zugangscode-Erstellung verwendet wird. |
+| **Beschreibung** | Ja `*` | Eine Freitext-Beschreibung des Zimmers — z. B. dessen Lage im Gebäude, besondere Ausstattungsmerkmale oder Hinweise für das Reinigungs- und Wartungspersonal. |
+
+<Tip>
+  Verwenden Sie eine einheitliche Benennung für Zimmernamen und -codes über alle Zimmer hinweg — zum Beispiel `UNIT-[Nummer]` oder `Etage-Zimmer` —, damit Zimmer in Listen und Berichten vorhersehbar sortiert und gefiltert werden.
+</Tip>
+
+---
+
+### Abschnitt 2 — Zugangsdaten und Zimmerkonfiguration
+
+<Frame>
+  <img src="/images/rooms-add-access-config.png" alt="Modal Zimmer hinzufügen zeigt Türpasswort-Feld mit Auge-Umschalter, danach Betttyp-, Stockwerksplan- und Zimmergröße-Felder" />
+</Frame>
+
+Beim Nach-unten-Scrollen werden zwei weitere Abschnitte sichtbar.
+
+#### Zugangsdaten
+
+| Feld | Erforderlich | Beschreibung |
+| :--- | :--- | :--- |
+| **Türpasswort** | Optional | Eine PIN oder ein Passwort, womit das smarte Schloss des Zimmers manuell entriegelt werden kann — nützlich als Ausfalllösung, wenn ein Gast seinen digitalen Schlüssel verliert oder die App nicht verfügbar ist. Das **Auge-Symbol** auf der rechten Seite schaltet die Sichtbarkeit um, damit Sie die Eingabe vor dem Speichern überprüfen können. Lassen Sie das Feld leer, wenn Sie für dieses Zimmer keinen PIN-basierten Türzugang nutzen. |
+
+#### Zimmerkonfiguration
+
+| Feld | Erforderlich | Beschreibung |
+| :--- | :--- | :--- |
+| **Betttyp** | Optional | Ein Dropdown-Menü zur Auswahl des Betttyps im Zimmer — z. B. Einzelbett, Doppelbett, Twin oder King. |
+| **Stockwerksplan** | Optional | Ein Dropdown-Menü zur Zuweisung des Zimmers zu einem Etagenplan-Layout. Wenn Sie Gebäudegrundrisse hochgeladen haben, verknüpft dies das Zimmer mit seinem physischen Standort auf der Karte. |
+| **Zimmergröße (sq ft)** | Optional | Die Größe des Zimmers in Quadratfuß (sq ft). Der Platzhalter zeigt **z. B. 320** als Beispiel. |
+
+---
+
+### Abschnitt 3 — IoT-Konfiguration und Absenden
+
+<Frame>
+  <img src="/images/rooms-add-iot-submit.png" alt="Modal Zimmer hinzufügen zeigt Abschnitt IoT-Konfiguration mit dem Feld IoT-Zimmer-ID und Hilfetext sowie Abbrechen und Absenden Schaltflächen unten" />
+</Frame>
+
+Der letzte Abschnitt verbindet das Zimmer mit Ihren physischen IoT-Geräten und schließt das Formular ab.
+
+#### IoT-Konfiguration
+
+| Feld | Erforderlich | Beschreibung |
+| :--- | :--- | :--- |
+| **IoT-Zimmer-ID** | Ja `*` | Eine eindeutige Kennung, die dieses Zimmer mit Ihrem IoT-System verbindet — z. B. einem Smart-Home-Hub, einem Gebäudeleitsystem oder einer Drittanbieter-IoT-Plattform. Über diese ID kommuniziert SUITEe mit den physischen Geräten in diesem Zimmer — smarte Schlösser, Thermostate, Sensoren und Schalter. |
+
+<Warning>
+  Die **IoT-Zimmer-ID** muss exakt mit der Zimmerkennung übereinstimmen, die in Ihrem IoT-System oder Hardware-Hub verwendet wird. Eine falsche ID kann verhindern, dass SUITEe mit den Geräten in diesem Zimmer kommuniziert.
+</Warning>
+
+#### Formular-Aktions-Schaltflächen
+
+Ganz unten im Modal befinden sich zwei Schaltflächen:
+
+| Schaltfläche | Aktion |
+| :--- | :--- |
+| **Abbrechen** | Schließt das Modal, ohne etwas zu speichern. Alle eingegebenen Daten werden verworfen. |
+| **Absenden** (orange) | Speichert das neue Zimmer und fügt es der Zimmerliste hinzu. Das Zimmer erscheint in der Gesamtzahl und je nach Konfiguration als aktiv oder inaktiv. Weisen Sie ihm nach dem Absenden im Bereich [Smart Devices](/de/devices/smart-locks) Geräte zu. |
+
+<Info>
+  Gehen Sie nach dem Speichern eines Zimmers zur [Zugangsverwaltung](/de/dashboard/access-management), um Zugangsberechtigungen zu erstellen, und zu den [Smart Devices](/de/devices/smart-locks), um dem Zimmer physische Schlösser und Sensoren zuzuweisen und zu konfigurieren.
+</Info>
+
+---
+
+## Wie Zimmer mit dem Rest der Plattform verbunden sind
+
+<CardGroup cols={2}>
+  <Card title="Dashboard-Übersicht" icon="house" href="/de/dashboard/overview">
+    Die Panels Buchungen und Türschloss auf dem Dashboard beziehen sich beide auf Zimmernamen. Zimmer müssen hier existieren, bevor sie gebucht oder ihnen Schlösser zugewiesen werden können.
+  </Card>
+  <Card title="Zugangsverwaltung" icon="key" href="/de/dashboard/access-management">
+    Jede Zugangsberechtigung ist an ein bestimmtes Zimmer gebunden. Erstellen Sie Zugangsberechtigungen für den Zugang auf Zimmerebene, nachdem Sie das Zimmer hier hinzugefügt haben.
+  </Card>
+  <Card title="Reservierungen" icon="calendar-check" href="/de/dashboard/reservations">
+    Gästereservierungen sind mit Zimmern verknüpft. Die Zimmer-Spalte im Buchungspanel zeigt den hier konfigurierten Zimmernamen.
+  </Card>
+  <Card title="Smart Devices" icon="microchip" href="/de/devices/smart-locks">
+    Smarte Schlösser, Thermostate und Sensoren werden Zimmern zugewiesen. Die hier eingegebene IoT-Zimmer-ID verbindet ein Zimmer mit seinen physischen Geräten.
+  </Card>
+</CardGroup>
+
+---
+
+## Zimmerlistentabelle
+
+<Frame>
+  <img src="/images/rooms-list-table.png" alt="Zimmerliste zeigt Filter-Tabs Alle 276, Aktiv 151, Inaktiv 125, Suchleiste, Aktualisieren-Schaltfläche, Schaltfläche Zimmersynchronisation und Tabelle mit den Spalten Zimmername, Beschreibung, Geteilte Zimmer, Aktionen" />
+</Frame>
+
+Unterhalb der Statistikkarten befindet sich die **Zimmerliste** — eine Tabelle, die alle für die Unterkunft registrierten Zimmer anzeigt. Dies ist Ihre Hauptarbeitsansicht zum Durchsuchen, Suchen und Verwalten einzelner Zimmer.
+
+---
+
+### Filter-Tabs
+
+Ganz oben in der Liste befinden sich drei Filter-Tabs:
+
+| Tab | Anzahl | Was angezeigt wird |
+| :--- | :--- | :--- |
+| **Alle** | `276` | Alle Zimmer unabhängig vom Status. Dies ist die Standardansicht — jedes Zimmer im System wird angezeigt. Der aktive Tab ist orange hervorgehoben und unterstrichen. |
+| **Aktiv** | `151` | Nur aktive Zimmer — derzeit aktiviert, haben zugewiesene Geräte und können Gästebuchungen entgegennehmen. |
+| **Inaktiv** | `125` | Nur inaktive Zimmer — deaktiviert und können derzeit nicht gebucht oder genutzt werden. Klicken Sie auf diesen Tab, um Zimmer zu finden, die konfiguriert oder reaktiviert werden müssen. |
+
+Klicken Sie auf einen beliebigen Tab, um die Liste sofort nach dieser Teilmenge zu filtern.
+
+---
+
+### Suchleiste
+
+Unter den Filter-Tabs befindet sich eine Suchleiste mit dem Platzhalter **Suche nach Name, Beschreibung...**.
+
+Geben Sie ein beliebiges Schlüsselwort ein, um nach Zimmernamen (z. B. `Seminarraum3`, `102`) und Zimmerbeschreibungen zu suchen. Die Ergebnisse werden während der Eingabe in Echtzeit gefiltert.
+
+---
+
+### Aktualisieren-Schaltfläche
+
+Rechts neben der Suchleiste befindet sich ein kreisförmiges **Aktualisieren-Symbol (Kreispfeil)**.
+
+Ein Klick darauf lädt die Zimmerliste vom Server neu. Nutzen Sie dies nach:
+
+- Dem Hinzufügen eines neuen Zimmers über **+ Zimmer hinzufügen**
+- Dem Bearbeiten eines Zimmers
+- Dem Verdacht, dass die angezeigten Zähler oder Zustände veraltet sind
+
+---
+
+### Schaltfläche Zimmersynchronisation
+
+Neben der Aktualisieren-Schaltfläche befindet sich die orangefarbene Schaltfläche **Zimmersynchronisation**.
+
+Ein Klick darauf löst eine **manuelle Synchronisation zwischen SUITEe und Ihrem verbundenen PMS oder IoT-System** aus. Während der Synchronisation:
+
+- Werden aus Ihrem PMS importierte neue Zimmer automatisch in der Liste angezeigt
+- Werden Zimmernamen, Status und Konfiguration aktualisiert, um mit dem Quellsystem übereinzustimmen
+- Werden im PMS entfernte Zimmer entsprechend aktualisiert oder deaktiviert
+
+Das **Info-Symbol** neben der Schaltfläche bietet zusätzliche Hinweise dazu, wie die Synchronisation für Ihre Unterkunft funktioniert.
+
+<Info>
+  Zimmer, die **Imported direct...** in der Beschreibung anzeigen, wurden automatisch über die Zimmersynchronisation aus Ihrem PMS oder einem verbundenen System erstellt. Sie können diese Zimmer bearbeiten, um weitere Details hinzuzufügen.
+</Info>
+
+---
+
+### Tabellenspalten
+
+Die Zimmerlistentabelle hat vier Spalten:
+
+| Spalte | Beschreibung |
+| :--- | :--- |
+| **Zimmername** | Der Name des Zimmers — z. B. **Seminarraum3**, **102**, **9**, **234**, **207**. Ein Sortiersymbol neben der Spaltenüberschrift ermöglicht die alphabetische oder numerische Sortierung der Liste. |
+| **Beschreibung** | Die Zimmerbeschreibung. Aus einem PMS synchronisierte Zimmer können eine automatisch importierte Beschreibung anzeigen. Manuell hinzugefügte Zimmer zeigen die im Formular eingegebene Beschreibung. |
+| **Geteilte Zimmer** | Zeigt an, ob dieses Zimmer Geräte oder Zugänge mit einer anderen Einheit teilt. Ein Bindestrich `-` bedeutet, dass das Zimmer eigenständig ist. |
+| **Aktionen** | Enthält ein **Drei-Punkte-Menü** für jede Zeile. Klicken Sie auf die drei Punkte, um die verfügbaren Optionen für dieses Zimmer zu öffnen. |
+
+---
+
+### Drei-Punkte-Aktionsmenü
+
+<Frame>
+  <img src="/images/rooms-actions-menu.png" alt="Drei-Punkte-Aktions-Dropdown zeigt Bearbeiten mit Stift-Symbol, Geräte anzeigen mit Geräte-Symbol und Löschen in Rot mit Mülleimer-Symbol" />
+</Frame>
+
+Ein Klick auf die Schaltfläche mit den **drei Punkten (...)** in der Spalte Aktionen eines beliebigen Zimmers öffnet ein Dropdown-Menü mit drei Optionen:
+
+| Option | Symbol | Was sie tut |
+| :--- | :--- | :--- |
+| **Bearbeiten** | Stift | Öffnet das Zimmer-Bearbeitungsformular mit den bestehenden Daten des Zimmers. Nutzen Sie dies, um die Zimmerkonfiguration zu aktualisieren. |
+| **Geräte anzeigen** | Geräte-Symbol | Öffnet die Geräteliste für die Smart Devices, die diesem Zimmer zugewiesen sind. Dies ist eine direkte Verknüpfung zum Bereich [Smart Devices](/de/devices/smart-locks). |
+| **Löschen** | Mülleimer-Symbol (rot) | Löscht das Zimmer. Prüfen Sie vorher sorgfältig, ob aktive Reservierungen, Zugangsberechtigungen oder Geräte mit diesem Zimmer verknüpft sind. |
+
+<Warning>
+  **Löschen** entfernt das Zimmer. Stellen Sie vor dem Löschen sicher, dass keine aktiven Gästereservierungen mit dem Zimmer verknüpft sind, keine Zugangsberechtigungen mehr gültig sind und keine Geräte ausschließlich diesem Zimmer zugewiesen sind.
+</Warning>
+
+---
+
+### Zimmerliste und Seitennummerierung
+
+<Frame>
+  <img src="/images/rooms-list-pagination.png" alt="Vollständige Zimmerliste mit Seitennummerierungsleiste unten mit Zeilen pro Seite, aktuellem Seitenbereich, Gehe zu Seite und Navigationspfeilen" />
+</Frame>
+
+Die Zimmerliste ist in Seiten unterteilt. Ganz unten in der Liste befinden sich die Bedienelemente für die Seitennummerierung:
+
+| Bedienelement | Beschreibung |
+| :--- | :--- |
+| **Zeilen pro Seite: 10** | Dropdown-Menü unten links — steuert, wie viele Zimmer pro Seite angezeigt werden. |
+| **1–10 von 276** | Aktueller Seitenbereich — Sie sehen die Zimmer 1 bis 10 von insgesamt 276. |
+| **Gehe zu Seite** | Geben Sie eine Seitennummer ein, um direkt zu dieser Seite zu springen. |
+| **von 28** | Gesamtzahl der Seiten bei der aktuell gewählten Anzahl von Zeilen pro Seite. |
+| **< >** | Pfeile für vorherige und nächste Seite — `<` geht zurück, `>` geht vorwärts. |
+
+<Tip>
+  Nutzen Sie **Gehe zu Seite**, um zu einer bestimmten Seite zu springen, oder nutzen Sie die Suchleiste, um ein Zimmer direkt nach Namen zu finden — die Suche ist in der Regel schneller als das seitenweise Durchsuchen.
+</Tip>

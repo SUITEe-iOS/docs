@@ -1,0 +1,659 @@
+---
+title: "Einstellungen"
+description: "Konfigurieren Sie Ihre Unterkunft, Check-in- und Check-out-Zeiten, PMS-Integration, Standortdaten, Gästekontakte, WLAN, IoT-Einstellungen, Stockwerkspläne, E-Mail-Versand und Benutzerrollen."
+---
+
+Das Modul **Einstellungen** ist die zentrale Konfigurationsstelle für Ihre Unterkunft in SUITEe. Hier verwalten Sie die grundlegenden Unterkunftsdaten, Betriebszeiten, PMS-Anbindung, Kontaktinformationen, WLAN- und IoT-Einstellungen sowie Stockwerkspläne, E-Mail-Versand und Rollenberechtigungen.
+
+Die Unterkunftseinstellungen erreichen Sie unter:
+
+[https://hotel.suite-e.com/settings/property-account](https://hotel.suite-e.com/settings/property-account)
+
+---
+
+## Navigation im Einstellungsbereich
+
+Die linke Navigation organisiert die Einstellungen in mehrere Bereiche:
+
+<Frame>
+  <img src="/images/settings-sidebar-navigation.png" alt="Einstellungen Seitenleiste mit Immobilie, Konto, Stockwerksplan, E-Mail, SMTP-Manager und Zugangsverwaltung mit Rollenverwaltung" />
+</Frame>
+
+| Bereich | Menüpunkt | Zweck |
+| :--- | :--- | :--- |
+| **Immobilie** | **Konto** | Stammdaten, Bild, Betriebszeiten, PMS, Adresse, Standort, Kontakte, WLAN und IoT-Einstellungen |
+| **Immobilie** | **Stockwerksplan** | Stockwerke erstellen und Zimmer den jeweiligen Etagen zuweisen |
+| **E-Mail** | **SMTP-Manager** | Versandmethode, Absenderinformationen und eigener SMTP-Server |
+| **Zugangsverwaltung** | **Rollenverwaltung** | Rollen und Zugriffsberechtigungen für Teammitglieder verwalten |
+
+---
+
+# 1. Immobilienkonto
+
+Wählen Sie unter **Immobilie** den Menüpunkt **Konto**, um die zentrale Konfiguration Ihrer Unterkunft zu öffnen.
+
+Die Seite umfasst folgende Bereiche:
+
+1. **Immobilienbild**
+2. **Grundinformationen**
+3. **Adresse und Standort**
+4. **Kontakt**
+5. **Konnektivität und IoT**
+
+---
+
+## Immobilienbild
+
+<Frame>
+  <img src="/images/settings-property-account-image-basic.png" alt="Immobilienkonto mit Immobilienbild und Grundinformationen wie Name, Code, Firmenname und Beschreibung" />
+</Frame>
+
+Im Bereich **Immobilienbild** können Sie das Bild Ihrer Unterkunft verwalten.
+
+- Das aktuell hinterlegte Bild wird als Vorschau angezeigt.
+- Über **Bild hochladen** können Sie ein neues Bild auswählen.
+- Unterstützt werden **PNG** und **JPEG**.
+- Die maximale Dateigröße beträgt **2 MB**.
+
+<Tip>
+  Verwenden Sie ein hochwertiges, gut erkennbares Bild Ihrer Unterkunft, das auch auf kleineren Bildschirmen gut funktioniert.
+</Tip>
+
+---
+
+## Grundinformationen
+
+Im Bereich **Grundinformationen** konfigurieren Sie die grundlegenden Daten Ihrer Unterkunft.
+
+| Feld | Erforderlich | Beschreibung |
+| :--- | :---: | :--- |
+| **Name** | Ja `*` | Name der Unterkunft, z. B. `Property No-PMS` oder `Savoy Baker Street`. |
+| **Code** | Ja `*` | Eindeutiger interner Code der Unterkunft. |
+| **Firmenname** | Ja `*` | Name des Unternehmens, das die Unterkunft betreibt. |
+| **Beschreibung** | Optional | Allgemeine Beschreibung der Unterkunft und ihrer Besonderheiten. |
+
+---
+
+## Check-in, Check-out, PMS und Zeitzone
+
+<Frame>
+  <img src="/images/settings-property-account-checkin-address.png" alt="Immobilieneinstellungen mit Check-in-Zeit, Check-out-Zeit, PMS-Typ, Zeitzone sowie Adresse und Standort" />
+</Frame>
+
+Unterhalb der Grundinformationen befinden sich wichtige Einstellungen für den täglichen Betrieb:
+
+| Einstellung | Erforderlich | Beschreibung |
+| :--- | :---: | :--- |
+| **Check-in-Zeit (HH:mm)** | Optional | Standardzeit, ab der Gäste normalerweise einchecken können. |
+| **Check-out-Zeit (HH:mm)** | Optional | Standardzeit, bis zu der Gäste normalerweise auschecken sollen. |
+| **PMS-Typ** | Ja `*` | Das für diese Unterkunft konfigurierte Property Management System. |
+| **Zeitzone** | Ja `*` | Lokale Zeitzone der Unterkunft, z. B. `Europe/Berlin`. |
+
+### PMS-Typ
+
+Der **PMS-Typ** bestimmt, welche PMS-Konfiguration für die Unterkunft verwendet wird.
+
+Abhängig von Ihrer SUITEe-Konfiguration können beispielsweise verschiedene PMS-Systeme oder **No-PMS** verfügbar sein.
+
+<Warning>
+  Ändern Sie den PMS-Typ einer bereits produktiv verwendeten Unterkunft nur, wenn Sie sicher sind, dass die entsprechende Integration korrekt eingerichtet ist. Die Einstellung beeinflusst die Verarbeitung von Buchungsdaten.
+</Warning>
+
+### Zeitzone
+
+Die korrekte Zeitzone ist besonders wichtig für zeitabhängige Funktionen wie:
+
+- Check-in und Check-out
+- Gültigkeitszeiträume von Zugängen
+- Automatisierte E-Mails
+- Zeitstempel von Aktivitäten
+- Zeitgesteuerte Automatisierungen
+
+---
+
+# Adresse und Standort
+
+Im Bereich **Adresse und Standort** hinterlegen Sie die vollständige Adresse der Unterkunft.
+
+| Feld | Erforderlich | Beschreibung |
+| :--- | :---: | :--- |
+| **Adresszeile 1** | Ja `*` | Straße und Hausnummer |
+| **Adresszeile 2** | Optional | Zusätzliche Adressinformationen |
+| **Stadt** | Ja `*` | Stadt der Unterkunft |
+| **Bundesland** | Ja `*` | Bundesland, Region oder vergleichbare Verwaltungseinheit |
+| **Land** | Ja `*` | Land der Unterkunft |
+| **Postleitzahl** | Ja `*` | Postleitzahl der Unterkunft |
+
+---
+
+## Breitengrad und Längengrad
+
+<Frame>
+  <img src="/images/settings-property-account-gps-contact.png" alt="Immobilieneinstellungen mit Breitengrad, Längengrad, Auf Karte anzeigen, Kontakt sowie Konnektivität und IoT" />
+</Frame>
+
+Zusätzlich zur postalischen Adresse können Sie die geografischen Koordinaten hinterlegen:
+
+- **Breitengrad**
+- **Längengrad**
+
+Beispiel:
+
+```text
+Breitengrad: 48.2249833
+Längengrad: 11.6747686
+```
+
+Über die Schaltfläche **Auf Karte anzeigen** können Sie die hinterlegte Position überprüfen.
+
+<Tip>
+  Verwenden Sie möglichst die Koordinaten des tatsächlichen Gästeeingangs und nicht nur die ungefähre Mitte des Grundstücks.
+</Tip>
+
+---
+
+# Kontakt
+
+Im Bereich **Kontakt** hinterlegen Sie die Kommunikationsmöglichkeiten, über die Gäste Ihre Unterkunft erreichen können.
+
+| Feld | Beschreibung |
+| :--- | :--- |
+| **Kontakt-E-Mail** | Allgemeine Kontakt- oder Support-E-Mail-Adresse der Unterkunft |
+| **WhatsApp-Nummer** | Telefonnummer für die Kommunikation über WhatsApp |
+| **Kontakttelefon** | Allgemeine Telefonnummer der Unterkunft |
+| **Notfallnummer** | Telefonnummer für dringende Anliegen oder Notfälle |
+
+Bei Telefonnummern können Sie über die Länderauswahl die passende internationale Vorwahl festlegen.
+
+<Info>
+  Prüfen Sie insbesondere die **Notfallnummer** regelmäßig. Gäste sollten dort eine Telefonnummer vorfinden, unter der bei dringenden Problemen tatsächlich Unterstützung erreichbar ist.
+</Info>
+
+---
+
+# Konnektivität und IoT
+
+<Frame>
+  <img src="/images/settings-property-account-iot-save.png" alt="Konnektivität und IoT mit WLAN-Name, WLAN-Passwort, IOT-Store-Code und Änderungen speichern" />
+</Frame>
+
+Im Bereich **Konnektivität und IoT** konfigurieren Sie Informationen für Gäste-WLAN und die Verbindung zur IoT-Infrastruktur.
+
+| Feld | Erforderlich | Beschreibung |
+| :--- | :---: | :--- |
+| **WLAN-Name** | Optional | Name des Gäste-WLANs (SSID) |
+| **WLAN-Passwort** | Optional | Passwort für das Gäste-WLAN |
+| **IOT-Store-Code** | Ja `*` | Kennung zur Zuordnung der Unterkunft zur konfigurierten IoT-Infrastruktur |
+
+Beim **WLAN-Passwort** können Sie über das Auge-Symbol **👁** die Sichtbarkeit ein- oder ausschalten.
+
+<Warning>
+  Ändern Sie den **IOT-Store-Code** nicht ohne entsprechende technische Abstimmung. Eine falsche Zuordnung kann dazu führen, dass die Unterkunft nicht mehr korrekt mit ihren IoT-Geräten verbunden ist.
+</Warning>
+
+---
+
+## Änderungen speichern
+
+Ganz unten auf der Seite befindet sich die orangefarbene Schaltfläche:
+
+**💾 Änderungen speichern**
+
+Beim Speichern prüft SUITEe die erforderlichen Pflichtfelder.
+
+Dazu gehören je nach aktueller Konfiguration unter anderem:
+
+- Name
+- Code
+- Firmenname
+- PMS-Typ
+- Zeitzone
+- Adresszeile 1
+- Stadt
+- Bundesland
+- Land
+- Postleitzahl
+- IOT-Store-Code
+
+Wenn erforderliche Informationen fehlen, werden die entsprechenden Felder zur Korrektur markiert.
+
+---
+
+# 2. Stockwerksplan
+
+Wählen Sie unter **Immobilie** den Menüpunkt **Stockwerksplan**, um die Etagenstruktur Ihrer Unterkunft zu verwalten.
+
+Direkter Zugriff:
+
+[https://hotel.suite-e.com/settings/floor-plan](https://hotel.suite-e.com/settings/floor-plan)
+
+<Frame>
+  <img src="/images/settings-floorplan-overview.png" alt="Stockwerksplan mit mehreren Stockwerken, Zimmeranzahl und Stockwerk hinzufügen" />
+</Frame>
+
+Der Stockwerksplan hilft Ihnen dabei, Zimmer entsprechend ihrer tatsächlichen Lage im Gebäude zu organisieren.
+
+---
+
+## Aufbau der Stockwerksansicht
+
+Jedes angelegte Stockwerk wird als eigene Karte dargestellt.
+
+| Element | Beschreibung |
+| :--- | :--- |
+| **Stockwerkname** | Name der Etage, z. B. `Ground floor`, `1. Obergeschoss` oder `Penthouse` |
+| **Zimmeranzahl** | Zeigt, wie viele Zimmer diesem Stockwerk zugeordnet sind |
+| **✏ Bearbeiten** | Öffnet das Formular zum Umbenennen des Stockwerks |
+| **⋮ Aktionen** | Öffnet weitere verfügbare Aktionen für das Stockwerk |
+| **+ Zimmer hinzufügen** | Ermöglicht die Zuordnung von Zimmern zu diesem Stockwerk |
+
+---
+
+## Neues Stockwerk hinzufügen
+
+Klicken Sie oben rechts auf:
+
+**+ Stockwerk hinzufügen**
+
+<Frame>
+  <img src="/images/settings-floorplan-btn-add-floor.png" alt="Orangefarbene Schaltfläche Stockwerk hinzufügen" />
+</Frame>
+
+Dadurch öffnet sich das Formular **Stockwerk hinzufügen**:
+
+<Frame>
+  <img src="/images/settings-floorplan-add-modal.png" alt="Stockwerk hinzufügen mit Stockwerkname, Abbrechen und Speichern" />
+</Frame>
+
+### Stockwerkname
+
+Geben Sie einen eindeutigen Namen für die Etage ein.
+
+Beispiele:
+
+- `Erdgeschoss`
+- `1. Obergeschoss`
+- `2. Obergeschoss`
+- `Untergeschoss`
+- `Penthouse`
+- `Wellness & Pool`
+
+### Abbrechen
+
+Schließt das Formular, ohne ein neues Stockwerk anzulegen.
+
+### Speichern
+
+Speichert das neue Stockwerk und fügt es der Stockwerksübersicht hinzu.
+
+---
+
+## Stockwerk bearbeiten
+
+Klicken Sie auf das **Stift-Symbol ✏** eines vorhandenen Stockwerks.
+
+<Frame>
+  <img src="/images/settings-floorplan-edit-modal.png" alt="Stockwerk bearbeiten mit bestehendem Stockwerknamen sowie Abbrechen und Speichern" />
+</Frame>
+
+Das Feld **Stockwerkname** enthält bereits den aktuellen Namen.
+
+Ändern Sie diesen und klicken Sie auf **Speichern**, um die neue Bezeichnung zu übernehmen.
+
+---
+
+## Zimmer einem Stockwerk zuweisen
+
+Über **+ Zimmer hinzufügen** innerhalb einer Stockwerkskarte können Sie vorhandene Zimmer dieser Etage zuordnen.
+
+Die Zimmer selbst werden im Bereich [Zimmer](/de/dashboard/rooms) verwaltet.
+
+Dadurch können Sie die digitale Zimmerstruktur entsprechend der tatsächlichen Gebäudestruktur organisieren.
+
+<Info>
+  Erstellen Sie zunächst die benötigten Zimmer unter [Zimmer](/de/dashboard/rooms) und ordnen Sie sie anschließend im Stockwerksplan der richtigen Etage zu.
+</Info>
+
+---
+
+# 3. E-Mail & SMTP-Manager
+
+Wählen Sie unter **E-Mail** den Menüpunkt **SMTP-Manager**, um die Versandkonfiguration für E-Mails einzurichten.
+
+<Frame>
+  <img src="/images/settings-smtp-sidebar.png" alt="Einstellungen Seitenleiste mit ausgewähltem SMTP-Manager" />
+</Frame>
+
+Direkter Zugriff:
+
+[https://hotel.suite-e.com/settings/email](https://hotel.suite-e.com/settings/email)
+
+Der SMTP-Manager bestimmt, über welche Versandkonfiguration automatisierte E-Mails der Unterkunft versendet werden.
+
+---
+
+## SMTP-Navigation
+
+Im Bereich **E-Mail (SMTP)** stehen zwei Tabs zur Verfügung:
+
+1. **SMTP-Konfiguration**
+2. **Test-E-Mail senden**
+
+Über **SMTP-Konfiguration** richten Sie die Versandmethode ein.
+
+Über **Test-E-Mail senden** können Sie die aktuelle Konfiguration mit einer Testnachricht überprüfen.
+
+---
+
+# Versand der E-Mails
+
+SUITEe bietet zwei Versandoptionen:
+
+| Option | Beschreibung |
+| :--- | :--- |
+| **Standard-Suite** | Verwendet die von SUITEe bereitgestellte Standard-Versandkonfiguration. |
+| **Eigenen SMTP verwenden** | Verwendet den eigenen E-Mail-Server bzw. SMTP-Dienst Ihrer Unterkunft. |
+
+---
+
+## Option 1 — Standard-Suite
+
+Wenn **Standard-Suite** ausgewählt ist, verwendet die Unterkunft die von SUITEe bereitgestellte Versandkonfiguration.
+
+<Frame>
+  <img src="/images/settings-smtp-standard-suite.png" alt="SMTP-Einstellungen mit aktivierter Standard-Suite und nicht bearbeitbaren E-Mail- und SMTP-Feldern" />
+</Frame>
+
+Die darunter angezeigten E-Mail- und SMTP-Felder sind in diesem Modus nicht bearbeitbar.
+
+Dies ist die einfachste Option, wenn Sie keinen eigenen SMTP-Server konfigurieren möchten.
+
+---
+
+## Option 2 — Eigenen SMTP verwenden
+
+Wählen Sie **Eigenen SMTP verwenden**, wenn E-Mails über Ihren eigenen Mailserver oder E-Mail-Dienst versendet werden sollen.
+
+<Frame>
+  <img src="/images/settings-smtp-custom-top.png" alt="SMTP-Einstellungen mit aktiviertem eigenen SMTP und bearbeitbaren E-Mail- sowie Serverinformationen" />
+</Frame>
+
+Dadurch werden die E-Mail- und SMTP-Felder zur Bearbeitung freigegeben.
+
+---
+
+## E-Mail-Informationen
+
+| Feld | Erforderlich | Beschreibung |
+| :--- | :---: | :--- |
+| **Absender-E-Mail** | Ja `*` | E-Mail-Adresse, die als Absender verwendet wird, z. B. `welcome@hotel-savoy.com` |
+| **Absendername** | Ja `*` | Anzeigename des Absenders, z. B. `Grand Hotel Savoy` |
+| **CC-Adressen (kommagetrennt)** | Optional | Zusätzliche E-Mail-Adressen, die als CC-Empfänger hinterlegt werden sollen |
+
+Beispiel für mehrere CC-Adressen:
+
+```text
+ops@beispiel.de, buchhaltung@beispiel.de
+```
+
+---
+
+## SMTP-Konfiguration
+
+Im Bereich **SMTP** hinterlegen Sie die Verbindungsinformationen Ihres Mailservers.
+
+| Feld | Beispiel / Optionen | Erforderlich | Beschreibung |
+| :--- | :--- | :---: | :--- |
+| **Port** | `587` | Ja `*` | SMTP-Port Ihres Mailservers |
+| **Host** | `smtp.office365.com` | Ja `*` | Hostname Ihres SMTP-Servers |
+| **Verschlüsselung** | `TLS` oder `SSL` | Ja `*` | Verwendete Verschlüsselungsmethode |
+| **Benutzername** | E-Mail oder Benutzerkennung | Ja `*` | Benutzername zur SMTP-Authentifizierung |
+| **Passwort** | Passwort / App-Passwort | Ja `*` | Passwort für die SMTP-Authentifizierung |
+
+Beim Passwortfeld können Sie über das Auge-Symbol **👁** die Eingabe sichtbar oder verborgen anzeigen.
+
+<Warning>
+  Verwenden Sie nur SMTP-Zugangsdaten, die für den Versand über die konfigurierte Absenderadresse autorisiert sind.
+</Warning>
+
+---
+
+## SMTP-Validierung
+
+Wenn **Eigenen SMTP verwenden** aktiviert ist und erforderliche Angaben fehlen, zeigt SUITEe entsprechende Fehlermeldungen an.
+
+<Frame>
+  <img src="/images/settings-smtp-custom-fields-errors.png" alt="SMTP-Konfiguration mit Validierungsfehlern bei fehlendem Host, Benutzernamen und Passwort" />
+</Frame>
+
+Beispiele:
+
+| Feld | Fehlermeldung |
+| :--- | :--- |
+| **Host** | `SMTP-Host ist erforderlich, wenn Sie den eigenen Server nutzen.` |
+| **Benutzername** | `SMTP-Benutzername ist erforderlich, wenn Sie den eigenen Server nutzen.` |
+| **Passwort** | `SMTP-Passwort ist erforderlich, wenn Sie den eigenen Server nutzen.` |
+
+<Frame>
+  <img src="/images/settings-smtp-custom-auth-errors.png" alt="SMTP-Einstellungen mit Validierungsfehlern bei den Authentifizierungsdaten" />
+</Frame>
+
+### Abbrechen
+
+Verwirft nicht gespeicherte Änderungen.
+
+### Aktualisieren
+
+Prüft die Eingaben und speichert die aktualisierte SMTP-Konfiguration.
+
+---
+
+# Test-E-Mail senden
+
+Nach der Einrichtung sollten Sie den E-Mail-Versand testen.
+
+Wechseln Sie zum Tab **Test-E-Mail senden**.
+
+<Frame>
+  <img src="/images/settings-smtp-test-email.png" alt="Test-E-Mail senden mit An, Betreff, HTML-Inhalt und Test senden" />
+</Frame>
+
+| Feld | Erforderlich | Beschreibung |
+| :--- | :---: | :--- |
+| **An** | Ja `*` | E-Mail-Adresse, an die die Testnachricht gesendet werden soll |
+| **Betreff** | Ja `*` | Betreff der Test-E-Mail |
+| **HTML-Inhalt** | Ja `*` | Inhalt der Testnachricht |
+| **Test senden** | — | Sendet die Test-E-Mail über die aktuell konfigurierte Versandmethode |
+
+Der Inhalt kann beispielsweise lauten:
+
+```html
+<h3>Testnachricht</h3>
+<p>Die E-Mail-Konfiguration funktioniert.</p>
+```
+
+### Was Sie nach dem Test prüfen sollten
+
+Prüfen Sie anschließend:
+
+- Ist die E-Mail angekommen?
+- Ist der Absender korrekt?
+- Wird der Absendername korrekt angezeigt?
+- Sind gegebenenfalls konfigurierte CC-Empfänger enthalten?
+- Wird der Inhalt korrekt dargestellt?
+- Ist die Nachricht möglicherweise im Spam-Ordner gelandet?
+
+<Tip>
+  Senden Sie nach jeder Änderung an einer eigenen SMTP-Konfiguration zunächst eine Test-E-Mail, bevor Sie sich auf den Versand echter Gäste-Kommunikation verlassen.
+</Tip>
+
+---
+
+# 4. Rollenverwaltung
+
+Wählen Sie unter **Zugangsverwaltung** den Menüpunkt **Rollenverwaltung**.
+
+<Frame>
+  <img src="/images/settings-roles-table-overview.png" alt="Rollenverwaltung mit Suche, Aktualisieren, Rolle hinzufügen und Rollentabelle" />
+</Frame>
+
+Direkter Zugriff:
+
+[https://hotel.suite-e.com/settings/roles](https://hotel.suite-e.com/settings/roles)
+
+Mit der Rollenverwaltung legen Sie fest, auf welche Bereiche der SUITEe-Plattform unterschiedliche Mitarbeiterrollen zugreifen können.
+
+---
+
+## Suche und Werkzeugleiste
+
+Über der Rollentabelle befinden sich:
+
+### Rollen suchen
+
+Das Suchfeld verwendet den Platzhalter:
+
+`Rollen suchen`
+
+Geben Sie einen Rollennamen oder Suchbegriff ein, um die Liste zu filtern.
+
+### Aktualisieren
+
+Über **↻** laden Sie die aktuelle Rollenliste neu.
+
+### Rolle hinzufügen
+
+Über die orangefarbene Schaltfläche **+ Rolle hinzufügen** öffnen Sie das Formular zum Erstellen einer neuen Rolle.
+
+---
+
+## Rollentabelle
+
+Die Tabelle zeigt die bereits konfigurierten Rollen und deren Zugriffsbereiche.
+
+| Spalte | Beschreibung |
+| :--- | :--- |
+| **Rollenname** | Name der Rolle, z. B. `Front Desk Test`, `Property Admin` oder `Housekeeping Lead` |
+| **Beschreibung** | Beschreibung des vorgesehenen Aufgaben- und Berechtigungsumfangs |
+| **Bereiche / Modulzugriff** | Zeigt, auf welche Plattformbereiche diese Rolle zugreifen darf |
+| **Erstellt von** | Benutzer, der die Rolle erstellt hat |
+| **Erstellungsdatum** | Datum, an dem die Rolle erstellt wurde |
+| **Aktionen** | Drei-Punkte-Menü **⋮** für verfügbare Verwaltungsaktionen |
+
+---
+
+## Bereiche / Modulzugriff
+
+Die angezeigten Badges zeigen, welche Plattformbereiche für eine Rolle freigegeben wurden.
+
+Beispiele können sein:
+
+- **Zugangsverwaltung**
+- **Buchungen**
+- **Geräte**
+- **E-Mail-Dienst**
+- **Rollen & Berechtigungen**
+- **E-Mail (SMTP)**
+
+<Warning>
+  Vergeben Sie nur die Berechtigungen, die ein Mitarbeiter tatsächlich für seine Aufgaben benötigt. Besonders Zugangsverwaltung, Benutzerrechte und SMTP-Konfiguration sollten nur entsprechend autorisierten Rollen zur Verfügung stehen.
+</Warning>
+
+---
+
+## Seitennummerierung
+
+Am unteren Rand der Tabelle befinden sich die üblichen Navigationsfunktionen:
+
+- **Zeilen pro Seite**
+- Anzeige des aktuellen Datensatzbereichs
+- **Gehe zu Seite**
+- Pfeile für vorherige und nächste Seite
+
+---
+
+## Aktionen für eine Rolle
+
+Über das Drei-Punkte-Menü **⋮** einer Rolle können je nach Konfiguration verschiedene Aktionen verfügbar sein:
+
+### Bearbeiten
+
+Ändert beispielsweise:
+
+- Rollenname
+- Beschreibung
+- Modulzugriffe
+
+### Duplizieren
+
+Erstellt eine Kopie einer vorhandenen Rolle, die anschließend angepasst werden kann.
+
+Das ist hilfreich, wenn zwei Rollen sehr ähnliche Berechtigungen benötigen.
+
+### Löschen
+
+Entfernt eine benutzerdefinierte Rolle.
+
+<Info>
+  Prüfen Sie vor dem Löschen, ob die Rolle noch Benutzern zugewiesen ist. Falls erforderlich, weisen Sie diesen Benutzern zunächst eine andere Rolle zu.
+</Info>
+
+---
+
+# Neue Rolle erstellen
+
+Klicken Sie auf **+ Rolle hinzufügen**.
+
+<Frame>
+  <img src="/images/settings-roles-create-modal.png" alt="Rolle erstellen mit Rollenname, Beschreibung, Bereiche und Modulzugriff sowie Abbrechen und Absenden" />
+</Frame>
+
+Das Formular enthält:
+
+| Feld | Erforderlich | Beschreibung |
+| :--- | :---: | :--- |
+| **Rollenname** | Ja `*` | Name der neuen Rolle, z. B. `Night Auditor`, `Maintenance Lead` oder `Concierge` |
+| **Beschreibung** | Optional | Beschreibung der Aufgaben und des vorgesehenen Berechtigungsumfangs |
+| **Bereiche / Modulzugriff** | Ja `*` | Wählen Sie die Plattformbereiche aus, auf die diese Rolle zugreifen darf |
+
+### Abbrechen
+
+Schließt das Formular, ohne eine Rolle zu erstellen.
+
+### ABSENDEN
+
+Prüft die Pflichtfelder und erstellt die neue Rolle.
+
+---
+
+## Rollen Benutzern zuweisen
+
+Die hier erstellten Rollen können anschließend Benutzern im Bereich [Benutzer & Teams](/de/dashboard/users-management) zugewiesen werden.
+
+Damit können Sie beispielsweise unterschiedliche Rollen für:
+
+- Rezeption
+- Housekeeping
+- Wartung
+- Management
+- Nachtpersonal
+- Externe Dienstleister
+
+erstellen.
+
+<Tip>
+  Erstellen Sie lieber wenige, klar definierte Rollen als viele leicht unterschiedliche Varianten. Das macht die Berechtigungsverwaltung langfristig übersichtlicher.
+</Tip>
+
+---
+
+# Verbindung zu anderen SUITEe-Modulen
+
+Die Einstellungen beeinflussen mehrere operative Bereiche der Plattform:
+
+- **[Benutzer & Teams](/de/dashboard/users-management)** — Benutzer erhalten Rollen und Immobilienzuweisungen.
+- **[E-Mail-Dienste](/de/dashboard/email-services)** — Automatisierte Gäste-E-Mails verwenden die konfigurierte Versandmethode.
+- **[Zimmer](/de/dashboard/rooms)** — Zimmer können im Stockwerksplan den entsprechenden Etagen zugeordnet werden.
+- **[Zugangsverwaltung](/de/dashboard/access-management)** — Nutzt Unterkunfts-, Zeit- und Geräteinformationen für die Verwaltung von Zugängen.
+- **[Geräte](/de/dashboard/devices)** — IoT-Geräte sind mit der jeweiligen Unterkunft und deren IoT-Konfiguration verbunden.
+- **[Explore](/de/dashboard/explore)** — Lokale Empfehlungen werden den entsprechenden Immobilien zugeordnet.

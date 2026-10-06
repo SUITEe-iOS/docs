@@ -1,0 +1,105 @@
+---
+title: "Sensoren"
+description: "Lernen Sie die Sensoren kennen, die die Automatisierungen von SUITEe ermöglichen — Präsenz-, Fenster-, Temperatur-, Bewegungs- und Wassersensoren."
+---
+
+Sensoren sind kleine Geräte, die in Räumen installiert werden, um **bestimmte Zustände zu erkennen** und die entsprechenden Daten an das SUITEe-System zu übermitteln. Sie bilden die Grundlage für die Automatisierungen von SUITEe — ohne Sensordaten wüsste das System nicht, wann Räume leer sind, wann Fenster geöffnet sind oder wie hoch die aktuelle Raumtemperatur ist.
+
+## Arten von Sensoren
+
+| Sensortyp | Was er erkennt | Warum das wichtig ist |
+| :--- | :--- | :--- |
+| **Belegungs-/Präsenzsensor** | Ob sich jemand im Raum befindet | Steuert die Energieautomatisierung — Heizung/Kühlung wird reduziert, wenn der Raum leer ist |
+| **Fenstersensor** | Ob ein Fenster geöffnet oder geschlossen ist | Pausiert Heizung/Kühlung bei geöffnetem Fenster, um Energieverschwendung zu vermeiden |
+| **Temperatursensor** | Aktuelle Raumtemperatur | Liefert genaue Temperaturdaten für die Klimasteuerung |
+| **Bewegungssensor** | Bewegung im Raum | Erkennt Aktivität und Anwesenheit für verschiedene Automatisierungen |
+| **Wassersensor** | Wasserlecks oder Überschwemmungen | Benachrichtigt Mitarbeiter sofort, wenn Wasser erkannt wird, z. B. bei einem Leck im Badezimmer |
+
+---
+
+## Wie Sensoren Automatisierungen steuern
+
+Sensoren liefern die **Echtzeitdaten**, die intelligente Automatisierungen in SUITEe ermöglichen:
+
+<AccordionGroup>
+  <Accordion title="Präsenzsensor → Energieeinsparung">
+    - Sensor meldet **„Raum ist belegt“** → Thermostat bleibt im Gästemodus mit komfortabler Temperatur
+    - Sensor meldet **„Raum ist leer“** → Nach einer Verzögerung reduziert das Thermostat den Energieverbrauch
+    - Sensor meldet **„Gast ist zurückgekehrt“** → Thermostat stellt schnell wieder die Komforttemperatur her
+  </Accordion>
+
+  <Accordion title="Fenstersensor → Heizungs-/Kühlungssteuerung">
+    - Sensor meldet **„Fenster ist geöffnet“** → Heizung/Kühlung wird sofort pausiert
+    - Sensor meldet **„Fenster ist geschlossen“** → Heizung/Kühlung nimmt den normalen Betrieb wieder auf
+  </Accordion>
+
+  <Accordion title="Temperatursensor → Präzise Klimasteuerung">
+    - Liefert dem Thermostat Temperaturwerte in Echtzeit
+    - Stellt sicher, dass Räume während der Vorkonditionierung die richtige Temperatur erreichen
+    - Benachrichtigt Mitarbeiter, wenn die Raumtemperatur außerhalb des normalen Bereichs liegt
+  </Accordion>
+
+  <Accordion title="Wassersensor → Leckerkennung">
+    - Wird Wasser auf dem Boden erkannt → Sofortige Benachrichtigung im Dashboard
+    - Hilft, Wasserschäden durch undichte Stellen im Badezimmer, Rohrbrüche oder überlaufende Waschbecken zu verhindern
+    - Eine frühzeitige Erkennung kann erhebliche Reparaturkosten vermeiden
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Platzierung der Sensoren
+
+Sensoren werden typischerweise an folgenden Stellen angebracht:
+
+| Sensor | Typischer Installationsort |
+| :--- | :--- |
+| **Präsenzsensor** | An der Decke oder hoch an der Wand mit freier Sicht auf den Raum |
+| **Fenstersensor** | Am Fensterrahmen als magnetischer Kontaktsensor |
+| **Temperatursensor** | An der Wand auf einer repräsentativen Höhe, nicht in der Nähe von Wärmequellen |
+| **Bewegungssensor** | An der Decke oder in einer Ecke mit Abdeckung des Hauptbereichs des Raums |
+| **Wassersensor** | Auf Bodenhöhe in der Nähe von Badezimmern, Küchen oder unter Waschbecken |
+
+<Info>
+  Sensoren sind klein und unauffällig — die meisten Gäste werden sie kaum bemerken. Sie sind so konzipiert, dass sie sich unauffällig in die Raumumgebung integrieren.
+</Info>
+
+---
+
+## Sensorstatus überwachen
+
+Über das Dashboard können Sie den Status jedes Sensors überprüfen:
+
+| Status | Bedeutung |
+| :--- | :--- |
+| **Online** | Der Sensor funktioniert und sendet Daten wie vorgesehen |
+| **Offline** | Der Sensor hat die Verbindung verloren — überprüfen Sie die Batterie und die Entfernung zum Gateway |
+| **Niedriger Batteriestand** | Die Batterie des Sensors muss ausgetauscht werden |
+| **Ausgelöst** | Der Sensor erkennt aktuell einen Zustand, z. B. Anwesenheit oder ein geöffnetes Fenster |
+
+<Warning>
+  **Wenn ein Präsenzsensor offline ist**, kann das System nicht erkennen, ob ein Raum belegt ist. Dadurch funktionieren die Energieautomatisierungen für diesen Raum nicht korrekt. Reagieren Sie daher möglichst schnell auf Meldungen zu offline befindlichen Sensoren.
+</Warning>
+
+---
+
+## Batterie und Wartung
+
+- Die meisten Sensoren sind **batteriebetrieben** und verfügen über eine lange Batterielaufzeit, typischerweise **1–2 Jahre**
+- Das Dashboard informiert Sie, wenn der Batteriestand eines Sensors niedrig ist
+- Es ist **keine Verkabelung** erforderlich — Sensoren werden mit Klebematerial oder Schrauben befestigt
+- Der Austausch ist einfach: Ersetzen Sie den alten Sensor durch einen neuen und koppeln Sie ihn anschließend im Dashboard
+
+<Tip>
+  **Tipp zur Einrichtung:** Schalten Sie Gateways und Sensoren ungefähr **30 Minuten** vor Beginn der Geräteeinrichtung ein. Dadurch haben die Geräte ausreichend Zeit, eine stabile Verbindung aufzubauen.
+</Tip>
+
+<CardGroup cols={2}>
+  <Card title="Gateways" icon="tower-broadcast" href="/de/devices/gateways">
+    Erfahren Sie, wie Sensoren mit dem Dashboard kommunizieren.
+  </Card>
+
+  <Card title="Energiemanagement" icon="leaf" href="/de/dashboard/energy-management">
+    Sehen Sie, welche Auswirkungen sensorgesteuerte Automatisierungen auf das Energiemanagement haben.
+  </Card>
+</CardGroup>

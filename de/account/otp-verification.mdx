@@ -1,0 +1,95 @@
+---
+title: "OTP-Verifizierung"
+description: "Verstehen Sie, wie die Einmalpasswort-Verifizierung (OTP) von SUITEe funktioniert — eine zusätzliche Sicherheitsebene für Ihr Konto."
+---
+
+Für zusätzliche Sicherheit fordert SUITEe Sie möglicherweise auf, Ihre Identität nach Eingabe Ihrer Anmeldedaten mit einem **Einmalpasswort (OTP)** zu verifizieren. Dies stellt sicher, dass selbst wenn jemand Ihr Passwort kennt, kein Zugriff auf Ihr Konto ohne Zugriff auf Ihre E-Mails oder Ihr Telefon möglich ist.
+
+## Was ist ein OTP?
+
+Ein OTP (One-Time Password) ist ein **temporärer Sicherheitscode** — in der Regel 4 bis 6 Ziffern —, der an Ihre registrierte E-Mail-Adresse oder Telefonnummer gesendet wird. Jeder Code:
+
+- Ist **einzigartig** und kann nur einmal verwendet werden
+- **Läuft ab** nach wenigen Minuten
+- Wird **automatisch generiert** vom System
+
+<Info>
+  Die OTP-Verifizierung ist eine Standard-Sicherheitspraxis, die von Banken, Fluggesellschaften und großen Plattformen weltweit genutzt wird. Sie bietet eine zweite Schutzschicht über Ihr Passwort hinaus.
+</Info>
+
+## So funktioniert die OTP-Verifizierung
+
+<Steps>
+  <Step title="Geben Sie Ihre Anmeldedaten ein">
+    Geben Sie auf der Anmeldeseite wie gewohnt Ihre **E-Mail-Adresse** und Ihr **Passwort** ein und klicken Sie dann auf **"Anmelden"** (oder **"Log In"**).
+  </Step>
+
+  <Step title="Bildschirm zur OTP-Verifizierung erscheint">
+    Anstatt direkt zum Dashboard zu gelangen, sehen Sie den **OTP-Verifizierungsbildschirm** mit dem Titel **"E-Mail verifizieren"**. Ein grünes Bestätigungsbanner bestätigt, dass der Code an Ihre E-Mail gesendet wurde:
+
+    > *"Ein Bestätigungscode wurde an Ihre E-Mail-Adresse gesendet. Bitte überprüfen Sie Ihren Posteingang."*
+
+    <Frame>
+      <img src="/images/otp-verification-actual.png" alt="SUITEe OTP-Verifizierungsbildschirm — E-Mail verifizieren mit Eingabefeld für den Bestätigungscode" />
+    </Frame>
+  </Step>
+
+  <Step title="Öffnen Sie Ihren E-Mail-Posteingang">
+    Gehen Sie zu dem E-Mail-Konto, das mit Ihrem SUITEe-Konto verknüpft ist. Suchen Sie nach einer E-Mail von SUITEe, die Ihren **Bestätigungscode** enthält.
+
+    Die E-Mail enthält beispielsweise folgenden Text:
+
+    > **Ihr SUITEe-Bestätigungscode lautet: 482916**  
+    > Dieser Code läuft in 5 Minuten ab.
+
+    <Tip>
+      E-Mail nicht gefunden? Prüfen Sie Ihren **Spam- oder Junk-E-Mail-Ordner**. Die E-Mail wird sofort nach der Anmeldung gesendet.
+    </Tip>
+  </Step>
+
+  <Step title="Geben Sie den OTP-Code ein">
+    Kehren Sie zum SUITEe-Verifizierungsbildschirm zurück. Geben Sie im Feld **"Bestätigungscode"** den Code exakt so ein, wie er in Ihrer E-Mail erscheint — ohne Leerzeichen oder zusätzliche Zeichen.
+  </Step>
+
+  <Step title="Klicken Sie auf 'Bestätigen'">
+    Klicken Sie auf die orangefarbene Schaltfläche **"Bestätigen"**. Wenn der Code korrekt und noch nicht abgelaufen ist, werden Sie direkt zum **Admin-Dashboard** weitergeleitet.
+  </Step>
+</Steps>
+
+## Was passiert, wenn das OTP abläuft?
+
+OTP-Codes sind zeitkritisch und laufen in der Regel nach **3–5 Minuten** ab. Wenn Ihr Code abgelaufen ist:
+
+1. Klicken Sie auf den Link **"Code erneut senden"** auf dem Verifizierungsbildschirm
+2. Ein **neuer Code** wird an Ihre E-Mail-Adresse gesendet
+3. Verwenden Sie den **neuen Code** — der alte ist nicht mehr gültig
+
+<Warning>
+  Teilen Sie Ihren OTP-Code mit niemandem. SUITEe-Teammitglieder werden Sie **niemals** nach Ihrem OTP fragen. Wenn jemand danach fragt, geben Sie ihn nicht weiter und melden Sie den Vorfall Ihrem Administrator.
+</Warning>
+
+## Fehlerbehebung bei OTP-Problemen
+
+<AccordionGroup>
+  <Accordion title="Ich habe den OTP-Code nicht erhalten">
+    - Prüfen Sie Ihren **Spam-/Junk-E-Mail-Ordner**
+    - Stellen Sie sicher, dass die E-Mail-Adresse Ihres Kontos korrekt ist
+    - Warten Sie 1–2 Minuten — manchmal kann die Zustellung leicht verzögert sein
+    - Klicken Sie auf **"Code erneut senden"**, um einen neuen anzufordern
+    - Bei Verwendung von SMS stellen Sie sicher, dass Ihr Telefon Empfang hat
+  </Accordion>
+
+  <Accordion title="Der eingegebene Code wird als 'ungültig' angezeigt">
+    - Stellen Sie sicher, dass Sie den **neuesten** Code eingeben (falls Sie auf "Code erneut senden" geklickt haben, nutzen Sie den aktuellsten)
+    - Prüfen Sie auf Tippfehler — der Code besteht gewöhnlich aus 4–6 Ziffern ohne Buchstaben oder Leerzeichen
+    - Wenn der Code **abgelaufen** ist, fordern Sie über **"Code erneut senden"** einen neuen an
+  </Accordion>
+
+  <Accordion title="Ich werde nach mehreren fehlgeschlagenen OTP-Versuchen gesperrt">
+    Nach mehreren fehlgeschlagenen Versuchen kann das System die OTP-Verifizierung aus Sicherheitsgründen vorübergehend sperren. Warten Sie **5–10 Minuten** und versuchen Sie es erneut, oder wenden Sie sich an Ihren Unterkunfts-Administrator für Unterstützung.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  **Profi-Tipp:** Halten Sie Ihren registrierten E-Mail-Posteingang beim Anmelden in einem anderen Tab geöffnet. Der OTP-Schritt dauert nur wenige Sekunden, sobald Sie den Code haben.
+</Tip>

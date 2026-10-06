@@ -1,0 +1,252 @@
+---
+title: "Buchung"
+description: "Verwalten Sie alle Reservierungen Ihrer Unterkunft — sehen Sie den Buchungsstatus ein, synchronisieren Sie Daten von externen PMS-Anbietern, erstellen Sie manuelle Reservierungen für Unterkünfte ohne PMS, fügen Sie Zimmer hinzu und verfolgen Sie die komplette Gästereise vom Check-in bis zum Check-out."
+---
+
+Die Seite **Buchung** ist die zentrale Schnittstelle zur Verwaltung von Reservierungen in SUITEe. Sie zeigt jede Buchung an, die der aktuell ausgewählten Unterkunft zugeordnet ist — unabhängig davon, ob sie automatisch von einem externen Property Management System (PMS) abgerufen oder manuell vom Personal für Unterkünfte ohne PMS erstellt wurde.
+
+Navigieren Sie zu dieser Seite unter:
+
+[https://hotel.suite-e.com/booking](https://hotel.suite-e.com/booking)
+
+<Warning>
+  **Dies ist die wichtigste Seite der Plattform.** Ohne ordnungsgemäß konfigurierte Buchungen können nachgelagerte Funktionen wie die digitale Gästeregistrierung, die Generierung von PIN-Codes für smarte Schlösser, die automatisierte Raumklimasteuerung und E-Mail-Benachrichtigungen an Gäste nicht funktionieren. Stellen Sie sicher, dass die PMS-Zugangsdaten Ihrer Unterkunft in den [Einstellungen](/de/dashboard/settings) korrekt konfiguriert sind, bevor Sie erwarten, dass Buchungsdaten angezeigt werden.
+</Warning>
+
+---
+
+## Seitenübersicht
+
+Wenn Sie zur Seite Buchung navigieren, bietet die Benutzeroberfläche eine vollständige operative Übersicht über die Reservierungen Ihrer Unterkunft. Das Seitenlayout umfasst:
+
+- **Immobilien-Auswahl** — Ein Dropdown-Menü zum Wechseln zwischen Unterkünften. Das Ändern der Unterkunft lädt alle Buchungsdaten für die ausgewählte Unterkunft neu.
+- **Brotkrümel-Navigation** — Zeigt den Navigationspfad `🏠 / Buchung`.
+- **Seitenüberschrift & Untertitel** — Zeigt **Buchungen** mit dem Untertitel *Buchungen anzeigen und verwalten*. Ein Info-Tooltip **ⓘ** bietet kontextbezogene Hilfe.
+- **Aktions-Schaltflächen** — Schaltflächen oben rechts, einschließlich **Synchronisieren**, Umschalter für Listen-/Rasteransicht und Schaltflächen für neue Reservierungen.
+- **Status-Zusammenfassungskarten** — Fünf farbige Karten, die Reservierungszustände auf einen Blick zusammenfassen.
+- **Unternavigations-Tabs & Filter** — Schnellfilter für Buchungsstatus.
+- **Such- & Filter-Werkzeugleiste** — Volltextsuche und Datumsbereichsfilter.
+- **Buchungstabelle** — Die Hauptdatentabelle, die alle Reservierungen mit sortierbaren Spalten auflistet.
+
+---
+
+## Immobilien-Auswahl
+
+<Frame>
+  <img src="/images/booking-property-switcher.png" alt="Immobilien-Auswahl Dropdown zeigt SUITEe Munich, Property No-PMS und Savoy Baker Street" />
+</Frame>
+
+Das Dropdown-Menü der **Immobilien-Auswahl** in der oberen linken Ecke bestimmt, welche Buchungen der Unterkunft in der Tabelle darunter angezeigt werden. Es enthält ein Suchfeld (`Immobilien suchen`), um schnell eine Unterkunft zu finden.
+
+- **Einzelunterkunfts-Ansicht** — Es werden jeweils nur Buchungen angezeigt, die zur ausgewählten Unterkunft gehören.
+- **Dynamisches Neuladen** — Das Auswählen einer anderen Unterkunft löst ein vollständiges Neuladen der Status-Zusammenfassungskarten, Buchungstabelle und verfügbaren Aktionen aus.
+- **PMS-Typ-Erkennung** — Das System erkennt den PMS-Typ der ausgewählten Unterkunft automatisch. Dies bestimmt, welche Synchronisations-Pipeline aktiv ist und ob die manuelle Erstellung von Reservierungen erlaubt ist.
+
+---
+
+## Status-Zusammenfassungskarten
+
+Direkt unter der Kopfzeile bieten fünf Zusammenfassungskarten eine Aufschlüsselung aller Buchungen der ausgewählten Unterkunft auf einen Blick:
+
+<Frame>
+  <img src="/images/booking-status-summary.png" alt="Fünf Statuskarten zeigen Alle Buchungen, Gebucht, Eingecheckt, Ausgecheckt und Storniert" />
+</Frame>
+
+| Karte | Beschriftung | Beschreibung |
+| :--- | :--- | :--- |
+| **1** | **Alle Buchungen** | Gesamtzahl aller Buchungsdatensätze für diese Unterkunft über alle Status hinweg. |
+| **2** | **Gebucht** | Bestätigte bevorstehende Reservierungen. Diese Gäste haben eine Reservierung, aber noch nicht eingecheckt. |
+| **3** | **Eingecheckt** | Derzeit aktive Aufenthalte. Diese Gäste haben den Check-in abgeschlossen und belegen derzeit ihre Zimmer. |
+| **4** | **Ausgecheckt** | Abgeschlossene Aufenthalte. Nach dem Check-out werden die Zimmerzugangs-PINs deaktiviert und die Klimasteuerung kann zurück in den Eco-Modus wechseln. |
+| **5** | **Storniert** | Stornierte Reservierungen. Sie bleiben für Audits, Berichte und historische Referenzen im System erhalten. |
+
+### Unternavigations-Tabs & Filter
+
+Unter den Zusammenfassungskarten befindet sich eine zweite Navigationszeile mit schnellen Filteroptionen:
+
+- **Alle** — Alle Buchungen
+- **Gebucht** — Bestätigte Buchungen
+- **Zugang generiert** — Zugangsdaten wurden erfolgreich erstellt
+- **Eingecheckt** — Aktive Aufenthalte
+- **Ausgecheckt** — Abgeschlossene Aufenthalte
+- **Storniert** — Stornierte Buchungen
+- **Abgeschlossen** — Vollständig abgeschlossene Reservierungen
+
+---
+
+## Synchronisieren-Schaltfläche
+
+Die Schaltfläche **Synchronisieren** löst eine manuelle Synchronisation der Buchungsdaten zwischen SUITEe und dem verbundenen PMS der Unterkunft aus.
+
+### Wie die Synchronisation funktioniert
+
+SUITEe kann Buchungsdaten über zwei Mechanismen erhalten:
+
+| Mechanismus | Auslöser | Häufigkeit | Beschreibung |
+| :--- | :--- | :--- | :--- |
+| **Live-Webhooks** | PMS sendet Ereignis automatisch | Echtzeit | Wenn eine Reservierung im PMS erstellt, geändert oder storniert wird, sendet das PMS eine Benachrichtigung an SUITEe und die Änderung wird verarbeitet. |
+| **Geplante Synchronisation** | Automatisierter Hintergrundprozess | Regelmäßig | Ein Hintergrundprozess ruft Reservierungsdaten vom PMS ab und gleicht sie mit SUITEe ab. Dadurch können auch Änderungen erfasst werden, die nicht über einen Live-Webhook angekommen sind. |
+
+Das Klicken auf **Synchronisieren** startet einen zusätzlichen manuellen Datenabgleich. Dies ist besonders hilfreich, wenn eine Reservierung fehlt oder Änderungen aus dem PMS noch nicht sichtbar sind.
+
+<Warning>
+  **Die Synchronisation erfolgt nicht immer augenblicklich.** Bei Unterkünften mit vielen Reservierungen kann die Verarbeitung einige Zeit dauern. Aktualisierte Datensätze erscheinen, sobald die Verarbeitung abgeschlossen ist.
+</Warning>
+
+### Unterstützte PMS-Anbieter
+
+Je nach Konfiguration kann SUITEe mit verschiedenen PMS-Systemen verbunden werden, darunter:
+
+- **Apaleo**
+- **3RPMS**
+- **Clock PMS**
+- **Mews**
+- **Ibelsa**
+- **RoomRaccoon**
+- **No-PMS** für direkt in SUITEe verwaltete Buchungen
+
+<Info>
+  Die genaue Funktionsweise der Synchronisation kann je nach PMS-Anbieter unterschiedlich sein. Einige Systeme unterstützen Echtzeit-Webhooks, während andere Daten über regelmäßige Synchronisationsprozesse bereitstellen.
+</Info>
+
+---
+
+## Such- & Filter-Werkzeugleiste
+
+<Frame>
+  <img src="/images/booking-search-toolbar.png" alt="Such-Werkzeugleiste zeigt Aufenthaltsdaten Datumsauswahl, Suche Eingabefeld und Filter zurücksetzen Schaltfläche" />
+</Frame>
+
+Die Werkzeugleiste über der Buchungstabelle bietet Filterfunktionen, um bestimmte Reservierungen schnell zu finden:
+
+- **Aufenthaltsdaten** — Eine Datumsbereichsauswahl (`Zeitraum auswählen`), um Buchungen anhand des Aufenthaltszeitraums zu filtern.
+- **Suche** — Volltextsuche nach Buchungs-ID, Gastname, Zimmername oder externer Buchungs-ID.
+- **Filter zurücksetzen** — Löscht alle angewendeten Suchbegriffe, Datumsbereiche und Statusfilter.
+
+---
+
+## Buchungstabelle
+
+<Frame>
+  <img src="/images/booking-table-view.png" alt="Buchungstabelle zeigt Spalten für Buchungs-ID, Externe Buchungs-ID, Gast, Einchecken, Auschecken, Zimmer, Zugangsstatus, Reg.-Status und Quelle" />
+</Frame>
+
+Die Hauptbuchungstabelle zeigt alle Reservierungen für die ausgewählte Unterkunft in einem strukturierten Format an.
+
+### Tabellenspalten
+
+Jede Zeile in der Buchungstabelle stellt eine einzelne Reservierung dar.
+
+| Spalte | Beschreibung |
+| :--- | :--- |
+| **Buchungs-ID** | Die für Gäste und Personal angezeigte Buchungs-ID. Ein Symbol kann zusätzlich den aktuellen Buchungsstatus anzeigen. |
+| **Externe Buchungs-ID** | Die Referenz eines externen Vertriebskanals oder Buchungssystems. Bei Direktbuchungen kann hier ein Bindestrich (`—`) angezeigt werden. |
+| **Gast** | Name des Hauptgastes zusammen mit der Gästeanzahl. |
+| **Einchecken** | Geplantes Check-in-Datum und Uhrzeit. |
+| **Auschecken** | Geplantes Check-out-Datum und Uhrzeit. |
+| **Zimmer** | Das Zimmer oder die Einheit, die dieser Buchung zugewiesen ist. |
+| **Zugangsstatus** | Status der digitalen Zugangsdaten des Gastes. |
+| **Reg.-Status** | Status der digitalen Gästeregistrierung. |
+| **Quelle** | Herkunft der Buchung, beispielsweise eine Direktbuchung oder ein verbundenes PMS. |
+
+### Zeilen-Interaktionen
+
+Das Klicken auf eine Buchungszeile öffnet die **Buchungs-Detailansicht**, in der Sie je nach Buchung und Berechtigung:
+
+- Das vollständige Gästeprofil einsehen können
+- Details zur Zimmerzuweisung und zu Zugangsdaten sehen können
+- Buchungs- und Statusinformationen überprüfen können
+- Verfügbare manuelle Aktionen für die Reservierung durchführen können
+
+---
+
+## Zimmer & Reservierungen hinzufügen bei No-PMS-Unterkünften
+
+Unterkünfte, die ohne PMS betrieben werden, definieren ihren Zimmerbestand direkt in SUITEe. Dies ermöglicht die manuelle Erstellung von Reservierungen und die Verwaltung von Zimmern und Zugängen direkt auf der Plattform.
+
+Wenn eine **No-PMS**-Unterkunft in der Immobilien-Auswahl ausgewählt ist, können zusätzliche Aktions-Schaltflächen verfügbar sein:
+
+- **+ Zimmer hinzufügen** — Erstellt ein neues Zimmer oder eine neue Einheit
+- **+ Neue Reservierung** — Öffnet ein Formular zur manuellen Erstellung einer Buchung mit Gästedetails, Zimmer sowie Check-in- und Check-out-Zeiten
+
+<Note>
+  No-PMS-Buchungen können dieselben nachgelagerten SUITEe-Funktionen nutzen wie synchronisierte Buchungen, darunter digitale Zugänge, Gäste-Kommunikation und Automatisierungen.
+</Note>
+
+---
+
+## Wie Buchungen in SUITEe verarbeitet werden
+
+Das Verständnis des grundlegenden Datenflusses hilft bei der Fehlerbehebung bei fehlenden oder verzögerten Reservierungen.
+
+```text
+Externes PMS
+     │
+     ├── Live-Übertragung ──────────────┐
+     │                                  │
+     └── Regelmäßige Synchronisation ───┤
+                                        │
+                                        ▼
+                              SUITEe verarbeitet
+                              Buchungsdaten
+                                        │
+                                        ▼
+                              Zimmer- und Gastdaten
+                              werden aktualisiert
+                                        │
+                                        ▼
+                              Nachgelagerte Prozesse
+                              ├── Zugangsverwaltung
+                              ├── Gäste-Kommunikation
+                              └── Automatisierungen
+```
+
+Bei einer manuellen Synchronisation werden Buchungsdaten erneut mit dem verbundenen PMS abgeglichen. Bereits vorhandene Reservierungen werden dabei aktualisiert, anstatt absichtlich als neue Buchungen angelegt zu werden.
+
+---
+
+## Buchungs-ID-System
+
+SUITEe verwendet mehrere Identifikatoren für Buchungen. Welche davon verfügbar sind, hängt teilweise vom verbundenen PMS und Buchungskanal ab.
+
+| Identifier | Verwendung |
+| :--- | :--- |
+| **Interne ID** | Technische interne Kennung der Reservierung innerhalb von SUITEe |
+| **PMS-Buchungs-ID** | Kennung, die für die Zuordnung und Synchronisation mit dem PMS verwendet wird |
+| **Anzeige-Buchungs-ID** | Für Personal bzw. Gäste sichtbare Buchungsreferenz |
+| **Externe Buchungs-ID** | Referenz eines externen Buchungskanals, sofern vorhanden |
+
+<Warning>
+  Die verschiedenen Buchungs-IDs können unterschiedliche Werte haben. Verwenden Sie bei der Fehlersuche die jeweils passende Referenz und achten Sie darauf, PMS-Referenzen nicht mit externen Kanalreferenzen zu verwechseln.
+</Warning>
+
+---
+
+## Miteinander verknüpfte Dashboard-Module
+
+Das Buchungssystem ist mit mehreren anderen Bereichen der SUITEe-Plattform verbunden:
+
+- **[Dashboard-Übersicht](/de/dashboard/overview)** — Zeigt aktuelle Buchungsinformationen und Aktivitäten.
+- **[Zimmer](/de/dashboard/rooms)** — Zimmer und Einheiten werden den Reservierungen zugeordnet.
+- **[Aktivitätszentrum](/de/dashboard/activity-centre)** — Protokolliert relevante Buchungsereignisse.
+- **[Zugangsverwaltung](/de/dashboard/access-management)** — Verwaltet digitale Zugänge für Gäste.
+- **[E-Mail-Dienste](/de/dashboard/email-services)** — Unterstützt die Gäste-Kommunikation.
+- **[Energiemanagement](/de/dashboard/energy-management)** — Kann Zimmerautomatisierungen anhand des Belegungsstatus steuern.
+
+---
+
+## Fehlerbehebung
+
+### Buchungen erscheinen nach der PMS-Verbindung nicht
+
+1. Überprüfen Sie, ob die PMS-Konfiguration unter [Einstellungen](/de/dashboard/settings) korrekt eingerichtet ist.
+2. Klicken Sie auf **Synchronisieren**, um einen manuellen Datenabgleich auszulösen.
+3. Prüfen Sie das [Aktivitätszentrum](/de/dashboard/activity-centre) auf relevante Meldungen oder Fehler.
+
+### Doppelte Buchungen
+
+Wenn scheinbar doppelte Buchungen erscheinen, prüfen Sie zunächst die Buchungs-IDs, Gastnamen, Aufenthaltsdaten und externen Referenzen. Ähnliche Gastnamen bedeuten nicht zwingend, dass es sich um dieselbe Reservierung handelt.
+
+### Alte Buchungen werden durch die Synchronisation nicht wiederhergestellt
+
+Je nach PMS und Integrationskonfiguration kann die Synchronisation nur einen bestimmten Zeitraum abdecken. Wenn ältere Reservierungen fehlen, wenden Sie sich an den SUITEe-Support, um die verfügbaren Importmöglichkeiten zu prüfen.

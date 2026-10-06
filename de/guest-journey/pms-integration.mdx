@@ -1,0 +1,105 @@
+---
+title: "PMS-Integration"
+description: "So verbindet sich SUITEe mit Ihrem Property Management System — Datenfluss, unterstützte Systeme und Synchronisierungsmechanismen."
+---
+
+SUITEe arbeitet **zusammen mit** Ihrem bestehenden PMS (Property Management System) und ersetzt es nicht. Das PMS verwaltet Buchungen und Abrechnung; SUITEe übernimmt smarte Geräte, Zugang und Energiemanagement. Beide Systeme kommunizieren automatisch miteinander, sodass Sie Daten nicht doppelt eingeben müssen.
+
+## Was ist ein PMS?
+
+Ein **PMS (Property Management System)** ist die zentrale Software, die Hotels und andere Beherbergungsbetriebe verwenden, um folgende Bereiche zu verwalten:
+
+- **Buchungen und Reservierungen**
+- **Gästeinformationen**
+- **Zimmerverfügbarkeit**
+- **Abrechnung und Rechnungsstellung**
+
+<Info>
+  SUITEe **ersetzt Ihr PMS nicht**. Sie verwalten weiterhin alle Buchungen, Preise und Abrechnungen wie gewohnt in Ihrem PMS. SUITEe *übernimmt* diese Buchungsdaten und automatisiert die Prozesse, die nach der Erstellung einer Reservierung stattfinden.
+</Info>
+
+---
+
+## So funktioniert die Verbindung
+
+Der Datenfluss zwischen Ihrem PMS und SUITEe ist **unidirektional** — Informationen werden sicher vom PMS an SUITEe übertragen. SUITEe schreibt keine Hardware-Protokolle oder Zugangsereignisse zurück in Ihr PMS.
+
+Wenn eine Buchung erstellt oder aktualisiert wird, sendet das PMS folgende Daten an SUITEe:
+
+| Daten | Inhalt |
+| :--- | :--- |
+| **Name und Kontaktdaten des Gastes** | Name, E-Mail-Adresse und Telefonnummer |
+| **Zimmer-/Einheitszuweisung** | Das Zimmer, dem der Gast zugeordnet ist |
+| **Check-in-Datum und -Uhrzeit** | Zeitpunkt, zu dem der Gast voraussichtlich anreist |
+| **Check-out-Datum und -Uhrzeit** | Zeitpunkt, zu dem der Gast voraussichtlich abreist |
+| **Reservierungsstatus** | Bestätigt, geändert oder storniert |
+
+---
+
+## Synchronisierungsmechanismen
+
+SUITEe stellt über zwei unabhängige Synchronisierungsprozesse sicher, dass Ihre Buchungsdaten stets aktuell sind:
+
+<Steps>
+  <Step title="Live-Webhooks (Echtzeit)">
+    Wenn eine Reservierung im PMS erstellt, geändert oder storniert wird, sendet das PMS sofort eine Webhook-Benachrichtigung an SUITEe. Diese wird in Echtzeit verarbeitet, sodass die Zugangsdaten unmittelbar erstellt werden können.
+  </Step>
+
+  <Step title="Cron-Backfill (alle 45 Minuten)">
+    Als zusätzliche Absicherung wird alle 45 Minuten ein Hintergrundprozess ausgeführt. Dieser fragt über die PMS-API ein Zeitfenster mit aktuellen Reservierungen ab und verarbeitet diese erneut. Dadurch werden Webhooks erfasst, die beispielsweise aufgrund von Netzwerkproblemen oder PMS-Ausfällen nicht empfangen wurden.
+  </Step>
+
+  <Step title="Änderungen werden automatisch synchronisiert">
+    Wenn eine Reservierung im PMS **geändert** (z. B. Datum oder Zimmer) oder **storniert** wird, aktualisiert SUITEe die entsprechenden Informationen automatisch:
+
+    - Geänderte Aufenthaltsdaten → Zugangsdaten werden entsprechend angepasst
+    - Zimmerwechsel → Zugang wird auf das neue Zimmer übertragen
+    - Stornierung → Zugang wird sofort widerrufen
+  </Step>
+</Steps>
+
+<Warning>
+  **Wichtige Regel:** Nehmen Sie Änderungen an Reservierungen immer zuerst in Ihrem **PMS** vor. SUITEe synchronisiert die Daten aus dem PMS — das PMS ist die **führende Datenquelle**. Versuchen Sie nicht, Buchungsdetails direkt in SUITEe zu ändern.
+</Warning>
+
+---
+
+## Unterstützte PMS-Systeme
+
+SUITEe ist derzeit mit folgenden Property Management Systemen integriert:
+
+| PMS | Synchronisierungsfunktionen |
+| :--- | :--- |
+| **Apaleo** | Live-Webhooks & Cron-Backfill |
+| **3RPMS** | Live-Webhooks (HMAC-signiert) & Cron-Backfill |
+| **Clock PMS** | Live-Webhooks & Cron-Backfill |
+| **Mews** | Live-Webhooks & Cron-Backfill |
+| **Ibelsa** | Live-Webhooks & Cron-Backfill |
+| **RoomRaccoon** | Nur Live-Webhooks (kein Cron-Backfill verfügbar) |
+| **No-PMS** | Integrierte manuelle Erstellung von Reservierungen |
+
+---
+
+## Fehlerbehebung bei Synchronisierungsproblemen
+
+Wenn Sie vermuten, dass eine Buchung nicht korrekt von Ihrem PMS zu SUITEe synchronisiert wurde:
+
+| Aktion | Beschreibung |
+| :--- | :--- |
+| **Buchungsliste prüfen** | Suchen Sie auf der Seite [Buchung](/de/dashboard/booking) anhand des Gastnamens oder der angezeigten Buchungs-ID nach der Reservierung. |
+| **Manuelle Synchronisierung starten** | Klicken Sie auf der Buchungsseite auf **Synchronisieren**. Dadurch wird der Cron-Backfill-Mechanismus sofort ausgelöst und fehlende Reservierungen werden erneut aus Ihrem PMS abgerufen. |
+| **Aktivitätscenter prüfen** | Prüfen Sie im [Aktivitätscenter](/de/dashboard/activity-centre), ob die Übermittlung eines Webhooks fehlgeschlagen ist oder bei der Verarbeitung der Reservierung ein Fehler aufgetreten ist. |
+
+<Tip>
+  Da SUITEe eine strikte Idempotenzsperre auf Basis der PMS-Buchungs-ID verwendet, können Sie die manuelle Schaltfläche **„Synchronisieren“** jederzeit sicher verwenden. Bestehende Buchungen werden aktualisiert, ohne Duplikate zu erzeugen.
+</Tip>
+
+<CardGroup cols={2}>
+  <Card title="Reservierungen" icon="calendar-check" href="/de/dashboard/reservations">
+    Erfahren Sie, wie Reservierungen nach der Synchronisierung mit SUITEe verwaltet werden.
+  </Card>
+
+  <Card title="Vor der Ankunft" icon="plane-arrival" href="/de/guest-journey/before-arrival">
+    Sehen Sie sich den vollständigen Automatisierungsablauf vor der Ankunft an.
+  </Card>
+</CardGroup>

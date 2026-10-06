@@ -1,0 +1,107 @@
+---
+title: "Energiemanagement"
+description: "Überwachen und steuern Sie den Energieverbrauch Ihrer Unterkunft — Raumtemperaturen, Energiemodi, Verbrauchstrends und intelligente Automatisierungen."
+---
+
+Der Bereich **Energiemanagement** zeigt, wie Heizung, Kühlung und Beleuchtung in Ihrer gesamten Unterkunft genutzt werden. Hier sehen Sie die direkten Auswirkungen der Energiespar-Automatisierungen von SUITEe.
+
+## Was Sie sehen können
+
+| Kennzahl | Beschreibung |
+| :--- | :--- |
+| **Aktuelle Raumtemperaturen** | Live-Temperaturwerte aller Räume mit intelligenten Thermostaten |
+| **Energiemodus pro Raum** | Zeigt, ob sich ein Raum im „Gästemodus“ (komfortabel) oder „Eco-Modus“ (energiesparend) befindet |
+| **Energieverbrauchstrends** | Historische Daten zum Energieverbrauch im Zeitverlauf (täglich, wöchentlich, monatlich) |
+| **Aktive Automatisierungen** | Zeigt, welche Energieregeln aktuell in Ihrer Unterkunft ausgeführt werden |
+
+<Frame>
+  <img src="/images/dashboard-device-cards.png" alt="SUITEe Energiemanagement-Dashboard mit Raumtemperaturen und Energiemodi" />
+</Frame>
+
+---
+
+## Energiemodi erklärt
+
+SUITEe verwendet zwei primäre Energiemodi für jeden Raum:
+
+| Modus | Temperatur | Wann er aktiv ist |
+| :--- | :--- | :--- |
+| **Gästemodus** | Komfortabel (vom Gast oder über den Standardwert eingestellt) | Wenn ein Gast eingecheckt ist und sich im Raum befindet |
+| **Eco-Modus** | Energiesparend (minimales Heizen/Kühlen) | Wenn der Raum leer ist, zwischen zwei Aufenthalten oder wenn der Gast den Raum vorübergehend verlässt |
+
+<Info>
+  Der Wechsel zwischen Gästemodus und Eco-Modus erfolgt **automatisch** auf Grundlage von Sensordaten und Reservierungsstatus. Mitarbeiter können den Modus bei Bedarf auch manuell über das Dashboard ändern.
+</Info>
+
+---
+
+## So funktioniert die Energieautomatisierung
+
+Die Energieautomatisierung von SUITEe reagiert auf fünf zentrale Situationen:
+
+<Steps>
+  <Step title="Gast checkt ein">
+    Der Raum wechselt in den **Gästemodus** mit komfortablen Temperatureinstellungen. Wenn eine Vorheizung oder Vorkühlung geplant wurde, hat der Raum bereits die richtige Temperatur, wenn der Gast ankommt.
+  </Step>
+
+  <Step title="Gast verlässt den Raum vorübergehend">
+    Der **Präsenzsensor** erkennt, dass der Raum leer ist. Nach einer konfigurierbaren Verzögerung passt das Thermostat die Temperatur an, um den Energieverbrauch zu reduzieren und gleichzeitig den Raum innerhalb eines angemessenen Temperaturbereichs zu halten.
+  </Step>
+
+  <Step title="Gast kehrt in den Raum zurück">
+    Der Präsenzsensor erkennt die Rückkehr des Gastes. Der Raum kehrt **schnell zu komfortablen Temperatureinstellungen** zurück.
+  </Step>
+
+  <Step title="Gast öffnet ein Fenster">
+    Der **Fenstersensor** erkennt, dass ein Fenster geöffnet wurde. Heizung oder Kühlung werden **automatisch pausiert**, damit keine Energie durch das Heizen oder Kühlen bei geöffnetem Fenster verschwendet wird.
+
+    <Tip>
+      Sobald das Fenster wieder geschlossen wird, nimmt das System die normale Klimasteuerung wieder auf. Allein diese Automatisierung kann erheblich Energie sparen — insbesondere im Winter, wenn Gäste zum Lüften Fenster öffnen, während die Heizung läuft.
+    </Tip>
+  </Step>
+
+  <Step title="Gast checkt aus">
+    Der Raum wechselt sofort in den **Eco-Modus** mit minimalem Energieverbrauch. Er bleibt in diesem Modus, bis sich die Check-in-Zeit des nächsten Gastes nähert und die Vorkonditionierung des Raums beginnt.
+  </Step>
+</Steps>
+
+---
+
+## Energiemanagement über das Dashboard
+
+Mitarbeiter können folgende Energiemanagement-Aktionen durchführen:
+
+| Aktion | Beschreibung |
+| :--- | :--- |
+| **Alle Raumtemperaturen anzeigen** | Zeigt die aktuellen Temperaturen aller Räume in einer Raster- oder Listenansicht |
+| **Raummodus ändern** | Wechseln Sie einen Raum manuell zwischen Gästemodus und Eco-Modus |
+| **Temperatur anpassen** | Stellen Sie aus der Ferne eine bestimmte Temperatur für einen Raum ein |
+| **Verbrauchsdaten anzeigen** | Prüfen Sie Energieverbrauchstrends und identifizieren Sie Einsparmöglichkeiten |
+| **Automatisierungsregeln konfigurieren** | Erstellen oder ändern Sie Regeln für das automatische Energiemanagement |
+
+---
+
+## Auswirkungen auf die Energieeinsparung
+
+Die Energieeinsparungen von SUITEe summieren sich über die gesamte Unterkunft:
+
+| Faktor | Auswirkung |
+| :--- | :--- |
+| **Erkennung leerer Räume** | Heizung bzw. Kühlung wird reduziert, wenn Sensoren einen leeren Raum erkennen — selbst wenn dieser nur einige Stunden nicht genutzt wird |
+| **Erkennung geöffneter Fenster** | Verhindert unnötiges Heizen oder Kühlen bei geöffnetem Fenster — eine der größten Quellen für Energieverschwendung |
+| **Eco-Modus zwischen Aufenthalten** | Zwischen Check-out und dem nächsten Check-in verbrauchen Räume nur minimale Energie |
+| **Vorkonditionierung** | Räume erreichen die gewünschte Komforttemperatur kurz vor der Ankunft des Gastes — und nicht bereits Stunden vorher |
+
+<Warning>
+  **Wichtig:** Energieeinsparungen hängen davon ab, dass die Sensoren korrekt installiert und online sind. Wenn ein Präsenzsensor offline ist, kann das System nicht erkennen, ob ein Raum leer ist. Prüfen Sie regelmäßig den Gerätestatus, um sicherzustellen, dass alle Sensoren betriebsbereit sind.
+</Warning>
+
+<CardGroup cols={2}>
+  <Card title="Sensoren" icon="satellite-dish" href="/de/devices/sensors">
+    Erfahren Sie mehr über die Sensoren, die die Energieautomatisierung steuern.
+  </Card>
+
+  <Card title="Intelligente Thermostate" icon="temperature-half" href="/de/devices/thermostats">
+    Erfahren Sie, wie die intelligenten Thermostate von SUITEe funktionieren.
+  </Card>
+</CardGroup>

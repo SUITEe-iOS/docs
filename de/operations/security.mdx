@@ -1,0 +1,130 @@
+---
+title: "Sicherheit & Schutz"
+description: "So schützt SUITEe Ihre Unterkunft und Ihre Gäste — Zugangssicherheit, DSGVO-Konformität, Notfall-Fallbacks und manuelle Übersteuerung."
+---
+
+Sicherheit hat bei SUITEe höchste Priorität. Die Plattform wurde entwickelt, um Ihre Unterkunft, Ihre Gäste und Ihre Daten zu schützen — mit mehreren Sicherheitsebenen und integrierten Fallback-Lösungen für unterschiedliche Szenarien.
+
+## Zugangssicherheit
+
+| Sicherheitsfunktion | Funktionsweise |
+| :--- | :--- |
+| **Eindeutige Zugangsdaten für jeden Gast** | Jeder Gast erhält einen eigenen PIN oder mobilen Schlüssel — keine gemeinsam genutzten Zugangsdaten |
+| **Zeitlich begrenzter Zugang** | Zugangsdaten funktionieren nur während des Aufenthalts des Gastes und laufen beim Check-out automatisch ab |
+| **Audit-Protokoll** | Jede Türöffnung wird mit Uhrzeit, Datum und der Information protokolliert, wer die Tür geöffnet hat |
+| **Zugang aus der Ferne widerrufen** | Mitarbeiter können den Zugang einer Person über das Dashboard **sofort widerrufen** |
+| **Mehrstufige Zugangskontrolle** | Der Zugang kann ausschließlich für bestimmte Bereiche gewährt werden, z. B. Zimmer, Gebäude oder Gemeinschaftsbereiche |
+
+<Info>
+  Die Kombination aus individuellen Zugangsdaten, zeitlich begrenztem Zugang und einem vollständigen Audit-Protokoll bietet eine deutlich **höhere Sicherheit als physische Schlüssel**, die kopiert, verloren oder an unbefugte Personen weitergegeben werden können.
+</Info>
+
+---
+
+## Gerätesicherheit
+
+Die Geräte und die Software von SUITEe wurden mit Sicherheitsmechanismen auf mehreren Ebenen entwickelt:
+
+| Ebene | Schutz |
+| :--- | :--- |
+| **Gerätezertifizierung** | Alle Geräte sind nach Industriestandards zertifiziert |
+| **Verschlüsselte Kommunikation** | Geräte verwenden sichere, verschlüsselte Protokolle für die Kommunikation |
+| **DSGVO-Konformität** | Die Plattform erfüllt vollständig die europäischen Datenschutzvorschriften (DSGVO) |
+| **Hybride Architektur** | Fällt ein Teil des Systems aus, funktionieren die übrigen Komponenten weiterhin |
+| **Regelmäßige Updates** | Die Systemsoftware wird regelmäßig mit Sicherheitsupdates aktualisiert |
+
+---
+
+## Was passiert in Notfällen?
+
+SUITEe wurde so konzipiert, dass der Betrieb auch dann aufrechterhalten wird, wenn Probleme auftreten. Im Folgenden sehen Sie, was in typischen Notfallszenarien passiert.
+
+### WLAN- oder Internetausfall
+
+<AccordionGroup>
+  <Accordion title="Was weiterhin funktioniert">
+    - Gäste können Türen weiterhin **mit ihrem PIN-Code öffnen** — PINs funktionieren offline
+    - Smarte Schlösser arbeiten mit **Batteriestrom** und benötigen keine Internetverbindung, um zu funktionieren
+    - Alle wesentlichen Geräte können als Fallback **manuell bedient** werden
+  </Accordion>
+
+  <Accordion title="Was während eines Ausfalls nicht funktioniert">
+    - Das **Dashboard** erhält keine Echtzeitinformationen zum Gerätestatus, da keine Daten von den Geräten übertragen werden
+    - **Fernbefehle**, beispielsweise das Öffnen einer Tür aus der Ferne, funktionieren nicht
+    - **Neue Zugangsdaten** können erst erstellt werden, wenn die Verbindung wiederhergestellt ist
+  </Accordion>
+
+  <Accordion title="Was passiert, wenn die Internetverbindung wiederhergestellt ist">
+    - Alle Geräte **verbinden sich automatisch erneut** und synchronisieren sich mit dem Dashboard
+    - Während des Ausfalls erfasste Daten werden **nachträglich hochgeladen**
+    - Es gehen keine Daten verloren — das System nimmt den normalen Betrieb automatisch wieder auf
+  </Accordion>
+</AccordionGroup>
+
+### Stromausfall
+
+| Bereich | Was passiert |
+| :--- | :--- |
+| **Smarte Schlösser** | Funktionieren weiterhin mit **Batteriestrom** — Gäste können ihre PIN-Codes weiterhin verwenden |
+| **Gateways** | Gehen offline, da sie Strom benötigen — die Verbindung zum Dashboard bleibt unterbrochen, bis die Stromversorgung wiederhergestellt ist |
+| **Thermostate** | Pausieren bis zur Wiederherstellung der Stromversorgung und setzen anschließend den normalen Betrieb fort |
+| **Sensoren** | Funktionieren weiterhin mit Batteriestrom |
+| **Nach Wiederherstellung der Stromversorgung** | Alles **synchronisiert sich automatisch erneut** — kein manueller Eingriff erforderlich |
+
+<Warning>
+  **Bei einem Stromausfall gehen keine Daten verloren.** Alle Zugangsprotokolle, Sensordaten und Gerätezustände bleiben erhalten und werden synchronisiert, sobald die Stromversorgung wiederhergestellt ist.
+</Warning>
+
+### Systemausfall
+
+Selbst im unwahrscheinlichen Fall eines vollständigen Systemausfalls:
+
+- verfügen **alle smarten Geräte über manuelle Fallback-Optionen** — Türen können mit manuellen Schlüsseln geöffnet werden
+- behalten **Mitarbeiter über integrierte Backup-Funktionen jederzeit die volle Kontrolle**
+- wird **kein Gast ausgesperrt** — die manuelle Schlüsselöffnung stellt den Zugang jederzeit sicher
+
+---
+
+## Datenschutz (DSGVO)
+
+SUITEe ist vollständig DSGVO-konform. Das bedeutet, dass Gästedaten gemäß den strengen europäischen Datenschutzvorschriften verarbeitet werden:
+
+| DSGVO-Grundsatz | Umsetzung durch SUITEe |
+| :--- | :--- |
+| **Datenminimierung** | Es werden nur notwendige Gästedaten verarbeitet, z. B. Name, Zimmer und Aufenthaltsdaten |
+| **Zweckbindung** | Gästedaten werden ausschließlich für die Zugangs- und Aufenthaltsverwaltung verwendet |
+| **Sicherheit** | Daten werden sowohl bei der Übertragung als auch bei der Speicherung verschlüsselt |
+| **Zugriffskontrolle** | Nur autorisierte Mitarbeiter können auf Gästedaten zugreifen, basierend auf rollenbasierten Berechtigungen |
+| **Datenspeicherung** | Gästedaten werden nur so lange gespeichert, wie dies erforderlich ist |
+| **Recht auf Löschung** | Gästedaten können auf Anfrage gelöscht werden |
+
+---
+
+## Best Practices für die Sicherheit
+
+<AccordionGroup>
+  <Accordion title="Für Property Manager">
+    - **Benutzerzugänge regelmäßig überprüfen** — Konten ehemaliger Mitarbeiter zeitnah entfernen
+    - **Rollenbasierte Berechtigungen verwenden** — nicht jedem Benutzer Super-Admin-Zugriff gewähren
+    - **Audit-Protokolle überwachen** — Zugangsprotokolle regelmäßig auf ungewöhnliche Aktivitäten prüfen
+    - **Geräte aktuell halten** — sicherstellen, dass auf allen Geräten die neueste Firmware installiert ist
+    - **Manuelle Schlüssel bereithalten** — Schlüssel für die manuelle Öffnung an einem sicheren und zugänglichen Ort aufbewahren
+  </Accordion>
+
+  <Accordion title="Für Mitarbeiter an der Rezeption">
+    - **Anmeldedaten niemals weitergeben** — jede Person sollte über ein eigenes Benutzerkonto verfügen
+    - **Sichere Passwörter verwenden** — Passwortanforderungen beachten und Passwörter regelmäßig ändern
+    - **An gemeinsam genutzten Computern abmelden** — beim Verlassen eines gemeinsam genutzten Arbeitsplatzes immer ausloggen
+    - **Identität vor der Erstellung neuer Zugangsdaten überprüfen** — wenn sich jemand als Gast ausgibt, zunächst die Reservierung überprüfen, bevor ein neuer PIN erstellt wird
+  </Accordion>
+
+  <Accordion title="Für Gäste (Hinweise zur Weitergabe)">
+    - **PIN-Code nicht mit anderen Personen teilen**
+    - **Gäste-Web-App schließen**, wenn sie nicht verwendet wird
+    - **Verdächtige Aktivitäten melden** — wenn jemand versucht, unbefugt auf das Zimmer zuzugreifen, sollte der Gast die Unterkunft kontaktieren
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  Sicherheit ist eine gemeinsame Verantwortung. SUITEe stellt die erforderlichen Werkzeuge und Technologien bereit. Die richtigen Sicherheitsmaßnahmen durch Mitarbeiter und Gäste tragen dazu bei, dass das System bestmöglich funktioniert.
+</Tip>

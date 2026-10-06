@@ -1,0 +1,241 @@
+---
+title: "Geräte"
+description: "Überwachen und verwalten Sie alle verbundenen IoT-Geräte in Ihrer Unterkunft — filtern Sie nach Zimmer und Kategorie, prüfen Sie Akkustände, kontrollieren Sie den Online-Verbindungsstatus und lösen Sie die Hardware-Synchronisation aus."
+---
+
+Die Seite **Geräte** ist die zentrale Hardware-Steuerzentrale in SUITEe. Sie bietet Unterkunfts-Managern und Betriebsteams einen Überblick über jedes smarte Gerät, das in Zimmern und Gemeinschaftsbereichen installiert ist — von smarten Türschlössern und Klimageräten bis hin zu Sensoren, Beleuchtungssteuerungen und IoT-Gateways.
+
+Navigieren Sie zu dieser Seite unter:
+
+[https://hotel.suite-e.com/devices](https://hotel.suite-e.com/devices)
+
+---
+
+## Seitenübersicht
+
+<Frame>
+  <img src="/images/devices-overview-table.png" alt="Geräte-Dashboard-Seite mit dem Titel Geräte, der Schaltfläche Synchronisieren, den Status-Filter-Tabs Alle, Online und Offline, Filtern nach Zimmer, Kategorie und Gerätetyp sowie der Geräteinventartabelle" />
+</Frame>
+
+### Seitentitel und Kopfzeilen-Bedienelemente
+
+- **Titel & Untertitel** — Die Seitenüberschrift zeigt **Geräte** mit dem Untertitel *Ihre Geräte verwalten*. Ein Info-Symbol **ⓘ** neben dem Untertitel bietet zusätzlichen Kontext.
+- **Synchronisieren** — Die Schaltfläche **SYNCHRONISIEREN** befindet sich oben rechts. Sie startet eine Synchronisation mit dem verbundenen IoT-System, um Geräteinformationen und Konfigurationszustände zu aktualisieren.
+
+---
+
+### Status-Filter-Tabs
+
+Über den Filter-Bedienelementen ermöglichen drei Status-Tabs die schnelle Filterung von Geräten nach Verbindungsstatus:
+
+| Tab | Beschreibung |
+| :--- | :--- |
+| **Alle** | Zeigt den gesamten Gerätebestand der aktiven Unterkunft unabhängig vom Verbindungsstatus. |
+| **Online** | Zeigt Geräte, die derzeit verbunden und erreichbar sind. Sie werden mit einer grünen Statusanzeige gekennzeichnet. |
+| **Offline** | Zeigt Geräte, die derzeit nicht erreichbar sind. Ursachen können beispielsweise ein Strom- oder Batterieproblem oder eine unterbrochene Verbindung zum Gateway sein. |
+
+<Tip>
+  Überprüfen Sie während der morgendlichen Betriebsabläufe regelmäßig den Tab **Offline**, um Geräte zu identifizieren, die vor der Ankunft der Gäste überprüft werden sollten.
+</Tip>
+
+---
+
+## Filter- und Such-Bedienelemente
+
+Die Filter-Werkzeugleiste über der Tabelle ermöglicht es Ihnen, bestimmte Geräte nach Zimmer, Kategorie, Gerätetyp oder Schlüsselwort schnell zu finden.
+
+### Filter 1 — Zimmer
+
+Ein Klick auf das Dropdown-Menü **Zimmer auswählen** öffnet eine Liste aller konfigurierten Zimmer und Einheiten der Unterkunft.
+
+<Frame>
+  <img src="/images/devices-filter-room-dropdown.png" alt="Zimmer-Filter-Dropdown mit einer Liste konfigurierter Zimmer und Einheiten" />
+</Frame>
+
+- **Bestimmtes Zimmer auswählen** — Wählen Sie beispielsweise `101`, `102`, `UNIT-3` oder `UNIT-5`, um nur die dort installierten Geräte anzuzeigen.
+- **Filter löschen** — Setzen Sie die Auswahl zurück, um wieder Geräte aus allen Zimmern anzuzeigen.
+- **Verbindung zu Zimmern** — Alle hier angezeigten Zimmer werden im Bereich [Zimmer](/de/dashboard/rooms) verwaltet.
+
+---
+
+### Filter 2 — Gerätekategorie
+
+Das Dropdown-Menü **Gerätekategorie** ermöglicht Ihnen das Filtern nach der Funktion eines Geräts.
+
+<Frame>
+  <img src="/images/devices-category-dropdown-part1.png" alt="Gerätekategorie-Dropdown Teil 1 mit verschiedenen Gerätekategorien" />
+</Frame>
+
+<Frame>
+  <img src="/images/devices-category-dropdown-part2.png" alt="Gerätekategorie-Dropdown Teil 2 mit weiteren Gerätekategorien" />
+</Frame>
+
+<Frame>
+  <img src="/images/devices-category-dropdown-part3.png" alt="Gerätekategorie-Dropdown Teil 3 mit weiteren Gerätekategorien" />
+</Frame>
+
+Zu den unterstützten Kategorien gehören unter anderem:
+
+| Kategorie | Beschreibung | Verwandtes Modul |
+| :--- | :--- | :--- |
+| **Air Conditioner** (Klimaanlage) | Geräte zur Klimatisierung und Temperatursteuerung eines Zimmers. | [Thermostate & Klima](/de/devices/thermostats) |
+| **Door Locks** (Türschlösser) | Elektronische Türschlösser und andere Geräte für den Zimmerzugang. | [Smart Locks](/de/devices/smart-locks) |
+| **Environment Sensor** (Umweltsensor) | Sensoren zur Erfassung von Raum- und Umgebungswerten. | [Sensoren](/de/devices/sensors) |
+| **Fire Fighting** (Brandschutz) | Vernetzte Geräte und Sensoren für Brandschutzfunktionen. | [Sensoren](/de/devices/sensors) |
+| **Gateways** | Gateways, die lokale Geräte mit der SUITEe-Plattform verbinden. | [Gateways](/de/devices/gateways) |
+| **Household Appliances** (Haushaltsgeräte) | Vernetzte Geräte und Ausstattung innerhalb eines Zimmers. | [Smart Devices](/de/devices/smart-locks) |
+| **Indoor Lighting** (Innenbeleuchtung) | Smarte Beleuchtung und Lichtsteuerungen im Innenbereich. | [Lichter & Schalter](/de/devices/lights-and-switches) |
+| **Kitchen Appliances** (Küchengeräte) | Vernetzte Küchengeräte in Zimmern oder Apartments. | [Smart Devices](/de/devices/smart-locks) |
+| **Meters** (Zähler) | Geräte zur Messung von Energie- oder Verbrauchswerten. | [Energiemanagement](/de/dashboard/energy-management) |
+| **Miscellaneous** (Sonstiges) | Geräte, die keiner spezifischen Hauptkategorie zugeordnet sind. | [Smart Devices](/de/devices/smart-locks) |
+| **Outdoor Lighting** (Außenbeleuchtung) | Smarte Beleuchtung im Außenbereich. | [Lichter & Schalter](/de/devices/lights-and-switches) |
+| **Protection Sensor** (Schutzsensor) | Tür-/Fensterkontakte, Bewegungs- und andere Schutzsensoren. | [Sensoren](/de/devices/sensors) |
+| **Routers** | Netzwerkgeräte zur Bereitstellung der lokalen Konnektivität. | [Gateways](/de/devices/gateways) |
+| **Switches** (Schalter) | Smarte Schalter und Relais zur Steuerung elektrischer Geräte. | [Lichter & Schalter](/de/devices/lights-and-switches) |
+| **Thermostat** | Thermostate und Geräte zur Heizungssteuerung. | [Thermostate](/de/devices/thermostats) |
+| **White Goods** (Weiße Ware) | Vernetzte Haushalts- oder Großgeräte. | [Smart Devices](/de/devices/smart-locks) |
+
+---
+
+### Filter 3 — Gerätetyp
+
+Das dritte Dropdown-Menü **Gerätetyp** ist ein abhängiger Filter:
+
+- Es bleibt inaktiv, bis Sie eine **Gerätekategorie** auswählen.
+- Sobald eine Kategorie ausgewählt wurde, werden die zu dieser Kategorie gehörenden Gerätetypen verfügbar.
+
+Dadurch können Sie beispielsweise zunächst **Door Locks** auswählen und anschließend nach einem bestimmten Schloss-Typ filtern.
+
+---
+
+### Suchleiste
+
+Das Suchfeld ermöglicht die Suche über mehrere Geräteinformationen gleichzeitig. Der Platzhalter lautet:
+
+`Suche nach Name, Kategoriename, Immobilienname, Zimmername`
+
+Sie können unter anderem nach folgenden Informationen suchen:
+
+1. **Gerätename** — z. B. `Klimaanlage` oder `Haupttürschloss`
+2. **Kategoriename** — z. B. `Door Locks`, `Air Conditioner` oder `Gateways`
+3. **Immobilienname** — hilfreich bei mehreren Unterkünften
+4. **Zimmername** — z. B. `UNIT-5`, `UNIT-3` oder `102`
+
+---
+
+### Aktualisieren-Schaltfläche
+
+Direkt rechts neben dem Sucheingabefeld befindet sich das kreisförmige **Aktualisieren-Symbol `↻`**.
+
+Nutzen Sie diese Schaltfläche, um die angezeigten Geräteinformationen neu zu laden. Dies ist beispielsweise hilfreich:
+
+- Nach einem Batteriewechsel
+- Nach dem Neustart eines Gateways
+- Wenn sich der Online-/Offline-Status eines Geräts geändert haben sollte
+- Wenn Sie überprüfen möchten, ob aktuelle Geräteinformationen bereits angezeigt werden
+
+---
+
+## Geräteinventartabelle
+
+Die Tabelle zeigt jedes Gerät an, das den aktiven Filterkriterien entspricht, zusammen mit den wichtigsten Betriebsinformationen:
+
+| Spalte | Beschreibung |
+| :--- | :--- |
+| **Zimmername** | Das Zimmer oder die Einheit, in der das Gerät installiert ist. Über die Sortierfunktion können Sie die Liste nach Zimmer ordnen. |
+| **Gerät** | Der registrierte Name des Geräts und seine zugehörige Kategorie. |
+| **Batterie** | Der aktuelle Akkustand bei batteriebetriebenen Geräten. Bei Geräten ohne Batterie kann dieses Feld leer sein. |
+| **Verbindung** | Zeigt an, ob das Gerät aktuell **Online** oder **Offline** ist. |
+| **Zustand** | Zeigt den aktuellen funktionalen Zustand oder Betriebsmodus des Geräts, sofern verfügbar. |
+| **Control** | Öffnet die für diesen Gerätetyp verfügbaren Steuerungs- und Aktionsmöglichkeiten. |
+
+---
+
+## Gerätedetailansicht und Fernaktionen
+
+Ein Klick auf ein Gerät oder dessen **Control**-Schaltfläche öffnet die Detailansicht dieses Geräts.
+
+<Frame>
+  <img src="/images/devices-detail-actions.png" alt="Gerätedetailseite eines Türschlosses mit Zurück zu Geräten, Gerätename, Zimmername, Geräteaktionen, Akkustand und Schaltfläche zum Entriegeln" />
+</Frame>
+
+### Kopfzeile und Navigation
+
+- **← Zurück zu Geräten** — Führt zurück zur Hauptseite [Geräte](/de/dashboard/devices).
+- **Gerätename & Bearbeiten** — Zeigt den Namen des Geräts. Falls verfügbar, können Sie über das Stift-Symbol den Anzeigenamen bearbeiten.
+- **Netzwerkstatus** — Zeigt an, ob das Gerät aktuell **Online** oder **Offline** ist.
+- **Zimmerzuweisung** — Zeigt, welchem [Zimmer](/de/dashboard/rooms) das Gerät zugeordnet ist.
+
+---
+
+### Detail-Tabs
+
+Die Gerätedetailansicht kann zwei operative Bereiche enthalten:
+
+1. **Geräteaktionen** — Zeigt den aktuellen Gerätestatus und die für diesen Gerätetyp verfügbaren Aktionen.
+2. **Geräteprotokoll** — Zeigt historische Ereignisse und Statusänderungen dieses Geräts.
+
+Relevante Geräteereignisse können ebenfalls im zentralen [Aktivitätszentrum](/de/dashboard/activity-centre) erscheinen.
+
+---
+
+### Geräteaktions-Karte
+
+Unter **Geräteaktionen** werden die verfügbaren Statusinformationen und Steuerungsmöglichkeiten des ausgewählten Geräts angezeigt.
+
+Je nach Gerätetyp können hierzu gehören:
+
+- Gerätename und Klassifizierung
+- Online-/Offline-Status
+- Akkustand
+- Gerätezustand
+- Verfügbare Fernaktionen
+
+Die verfügbaren Bedienelemente unterscheiden sich je nach Gerätetyp. Ein Türschloss bietet beispielsweise andere Aktionen als ein Thermostat oder Sensor.
+
+---
+
+### Überwachung des Akkustands
+
+Bei batteriebetriebenen Geräten wird der aktuelle Akkustand als Prozentwert angezeigt.
+
+<Info>
+  Geräte mit permanenter Stromversorgung zeigen möglicherweise keinen Akku-Prozentsatz an.
+</Info>
+
+Wenn der Akkustand eines Geräts niedrig ist, sollte das Gerät rechtzeitig überprüft und die Batterie gegebenenfalls ausgetauscht werden. Dies ist besonders bei Türschlössern wichtig, damit der Gästezugang zuverlässig funktioniert.
+
+<Tip>
+  Nutzen Sie zusätzlich die Anzeige **Niedriger Akkustand** auf der [Dashboard-Übersicht](/de/dashboard/overview), um Geräte zu erkennen, die Aufmerksamkeit benötigen.
+</Tip>
+
+---
+
+### Fernaktion — Tür entriegeln
+
+Bei unterstützten smarten Türschlössern steht in der Geräteansicht eine Schaltfläche wie **Unlock door** bzw. **Tür entriegeln** zur Verfügung.
+
+Ein Klick darauf sendet einen Fernentriegelungsbefehl an das ausgewählte Schloss. Wenn das Gerät online und erreichbar ist, wird die Tür entriegelt.
+
+Typische Anwendungsfälle sind:
+
+- **Unterstützung für Gäste** — Ein Gast benötigt Hilfe beim Zugang zum Zimmer.
+- **Reinigung und Wartung** — Personal benötigt vorübergehend Zugang.
+- **Operative Unterstützung** — Ein berechtigter Mitarbeiter öffnet eine Tür aus der Ferne.
+
+<Warning>
+  **Tür entriegeln** ist eine direkte Zugriffsaktion. Prüfen Sie vor dem Auslösen immer, welches Gerät und welches Zimmer ausgewählt sind und wer den Zugang anfordert.
+</Warning>
+
+---
+
+## Miteinander verknüpfte Dashboard-Module
+
+Das Modul zur Geräteverwaltung ist eng mit dem Rest der SUITEe-Plattform verbunden:
+
+- **[Zimmer](/de/dashboard/rooms)** — Zimmer müssen vorhanden sein, bevor ihnen Geräte zugeordnet werden können.
+- **[Dashboard-Übersicht](/de/dashboard/overview)** — Zeigt zusammengefasste Gerätezahlen und Gerätestatus.
+- **[Aktivitätszentrum](/de/dashboard/activity-centre)** — Zeigt relevante Geräte- und Zugangsereignisse.
+- **[Zugangsverwaltung](/de/dashboard/access-management)** — Verknüpft unterstützte Türschlösser mit digitalen Zugangsberechtigungen.
+- **[Energiemanagement](/de/dashboard/energy-management)** — Nutzt kompatible Klima- und Energiegeräte für Automatisierungen.
+- **[Smart Locks](/de/devices/smart-locks)** — Weitere Informationen zu den von SUITEe unterstützten smarten Türschlössern.

@@ -1,0 +1,77 @@
+---
+title: "Vor der Ankunft — Pre-Check-in"
+description: "Der automatisierte Ablauf zwischen der Erstellung einer Buchung und der Ankunft des Gastes — einschließlich Datensynchronisierung, PIN-Erstellung und Gästekommunikation."
+---
+
+Die Gästereise in SUITEe beginnt unmittelbar in dem Moment, in dem eine Buchung in Ihrem Property Management System (PMS) erstellt wird. Die Automatisierung vor der Ankunft stellt sicher, dass der digitale Zugang und das Raumklima vollständig vorbereitet sind, wenn der Gast in der Unterkunft eintrifft — ohne manuelles Eingreifen der Mitarbeiter.
+
+---
+
+## 1. Empfang der Buchungsdaten
+
+Der gesamte Automatisierungsablauf wird ausgelöst, sobald SUITEe eine Buchung erhält:
+
+1. **Der Gast bucht**: Eine Reservierung wird über ein OTA (z. B. Booking.com oder Airbnb), Ihre eigene Website oder manuell durch Mitarbeiter in Ihrem PMS erstellt.
+2. **Echtzeit-Webhook**: Das PMS sendet unmittelbar einen Live-Webhook mit den Reservierungsdaten an SUITEe. Dazu gehören Gastname, Kontaktdaten, Zimmerzuweisung und Aufenthaltsdaten.
+3. **Verarbeitung über die Warteschlange**: SUITEe empfängt den Webhook über eine sichere RabbitMQ-Warteschlange. Anhand der `pms_booking_id` stellt das System sicher, dass jede Buchung genau einmal verarbeitet und eine doppelte Verarbeitung verhindert wird.
+
+<Info>
+  Falls ein Live-Webhook aufgrund eines Netzwerkausfalls nicht empfangen wird, ruft SUITEe die fehlende Reservierung über den **45-minütigen Cron-Backfill** automatisch über die PMS-API ab. Dadurch wird sichergestellt, dass keine Reservierung verloren geht.
+</Info>
+
+---
+
+## 2. Automatische Erstellung der Zugangsdaten
+
+Sobald die Buchung erfolgreich in der Datenbank gespeichert wurde, beginnt der **Booking Post-Processor Service** unmittelbar mit der Vorbereitung des physischen Zugangs für den Gast:
+
+- **Tuya PIN-Erstellung**: Das System kommuniziert mit der Tuya IoT Cloud, um einen eindeutigen, zeitlich begrenzten PIN-Code speziell für das smarte Schloss des dem Gast zugewiesenen Zimmers bereitzustellen.
+- **Gültigkeitszeitraum**: Der PIN wird so programmiert, dass er exakt zur geplanten Check-in-Zeit aktiv wird und automatisch zur Check-out-Zeit abläuft.
+- **Vorbereitung des mobilen Schlüssels**: Für die Gäste-Web-App wird ein sicherer, eindeutiger UUID-Link erstellt, über den der Gast die Tür mit seinem Smartphone öffnen kann.
+
+---
+
+## 3. Gästekommunikation vor der Ankunft
+
+Nachdem die Zugangsdaten erstellt wurden, versendet das System automatisch die entsprechenden Informationen an den Gast. SUITEe verwendet individuell konfigurierte E-Mail-Vorlagen über SendGrid, um diese wichtigen Informationen bereitzustellen.
+
+<Frame>
+  <img src="/images/email-template-editor-overview.png" alt="E-Mail-Vorlageneditor in SUITEe mit dynamischen Variablen für die Gästekommunikation" />
+</Frame>
+
+Die E-Mail vor der Ankunft enthält typischerweise:
+
+- **Link zur Gäste-Web-App**: Eine sichere URL, über die der Gast die Gäste-Web-App mit einem Klick direkt im mobilen Browser öffnen kann — ohne App-Download.
+- **PIN-Code**: Der numerische Backup-Code, den der Gast direkt über das Tastenfeld des Türschlosses eingeben kann.
+- **Informationen zur Unterkunft**: Hinweise zum Gebäudezugang, WLAN-Passwörter und Informationen zum Parken.
+- **Digitale Registrierung (optional)**: Ein Link, über den der Gast seine Registrierungsformulare bereits vor der Ankunft online ausfüllen kann.
+
+---
+
+## 4. Vorkonditionierung des Raumklimas
+
+Wenn sich die Check-in-Zeit nähert, beginnt das Energiemanagementsystem von SUITEe automatisch mit der Vorbereitung des Zimmers:
+
+- **Aktivierung des Thermostats**: Das smarte Thermostat des Zimmers wechselt vom Eco-Modus in den Gästemodus.
+- **Zieltemperatur**: Das System beginnt, den Raum auf die für Ihre Unterkunft konfigurierte komfortable Standardtemperatur zu heizen oder zu kühlen.
+- **Optimales Timing**: Das System berechnet den genauen Zeitpunkt, zu dem die Klimatisierung beginnen muss, damit die gewünschte Temperatur genau dann erreicht wird, wenn der Gast voraussichtlich das Zimmer betritt. Dadurch wird in den Stunden davor Energie gespart.
+
+---
+
+## Was Mitarbeiter im Dashboard sehen
+
+Während dieser Phase vor der Ankunft erscheint die Buchung in der Tabelle unter [Buchung](/de/dashboard/booking). Mitarbeiter können den automatisierten Ablauf anhand folgender Informationen überprüfen:
+
+- **Zugangsstatus**: Sollte anzeigen, dass der Zugang erfolgreich erstellt wurde, z. B. `Zugang generiert`.
+- **Reg.-Status (Registrierungsstatus)**: Zeigt an, ob der Gast seine Online-Registrierung bereits abgeschlossen hat.
+- **Aktivitätscenter**: Das [Aktivitätscenter](/de/dashboard/activity-centre) protokolliert jeden Schritt dieses Ablaufs — vom eingehenden Webhook bis zur erfolgreichen PIN-Erstellung auf dem Schloss.
+
+<CardGroup cols={2}>
+  <Card title="Check-in, Aufenthalt & Check-out" icon="person-walking-luggage" href="/de/guest-journey/check-in-and-stay">
+    Setzen Sie die Gästereise fort — von der Ankunft bis zur Abreise.
+  </Card>
+
+  <Card title="PMS-Integration" icon="plug" href="/de/guest-journey/pms-integration">
+    Erfahren Sie, wie die Daten von Ihrem PMS zu SUITEe übertragen werden.
+  </Card>
+</CardGroup>

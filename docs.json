@@ -90,7 +90,70 @@
           {
             "group": "Erste Schritte",
             "pages": [
-              "de/index"
+              "de/index",
+              "de/quickstart",
+              "de/getting-started/how-it-works",
+              "de/getting-started/key-benefits"
+            ]
+          },
+          {
+            "group": "Konto & Login",
+            "pages": [
+              "de/account/login",
+              "de/account/forgot-password",
+              "de/account/otp-verification",
+              "de/account/settings"
+            ]
+          },
+          {
+            "group": "Admin-Dashboard",
+            "pages": [
+              "de/dashboard/overview",
+              "de/dashboard/activity-centre",
+              "de/dashboard/rooms",
+              "de/dashboard/booking",
+              "de/dashboard/devices",
+              "de/dashboard/access-management",
+              "de/dashboard/users-management",
+              "de/dashboard/email-services",
+              "de/dashboard/explore",
+              "de/dashboard/settings",
+              "de/dashboard/properties-and-units",
+              "de/dashboard/reservations",
+              "de/dashboard/energy-management"
+            ]
+          },
+          {
+            "group": "Smarte Geräte",
+            "pages": [
+              "de/devices/smart-locks",
+              "de/devices/thermostats",
+              "de/devices/sensors",
+              "de/devices/gateways",
+              "de/devices/lights-and-switches"
+            ]
+          },
+          {
+            "group": "Gästereise & PMS",
+            "pages": [
+              "de/guest-journey/before-arrival",
+              "de/guest-journey/check-in-and-stay",
+              "de/guest-journey/pms-integration"
+            ]
+          },
+          {
+            "group": "Einrichtung & Sicherheit",
+            "pages": [
+              "de/operations/installation",
+              "de/operations/security"
+            ]
+          },
+          {
+            "group": "Support & Referenz",
+            "pages": [
+              "de/support/troubleshooting",
+              "de/support/faq",
+              "de/support/glossary"
             ]
           }
         ]

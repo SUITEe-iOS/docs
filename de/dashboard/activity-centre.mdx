@@ -1,0 +1,254 @@
+---
+title: "Aktivitätszentrum"
+description: "Überwachen und verfolgen Sie jedes Ereignis in Ihrer Unterkunft — Buchungen, Gerätestatus und Zugangsereignisse — alles in einem Echtzeit-Feed."
+---
+
+Das **Aktivitätszentrum** ist das vollständige Audit- und Ereignisprotokoll für Ihre gesamte Unterkunft. Während die [Dashboard-Übersicht](/de/dashboard/overview#rechtes-panel--aktivitat-aktivitats-feed) eine kurze Vorschau der letzten Aktivitäten zeigt, bietet das Aktivitätszentrum die **vollständige, ungefilterte Ansicht** — jedes Buchungsereignis, jede Änderung des Gerätezustands und jede Zugangsaktion, die von SUITEe erfasst wurde, nummeriert und durchsuchbar.
+
+Navigieren Sie zum Aktivitätszentrum, indem Sie auf die Benachrichtigungsglocke in der Kopfzeile des Dashboards klicken und **Alle Benachrichtigungen anzeigen** auswählen, oder indem Sie direkt [hotel.suite-e.com/activity-center](https://hotel.suite-e.com/activity-center) aufrufen.
+
+---
+
+## Seitenkopf, Statistiken und Filter
+
+<Frame>
+  <img src="/images/activity-centre-overview.png" alt="Aktivitätszentrum Seitenkopf mit Titel, Untertitel, Alle als gelesen markieren Schaltfläche und fünf Statistikkarten: Alle Aktivitäten 58, Ungelesen 48, Kritisch 0, Warnungen 0, Informativ 58" />
+</Frame>
+
+### Seitentitel und Untertitel
+
+Ganz oben auf der Seite lautet die Überschrift **Aktivitätszentrum** mit dem Untertitel:
+
+*Alle Aktivitäten Ihrer Immobilie überwachen und verfolgen*
+
+Dies bestätigt, dass Sie das vollständige unterkunftsweite Audit-Protokoll für die aktuell aktive Unterkunft anzeigen, die im Auswähler oben links angezeigt wird (z. B. **Property No-PMS**).
+
+---
+
+### Alle als gelesen markieren
+
+In der oberen rechten Ecke des Seitenkopfs befindet sich die Schaltfläche **Alle als gelesen markieren**.
+
+Ein Klick auf diese Schaltfläche **markiert sofort jede ungelesene Benachrichtigung und jeden Aktivitätseintrag als gelesen** im gesamten Aktivitätszentrum. Der Zähler **Ungelesen** wird auf `0` zurückgesetzt.
+
+Nutzen Sie dies, wenn:
+
+- Sie alle ausstehenden Warnmeldungen überprüft haben und das Badge für ungelesene Nachrichten löschen möchten
+- Sie eine Schicht übergeben und möchten, dass das nachfolgende Team mit einer leeren Liste beginnt
+- Sie den Benachrichtigungszähler auf dem Glocken-Symbol in der Kopfzeile zurücksetzen möchten
+
+<Warning>
+  Diese Aktion kann nicht rückgängig gemacht werden. Sobald alle Einträge als gelesen markiert sind, wird der Zähler für ungelesene Einträge zurückgesetzt. Nutzen Sie dies nur, wenn Sie die ausstehenden Einträge tatsächlich überprüft haben oder sie bewusst als gelesen markieren möchten.
+</Warning>
+
+---
+
+### Statistikkarten
+
+Direkt unter dem Titel befinden sich **fünf Zusammenfassungskarten**, die Ihnen eine sofortige Übersicht der Aktivitäten nach Kategorie und Lesestatus geben. Jede Karte ist interaktiv — ein Klick darauf filtert die darunter liegende Aktivitätsliste so, dass nur diese Kategorie angezeigt wird.
+
+| Karte | Anzahl | Was angezeigt wird |
+| :--- | :--- | :--- |
+| **Alle Aktivitäten** | `58` | Die Gesamtzahl aller erfassten Aktivitätsereignisse für diese Unterkunft über alle Kategorien hinweg. Dies ist die Standardansicht. Die aktuell aktive Filterkarte wird mit einem **orangefarbenen Rahmen** angezeigt. |
+| **Ungelesen** | `48` | Aktivitätseinträge, die noch nicht angesehen oder als gelesen markiert wurden. Diese Zahl entspricht dem Badge auf der Benachrichtigungsglocke in der Kopfzeile. |
+| **Kritisch** | `0` | Ereignisse mit hoher Priorität, die sofortige Aufmerksamkeit erfordern — z. B. ein Gerät, das unerwartet offline geht, wiederholte fehlgeschlagene Zugriffsversuche oder ein Fehler bei der Systemintegration. |
+| **Warnungen** | `0` | Warnmeldungen mittlerer Priorität — z. B. wenn der Akku eines Geräts unter einen sicheren Schwellenwert fällt oder eine Verzögerung bei der PMS-Synchronisation auftritt. |
+| **Informativ** | `58` | Routineereignisse mit niedriger Priorität — z. B. neu erstellte Buchungen, generierte Zugangscodes oder Gäste-Check-ins. |
+
+<Info>
+  Im gezeigten Beispiel sind alle 58 Aktivitäten **Informativ** und keine sind **Kritisch** oder **Warnungen** — die Unterkunft läuft normal ohne dringende Probleme. Wenn der Zähler **Kritisch** über `0` steigt, untersuchen Sie dies sofort.
+</Info>
+
+---
+
+### Filterleiste — Datum, Kategorie, Priorität und Status
+
+<Frame>
+  <img src="/images/activity-centre-filters.png" alt="Aktivitätszentrum Filterleiste mit Datum- und Uhrzeitbereich, Kategorien, Alle Prioritäten, Alle Status Dropdowns, Suchleiste, Zurücksetzen und Filter anwenden Schaltflächen sowie Buchung, Geräte, Zugang Kategorie-Tags" />
+</Frame>
+
+Unter den Statistikkarten befindet sich eine **zweizeilige Filter-Werkzeugleiste**, mit der Sie die Aktivitätsliste genau auf das einschränken können, was Sie benötigen. Alle Filter arbeiten zusammen — Sie können sie kombinieren.
+
+#### Datum- und Uhrzeitbereich
+
+Der erste Filter (Uhr-Symbol, links) öffnet eine Datum-Uhrzeit-Auswahl, in der Sie ein **benutzerdefiniertes Zeitfenster** definieren — ein Start- und Enddatum sowie die Uhrzeit. Die Liste zeigt nur Ereignisse an, die innerhalb dieses Zeitraums aufgetreten sind.
+
+Nutzen Sie dies, wenn:
+
+- Sie einen Vorfall zu einem bestimmten Zeitpunkt untersuchen (z. B. wer die Tür um 02:00 Uhr entriegelt hat)
+- Sie Aktivitäten während des Aufenthalts eines bestimmten Gastes überprüfen
+- Sie einen Schichtbericht für einen bestimmten Zeitraum erstellen
+
+#### Kategorien
+
+Das Dropdown-Menü **Kategorien** filtert nach Ereigniskategorie. Zu den Optionen gehören:
+
+- **Buchung** — Erstellung, Änderung oder Stornierung von Buchungen
+- **Geräte** — Gerätestatusänderungen, Akkuwarnungen, Online-/Offline-Ereignisse
+- **Zugang** — Tür-Entriegelungsereignisse, Erstellung von Zugangscodes, Ausgabe digitaler Schlüssel an Gäste
+
+#### Prioritätsfilter (Alle Prioritäten)
+
+Filtert nach Schweregrad:
+
+| Option | Bedeutung |
+| :--- | :--- |
+| **Alle Prioritäten** | Alle Schweregrade anzeigen (Standard) |
+| **Kritisch** | Nur kritische Ereignisse anzeigen |
+| **Warnungen** | Nur Warnereignisse anzeigen |
+| **Informativ** | Nur informative Ereignisse anzeigen |
+
+#### Statusfilter (Alle Status)
+
+Filtert nach Lese-/Ungelesen-Status:
+
+| Option | Bedeutung |
+| :--- | :--- |
+| **Alle Status** | Alles anzeigen, unabhängig vom Lesestatus (Standard) |
+| **Ungelesen** | Nur ungelesene Einträge anzeigen |
+| **Gelesen** | Nur bereits gelesene Einträge anzeigen |
+
+---
+
+### Filterleiste — Suche, Zurücksetzen, Anwenden und Kategorie-Tags
+
+#### Suchleiste (Aktivitäten suchen)
+
+Das breite Sucheingabefeld mit dem Platzhalter **Aktivitäten suchen...** ermöglicht eine Volltextsuche über alle Aktivitätseinträge nach:
+
+- Gastname (z. B. "John")
+- Zimmer- oder Einheitsname (z. B. "UNIT-3", "Parkplatz1")
+- Gerätename (z. B. "Haupttürschloss")
+- Buchungs-ID
+- Jedem Teil der Aktivitätsbeschreibung
+
+Die Ergebnisse verfeinern sich dynamisch während der Eingabe.
+
+#### Zurücksetzen
+
+Die Schaltfläche **Zurücksetzen** löscht alle aktiven Filter auf einmal — Datumsbereich, Kategorie, Priorität, Status und Suchtext — und setzt die Liste auf ihre vollständige Standardansicht zurück.
+
+#### Filter anwenden
+
+Die orangefarbene Schaltfläche **Filter anwenden** wendet alle aktuell ausgewählten Filterkriterien gleichzeitig an. Stellen Sie zuerst alle Filter ein und klicken Sie dann einmal, um die kombinierte Suche auszuführen.
+
+<Tip>
+  Stellen Sie zuerst alle Ihre Filterkriterien ein (Datumsbereich, Kategorie, Priorität, Status) und klicken Sie dann einmal auf **Filter anwenden**. Dies ist effizienter, als Filter einzeln anzuwenden.
+</Tip>
+
+#### Kategorie-Schnellfilter-Tags
+
+Unten rechts in der Filterzeile befinden sich drei **Kategorie-Tag-Schaltflächen** für das Filtern mit einem Klick:
+
+| Tag | Symbol | Was gefiltert wird |
+| :--- | :--- | :--- |
+| **Buchung** | Kalender-Symbol (Türkis) | Nur Buchungsereignisse — neue Reservierungen, Check-ins, Check-outs, Änderungen, Stornierungen |
+| **Geräte** | Geräte-Symbol (Blau) | Nur Geräteereignisse — Online-/Offline-Änderungen, Akkuwarnungen, Firmware-Updates, Sensorauslösungen |
+| **Zugang** | Schlüssel-Symbol (Orange) | Nur Zugangsereignisse — Tür-Entriegelungen, Code-Erstellung, digitale Gästeschlüssel, Admin-PIN-Nutzung |
+
+Klicken Sie auf ein beliebiges Tag, um sofort zu filtern. Klicken Sie erneut auf das aktive Tag, um den Filter zu entfernen.
+
+---
+
+## Aktivitätslistentabelle
+
+<Frame>
+  <img src="/images/activity-centre-activity-list.png" alt="Aktivitätszentrum Listentabelle mit Aktivitätsdetails, Kategorie, Unterkategorie, Zimmer oder Standort, Benutzer, Quelle, Details, Auslöser-Zeit und Priorität" />
+</Frame>
+
+Unterhalb der Filter-Werkzeugleiste befindet sich die **Aktivitätslistentabelle**. Jede Zeile entspricht einem erfassten Ereignis. Die Tabelle zeigt standardmäßig 10 Zeilen pro Seite an (anpassbar über **Zeilen pro Seite**).
+
+---
+
+### Tabellenspalten
+
+| Spalte | Was angezeigt wird | Vollständiges Detail |
+| :--- | :--- | :--- |
+| **Aktivitätsdetails** | Primäre Beschreibung des Ereignisses | Zeigt den **Ereignistitel** in Fettdruck (z. B. **Neue Buchung erstellt**) und darunter einen vollständigen Satz, der beschreibt, was passiert ist. Unter der Beschreibung können interne Ereignistyp-Tags wie `booking` oder `booking-created` erscheinen. |
+| **Kategorie** | Übergeordnete Kategorie des Ereignisses | Wird als farbiges Badge angezeigt: **Buchung**, **Geräte** oder **Zugang**. |
+| **Unterkategorie** | Spezifischer Ereignis-Untertyp | Eine detailliertere Bezeichnung — z. B. **Booking Created**, **Booking Modified**, **Door Unlocked**, **Device Offline** oder **Code Generated**. |
+| **Zimmer / Standort** | Das Zimmer oder der Bereich, in dem das Ereignis aufgetreten ist | Name der Einheit oder des Standorts. Verlinkt zur entsprechenden Einheit unter [Unterkünfte & Einheiten](/de/dashboard/properties-and-units). |
+| **Benutzer** | Wer das Ereignis ausgelöst hat | Zeigt den Benutzer mit Avatar bzw. Initialen und Namen an. Bei automatisierten Systemereignissen kann hier ein System- oder Integrationsname erscheinen. |
+| **Quelle** | Das System oder die Integration, die das Ereignis generiert hat | Identifiziert, woher das Ereignis stammt — beispielsweise direkt aus SUITEe oder aus einem verbundenen PMS. |
+| **Details** | Zusätzliche Ereignis-Metadaten | Eine Vorschau zusätzlicher Informationen zum Ereignis. |
+| **Auslöser-Zeit** | Exakter Zeitstempel | Datum und Uhrzeit, zu denen SUITEe das Ereignis registriert hat. |
+| **Priorität** | Schweregrad des Ereignisses | **Kritisch**, **Warnungen** oder **Informativ**. |
+
+---
+
+### Zeile lesen — Beispiel-Aufschlüsselung
+
+Betrachten wir beispielhaft eine Zeile mit einer neu erstellten Buchung:
+
+| Feld | Wert | Bedeutung |
+| :--- | :--- | :--- |
+| Aktivitätsdetails | **Neue Buchung erstellt** · *"Neue Buchung für John Etwoeiovgnehno in Parkplatz1 erstellt"* · Tags: `booking`, `booking-created` | Eine neue Reservierung wurde für den Gast erstellt und der Einheit Parkplatz1 zugewiesen |
+| Kategorie | **Buchung** | Buchungsbezogenes Ereignis |
+| Unterkategorie | **Booking Created** | Eine neue Buchung wurde erstellt |
+| Zimmer / Standort | **Parkplatz1** — Property No-PMS | Die Buchung gilt für die Einheit Parkplatz1 |
+| Benutzer | **KB** — Kallola Bal | Benutzer, der die Aktion ausgelöst hat |
+| Quelle | **SUITEe-NoPMS** | Direkt in SUITEe erstellt — kein externes PMS |
+| Priorität | **Informativ** | Routineereignis — kein Handeln erforderlich |
+
+<Info>
+  Jede Buchung, die hier erscheint, ist auch im [Panel Buchungen auf dem Dashboard](/de/dashboard/overview#panel-buchungen-reservierungskalender) und in vollem Detail auf der Seite [Reservierungen](/de/dashboard/reservations) sichtbar. Nutzen Sie die **Buchungs-ID** aus den Reservierungen zur Abstimmung mit den Einträgen im Aktivitätszentrum.
+</Info>
+
+---
+
+### Kategorie-Schnellfilter-Tags
+
+Die drei Tag-Schaltflächen wiederholen sich oben rechts im Listenbereich für einen schnellen Zugriff:
+
+| Tag | Farbe | Was gefiltert wird | Verwandte Seite |
+| :--- | :--- | :--- | :--- |
+| **Buchung** | Türkis / Kalender-Symbol | Buchungsereignisse — neue Reservierungen, Check-ins, Änderungen | [Reservierungen](/de/dashboard/reservations) |
+| **Geräte** | Blau / Geräte-Symbol | Geräteereignisse — Online-/Offline-Änderungen, Akkuwarnungen, Sensorauslösungen | [Smart Devices](/de/devices/smart-locks) |
+| **Zugang** | Orange / Schlüssel-Symbol | Zugangsereignisse — Tür-Entriegelungen, Code-Erstellung, Entsperren-Aktionen | [Zugangsverwaltung](/de/dashboard/access-management) |
+
+Klicken Sie auf ein beliebiges Tag, um sofort zu filtern. Klicken Sie erneut darauf, um zur vollständigen Liste zurückzukehren.
+
+---
+
+### Seitennummerierung
+
+Ganz unten in der Liste befinden sich zwei Bedienelemente:
+
+#### Zeilen pro Seite
+
+Das Dropdown-Menü **Zeilen pro Seite: 10** unten links steuert, wie viele Zeilen pro Seite angezeigt werden. Häufige Optionen sind `10`, `25` und `50`. Erhöhen Sie diesen Wert, um mehr Ereignisse auf einmal zu sehen, wenn Sie eine Reihe zusammenhängender Vorfälle untersuchen.
+
+#### Seitennavigation
+
+Die Anzeige **1–10 von 58** unten rechts informiert Sie darüber:
+
+- Angezeigt werden die Zeilen **1 bis 10**
+- **58 Einträge insgesamt** entsprechen dem aktuellen Filter
+- Nutzen Sie die Pfeile `<` und `>`, um zwischen den Seiten zu navigieren
+
+Mit `pageSize=10` und 58 Einträgen gibt es insgesamt **6 Seiten**. Die URL wird automatisch aktualisiert — z. B. `?page=2&pageSize=10`.
+
+<Tip>
+  So untersuchen Sie einen bestimmten Vorfall: Kombinieren Sie den **Datum- und Uhrzeitbereich** mit dem Tag **Zugang**, um die Zugangsereignisse in einem bestimmten Fenster einzugrenzen, und stellen Sie dann **Zeilen pro Seite** auf 50 ein, um alles ohne Umblättern zu sehen.
+</Tip>
+
+---
+
+## Wie das Aktivitätszentrum mit dem Dashboard verbunden ist
+
+Das Aktivitätszentrum ist direkt mit mehreren anderen Plattformbereichen verknüpft:
+
+<CardGroup cols={2}>
+  <Card title="Dashboard-Übersicht" icon="house" href="/de/dashboard/overview">
+    Das Panel Aktivität auf dem Haupt-Dashboard zeigt die aktuellsten Aktivitätseinträge. Klicken Sie auf **Alle Benachrichtigungen anzeigen**, um das vollständige Aktivitätszentrum zu öffnen.
+  </Card>
+  <Card title="Zugangsverwaltung" icon="key" href="/de/dashboard/access-management">
+    Zugangsereignisse wie Tür-Entriegelungen, Code-Erstellung und Entsperren-Aktionen erscheinen im Aktivitätszentrum unter der Kategorie **Zugang**.
+  </Card>
+  <Card title="Reservierungen" icon="calendar-check" href="/de/dashboard/reservations">
+    Jede neue Buchung, die erstellt oder aus Ihrem PMS synchronisiert wird, generiert einen entsprechenden Eintrag im Aktivitätszentrum unter der Kategorie **Buchung**.
+  </Card>
+  <Card title="Smart Devices" icon="microchip" href="/de/devices/smart-locks">
+    Gerätezustandsänderungen — Schlösser, die offline gehen, sinkende Akkustände oder ausgelöste Sensoren — erscheinen unter der Kategorie **Geräte**.
+  </Card>
+</CardGroup>

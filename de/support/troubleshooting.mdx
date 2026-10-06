@@ -1,0 +1,118 @@
+---
+title: "Fehlerbehebung"
+description: "Schnelle Diagnose-Checklisten für die häufigsten SUITEe-Probleme — Türzugang, Offline-Geräte, Temperaturprobleme, fehlende Zugangscodes und PMS-Synchronisierung."
+---
+
+Diese Seite bietet Schritt-für-Schritt-Checklisten zur Diagnose der häufigsten Probleme bei der Nutzung von SUITEe. Gehen Sie die Schritte der Reihe nach durch — die meisten Probleme lassen sich bereits mit den ersten Prüfungen beheben.
+
+## Gast kann seine Tür nicht öffnen
+
+Dies ist die häufigste Support-Anfrage. Gehen Sie folgende Checkliste durch:
+
+| Schritt | Was prüfen? | Maßnahme |
+| :--- | :--- | :--- |
+| 1 | Verwendet der Gast den **richtigen PIN-Code oder mobilen Schlüssel**? | Prüfen Sie, ob der Code mit dem gesendeten Code übereinstimmt |
+| 2 | Hat die **Reservierung bereits begonnen**? Prüfen Sie die Check-in-Zeit. | Wenn die Check-in-Zeit noch nicht erreicht ist, steht die Aktivierung des Zugangs noch aus |
+| 3 | Ist die **Reservierung noch aktiv**? | Prüfen Sie, ob sie im PMS storniert wurde |
+| 4 | Ist das **Schloss online**? | Prüfen Sie den Gerätestatus im Dashboard |
+| 5 | Hat das Schloss **ausreichend Batteriekapazität**? | Prüfen Sie den Batteriestand im Dashboard |
+| 6 | Bitten Sie den Gast, es **erneut zu versuchen** | Manchmal behebt ein erneuter Versuch kurzfristige Verbindungsprobleme |
+| 7 | **Neuen Zugangscode erstellen** | Erstellen Sie über das Dashboard einen neuen PIN |
+| 8 | **Manuelle Schlüsselöffnung verwenden** | Verwenden Sie als letzte Möglichkeit den physischen Backup-Schlüssel |
+
+<Warning>
+  Wenn ein Gast ausgesperrt ist und nicht warten kann, verwenden Sie sofort die **manuelle Schlüsselöffnung**, damit der Gast sein Zimmer betreten kann. Analysieren Sie das technische Problem anschließend.
+</Warning>
+
+---
+
+## Ein Gerät wird im Dashboard als „Offline“ angezeigt
+
+Wenn ein Gerät wie Schloss, Thermostat oder Sensor als offline angezeigt wird:
+
+| Schritt | Was prüfen? | Maßnahme |
+| :--- | :--- | :--- |
+| 1 | Ist das **Gateway online**? | Alle Geräte kommunizieren über das Gateway — ist es offline, werden auch alle Geräte als offline angezeigt |
+| 2 | Funktioniert das **WLAN/Internet** der Unterkunft? | Testen Sie die Internetverbindung vor Ort |
+| 3 | Ist die **Batterie des Geräts leer**? | Prüfen Sie bei batteriebetriebenen Geräten den Batteriestand |
+| 4 | Befindet sich das Gerät **in Reichweite** des Gateways? | Stellen Sie sicher, dass sich das Gerät innerhalb des Abdeckungsbereichs des Gateways befindet |
+| 5 | **Gateway neu starten** | Schalten Sie es aus, warten Sie 30 Sekunden und schalten Sie es wieder ein |
+| 6 | **SUITEe Support kontaktieren** | Wenn das Problem nach allen Prüfungen weiterhin besteht |
+
+<Info>
+  Das Gateway ist der häufigste zentrale Ausfallpunkt. Wenn mehrere Geräte gleichzeitig offline gehen, ist fast immer das Gateway die Ursache. Prüfen Sie es daher zuerst.
+</Info>
+
+---
+
+## Raumtemperatur lässt sich nicht anpassen
+
+Wenn ein Gast oder Mitarbeiter meldet, dass sich die Raumtemperatur nicht verändert:
+
+| Schritt | Was prüfen? | Maßnahme |
+| :--- | :--- | :--- |
+| 1 | Ist das **Thermostat online**? | Prüfen Sie den Gerätestatus im Dashboard |
+| 2 | Ist ein **Fenster geöffnet**? | Der Fenstersensor könnte die Heizung/Kühlung pausiert haben |
+| 3 | In welchem **Modus** befindet sich das Zimmer? | Gästemodus oder Eco-Modus — die Zieltemperatur unterscheidet sich je nach Modus |
+| 4 | Wurde die Temperatur **manuell geändert**? | Prüfen Sie, ob jemand die Temperatur direkt am physischen Gerät angepasst hat |
+| 5 | Funktioniert der **Präsenzsensor**? | Wenn er offline ist, erkennt das System möglicherweise nicht, dass sich jemand im Zimmer befindet |
+| 6 | Versuchen Sie eine Anpassung **aus der Ferne über das Dashboard** | Stellen Sie über das Dashboard eine bestimmte Temperatur ein |
+
+<Tip>
+  **Schnelle Lösung:** Wenn ein Gast meldet, dass das Zimmer zu kalt oder zu warm ist, versuchen Sie zunächst, die Temperatur über das Dashboard aus der Ferne anzupassen. So können Sie überprüfen, ob das Thermostat auf Befehle reagiert.
+</Tip>
+
+---
+
+## Gast hat seinen Zugangscode nicht erhalten
+
+Wenn ein Gast angibt, keine Check-in-Informationen oder keinen Zugangscode erhalten zu haben:
+
+| Schritt | Was prüfen? | Maßnahme |
+| :--- | :--- | :--- |
+| 1 | Ist die **Reservierung im PMS bestätigt**? | Für stornierte oder unbestätigte Reservierungen wird kein Zugang erstellt |
+| 2 | Wurde die Reservierung vom PMS **mit SUITEe synchronisiert**? | Prüfen Sie, ob die Reservierung in der Reservierungsliste von SUITEe angezeigt wird |
+| 3 | Sind **E-Mail-Adresse/Telefonnummer des Gastes korrekt**? | Überprüfen Sie die Kontaktdaten in der Reservierung |
+| 4 | Wurde der **Zugangscode erstellt**? | Prüfen Sie den Bereich Zugangsverwaltung im Dashboard |
+| 5 | Wurde die **Check-in-Zeit bereits erreicht**? | Codes werden zur Check-in-Zeit aktiviert — sie wurden möglicherweise bereits versendet, sind aber noch nicht aktiv |
+| 6 | **Zugangsinformationen erneut senden** | Verwenden Sie das Dashboard, um die Zugangsdaten manuell erneut zu versenden |
+
+---
+
+## PMS-Daten werden nicht mit SUITEe synchronisiert
+
+Wenn Buchungen aus Ihrem PMS nicht in SUITEe erscheinen:
+
+| Schritt | Was prüfen? | Maßnahme |
+| :--- | :--- | :--- |
+| 1 | Ist die **PMS-Integration aktiv**? | Prüfen Sie im Dashboard unter Einstellungen → Integrationen |
+| 2 | Gibt es **Fehlermeldungen** im Bereich Benachrichtigungen? | Suchen Sie nach integrationsspezifischen Fehlermeldungen |
+| 3 | Ist das **PMS selbst online**? | Prüfen Sie, ob Ihr PMS normal funktioniert |
+| 4 | Versuchen Sie, **manuell eine Synchronisierung auszulösen** | Sofern diese Option im Dashboard verfügbar ist |
+| 5 | **SUITEe Support kontaktieren** | Wenn das Problem nach diesen Prüfungen weiterhin besteht |
+
+<Warning>
+  Probleme bei der PMS-Synchronisierung können dazu führen, dass Gäste keine Zugangscodes erhalten. Wenn Sie ein Synchronisierungsproblem feststellen, prüfen Sie anstehende Reservierungen manuell und erstellen Sie bei Bedarf Zugangscodes, damit keine Gäste betroffen sind.
+</Warning>
+
+---
+
+## Allgemeine Tipps zur Fehlerbehebung
+
+<AccordionGroup>
+  <Accordion title="Im Zweifelsfall zuerst das Gateway prüfen">
+    Das Gateway ist die zentrale Kommunikationseinheit. Wenn es offline ist, funktioniert das System nicht ordnungsgemäß. Prüfen Sie daher den Gateway-Status, bevor Sie Probleme einzelner Geräte untersuchen.
+  </Accordion>
+
+  <Accordion title="Bereich Benachrichtigungen regelmäßig prüfen">
+    Viele Probleme erzeugen bereits Warnmeldungen, bevor sie zu einem Ausfall führen. Eine Warnung über einen niedrigen Batteriestand gibt Ihnen beispielsweise ausreichend Zeit, die Batterie auszutauschen, bevor das Gerät ausfällt.
+  </Accordion>
+
+  <Accordion title="Manuelle Öffnung verwenden, wenn ein Gast wartet">
+    Wenn ein Gast vor seiner Tür steht und nicht hineinkommt, verwenden Sie sofort den manuellen Schlüssel. Analysieren Sie das technische Problem, nachdem der Gast Zugang zu seinem Zimmer erhalten hat.
+  </Accordion>
+
+  <Accordion title="Kontaktdaten des SUITEe Supports griffbereit halten">
+    Bei Problemen, die Sie nicht selbst lösen können, wenden Sie sich an den [SUITEe Support](https://suite-e.com/contact-us/). Sie sprechen direkt mit dem Team — nicht mit einem Callcenter.
+  </Accordion>
+</AccordionGroup>

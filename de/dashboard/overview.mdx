@@ -1,0 +1,410 @@
+---
+title: "Dashboard-Übersicht"
+description: "Ihre zentrale Steuerzentrale — ein detaillierter Rundgang durch jedes Element des SUITEe Admin-Dashboards, von den Bedienelementen in der Kopfzeile bis zu den Gerätestatus-Karten."
+---
+
+Das **Admin-Dashboard** ist der erste Bildschirm, den Sie nach der Anmeldung sehen. Es ist die zentrale Steuerzentrale, auf der Unterkunfts-Manager und Personal sämtliche Abläufe ihrer Unterkunft in Echtzeit überwachen und steuern — Gastzugänge, Gerätestatus, Akkustände und vieles mehr.
+
+<Frame>
+  <img src="/images/dashboard-overview-german.png" alt="SUITEe Admin-Dashboard Hauptübersicht auf Deutsch mit Begrüßung, Gerätestatistiken, Gerätezugang und Öffentliche Geräte Panels" />
+</Frame>
+
+---
+
+## Bereich der Kopfzeile
+
+Die Kopfzeile des Dashboards erstreckt sich über den obersten Bildschirmrand. Sie enthält auf der linken Seite die Immobilien-Auswahl, in der Mitte die globale Suchleiste sowie auf der rechten Seite Benachrichtigungs- und Kontobedienelemente.
+
+### Immobilien-Auswahl
+
+Ganz links in der Kopfzeile sehen Sie eine Schaltfläche, die die **Initialen und den Namen der aktuell aktiven Unterkunft** anzeigt — zum Beispiel **PN · Property No-PMS**. Dies ist die Immobilien-Auswahl.
+
+<Frame>
+  <img src="/images/dashboard-property-switcher.png" alt="Immobilien-Auswahl Dropdown mit dem Suchfeld Immobilien suchen und den Unterkünften: Property No-PMS, Savoy Baker Street, SUITEe Munich" />
+</Frame>
+
+Ein Klick auf die Immobilien-Auswahl öffnet ein Dropdown-Menü mit:
+
+- Einem Eingabefeld **Immobilien suchen** — geben Sie einen Teil des Unterkunftsnamens ein, um die Liste sofort zu filtern
+- Einer Liste aller Unterkünfte, auf die Ihr Konto Zugriff hat. Die aktuell aktive Unterkunft ist hervorgehoben (z. B. **Property No-PMS**)
+
+**So wechseln Sie die Unterkunft:**
+
+1. Klicken Sie oben links auf die Schaltfläche der Immobilien-Auswahl
+2. Geben Sie einen Teil des Unterkunftsnamens in das Suchfeld **Immobilien suchen** ein, um zu filtern
+3. Klicken Sie auf die Unterkunft, zu der Sie wechseln möchten
+4. Das gesamte Dashboard — Gerätezahlen, Zugangsaufzeichnungen, Warnmeldungen — wird für die ausgewählte Unterkunft neu geladen
+
+<Info>
+  Sie müssen sich **nicht** abmelden, um zwischen Unterkünften zu wechseln. Ihre Sitzung bleibt aktiv und alle Unterkunftsansichten stehen unter einer einzigen Anmeldung zur Verfügung.
+</Info>
+
+---
+
+### Globale Suchleiste (Suche)
+
+Direkt in der Mitte der Kopfzeile befindet sich eine breite Suchleiste mit der Beschriftung **Suche...**.
+
+<Frame>
+  <img src="/images/dashboard-global-search.png" alt="SUITEe globale Suchleiste mit dem Platzhaltertext Suche..." />
+</Frame>
+
+Mit der globalen Suchleiste können Sie alles auf der Plattform finden, ohne durch Menüs navigieren zu müssen. Sie können folgende Bereiche durchsuchen:
+
+- **Zimmer und Einheiten** — finden Sie ein bestimmtes Zimmer oder Apartment nach Name oder Nummer
+- **Geräte** — lokalisieren Sie ein smartes Schloss, einen Thermostat oder einen Sensor nach Name oder ID
+- **Gäste und Reservierungen** — suchen Sie nach einem Gastnamen oder einer Buchungsreferenz
+- **Benutzer** — finden Sie ein Personalmitglied oder ein Manager-Konto
+- **Unterkünfte** — springen Sie schnell zu einer anderen Unterkunftskonfiguration
+
+**So nutzen Sie die Suche:**
+
+1. Klicken Sie an eine beliebige Stelle in der Leiste **Suche...** (oder nutzen Sie das Tastaturkürzel, falls konfiguriert)
+2. Beginnen Sie mit der Eingabe Ihrer Suchanfrage — Ergebnisse erscheinen dynamisch während der Eingabe
+3. Klicken Sie auf ein Ergebnis, um direkt zur Detailseite dieses Eintrags zu gelangen
+
+<Tip>
+  Nutzen Sie die globale Suche als schnelle Alternative zu tief verschachtelten Navigationsmenüs. Wenn Sie beispielsweise den Namen eines Gastes eingeben, werden dessen Reservierung und Zimmerzuweisung sofort angezeigt, ohne dass Sie den Bereich Reservierungen durchsuchen müssen.
+</Tip>
+
+---
+
+### Benachrichtigungsglocke und Bedienelemente der Kopfzeile
+
+Oben rechts in der Kopfzeile sehen Sie drei Bedienelemente:
+
+| Bedienelement | Beschreibung |
+| :--- | :--- |
+| **Glocken-Symbol (Benachrichtigungen)** | Benachrichtigungsglocke. Das orangefarbene Badge zeigt die Anzahl ungelesener Systemwarnungen an (z. B. `48`). Klicken Sie darauf, um das vollständige Benachrichtigungspanel mit Gerätewarnungen, Zugangsereignissen und Systemmeldungen zu öffnen. |
+| **Raster-Symbol (Schnellzugriff)** | Schnellzugriffs-Schaltfläche. Klicken Sie darauf, um das Schnellzugriff-Pop-up mit Ein-Klick-Zugriff auf Öffentliche Geräte, Immobilie konfigurieren und E-Mail-Dienst konfigurieren zu öffnen. |
+| **Sprachcode (z. B. DE)** | Sprachauswahl. Zeigt Ihre aktive Sprache an. Klicken Sie darauf, um zwischen Englisch, Deutsch, Polski und Română zu wechseln. |
+
+---
+
+## Begrüßungsbanner und Systemstatus
+
+Direkt unter der Kopfzeile befindet sich ein personalisiertes **Begrüßungsbanner**, das den angemeldeten Benutzer namentlich begrüßt — zum Beispiel **Guten Morgen, Dolly Arc 123 👋**. Eine farblich gekennzeichnete Statusmeldung unter der Begrüßung fasst den aktuellen Zustand der Unterkunft zusammen:
+
+- **Alles sieht gut aus! Alle Systeme funktionieren einwandfrei.** — Alle Systeme laufen normal (grün / keine Probleme)
+- Falls Geräte offline sind oder einen niedrigen Akkustand haben, erscheint hier stattdessen eine entsprechende Warnmeldung
+
+Auf der rechten Seite des Banners befinden sich zwei wichtige Aktions-Schaltflächen: **Admin-PIN** und **Web-App**.
+
+---
+
+### Admin-PIN
+
+Die Schaltfläche **Admin-PIN** (rechts im Begrüßungsbanner) zeigt den Master-Administrator-PIN-Code der Unterkunft an — einen numerischen Code, der verwendet werden kann, um Geräte manuell zu entriegeln oder den Zugang ohne digitalen Schlüssel zu überschreiben.
+
+Da es sich hierbei um eine sensible Sicherheitsangabe handelt, löst das Klicken auf **Admin-PIN** einen **Identitätsverifizierungsschritt** aus, bevor die PIN angezeigt wird:
+
+<Frame>
+  <img src="/images/dashboard-admin-pin.png" alt="Dialog Identität bestätigen, der vor der Anzeige der Admin-PIN das Kontopasswort erfordert, mit den Schaltflächen Abbrechen und Bestätigen & PIN anzeigen" />
+</Frame>
+
+**So funktioniert die Identitätsbestätigung:**
+
+1. Klicken Sie im Begrüßungsbanner auf die Schaltfläche **Admin-PIN**
+2. Ein Modaldialog mit dem Titel **Identität bestätigen** erscheint
+3. Der Dialog erklärt: *"Geben Sie aus Sicherheitsgründen Ihr Kontopasswort ein, um die Admin-PIN anzuzeigen."*
+4. Geben Sie Ihr **Passwort** (Ihr Konto-Anmeldepasswort) in das Passwortfeld ein — Sie können das Auge-Symbol verwenden, um die Sichtbarkeit umzuschalten
+5. Klicken Sie auf **Bestätigen & PIN anzeigen**, um die Admin-PIN offenzulegen, oder klicken Sie auf **Abbrechen**, um den Dialog zu schließen, ohne etwas anzuzeigen
+
+<Warning>
+  Die Admin-PIN gewährt das Recht zur physischen Zugangsübersteuerung für jedes Gerät, das dafür konfiguriert ist. Teilen Sie die Admin-PIN niemals mit Gästen oder unbefugtem Personal. Nur vertrauenswürdige Unterkunfts-Manager und Administratoren sollten Zugriff darauf haben.
+</Warning>
+
+---
+
+### Web-App-Schaltfläche und Dropdown
+
+Die orangefarbene Schaltfläche **Web-App** (neben Admin-PIN) bietet Zugriff auf die für Gäste bestimmte Web-Anwendung dieser Unterkunft.
+
+<Frame>
+  <img src="/images/dashboard-web-app-menu.png" alt="Web-App Dropdown-Menü mit den Optionen Web-App teilen und Web-App öffnen" />
+</Frame>
+
+Ein Klick auf **Web-App** öffnet ein kleines Dropdown-Menü mit zwei Optionen:
+
+| Option | Symbol | Beschreibung |
+| :--- | :--- | :--- |
+| **Web-App teilen** | Teilen-Symbol | Generiert einen teilbaren Link zur Gäste-Web-App für diese Unterkunft. Nutzen Sie diesen, um die Web-App-URL an Gäste oder Rezeptionspersonal zu senden oder sie in Onboarding-Materialien einzubinden. |
+| **Web-App öffnen** | Externe-Link-Symbol | Öffnet die für Gäste bestimmte Web-App direkt in einem neuen Browser-Tab, sodass Sie das Gäste-Erlebnis selbst testen und überprüfen können. |
+
+<Info>
+  Die Gäste-Web-App ist die Benutzeroberfläche, die Ihre Gäste für Self-Check-in, Zimmerzugang und Services während des Aufenthalts nutzen. Nutzen Sie **Web-App öffnen**, um vor der Ankunft eines neuen Gastes zu überprüfen, ob alles aus Gästeperspektive einwandfrei funktioniert.
+</Info>
+
+---
+
+## Gerätestatus-Zusammenfassungskarten
+
+Unterhalb des Begrüßungsbanners bieten vier große Zusammenfassungskarten eine **Schnellübersicht über alle registrierten Geräte** der Unterkunft:
+
+| Karte | Beschriftung | Beschreibung |
+| :--- | :--- | :--- |
+| **Geräte gesamt** | Gesamte Geräte | Die Gesamtzahl aller unter dieser Unterkunft registrierten Smart Devices (z. B. `12`). Klicken Sie auf den Pfeil `>`, um die vollständige Geräteliste anzuzeigen. |
+| **Online-Geräte** | Online-Geräte | Die Anzahl der Geräte, die derzeit verbunden sind und normal kommunizieren (z. B. `11`). Dargestellt mit einem grünen Signal-Symbol. Klicken Sie darauf, um die Geräteliste nach Nur-Online zu filtern. |
+| **Offline-Geräte** | Offline-Geräte | Geräte, die nicht erreichbar sind oder die Verbindung verloren haben (z. B. `01`). Dargestellt mit einem durchgestrichenen Signal-Symbol. Klicken Sie darauf, um zu untersuchen, welches Gerät offline ist. |
+| **Niedriger Akkustand** | Niedriger Akkustand | Zusammenfassung des Akkustatus über alle batteriebetriebenen Geräte hinweg. Wenn kein Gerät einen kritisch niedrigen Akkustand hat, wird **Alles in Ordnung** angezeigt. Wenn Geräte Aufmerksamkeit benötigen, hebt diese Karte diese hervor. Klicken Sie darauf, um die Akkustände anzuzeigen. |
+
+<Tip>
+  Prüfen Sie jeden Morgen zuerst die Karte **Offline-Geräte**. Wenn ein Gerät über Nacht offline geht, kann das bedeuten, dass ein Schloss einen Batteriewechsel benötigt, ein Gateway den Strom verloren hat oder ein Sensor physisch manipuliert wurde.
+</Tip>
+
+---
+
+## Teil 2 — Dashboard-Panels und Widgets
+
+Unterhalb der Geräte-Zusammenfassungskarten zeigt das Dashboard mehrere interaktive Panels an, die Ihnen die operative Kontrolle über Ihre Unterkunft geben. Dieser Abschnitt erklärt jedes Panel im Detail.
+
+---
+
+## Gerätestatus-Zusammenfassungskarten
+
+<Frame>
+  <img src="/images/dashboard-device-cards.png" alt="Vier Gerätestatus-Karten: Geräte gesamt 12, Online-Geräte 11, Offline-Geräte 01, Niedriger Akkustand — Alles in Ordnung" />
+</Frame>
+
+Die vier Karten im oberen Bereich des Panel-Bereichs geben Ihnen einen sofortigen Gesundheitsstatus jedes Smart Devices der Unterkunft. Jede Karte ist interaktiv — ein Klick auf den Pfeil `>` führt Sie in die gefilterte Geräteliste.
+
+| Karte | Angezeigter Wert | Bedeutung | Was bei Problemen zu tun ist |
+| :--- | :--- | :--- | :--- |
+| **Geräte gesamt** | `12` | Die Gesamtzahl aller registrierten Smart Devices (Schlösser, Thermostate, Sensoren, Gateways) dieser Unterkunft. | Wenn die Zahl niedriger als erwartet ist, wurde möglicherweise ein Gerät entfernt. Gehen Sie zu **Geräte**, um die Liste zu prüfen. |
+| **Online-Geräte** | `11` | Geräte, die aktiv verbunden sind, kommunizieren und normal reagieren. Angezeigt mit einem grünen WLAN-Symbol. | Dies ist Ihre gesunde Anzahl. Streben Sie an, dass dieser Wert jederzeit gleich **Geräte gesamt** ist. |
+| **Offline-Geräte** | `01` | Geräte, die nicht erreicht werden können — sie haben die Verbindung verloren oder sind ausgeschaltet. Dargestellt mit einem durchgestrichenen grauen WLAN-Symbol. | Klicken Sie sofort auf diese Karte, um festzustellen, welches Gerät offline ist. Überprüfen Sie dessen Stromversorgung und physischen Standort. |
+| **Niedriger Akkustand** | **Alles in Ordnung** | Wenn alle batteriebetriebenen Geräte einen akzeptablen Ladezustand haben, zeigt diese Karte **Alles in Ordnung** in grünem Text an. Wenn ein Gerätestatus kritisch ist, listet diese Karte stattdessen die betroffenen Geräte auf. | Wenn hier ein Gerät erscheint, planen Sie umgehend einen Batteriewechsel ein — eine leere Schlossbatterie bedeutet, dass ein Gast sein Zimmer nicht betreten kann. |
+
+---
+
+### Panels Gerätezugang und Öffentliche Geräte
+
+<Frame>
+  <img src="/images/dashboard-geraetezugang-public.png" alt="Gerätezugang Panel zeigt den Leerzustand Kein Gerätezugang und Öffentliche Geräte Panel zeigt Haupttürschloss mit Online-Status, 79% Akku und orangefarbener Tür entriegeln Schaltfläche" />
+</Frame>
+
+Diese beiden Panels befinden sich nebeneinander im mittleren Bereich des Dashboards und geben Ihnen die direkte operative Kontrolle über den Gerätezugang.
+
+#### Linkes Panel — Gerätezugang
+
+**Gerätezugang** zeigt eine Liste **geplanter oder aktiver Zugangsberechtigungen**, die Benutzern für bestimmte Zimmer oder Geräte zugewiesen wurden.
+
+Der Kopfbereich des Panels verfügt über zwei Bedienelemente:
+
+- **+ Zugang erstellen** — Klicken Sie hierauf, um eine neue Zugangsberechtigung zu erstellen. Sie werden aufgefordert, einen Benutzer, ein Zimmer oder eine Einheit und ein Ablaufdatum auszuwählen.
+- **Alle anzeigen →** — Klicken Sie hier, um die vollständige Seite der Zugangsverwaltung zu öffnen, auf der alle vergangenen, aktiven und geplanten Zugangsaufzeichnungen aufgelistet sind.
+
+Die Tabellenspalten sind:
+
+| Spalte | Bedeutung |
+| :--- | :--- |
+| **Benutzername** | Der Name des Benutzers, dem Zugang gewährt wurde |
+| **Zimmer-Immobilie** | Das spezifische Zimmer oder die Einheit, für die der Zugang gilt |
+| **Läuft ab am** | Datum und Uhrzeit, zu denen diese Zugangsberechtigung automatisch erlischt |
+| **Ansehen** | Eine "Ansehen"-Aktion — klicken Sie darauf, um die vollständigen Details der Zugangsaufzeichnung zu sehen |
+| **Aktion** | Aktions-Schaltflächen — typischerweise Optionen zum Bearbeiten, Verlängern oder Widerrufen des Zugangs |
+
+Wenn für den aktuellen Zeitraum keine Zugangsberechtigungen existieren, zeigt das Panel ein Leerzustands-Symbol und die Meldung **Kein Gerätezugang** an, was bedeutet, dass derzeit für keinen Benutzer Zugangsberechtigungen konfiguriert sind.
+
+<Info>
+  Nutzen Sie **+ Zugang erstellen**, wenn ein Gast, eine Reinigungskraft oder ein Wartungstechniker vorübergehenden Zugriff auf ein Zimmer oder Gerät benötigt. Die Zugangsberechtigung erlischt automatisch am festgelegten Datum — Sie müssen sie nicht manuell widerrufen.
+</Info>
+
+#### Rechtes Panel — Öffentliche Geräte
+
+**Öffentliche Geräte** zeigt Smart Devices, die nicht an ein bestimmtes privates Zimmer gebunden sind, sondern für die gemeinsame Nutzung oder Rezeptionsnutzung zur Verfügung stehen, zum Beispiel ein Haupteingangsschloss oder ein Lobby-Gerät.
+
+Der Untertitel lautet: *"Geräte für den öffentlichen Zugang verfügbar"*.
+
+Jede Gerätekarte in diesem Panel zeigt:
+
+| Element | Beschreibung |
+| :--- | :--- |
+| **Gerätesymbol** | Ein visuelles Symbol, das den Gerätetyp darstellt (z. B. ein Vorhängeschloss-Symbol für ein smartes Schloss) |
+| **Gerätename** | Der vollständige Name des Geräts — z. B. **Haupttürschloss Ger...** |
+| **Online-Badge** | Eine grüne **Online**-Indikator-Pille, die bestätigt, dass das Gerät derzeit verbunden und erreichbar ist |
+| **Akkustand** | Ein Akku-Symbol, das den aktuellen Ladestand in Prozent anzeigt — z. B. **79%** (grün = gesund) |
+| **Schaltfläche Tür entriegeln** | Eine orangefarbene Schaltfläche mit der Beschriftung **🔒 Unlock door** (oder **Tür entriegeln**) |
+
+**Was passiert, wenn Sie auf die orangefarbene Schaltfläche "Unlock door" klicken:**
+
+Das Klicken auf die Schaltfläche **Unlock door** sendet einen **sofortigen Fernentriegelungsbefehl** direkt über das Netzwerk an dieses smarte Schloss. Das Schloss empfängt das Signal und entriegelt die Tür ohne physischen Schlüssel, PIN oder Karte. Dies ist nützlich, wenn:
+
+- Ein Gast ausgesperrt ist und sofortigen Zutritt benötigt
+- Ein Lieferant oder Handwerker vorübergehenden Zugang benötigt
+- Ein Personalmitglied vor Ort ist und die Haupttür aus der Ferne von jemandem an der Rezeption geöffnet werden muss
+
+<Warning>
+  Das Klicken auf **Unlock door** entriegelt das Gerät sofort und physisch in Echtzeit. Nutzen Sie dies nur, wenn Sie sicher sind, wer den Zugang anfordert. Die Aktion wird zu Audit-Zwecken im Aktivitäts-Feed protokolliert.
+</Warning>
+
+Die Schaltfläche **Alle anzeigen →** oben rechts im Panel öffnet die vollständige Seite der öffentlichen Geräte, auf der alle Gemeinschaftsbereichsgeräte im Detail verwaltet werden.
+
+---
+
+### Panels Türschloss und Aktivität
+
+<Frame>
+  <img src="/images/dashboard-tuerschloss-aktivitaet.png" alt="Türschloss Panel zeigt Schlösser für UNIT-3 und UNIT-5 mit Akkuständen und orangefarbenen Entsperren Schaltflächen, daneben Aktivität Panel mit aktuellen Benachrichtigungen Neue Buchung erstellt" />
+</Frame>
+
+Diese beiden Panels befinden sich unterhalb von Gerätezugang und bieten Ihnen eine Live-Ansicht des **Status einzelner Zimmerschlösser** sowie einen **Live-Aktivitäts-Feed** aller Ereignisse in der Unterkunft.
+
+#### Linkes Panel — Türschloss
+
+Dieses Panel listet alle smarten Schlösser auf, die einzelnen Zimmern in der Unterkunft zugewiesen sind — im Gegensatz zum Panel für öffentliche Geräte oben. Jede Zeile stellt ein Schloss in einem Zimmer dar.
+
+| Spalte | Beschreibung |
+| :--- | :--- |
+| **Zimmer** | Das Zimmer oder die Einheit, in der das Schloss installiert ist — z. B. `UNIT-3`, `UNIT-5` |
+| **Geräte** | Der vollständige Gerätename — z. B. **Haupttürschloss 85 German U** |
+| **Batterie** | Aktueller Akkustand als farbiger Fortschrittsbalken und Prozentwert — z. B. **64%** (grün), **86%** (grün). Die Farbe wechselt zu Gelb und dann zu Rot, wenn er sich Null nähert. |
+| **Aktion** | Eine orangefarbene **🔒 Entsperren**-Schaltfläche |
+
+**Was passiert, wenn Sie auf "Entsperren" klicken:**
+
+Das Klicken auf die orangefarbene Schaltfläche **Entsperren** sendet einen sofortigen Fernentriegelungsbefehl an das smarte Schloss dieses spezifischen Zimmers. Das Schloss wird sofort entriegelt. Dies gibt Ihnen **schlüssellose Fernsteuerung des Zugangs** für jedes einzelne Zimmer direkt vom Dashboard aus. Anwendungsfälle sind unter anderem:
+
+- Einen Gast in sein Zimmer lassen, wenn er seinen digitalen Schlüssel nicht nutzen kann
+- Dem Reinigungspersonal das Betreten eines Zimmers ohne physische Schlüsselkarte ermöglichen
+- Gewährung von Notfallzugang für Wartungsarbeiten bei einer Störung
+
+Die Entriegelung ist **nicht dauerhaft** — das Schloss verriegelt sich nach einer konfigurierten Offenhaltezeit automatisch wieder.
+
+Die Schaltfläche **Alle anzeigen →** oben rechts öffnet die vollständige Geräteverwaltungsansicht, gefiltert nach Türschlössern.
+
+<Tip>
+  Überwachen Sie die Akku-Prozentwerte im Panel **Türschloss** genau. Ein Schloss mit niedrigem Akkustand sollte rechtzeitig für einen Batteriewechsel eingeplant werden, damit der Zimmerzugang zuverlässig gewährleistet bleibt.
+</Tip>
+
+#### Rechtes Panel — Aktivität (Aktivitäts-Feed)
+
+Dieses Panel ist ein **Live-Ereignisprotokoll**, das jede wichtige Aktion und jedes Systemereignis in der Unterkunft in chronologischer Reihenfolge anzeigt.
+
+Jeder Eintrag im Aktivitäts-Feed zeigt:
+
+- Ein **grünes Symbol** (z. B. ein Kalender-Symbol für Buchungsereignisse, ein Schloss-Symbol für Zugangsereignisse)
+- Einen **Ereignistitel** in Fettdruck — z. B. **Neue Buchung erstellt**
+- Eine **Detailzeile**, die das spezifische Ereignis beschreibt
+- Einen **relativen Zeitstempel** — z. B. *vor 2 Tagen*
+
+Häufige Ereignistypen im Aktivitäts-Feed:
+
+| Ereignis | Deutsche Beschriftung | Bedeutung |
+| :--- | :--- | :--- |
+| Neue Buchung erstellt | **Neue Buchung erstellt** | Eine Gästereservierung wurde erstellt oder aus Ihrem PMS synchronisiert |
+| Zugang gewährt | **Zugang gewährt** | Ein digitaler Schlüssel oder Zugangscode wurde an einen Gast oder Benutzer ausgegeben |
+| Tür entsperrt | **Tür entsperrt** | Ein Schloss wurde entriegelt (per Schlüssel, Code oder Fernbefehl) |
+| Gerät offline | **Gerät offline** | Ein Gerät hat seine Verbindung verloren |
+| Niedriger Akkustand | **Niedriger Akkustand** | Der Akku eines Geräts ist unter den Warnschwellenwert gefallen |
+
+Die Schaltfläche **Alle Benachrichtigungen anzeigen** unten im Feed öffnet das vollständige [Aktivitätszentrum](/de/dashboard/activity-centre), in dem Sie alle vergangenen Ereignisse überprüfen, nach Schlüsselwörtern suchen und nach Datum, Kategorie, Priorität und Status filtern können.
+
+<Info>
+  Der Aktivitäts-Feed arbeitet in Echtzeit. Lassen Sie das Dashboard geöffnet, und neue Ereignisse werden angezeigt, sobald sie eintreffen — Gäste-Check-ins, Fernentriegelungen und Gerätezustandsänderungen erscheinen hier.
+</Info>
+
+---
+
+### Panel Buchungen (Reservierungskalender)
+
+<Frame>
+  <img src="/images/dashboard-buchungen.png" alt="Buchungen Panel zeigt eine horizontale wöchentliche Datumsnavigation und eine Reservierungstabelle mit Buchungsinformationen" />
+</Frame>
+
+Dieses Panel bietet eine **tägliche Reservierungsansicht** für die Unterkunft, organisiert um eine scrollbare Datumsnavigation.
+
+#### Datumsnavigator
+
+Oben im Panel Buchungen befindet sich eine horizontale Datumsauswahl. Das ausgewählte Datum ist **orange** hervorgehoben. Navigationspfeile `<` und `>` auf beiden Seiten lassen Sie im Kalender rückwärts oder vorwärts scrollen.
+
+Klicken Sie auf ein beliebiges Datum, um die Reservierungstabelle darunter sofort so zu filtern, dass nur die an diesem Datum relevanten Buchungen angezeigt werden.
+
+#### Spalten der Reservierungstabelle
+
+Wenn Reservierungen für das ausgewählte Datum existieren, erscheinen sie als Zeilen in der Tabelle. Jede Spalte bietet wichtige Informationen zu dieser Buchung:
+
+| Spalte | Deutsche Beschriftung | Was angezeigt wird |
+| :--- | :--- | :--- |
+| **Booking ID** | Buchungs-ID | Kennung der Reservierung (zur Abstimmung mit Ihrem PMS) |
+| **Room** | Zimmer | Das Zimmer oder die Einheit, die der Gast gebucht hat |
+| **Check-in** | Einchecken | Geplantes Check-in-Datum und Uhrzeit des Gastes |
+| **Check-out** | Auschecken | Geplantes Check-out-Datum und Uhrzeit des Gastes |
+| **Guest Registration** | Kundenregistrierung | Status des Online-Registrierungsformulars des Gastes vor der Anreise — ausgefüllt oder ausstehend |
+| **Code Generation** | Code-Generierung | Ob ein digitaler Zugangscode generiert und an den Gast gesendet wurde |
+| **Pre-Stay** | Pre-Stay | Status von Kommunikations- oder Vorbereitungsschritten vor dem Aufenthalt |
+| **Guest Information** | Gastinformationen | Zusätzliche Notizen, Präferenzen oder Sonderwünsche des Gastes zur Buchung |
+
+Wenn für das ausgewählte Datum keine Buchungen vorliegen, zeigt die Tabelle **Keine Buchungen** an.
+
+Die Schaltfläche **Alle anzeigen →** in der oberen rechten Ecke öffnet die vollständige Reservierungsseite, auf der alle Buchungen über alle Daten, Zimmer und Gäste hinweg im Detail durchsucht, gefiltert und verwaltet werden können.
+
+<Info>
+  Das Panel Buchungen synchronisiert sich direkt mit Ihrem verbundenen Property Management System (PMS). Neue Buchungen in Ihrem PMS erscheinen hier automatisch. Wenn eine Buchung fehlt, prüfen Sie den Status der PMS-Integration in Ihren Unterkunftseinstellungen.
+</Info>
+
+---
+
+## Weitere Bereiche des Dashboards
+
+Das SUITEe-Dashboard ist in mehrere Hauptbereiche unterteilt, die alle über das Seitennavigationsmenü erreichbar sind:
+
+<CardGroup cols={2}>
+  <Card title="Unterkünfte & Einheiten" icon="building" href="/de/dashboard/properties-and-units">
+    Verwalten Sie Ihre Gebäude und einzelnen Zimmer/Apartments
+  </Card>
+  <Card title="Reservierungen" icon="calendar-check" href="/de/dashboard/reservations">
+    Sehen und verwalten Sie alle aus Ihrem PMS synchronisierten Buchungen
+  </Card>
+  <Card title="Zugangsverwaltung" icon="key" href="/de/dashboard/access-management">
+    Steuern Sie, wer welche Türen wann betreten kann
+  </Card>
+  <Card title="Energiemanagement" icon="leaf" href="/de/dashboard/energy-management">
+    Überwachen und steuern Sie den Energieverbrauch über alle Zimmer hinweg
+  </Card>
+  <Card title="Benutzerverwaltung" icon="users" href="/de/dashboard/users-management">
+    Verwalten Sie Konten und Berechtigungen von Teammitgliedern
+  </Card>
+  <Card title="Warnmeldungen" icon="bell" href="/de/dashboard/overview#warnmeldungen-und-benachrichtigungen">
+    Sehen Sie Systemwarnungen und Benachrichtigungen ein und reagieren Sie darauf
+  </Card>
+</CardGroup>
+
+---
+
+## Warnmeldungen und Benachrichtigungen
+
+Das System überwacht Ihre Unterkunft kontinuierlich und bringt Probleme, die Aufmerksamkeit erfordern, über das Warnsystem an die Oberfläche. Die Benachrichtigungsglocke in der Kopfzeile zeigt die Anzahl ungelesener Warnmeldungen an.
+
+### Arten von Warnmeldungen
+
+| Warnmeldungstyp | Beispiele |
+| :--- | :--- |
+| **Geräte-Warnmeldungen** | Schloss hat niedrigen Akkustand, Thermostat offline, Sensor reagiert nicht |
+| **Zugangs-Warnmeldungen** | Ungewöhnliche Türaktivität, fehlgeschlagene Zugriffsversuche |
+| **System-Warnmeldungen** | Verbindungsprobleme, PMS-Synchronisationsprobleme |
+| **Wartungs-Warnmeldungen** | Gerät muss gewartet werden, Gateway getrennt |
+
+### Wie Warnmeldungen funktionieren
+
+<Steps>
+  <Step title="System überwacht kontinuierlich">
+    SUITEe überwacht alle Geräte, Verbindungen und Integrationen Ihrer Unterkunft in Echtzeit. Es ist keine manuelle Überprüfung erforderlich.
+  </Step>
+
+  <Step title="Warnmeldung erscheint im Benachrichtigungspanel">
+    Wenn etwas Aufmerksamkeit erfordert, wird eine Warnmeldung erstellt. Der Zähler der Benachrichtigungsglocke erhöht sich und die Warnmeldung ist im Benachrichtigungspanel sichtbar.
+  </Step>
+
+  <Step title="Benachrichtigung gesendet (falls konfiguriert)">
+    Je nach Ihren Kontoeinstellungen erhalten Sie bei kritischen Warnmeldungen möglicherweise auch E-Mail- oder Push-Benachrichtigungen.
+  </Step>
+
+  <Step title="Maßnahme ergreifen und beheben">
+    Sehen Sie sich die Details der Warnmeldung an, ergreifen Sie die entsprechende Maßnahme (z. B. Batterie wechseln, Gerät neu starten) und markieren Sie die Warnmeldung als behoben.
+  </Step>
+</Steps>
+
+<Tip>
+  **Bewährte Praxis:** Überprüfen Sie das Dashboard zu Beginn jeder Schicht, um alle Warnmeldungen aus der Nacht einzusehen. Beheben Sie kritische Punkte — wie Offline-Schlösser oder sehr niedrige Akkuwarnungen —, bevor Gäste ankommen.
+</Tip>

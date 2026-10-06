@@ -1,0 +1,392 @@
+---
+title: "E-Mail-Dienste"
+description: "Automatisieren Sie die Gäste-Kommunikation und transaktionale E-Mails — verwalten Sie E-Mail-Vorlagen, automatische Versandzeitpunkte und den Lebenszyklus Ihrer Vorlagen."
+---
+
+Die Seite **E-Mail-Dienste** — in der Plattform als **E-Mail-Service / E-Mail** bezeichnet — ist die zentrale Verwaltung für automatisierte Gäste-Kommunikation in SUITEe. Hier können Unterkunfts-Manager standardisierte E-Mail-Vorlagen erstellen, den automatischen Versand anhand von Buchungsereignissen wie Buchungsbestätigung, Check-in oder Check-out planen und den Status ihrer Vorlagen verwalten.
+
+Navigieren Sie zu dieser Seite unter:
+
+[https://hotel.suite-e.com/email-service/email](https://hotel.suite-e.com/email-service/email)
+
+---
+
+## Seitenübersicht
+
+<Frame>
+  <img src="/images/email-services-overview.png" alt="E-Mail-Dienste Übersicht mit Navigation E-Mail-Service / E-Mail, Status-Tabs Alle, Aktiv und Inaktiv, Suchleiste Vorlagen suchen, Aktualisieren-Schaltfläche, Vorlage hinzufügen und Vorlagentabelle" />
+</Frame>
+
+### Navigation und Kopfzeilen-Bedienelemente
+
+- **Immobilien-Auswahl** — Über das Dropdown-Menü oben links können Sie zwischen verschiedenen Unterkünften wechseln.
+- **Brotkrümel-Navigation** — Zeigt den Navigationspfad `🏠 / E-Mail-Service / E-Mail`.
+- **Seitennavigation** — Der Bereich **✉ E-Mail** in der linken Navigation kennzeichnet das aktuell ausgewählte Kommunikationsmodul.
+- **Seitenüberschrift** — **E-Mail** ist die zentrale Seite zur Verwaltung automatisierter E-Mail-Kommunikation.
+
+---
+
+## Status-Filter
+
+Direkt oberhalb der Tabelle befinden sich drei Tabs, mit denen Sie Vorlagen nach ihrem aktuellen Status filtern können:
+
+| Tab | Beschreibung |
+| :--- | :--- |
+| **Alle** | Zeigt alle E-Mail-Vorlagen der ausgewählten Unterkunft unabhängig von ihrem Status. |
+| **Aktiv** | Zeigt Vorlagen, die aktuell für den automatisierten Versand aktiviert sind. |
+| **Inaktiv** | Zeigt deaktivierte oder pausierte Vorlagen, die derzeit nicht automatisch versendet werden. |
+
+Die Zahl neben jedem Tab zeigt an, wie viele Vorlagen sich aktuell in der jeweiligen Kategorie befinden.
+
+---
+
+## Suche und Werkzeugleiste
+
+<Frame>
+  <img src="/images/email-services-toolbar-table.png" alt="E-Mail-Dienste Werkzeugleiste mit Vorlagen suchen, Aktualisieren und orangefarbener Vorlage hinzufügen Schaltfläche" />
+</Frame>
+
+Über der Vorlagentabelle befinden sich die wichtigsten Funktionen zum Suchen, Aktualisieren und Erstellen von Vorlagen.
+
+### Vorlagen suchen
+
+<Frame>
+  <img src="/images/email-services-search-table.png" alt="Suchleiste mit Vorlagen suchen und leerer E-Mail-Vorlagentabelle" />
+</Frame>
+
+Das Suchfeld verwendet den Platzhalter:
+
+`Vorlagen suchen...`
+
+Sie können damit bestimmte E-Mail-Vorlagen schnell finden, beispielsweise anhand des Vorlagennamens oder Betreffs.
+
+Beispiele:
+
+- `Willkommen`
+- `Check-in`
+- `Buchungsbestätigung`
+- `PIN`
+- `Abreise`
+
+---
+
+### Aktualisieren
+
+Direkt rechts neben dem Suchfeld befindet sich die Schaltfläche **↻**.
+
+Klicken Sie darauf, um die angezeigte Vorlagenliste und deren aktuellen Status neu zu laden.
+
+Dies ist beispielsweise hilfreich, nachdem Sie eine Vorlage erstellt oder bearbeitet haben.
+
+---
+
+### Vorlage hinzufügen
+
+Über die orangefarbene Schaltfläche **+ Vorlage hinzufügen** öffnen Sie den Editor für eine neue E-Mail-Vorlage.
+
+Dort können Sie unter anderem konfigurieren:
+
+- Vorlagenname
+- E-Mail-Betreff
+- Versandzeitpunkt
+- Buchungsereignis als Auslöser
+- E-Mail-Inhalt und Gestaltung
+- Dynamische Gäste- und Buchungsinformationen
+
+---
+
+## E-Mail-Vorlagentabelle
+
+Die Tabelle zeigt alle für die ausgewählte Unterkunft konfigurierten E-Mail-Vorlagen und deren wichtigste Einstellungen.
+
+| Spalte | Beschreibung |
+| :--- | :--- |
+| **Template Name** | Interner Name der Vorlage, damit Mitarbeiter ihren Zweck schnell erkennen können. |
+| **Betreff** | Betreffzeile, die der Gast in seinem E-Mail-Posteingang sieht. |
+| **Geplant für** | Zeigt, wann die E-Mail im Verhältnis zu einem ausgewählten Ereignis versendet werden soll. |
+| **Erstellt am** | Datum bzw. Zeitpunkt, zu dem die Vorlage erstellt wurde. |
+| **Aktiv** | Schalter zum Aktivieren oder Pausieren der Vorlage, ohne sie zu löschen. |
+| **Auto Mailer** | Zeigt den Status der automatisierten Versandfunktion für die Vorlage. |
+| **Vorschau** | Ermöglicht die Vorschau der E-Mail vor der Verwendung. |
+| **Aktionen** | Öffnet die für die Vorlage verfügbaren Verwaltungsaktionen. |
+
+---
+
+## Leerer Zustand und Seitennummerierung
+
+Wenn für die ausgewählte Unterkunft noch keine E-Mail-Vorlagen vorhanden sind, zeigt die Tabelle:
+
+**Keine Daten verfügbar**
+
+Am unteren Rand der Tabelle befinden sich die Bedienelemente für die Seitennummerierung:
+
+- **Zeilen pro Seite** — Legt fest, wie viele Vorlagen gleichzeitig angezeigt werden.
+- **Seitenbereich** — Zeigt an, welche Einträge aktuell sichtbar sind.
+- **Navigationspfeile `< >`** — Wechseln zwischen den Seiten, wenn mehrere Vorlagen vorhanden sind.
+
+---
+
+# E-Mail-Vorlage erstellen
+
+Um eine neue automatisierte Gäste-E-Mail zu erstellen, klicken Sie auf **+ Vorlage hinzufügen**.
+
+<Frame>
+  <img src="/images/email-template-btn-add.png" alt="Orangefarbene Schaltfläche Vorlage hinzufügen" />
+</Frame>
+
+Dadurch öffnet sich der vollständige E-Mail-Vorlageneditor:
+
+[https://hotel.suite-e.com/email-service/email/create](https://hotel.suite-e.com/email-service/email/create)
+
+<Frame>
+  <img src="/images/email-template-editor-overview.png" alt="E-Mail-Vorlageneditor mit Auslöser-Konfiguration links, visuellem E-Mail-Editor in der Mitte und verfügbaren Variablen rechts" />
+</Frame>
+
+Der Editor ist in drei Hauptbereiche unterteilt:
+
+1. **Auslöser & Zeitplanung** — Wann soll die E-Mail versendet werden?
+2. **E-Mail-Inhalt** — Wie soll die Nachricht aussehen und was soll sie enthalten?
+3. **Verfügbare Variablen** — Welche Gäste- und Buchungsinformationen sollen automatisch eingefügt werden?
+
+---
+
+## Schutz vor ungespeicherten Änderungen
+
+Wenn Sie eine Vorlage bearbeiten und oben links auf **← Zurück** klicken, bevor Sie Ihre Änderungen gespeichert haben, zeigt SUITEe eine Warnmeldung an:
+
+<Frame>
+  <img src="/images/email-template-unsaved-modal.png" alt="Dialog Ungespeicherte Änderungen mit Abbrechen und Bestätigen" />
+</Frame>
+
+Die Meldung lautet:
+
+> **Sie haben ungespeicherte Änderungen. Wirklich verlassen? Ihre Änderungen gehen verloren.**
+
+Sie haben zwei Möglichkeiten:
+
+- **Abbrechen** — Schließt die Warnmeldung und bringt Sie zurück zum Editor. Ihre bisherigen Änderungen bleiben erhalten.
+- **Bestätigen** — Verwirft die nicht gespeicherten Änderungen und führt zurück zur Übersicht der [E-Mail-Dienste](/de/dashboard/email-services).
+
+<Warning>
+  Klicken Sie nur auf **Bestätigen**, wenn Sie sicher sind, dass Sie die nicht gespeicherten Änderungen verwerfen möchten.
+</Warning>
+
+---
+
+## Speichern und Vollbildmodus
+
+Oben rechts im Editor befinden sich zwei wichtige Bedienelemente:
+
+<Frame>
+  <img src="/images/email-template-btn-save-fullscreen.png" alt="Schaltflächen Speichern und Vollbildmodus oben rechts im E-Mail-Vorlageneditor" />
+</Frame>
+
+### Speichern
+
+Klicken Sie auf **Speichern**, um die aktuelle E-Mail-Vorlage und ihre Einstellungen zu speichern.
+
+Falls erforderliche Felder fehlen oder ungültige Angaben enthalten, zeigt der Editor entsprechende Hinweise an.
+
+### Vollbildmodus
+
+Über die Schaltfläche **⛶** können Sie den E-Mail-Editor auf die gesamte verfügbare Browserfläche erweitern.
+
+Dies ist besonders hilfreich bei längeren E-Mails oder auf kleineren Bildschirmen.
+
+---
+
+## Pflichtfelder und Validierung
+
+Wenn Sie auf **Speichern** klicken, bevor alle erforderlichen Angaben ausgefüllt sind, markiert der Editor die betroffenen Felder.
+
+<Frame>
+  <img src="/images/email-template-validation-errors.png" alt="E-Mail-Vorlageneditor mit Validierungsfehlern bei Vorlagenname, Betreff und Auslöser-Zeit" />
+</Frame>
+
+| Feld | Fehlermeldung | Anforderung |
+| :--- | :--- | :--- |
+| **Vorlagenname** | *Vorlagenname muss mindestens 3 Zeichen haben* | Geben Sie einen eindeutigen internen Namen mit mindestens drei Zeichen ein. |
+| **Betreff** | *Betreff ist erforderlich* | Jede Vorlage benötigt eine Betreffzeile. |
+| **Auslöser-Zeit** | *Auslöserzeit ist erforderlich, wenn Vor oder Nach ausgewählt ist* | Wenn **Vor** oder **Nach** ausgewählt wird, muss ein entsprechender Zeitabstand angegeben werden. |
+
+<Tip>
+  Verwenden Sie für Vorlagennamen eine klare interne Benennung wie **Willkommens-E-Mail nach Buchung** oder **Check-in Informationen 24h vorher**. Dadurch können Mitarbeiter den Zweck einer Vorlage später sofort erkennen.
+</Tip>
+
+---
+
+## Linke Spalte — Auslöser und Zeitplanung
+
+Im linken Bereich des Editors legen Sie fest, **wann** und aufgrund welches Ereignisses die E-Mail versendet werden soll.
+
+### Vorlagenname
+
+Der **Vorlagenname** ist eine interne Bezeichnung für Ihr Team.
+
+Beispiel:
+
+`Willkommens-E-Mail nach Buchung`
+
+Der Vorlagenname wird nicht als Betreff an den Gast gesendet.
+
+---
+
+### Betreff
+
+Im Feld **Betreff** legen Sie die Betreffzeile fest, die der Gast in seinem E-Mail-Posteingang sieht.
+
+Beispiel:
+
+`Ihr Aufenthalt bei {property_name}`
+
+Der Editor zeigt zusätzlich eine Zeichenanzeige für die Länge des Betreffs an.
+
+---
+
+### Auslöser-Ereignis
+
+Über **Auslöser-Ereignis** wählen Sie das Buchungsereignis aus, auf das die E-Mail reagieren soll.
+
+Ein Beispiel ist:
+
+**Buchungsbestätigung**
+
+Damit kann eine E-Mail im Zusammenhang mit einer bestätigten Reservierung aus dem Bereich [Buchung](/de/dashboard/booking) geplant werden.
+
+Je nach Konfiguration können weitere Ereignisse rund um die Gästereise verfügbar sein, beispielsweise Check-in oder Check-out.
+
+---
+
+### Auslöser-Aktion
+
+Mit der **Auslöser-Aktion** bestimmen Sie, ob die E-Mail **vor** oder **nach** dem ausgewählten Ereignis versendet werden soll.
+
+- **Nach** — Die E-Mail wird nach dem Ereignis geplant.
+- **Vor** — Die E-Mail wird vor dem Ereignis geplant.
+
+Beispiele:
+
+- 1 Stunde **nach** der Buchungsbestätigung
+- 24 Stunden **vor** dem Check-in
+- 1 Stunde **nach** dem Check-out
+
+---
+
+### Auslöser-Zeit
+
+Im Feld **Auslöser-Zeit** legen Sie den zeitlichen Abstand zum Ereignis fest.
+
+Wenn beispielsweise ausgewählt wurde:
+
+- Ereignis: **Check-in**
+- Aktion: **Vor**
+- Zeit: **24 Stunden**
+
+wird die Vorlage für den Zeitraum 24 Stunden vor dem Check-in eingeplant.
+
+Ein Hinweis im Editor fasst Ihre aktuelle Konfiguration zusammen.
+
+<Info>
+  Überprüfen Sie vor dem Speichern immer **Auslöser-Ereignis**, **Vor/Nach** und **Auslöser-Zeit** gemeinsam. Diese drei Einstellungen bestimmen, wann Ihre Gäste die E-Mail erhalten.
+</Info>
+
+---
+
+## Mittlere Spalte — Visueller E-Mail-Editor
+
+Im mittleren Bereich befindet sich der visuelle Editor, in dem Sie den eigentlichen E-Mail-Inhalt erstellen.
+
+Der Editor bietet typische Text- und Layoutfunktionen wie:
+
+- Überschriften und Absätze
+- **Fett** und *kursiv*
+- Textausrichtung
+- Aufzählungen und nummerierte Listen
+- Einrückungen
+- Bilder
+- Tabellen
+- Emojis
+- Links
+
+Je nach Editoransicht stehen außerdem Funktionen wie Vorschau oder Quelltextansicht zur Verfügung.
+
+---
+
+## SUITEe E-Mail-Layout
+
+Die Vorlage verwendet ein vorbereitetes SUITEe-Layout, das als Ausgangspunkt für Ihre Gäste-Kommunikation dient.
+
+Im Inhaltsbereich können Sie beispielsweise:
+
+- Eine persönliche Begrüßung schreiben
+- Check-in-Informationen bereitstellen
+- Hinweise zur Unterkunft hinzufügen
+- Zugangsinformationen einfügen
+- Links zur Gäste-Web-App integrieren
+- Kontakt- oder Serviceinformationen bereitstellen
+
+<Tip>
+  Halten Sie automatisierte Gäste-E-Mails möglichst kurz und handlungsorientiert. Die wichtigsten Informationen — beispielsweise Check-in, Zugang oder ein wichtiger Link — sollten für den Gast sofort sichtbar sein.
+</Tip>
+
+---
+
+# Dynamische Variablen
+
+Auf der rechten Seite des Editors befindet sich der Bereich **Verfügbare Variablen**.
+
+Diese Variablen ermöglichen es, Daten aus der jeweiligen Reservierung automatisch in die E-Mail einzufügen. Dadurch können Sie eine einzige Vorlage erstellen, die für jeden Gast personalisiert wird.
+
+<Info>
+  **Variablen einfügen:** Geben Sie im E-Mail-Editor `{` ein, um verfügbare Variablen aufzurufen, oder klicken Sie auf eine Variable in der rechten Seitenleiste, um sie an der aktuellen Cursorposition einzufügen.
+</Info>
+
+---
+
+## Gäste-Variablen
+
+Im Bereich **GAST** stehen Variablen für persönliche Gästeinformationen zur Verfügung:
+
+| Variable | Platzhalter | Beispiel | Verwendung |
+| :--- | :--- | :--- | :--- |
+| **Vorname des Gastes** | `{vorname}` | *Max* | Fügt den Vornamen des Gastes ein, beispielsweise für `Hallo {vorname}`. |
+| **Nachname des Gastes** | `{nachname}` | *Mustermann* | Fügt den Nachnamen des Gastes ein. |
+| **E-Mail-Adresse des Gastes** | `{gast_email}` | *john.doe@example.com* | Fügt die in der Reservierung hinterlegte E-Mail-Adresse ein. |
+| **Telefonnummer des Gastes** | `{gast_telefon}` | *+49 170 1234567* | Fügt die zur Buchung hinterlegte Telefonnummer ein. |
+
+### Beispiel
+
+Sie könnten in Ihrer Vorlage schreiben:
+
+```text
+Hallo {vorname},
+
+vielen Dank für Ihre Buchung.
+
+Wir freuen uns darauf, Sie bald bei uns begrüßen zu dürfen.
+```
+
+Für einen Gast mit dem Vornamen Max wird daraus:
+
+```text
+Hallo Max,
+
+vielen Dank für Ihre Buchung.
+
+Wir freuen uns darauf, Sie bald bei uns begrüßen zu dürfen.
+```
+
+<Warning>
+  Verwenden Sie ausschließlich Variablen, die im Bereich **Verfügbare Variablen** des Editors angezeigt werden. So stellen Sie sicher, dass die entsprechenden Daten von SUITEe unterstützt werden.
+</Warning>
+
+---
+
+## Verbindung zu anderen Dashboard-Modulen
+
+E-Mail-Dienste sind mit mehreren Bereichen der SUITEe-Plattform verbunden:
+
+- **[Buchung](/de/dashboard/booking)** — Buchungsereignisse können als Auslöser für automatisierte E-Mail-Vorlagen verwendet werden.
+- **[Zugangsverwaltung](/de/dashboard/access-management)** — Zugangsinformationen können Teil der Kommunikation mit Gästen sein.
+- **[Zimmer](/de/dashboard/rooms)** — Zimmer- und Einheitsinformationen können für die Gäste-Kommunikation relevant sein.
+- **[Dashboard-Übersicht](/de/dashboard/overview)** — Führt zurück zur zentralen operativen Übersicht der Unterkunft.

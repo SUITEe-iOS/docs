@@ -1,0 +1,129 @@
+---
+title: "Reservierungsverwaltung"
+description: "So gelangen Reservierungen aus Ihrem PMS in SUITEe — Gästebuchungen und Zugangsstatus anzeigen, verfolgen und verwalten."
+---
+
+Reservierungen werden in SUITEe **automatisch aus Ihrem PMS** (Property Management System) synchronisiert. In der Regel müssen Sie Reservierungen nicht manuell erstellen — die Daten werden automatisch aus Ihrem Buchungssystem übernommen.
+
+<Info>
+  SUITEe ist darauf ausgelegt, **zusammen mit Ihrem PMS** zu arbeiten und es nicht zu ersetzen. Alle Buchungen, Änderungen und Stornierungen werden zuerst in Ihrem PMS vorgenommen und anschließend automatisch mit SUITEe synchronisiert.
+</Info>
+
+## Wie Reservierungen zu SUITEe gelangen
+
+<Steps>
+  <Step title="Die Buchung wird erstellt">
+    Ein Gast bucht über einen beliebigen Kanal — Ihre Website, Booking.com, Airbnb, ein Reisebüro oder direkt vor Ort. Die Buchung wird in Ihrem PMS erfasst.
+  </Step>
+
+  <Step title="Das PMS sendet die Daten an SUITEe">
+    Ihr PMS übermittelt die Buchungsdetails automatisch an SUITEe:
+
+    - Name und Kontaktdaten des Gastes
+    - Zimmer- bzw. Einheitszuweisung
+    - Check-in-Datum und -Uhrzeit
+    - Check-out-Datum und -Uhrzeit
+    - Reservierungsstatus (bestätigt, geändert, storniert)
+  </Step>
+
+  <Step title="SUITEe erstellt die Reservierung">
+    SUITEe erstellt einen Reservierungseintrag und beginnt mit der Vorbereitung:
+
+    - Digitale Zugangsdaten (PIN-Code oder mobiler Schlüssel) werden erstellt
+    - Die Vorbereitung des Raumklimas wird geplant
+    - Check-in-Informationen für den Gast werden für den Versand vorbereitet
+  </Step>
+
+  <Step title="Der Zugang wird zur Check-in-Zeit aktiviert">
+    Sobald die Check-in-Zeit des Gastes erreicht ist, werden seine Zugangsdaten aktiv und er erhält seine Check-in-Informationen.
+  </Step>
+
+  <Step title="Der Zugang läuft beim Check-out ab">
+    Zur geplanten Check-out-Zeit läuft der Zugang des Gastes automatisch ab. Es ist keine manuelle Aktion erforderlich.
+  </Step>
+</Steps>
+
+---
+
+## Reservierungen anzeigen
+
+Der Bereich **Reservierungen** organisiert Buchungen in drei Kategorien:
+
+| Kategorie | Beschreibung |
+| :--- | :--- |
+| **Bevorstehende Reservierungen** | Gäste, die in den kommenden Tagen anreisen |
+| **Aktuelle Reservierungen** | Gäste, die aktuell eingecheckt sind und sich in der Unterkunft befinden |
+| **Vergangene Reservierungen** | Abgeschlossene Aufenthalte, die weiterhin für Referenz und Auswertungen verfügbar sind |
+
+### Reservierungsdetails
+
+Für jede Reservierung können Sie folgende Informationen einsehen:
+
+| Feld | Beschreibung |
+| :--- | :--- |
+| **Gastname** | Name des Gastes aus dem PMS |
+| **Zimmer / Einheit** | Zugeordnetes Zimmer oder Apartment |
+| **Check-in-Datum & -Uhrzeit** | Zeitpunkt, zu dem der Gast voraussichtlich anreist |
+| **Check-out-Datum & -Uhrzeit** | Zeitpunkt, zu dem der Gast voraussichtlich abreist |
+| **Zugangsstatus** | Zeigt, ob der digitale Schlüssel bzw. PIN erstellt und versendet wurde |
+| **Reservierungsstatus** | Bestätigt, eingecheckt, ausgecheckt oder storniert |
+
+<Frame>
+  <img src="/images/dashboard-buchungen.png" alt="SUITEe Reservierungsliste mit bevorstehenden, aktuellen und vergangenen Buchungen" />
+</Frame>
+
+---
+
+## Was passiert, wenn sich Reservierungen ändern?
+
+SUITEe verarbeitet Änderungen an Reservierungen automatisch:
+
+| Änderung im PMS | Was SUITEe macht |
+| :--- | :--- |
+| **Reservierung geändert** (Datum geändert) | Die Zugangsdaten werden an die neuen Daten angepasst |
+| **Zimmer geändert** | Der Zugang wird automatisch auf das neue Zimmer übertragen |
+| **Reservierung storniert** | Die Zugangsdaten werden sofort widerrufen |
+| **Gastname aktualisiert** | Die Gastinformationen werden in SUITEe aktualisiert |
+| **Neue Buchung hinzugefügt** | Ein neuer Reservierungseintrag mit neuen Zugangsdaten wird erstellt |
+
+<Warning>
+  **Wichtig:** Nehmen Sie Änderungen an Reservierungen immer zuerst in Ihrem **PMS** vor. SUITEe synchronisiert die Daten aus dem PMS — versuchen Sie daher nicht, Buchungsdaten oder Zimmerzuweisungen direkt in SUITEe zu ändern. Das PMS ist die führende Datenquelle.
+</Warning>
+
+---
+
+## Zugangsstatus verfolgen
+
+Eines der wichtigsten Felder in der Reservierungsansicht ist der **Zugangsstatus**. Dieser zeigt an, ob der Gast aktuell Zugang zu seinem Zimmer hat:
+
+| Zugangsstatus | Bedeutung |
+| :--- | :--- |
+| **Ausstehend** | Die Zugangsdaten wurden erstellt, sind aber noch nicht aktiv, da die Check-in-Zeit noch nicht erreicht wurde |
+| **Aktiv** | Der Gast kann seine Tür aktuell öffnen — die Zugangsdaten sind aktiv |
+| **Abgelaufen** | Die Check-out-Zeit ist überschritten — die Zugangsdaten sind nicht mehr gültig |
+| **Widerrufen** | Der Zugang wurde manuell durch einen Mitarbeiter widerrufen |
+
+<Tip>
+  Wenn ein Gast meldet, dass er sein Zimmer nicht öffnen kann, prüfen Sie **zuerst den Zugangsstatus** in den Reservierungsdetails. Wird dort **Ausstehend** angezeigt, ist die Check-in-Zeit möglicherweise noch nicht erreicht.
+</Tip>
+
+---
+
+## Manuelle Aktionen
+
+Obwohl der Großteil der Reservierungsverwaltung automatisiert erfolgt, können Mitarbeiter bei Bedarf bestimmte Aktionen manuell durchführen:
+
+- **Zugangsdaten erneut senden** — Wenn ein Gast seine Zugangsinformationen nicht erhalten hat, können Sie diese erneut senden.
+- **Neuen PIN-Code erstellen** — Wenn ein Gast seinen PIN vergessen hat, können Sie einen neuen erstellen.
+- **Zugang verlängern** — Wenn der Aufenthalt eines Gastes verlängert wird, aktualisieren Sie die Reservierung im PMS. SUITEe synchronisiert anschließend die Änderung.
+- **Zugang widerrufen** — In dringenden Situationen können Sie den Zugang eines Gastes sofort deaktivieren.
+
+<CardGroup cols={2}>
+  <Card title="Zugangsverwaltung" icon="key" href="/de/dashboard/access-management">
+    Weitere Informationen zu Zugangsarten, PIN-Codes und mobilen Schlüsseln.
+  </Card>
+
+  <Card title="PMS-Integration" icon="plug" href="/de/guest-journey/pms-integration">
+    Erfahren Sie, wie der Datenaustausch zwischen Ihrem PMS und SUITEe funktioniert.
+  </Card>
+</CardGroup>

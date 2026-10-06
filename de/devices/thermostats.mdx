@@ -1,0 +1,109 @@
+---
+title: "Smarte Thermostate"
+description: "So automatisieren die smarten Thermostate von SUITEe das Raumklima — Gästemodus, Eco-Modus, Fernsteuerung und Vorkonditionierung."
+---
+
+Smarte Thermostate sind das Herzstück der Energieautomatisierung von SUITEe. Sie steuern Heizung und Kühlung in jedem Raum und passen die Temperatur automatisch anhand von Belegung, Reservierungen und Sensordaten an.
+
+## Was sind smarte Thermostate?
+
+Die smarten Thermostate von SUITEe sind digitale Klimasteuerungen, die:
+
+- die **Temperatur automatisch anpassen**, je nachdem, ob ein Raum belegt oder leer ist
+- von Mitarbeitern über das Dashboard **aus der Ferne gesteuert** werden können
+- Gästen ermöglichen, die Raumtemperatur über die **Gäste-Web-App anzupassen**
+- Räume vor der Ankunft eines Gastes **vorheizen oder vorkühlen**
+
+---
+
+## Energiemodi
+
+Jeder Raum mit einem smarten Thermostat arbeitet in einem von zwei Modi:
+
+| Modus | Temperatur | Wann er aktiv ist | Zweck |
+| :--- | :--- | :--- | :--- |
+| **Gästemodus** | Komfortabel (typischerweise 20–24 °C / 68–75 °F) | Wenn ein Gast eingecheckt ist | Maximaler Komfort für den Gast |
+| **Eco-Modus** | Energiesparend (typischerweise 15–18 °C / 59–64 °F) | Wenn der Raum leer ist | Minimaler Energieverbrauch |
+
+Der Wechsel zwischen den Modi erfolgt **automatisch** auf Grundlage von:
+
+- Reservierungsdaten (Check-in- und Check-out-Zeiten)
+- Messwerten des Präsenzsensors (befindet sich jemand im Raum?)
+- Status des Fenstersensors (ist ein Fenster geöffnet?)
+
+---
+
+## So funktioniert die Temperaturautomatisierung
+
+<Steps>
+  <Step title="Vor der Ankunft des Gastes">
+    Der Raum bleibt im **Eco-Modus** mit minimalem Energieverbrauch. Kurz vor der Check-in-Zeit des Gastes beginnt das Thermostat mit der **Vorkonditionierung** — der Raum wird auf eine angenehme Temperatur geheizt oder gekühlt, sodass er bei der Ankunft des Gastes bereit ist.
+  </Step>
+
+  <Step title="Gast befindet sich im Raum">
+    Der Raum arbeitet im **Gästemodus**. Der Gast kann die Temperatur anpassen:
+
+    - über die **Gäste-Web-App** auf seinem Smartphone
+    - bei einigen Thermostaten auch direkt über die Bedienelemente am Gerät
+
+    Mitarbeiter können die Temperatur ebenfalls aus der Ferne über das Dashboard anpassen.
+  </Step>
+
+  <Step title="Gast verlässt den Raum vorübergehend">
+    Der **Präsenzsensor** erkennt, dass der Raum leer ist. Nach einer konfigurierbaren Verzögerung, z. B. 15–30 Minuten, reduziert das Thermostat die Heiz- oder Kühlleistung, um Energie zu sparen. Da der Gast weiterhin eingecheckt ist, wechselt der Raum dabei nicht vollständig in den Eco-Modus.
+  </Step>
+
+  <Step title="Gast kehrt zurück">
+    Der Präsenzsensor erkennt die Rückkehr des Gastes. Das Thermostat stellt **schnell wieder die komfortable Temperatur** her.
+  </Step>
+
+  <Step title="Fenster wird geöffnet">
+    Der **Fenstersensor** erkennt ein geöffnetes Fenster. Heizung oder Kühlung werden **sofort pausiert**, um unnötigen Energieverbrauch zu vermeiden. Sobald das Fenster wieder geschlossen wird, wird der normale Betrieb fortgesetzt.
+
+    <Tip>
+      Allein diese Automatisierung kann erheblich Energie sparen. Im Winter öffnen Gäste häufig Fenster zum Lüften, während die Heizung auf hoher Leistung läuft — der Fenstersensor verhindert diese Energieverschwendung.
+    </Tip>
+  </Step>
+
+  <Step title="Gast checkt aus">
+    Der Raum wechselt sofort in den **Eco-Modus**. Er bleibt bei minimalem Energieverbrauch, bis die Vorkonditionierungsphase für den nächsten Gast beginnt.
+  </Step>
+</Steps>
+
+---
+
+## Thermostate über das Dashboard steuern
+
+Mitarbeiter können die Thermostate der gesamten Unterkunft über das Dashboard verwalten:
+
+| Aktion | Beschreibung |
+| :--- | :--- |
+| **Alle Temperaturen anzeigen** | Zeigt die aktuellen Temperaturwerte für alle Räume |
+| **Temperatur anpassen** | Stellen Sie aus der Ferne eine bestimmte Temperatur für einen beliebigen Raum ein |
+| **Modus wechseln** | Wechseln Sie manuell zwischen Gästemodus und Eco-Modus |
+| **Verlauf anzeigen** | Zeigt die Temperaturveränderungen eines Raums im Zeitverlauf |
+| **Gerätestatus prüfen** | Überprüfen Sie, ob das Thermostat online ist und ordnungsgemäß funktioniert |
+
+---
+
+## Temperatursteuerung durch Gäste
+
+Gäste können die Temperatur ihres Zimmers über die **Gäste-Web-App** auf ihrem Smartphone anpassen:
+
+- Kein App-Download erforderlich — die Anwendung funktioniert direkt im Browser des Smartphones
+- Einfache Bedienoberfläche zum Erhöhen oder Senken der Temperatur
+- Änderungen werden innerhalb weniger Minuten wirksam
+
+<Info>
+  Temperatureinstellungen durch Gäste sind auf einen **angemessenen Temperaturbereich begrenzt**, um extreme Einstellungen zu verhindern. Der genaue Bereich kann vom Unterkunfts-Manager konfiguriert werden.
+</Info>
+
+<CardGroup cols={2}>
+  <Card title="Sensoren" icon="satellite-dish" href="/de/devices/sensors">
+    Erfahren Sie mehr über die Sensoren, die Daten für die Thermostate liefern.
+  </Card>
+
+  <Card title="Energiemanagement" icon="leaf" href="/de/dashboard/energy-management">
+    Überwachen Sie die Energieeinsparungen in Ihrer gesamten Unterkunft.
+  </Card>
+</CardGroup>

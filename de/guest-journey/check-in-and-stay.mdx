@@ -1,0 +1,111 @@
+---
+title: "Check-in, Aufenthalt & Check-out"
+description: "Das vollständige Gästeerlebnis vor Ort — von der Ankunft bis zum Check-out, einschließlich digitaler Schlüssel, Klimasteuerung und smarter IoT-Automatisierungen."
+---
+
+Diese Seite beschreibt die Gästereise vom Moment der Ankunft in Ihrer Unterkunft über den gesamten Aufenthalt bis zur Abreise. SUITEe automatisiert diesen gesamten Ablauf und ermöglicht Gästen, die Rezeption vollständig zu umgehen, während gleichzeitig der Energieverbrauch des Zimmers automatisch gesteuert wird.
+
+---
+
+## 1. Ankunft und digitaler Check-in
+
+Wenn der Gast in der Unterkunft ankommt, werden seine Zugangsdaten automatisch zur geplanten Check-in-Zeit aktiviert.
+
+<Steps>
+  <Step title="Gast öffnet die Web-App">
+    Der Gast öffnet den sicheren Link aus seiner E-Mail vor der Ankunft. Dadurch wird die **Gäste-Web-App** direkt im Browser seines Smartphones geöffnet — ein App-Download ist nicht erforderlich.
+
+    *Sicherheitshinweis: Die URL der Web-App enthält eine sichere, interne UUID. Die interne PMS-Buchungs-ID wird niemals im öffentlichen Internet offengelegt.*
+  </Step>
+
+  <Step title="Gebäudezugang">
+    Wenn der Haupteingang Ihrer Unterkunft mit einem smarten Schloss ausgestattet ist, kann der Gast in der Gäste-Web-App auf **„Öffnen“** tippen oder alternativ seinen Backup-PIN-Code über das physische Tastenfeld eingeben.
+  </Step>
+
+  <Step title="Zimmerzugang">
+    An der Zimmertür verwendet der Gast denselben digitalen Schlüssel oder PIN-Code. Wenn das Schloss gültige Zugangsdaten erhält, kommuniziert es über das SUITEe Gateway, um den Zutritt zu autorisieren.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/guest-app-1.png" alt="SUITEe Gäste-Web-App – Ansicht 1" />
+</Frame>
+
+<Frame>
+  <img src="/images/guest-app-2.png" alt="SUITEe Gäste-Web-App – Ansicht 2" />
+</Frame>
+
+<Frame>
+  <img src="/images/guest-app-3.png" alt="SUITEe Gäste-Web-App – Ansicht 3" />
+</Frame>
+
+<Info>
+  Der Check-in-Prozess ist vollständig reibungslos. Wenn der Gast seine Zimmertür öffnet, hat das smarte Thermostat das Zimmer bereits auf die optimale Temperatur vorkonditioniert.
+</Info>
+
+---
+
+## 2. Während des Aufenthalts: Steuerung durch den Gast
+
+Nach dem Check-in hat der Gast über die Gäste-Web-App die volle Kontrolle über seine Zimmerumgebung. Die App kommuniziert sicher mit der **Guest Web API**, um Befehle auszuführen:
+
+| Funktion | Technischer Ablauf |
+| :--- | :--- |
+| **Türzugang** | Durch Tippen auf „Öffnen“ wird über die API ein Befehl an das Gateway gesendet, das dem physischen Türschloss das Signal zum Öffnen gibt. |
+| **Klimasteuerung** | Gäste können die Temperatur erhöhen oder senken. Die API sendet diese Änderungen direkt an das smarte Thermostat des Zimmers. Manager können maximale und minimale Grenzwerte konfigurieren. |
+| **Digitale Registrierung** | Falls noch nicht erfolgt, können Gäste die erforderlichen Registrierungsformulare digital ausfüllen. |
+
+---
+
+## 3. Während des Aufenthalts: Smarte Automatisierungen
+
+Während der Gast seinen Aufenthalt genießt, arbeitet die IoT-Hardware von SUITEe unauffällig im Hintergrund, um die Energieeffizienz zu optimieren:
+
+| Auslöser | Aktion des IoT-Sensors | Ergebnis |
+| :--- | :--- | :--- |
+| **Gast verlässt das Zimmer** | Der **Präsenzsensor** im Zimmer erkennt für einen konfigurierten Zeitraum, z. B. 15 Minuten, keine Bewegung. | Das Thermostat reduziert vorübergehend die Heiz- bzw. Kühlleistung, um Energie zu sparen. |
+| **Gast kehrt zurück** | Der **Präsenzsensor** erkennt Bewegung. | Das Thermostat stellt sofort wieder die vom Gast bevorzugte Temperatur her. |
+| **Fenster wird geöffnet** | Der **Fensterkontaktsensor** erkennt, dass das Fenster geöffnet ist. | Das Thermostat pausiert Heizung bzw. Kühlung vollständig, um unnötigen Energieverbrauch zu vermeiden. |
+| **Fenster wird geschlossen** | Der **Fensterkontaktsensor** erkennt, dass das Fenster geschlossen ist. | Die normale Klimasteuerung wird sofort fortgesetzt. |
+
+---
+
+## 4. Check-out und Abreise
+
+Der Abreiseprozess ist genauso automatisiert wie die Ankunft:
+
+<Steps>
+  <Step title="Zugangsdaten laufen ab">
+    Zur exakt geplanten Check-out-Zeit, z. B. um 11:00 Uhr, werden der **Tuya PIN** und der **mobile Schlüssel** automatisch vom System widerrufen. Der Gast kann das Zimmer anschließend nicht mehr betreten.
+  </Step>
+
+  <Step title="Eco-Modus wird aktiviert">
+    Das Thermostat des Zimmers wird sofort in den **Eco-Modus** mit minimalem Energieverbrauch versetzt, damit keine Energie verschwendet wird, während das Zimmer leer steht.
+  </Step>
+
+  <Step title="Housekeeping wird informiert">
+    Das Dashboard aktualisiert automatisch den Zimmerstatus und signalisiert dem Housekeeping, dass das Zimmer frei und zur Reinigung bereit ist.
+  </Step>
+
+  <Step title="Der nächste Zyklus wird vorbereitet">
+    Nach der Reinigung wartet das Zimmer auf den nächsten eingehenden PMS-Webhook, um den Ablauf für den nächsten Gast erneut zu starten.
+  </Step>
+</Steps>
+
+<Warning>
+  **Für Help-Centre-Mitarbeiter:** Wenn ein Gast meldet „Ich kann meine Tür nicht öffnen“, prüfen Sie zunächst im Dashboard:
+
+  1. Ist die Reservierung aktuell aktiv? Die Check-in-Zeit muss bereits erreicht sein und die Check-out-Zeit darf noch nicht überschritten sein.
+  2. Wird das Schloss als **Online** angezeigt und ist ausreichend **Batterie** vorhanden?
+  3. Wurde der Zugang erfolgreich erstellt? Prüfen Sie die Spalte `Zugangsstatus`.
+</Warning>
+
+<CardGroup cols={2}>
+  <Card title="Vor der Ankunft" icon="plane-arrival" href="/de/guest-journey/before-arrival">
+    Sehen Sie sich die Automatisierungsschritte vor der Ankunft an.
+  </Card>
+
+  <Card title="Zugangsverwaltung" icon="key" href="/de/dashboard/access-management">
+    Erfahren Sie im Detail, wie PINs und mobile Schlüssel erstellt werden.
+  </Card>
+</CardGroup>

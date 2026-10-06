@@ -1,0 +1,114 @@
+---
+title: "Gateways"
+description: "Alles über SUITEe Gateways — die Kommunikationsbrücke zwischen Ihren smarten Geräten und dem Cloud-Dashboard."
+---
+
+Gateways sind kleine Hub-Geräte, die als **Kommunikationsbrücke** zwischen Ihren smarten Geräten (Schlösser, Thermostate, Sensoren) und dem SUITEe Cloud-Dashboard dienen. Ohne ein Gateway können Geräte keine Daten an das Dashboard senden oder Anweisungen vom System empfangen.
+
+## Was ist ein Gateway?
+
+Stellen Sie sich ein Gateway als **Übersetzer und Vermittlungsstation** vor:
+
+- Smarte Geräte (Schlösser, Thermostate, Sensoren) kommunizieren über drahtlose Protokolle mit kurzer Reichweite
+- Das Gateway **empfängt** diese Kommunikation
+- Anschließend **überträgt** es die Daten über das WLAN bzw. Internet Ihrer Unterkunft an die SUITEe Cloud
+- Befehle aus dem Dashboard werden über das Gateway zurück an die Geräte gesendet
+
+<Info>
+  Jede Unterkunft benötigt **mindestens ein Gateway**. Größere Unterkünfte können mehrere Gateways benötigen, um eine ausreichende Abdeckung über alle Etagen und Bereiche hinweg sicherzustellen.
+</Info>
+
+---
+
+## So funktionieren Gateways
+
+<Steps>
+  <Step title="Gateway verbindet sich mit Ihrem Netzwerk">
+    Das Gateway wird an die Stromversorgung angeschlossen und verbindet sich mit dem **WLAN- oder Ethernet-Netzwerk** Ihrer Unterkunft.
+  </Step>
+
+  <Step title="Smarte Geräte verbinden sich mit dem Gateway">
+    Alle smarten Geräte in der Nähe (Schlösser, Thermostate, Sensoren) stellen über drahtlose Protokolle mit kurzer Reichweite eine Verbindung zum Gateway her.
+  </Step>
+
+  <Step title="Daten werden in beide Richtungen übertragen">
+    - **Geräte → Gateway → Cloud:** Sensordaten, Schlossstatus und Temperaturdaten werden an das Dashboard gesendet
+    - **Cloud → Gateway → Geräte:** Fernbefehle, z. B. Tür entriegeln oder Temperatur anpassen, werden an die Geräte gesendet
+  </Step>
+
+  <Step title="Dashboard zeigt den Echtzeitstatus">
+    Mitarbeiter sehen den aktuellen Gerätestatus, können Fernbefehle senden und Benachrichtigungen erhalten — alles über die Gateway-Verbindung.
+  </Step>
+</Steps>
+
+---
+
+## Anforderungen für die Gateway-Einrichtung
+
+| Anforderung | Details |
+| :--- | :--- |
+| **Stromversorgung** | Permanente Stromversorgung über eine Steckdose |
+| **Netzwerk** | WLAN- oder Ethernet-Verbindung mit Internetzugang |
+| **Standort** | Zentraler Standort mit guter Abdeckung für alle Geräte |
+| **Anzahl** | Mindestens ein Gateway pro Unterkunft; bei großen oder mehrstöckigen Unterkünften können weitere Gateways erforderlich sein |
+
+<Warning>
+  **Die Reihenfolge bei der Einrichtung ist wichtig:** Richten Sie die Gateways immer **vor** den anderen Geräten ein. Das Gateway muss online und verbunden sein, damit Schlösser, Thermostate und Sensoren darüber kommunizieren können.
+</Warning>
+
+---
+
+## Warum Gateways wichtig sind
+
+Ohne ein funktionierendes Gateway:
+
+| Auswirkung | Beschreibung |
+| :--- | :--- |
+| **Keine Fernüberwachung** | Das Dashboard kann den Gerätestatus nicht anzeigen oder Sensordaten empfangen |
+| **Keine Fernbefehle** | Mitarbeiter können Türen nicht aus der Ferne entriegeln oder Temperaturen anpassen |
+| **Keine Echtzeit-Benachrichtigungen** | Warnungen zu niedrigem Batteriestand, Offline-Geräten usw. werden nicht angezeigt |
+| **Geräte funktionieren weiterhin lokal** | Schlösser und PIN-Codes funktionieren weiterhin — jedoch ohne Cloud-Verbindung |
+
+<Info>
+  **Wichtig:** Auch wenn ein Gateway offline ist, funktionieren smarte Schlösser weiterhin mit PIN-Codes. Gäste können ihre Zimmer weiterhin betreten. Allerdings stehen Dashboard-Anzeige und Fernsteuerung nicht zur Verfügung, bis das Gateway wieder online ist.
+</Info>
+
+---
+
+## Gateway-Status überwachen
+
+Über das Dashboard können Sie den Status jedes Gateways überprüfen:
+
+| Status | Bedeutung |
+| :--- | :--- |
+| **Online** | Das Gateway ist verbunden und funktioniert normal |
+| **Offline** | Das Gateway hat die Verbindung verloren — überprüfen Sie Stromversorgung und Netzwerk |
+| **Eingeschränkt** | Das Gateway ist verbunden, weist jedoch Leistungsprobleme auf |
+
+### Fehlerbehebung bei einem Offline-Gateway
+
+<Steps>
+  <Step title="Stromversorgung prüfen">
+    Stellen Sie sicher, dass das Gateway **eingesteckt** ist und die Steckdose funktioniert.
+  </Step>
+
+  <Step title="Netzwerk prüfen">
+    Überprüfen Sie, ob das **WLAN-Netzwerk** bzw. das Ethernet-Kabel verbunden ist und die Internetverbindung funktioniert.
+  </Step>
+
+  <Step title="Gateway neu starten">
+    Führen Sie einen **Neustart** des Gateways durch — ziehen Sie den Netzstecker, warten Sie 30 Sekunden und schließen Sie das Gateway anschließend wieder an.
+  </Step>
+
+  <Step title="Standort prüfen">
+    Wenn Geräte weit vom Gateway entfernt sind, sollten Sie das Gateway für eine bessere Abdeckung neu positionieren oder ein zusätzliches Gateway installieren.
+  </Step>
+
+  <Step title="Support kontaktieren">
+    Wenn das Problem nach diesen Schritten weiterhin besteht, wenden Sie sich an den [SUITEe Support](https://suite-e.com/contact-us/).
+  </Step>
+</Steps>
+
+<Tip>
+  **Tipp zur Einrichtung:** Schalten Sie Gateways ungefähr **30 Minuten** vor Beginn der Geräteeinrichtung ein. Dadurch haben sie ausreichend Zeit, eine stabile Verbindung mit der SUITEe Cloud aufzubauen.
+</Tip>
