@@ -1,0 +1,104 @@
+---
+title: "Sensors"
+description: "Understand the sensors that power SUITEe's automations — occupancy, window, temperature, motion, and water sensors."
+---
+
+Sensors are small devices placed in rooms that **detect conditions** and feed data to the SUITEe system. They are the foundation of SUITEe's automation — without sensor data, the system wouldn't know when rooms are empty, when windows are open, or what the current temperature is.
+
+## Types of sensors
+
+| Sensor Type | What It Detects | Why It Matters |
+| :--- | :--- | :--- |
+| **Occupancy / Presence Sensor** | Whether someone is in the room | Drives energy automation — reduce heating/cooling when empty |
+| **Window Sensor** | Whether a window is open or closed | Pauses heating/cooling when windows are open to prevent waste |
+| **Temperature Sensor** | Current room temperature | Provides accurate temperature data for climate control |
+| **Motion Sensor** | Movement in the room | Detects activity and presence for various automations |
+| **Water Sensor** | Water leaks or flooding | Alerts staff immediately if water is detected (e.g., bathroom leak) |
+
+---
+
+## How sensors drive automations
+
+Sensors provide the **real-time data** that makes SUITEe's automations intelligent:
+
+<AccordionGroup>
+  <Accordion title="Occupancy sensor → Energy savings">
+    - Sensor says **"room is occupied"** → Thermostat stays in Guest Mode (comfortable)
+    - Sensor says **"room is empty"** → After a delay, thermostat reduces energy consumption
+    - Sensor says **"guest returned"** → Thermostat restores comfort quickly
+  </Accordion>
+
+  <Accordion title="Window sensor → Heating/cooling control">
+    - Sensor says **"window is open"** → Heating/cooling pauses immediately
+    - Sensor says **"window is closed"** → Heating/cooling resumes normal operation
+  </Accordion>
+
+  <Accordion title="Temperature sensor → Accurate climate control">
+    - Provides real-time temperature readings to the thermostat
+    - Ensures rooms reach the correct temperature during pre-conditioning
+    - Alerts staff if a room temperature falls outside normal ranges
+  </Accordion>
+
+  <Accordion title="Water sensor → Leak detection">
+    - If water is detected on the floor → Immediate alert on the dashboard
+    - Prevents water damage from bathroom leaks, burst pipes, or overflowing sinks
+    - Early detection saves significant repair costs
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Sensor placement
+
+Sensors are typically placed in these locations:
+
+| Sensor | Typical Location |
+| :--- | :--- |
+| **Occupancy sensor** | Ceiling or high wall position with a clear view of the room |
+| **Window sensor** | On the window frame (magnetic contact sensor) |
+| **Temperature sensor** | Wall-mounted at a representative height (not near heat sources) |
+| **Motion sensor** | Ceiling or corner position covering the main room area |
+| **Water sensor** | Floor level near bathrooms, kitchens, or under sinks |
+
+<Info>
+  Sensors are small and discreet — most guests won't even notice them. They are designed to blend into the room environment.
+</Info>
+
+---
+
+## Monitoring sensor status
+
+From the dashboard, you can see the status of every sensor:
+
+| Status | Meaning |
+| :--- | :--- |
+| **Online** | Sensor is working and sending data normally |
+| **Offline** | Sensor has lost connection — check battery and gateway proximity |
+| **Low Battery** | Sensor battery needs replacement |
+| **Triggered** | Sensor is currently detecting something (e.g., occupancy detected, window open) |
+
+<Warning>
+  **If an occupancy sensor goes offline**, the system cannot detect whether a room is occupied. This means energy automations won't work correctly for that room. Address offline sensor alerts promptly.
+</Warning>
+
+---
+
+## Battery and maintenance
+
+- Most sensors are **battery-powered** with long battery life (typically 1–2 years)
+- The dashboard alerts you when a sensor's battery is low
+- **No wiring** is needed — sensors are attached with adhesive or screws
+- Replacement is simple: swap the old sensor for a new one and pair it in the dashboard
+
+<Tip>
+  **Setup tip:** Power on gateways and sensors approximately **30 minutes** before starting the device setup process. This gives them time to establish a stable connection.
+</Tip>
+
+<CardGroup cols={2}>
+  <Card title="Gateways" icon="tower-broadcast" href="/devices/gateways">
+    How sensors communicate with the dashboard.
+  </Card>
+  <Card title="Energy Management" icon="leaf" href="/dashboard/energy-management">
+    See the impact of sensor-driven automations.
+  </Card>
+</CardGroup>

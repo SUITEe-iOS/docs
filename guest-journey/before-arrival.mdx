@@ -1,0 +1,75 @@
+---
+title: "Before Arrival — Pre-Check-In"
+description: "The automated sequence that occurs between a booking being created and the guest arriving at the property, including data sync, PIN generation, and guest communications."
+---
+
+The guest journey in SUITEe begins instantly the moment a booking is created in your Property Management System (PMS). The pre-arrival automation pipeline ensures that by the time the guest physically arrives, their digital access and room climate are fully prepared without any manual staff intervention.
+
+---
+
+## 1. Booking Data Reception
+
+The entire automation sequence is triggered when SUITEe receives a booking:
+
+1. **The Guest Books**: A reservation is created via an OTA (e.g., Booking.com, Airbnb), your direct website, or manually by staff into your PMS.
+2. **Real-Time Webhook**: The PMS immediately fires a live webhook carrying the reservation payload (Guest Name, Contact Details, Room Assignment, Dates) to SUITEe.
+3. **Queue Processing**: SUITEe receives the webhook into a secure RabbitMQ queue. It uses the `pms_booking_id` to ensure the booking is processed exactly once, preventing duplicates.
+
+<Info>
+  If a live webhook is missed due to a network outage, SUITEe's **45-minute Cron Backfill** automatically fetches the missed reservation from the PMS API, ensuring no guest is ever left stranded.
+</Info>
+
+---
+
+## 2. Automated Access Generation
+
+As soon as the booking is successfully written to the database, the **Booking Post-Processor Service** immediately begins preparing the guest's physical access:
+
+- **Tuya PIN Generation**: The system communicates with the Tuya IoT cloud to provision a unique, time-bound PIN code specifically for the smart lock on the guest's assigned room.
+- **Validity Window**: This PIN is strictly programmed to become active exactly at the scheduled check-in time and will automatically expire exactly at the check-out time.
+- **Mobile Key Preparation**: A secure, unique UUID link is generated for the Guest Web App, allowing the guest to unlock the door via their smartphone.
+
+---
+
+## 3. Pre-Arrival Guest Communication
+
+With access credentials generated, the system dispatches automated communications to the guest. SUITEe uses custom email templates (configured via SendGrid) to deliver this critical information.
+
+<Frame>
+  <img src="/images/email-template-editor-overview.png" alt="Email template editor in SUITEe showing dynamic variables for guest communication" />
+</Frame>
+
+The pre-arrival email typically contains:
+- **The Guest Web App Link**: A secure, one-click URL that opens the Guest Web App in their mobile browser (no app store download required).
+- **The PIN Code**: The backup numerical code they can type directly onto the physical door lock keypad.
+- **Property Information**: Building access instructions, Wi-Fi passwords, and parking details.
+- **Digital Registration (Optional)**: A link prompting them to complete their registration forms online before they arrive.
+
+---
+
+## 4. Room Climate Pre-Conditioning
+
+As the check-in time approaches, SUITEe's energy management system automatically begins preparing the physical room:
+
+- **Thermostat Activation**: The room's smart thermostat switches from Eco Mode to Guest Mode.
+- **Target Temperature**: It begins heating or cooling the room to the default comfortable temperature configured for your property.
+- **Perfect Timing**: The system calculates the exact time needed to condition the room so that it hits the target temperature precisely when the guest is expected to walk through the door, saving energy during the hours prior.
+
+---
+
+## What Staff See in the Dashboard
+
+During this pre-arrival phase, the booking appears in the [Booking](/dashboard/booking) table. Staff can verify the automation by checking:
+
+- **Zugangsstatus (Access Status)**: Should show that access has been successfully generated (e.g., `Zugang generiert`).
+- **Reg.-Status (Registration Status)**: Indicates whether the guest has proactively completed their online registration.
+- **Activity Centre**: The [Activity Centre](/dashboard/activity-centre) logs every step of this pipeline, from the incoming webhook to the successful PIN generation on the lock.
+
+<CardGroup cols={2}>
+  <Card title="Check-In, Stay & Check-Out" icon="person-walking-luggage" href="/guest-journey/check-in-and-stay">
+    Continue the guest journey — from arrival to departure.
+  </Card>
+  <Card title="PMS Integration" icon="plug" href="/guest-journey/pms-integration">
+    Learn how the data flows from your PMS into SUITEe.
+  </Card>
+</CardGroup>

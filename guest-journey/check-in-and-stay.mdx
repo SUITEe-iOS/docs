@@ -1,0 +1,107 @@
+---
+title: "Check-In, Stay & Check-Out"
+description: "The complete guest experience on-site — from arriving at the property to checking out, including digital keys, climate control, and smart IoT automations."
+---
+
+This page covers the guest journey from the moment they arrive at your property through their stay and departure. SUITEe automates this entire lifecycle, allowing guests to bypass the reception desk entirely while automatically managing room energy consumption.
+
+---
+
+## 1. Arrival and Digital Check-In
+
+When the guest arrives at the property, their physical access credentials automatically become active at the scheduled check-in time. 
+
+<Steps>
+  <Step title="Guest Opens Web App">
+    The guest opens the secure link provided in their pre-arrival email. This launches the **Guest Web App** directly in their smartphone's browser — no app download is required.
+    
+    *Security Note: The Web App URL contains a secure, internal UUID. The internal PMS booking ID is never exposed to the public internet.*
+  </Step>
+
+  <Step title="Building Access">
+    If your property has a smart lock on the main entrance, the guest uses their Guest Web App to tap **"Unlock"**, or they can enter their backup PIN code on the physical keypad.
+  </Step>
+
+  <Step title="Room Access">
+    At their room door, they use the same digital key or PIN. When the lock receives the valid credential, it communicates via the SUITEe gateway to authorize entry.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/guest-app-1.png" alt="SUITEe Guest Web App interface - Screen 1" />
+</Frame>
+<Frame>
+  <img src="/images/guest-app-2.png" alt="SUITEe Guest Web App interface - Screen 2" />
+</Frame>
+<Frame>
+  <img src="/images/guest-app-3.png" alt="SUITEe Guest Web App interface - Screen 3" />
+</Frame>
+
+<Info>
+  The check-in process is entirely frictionless. By the time the guest opens their room door, the smart thermostat has already pre-conditioned the room to the perfect temperature.
+</Info>
+
+---
+
+## 2. During the Stay: Guest Controls
+
+Once checked in, the guest has full control over their room environment via the Guest Web App. The app securely communicates with the **Guest Web API** to execute commands:
+
+| Feature | Technical Action |
+| :--- | :--- |
+| **Door Access** | Tapping "Unlock" sends a command via the API to the gateway, which signals the physical door lock to open. |
+| **Climate Control** | Guests can adjust the temperature up or down. The API sends these adjustments directly to the room's smart thermostat. (Managers can configure maximum/minimum limits). |
+| **Digital Registration** | If they haven't already, guests can complete required registration forms digitally. |
+
+---
+
+## 3. During the Stay: Smart Automations
+
+While the guest enjoys their stay, SUITEe's IoT hardware works silently in the background to manage energy efficiency:
+
+| Trigger | IoT Sensor Action | Result |
+| :--- | :--- | :--- |
+| **Guest Leaves Room** | The in-room **occupancy sensor** detects no motion for a configured threshold (e.g., 15 minutes). | The thermostat temporarily dials back heating/cooling to save energy. |
+| **Guest Returns** | The **occupancy sensor** detects motion. | The thermostat instantly resumes the guest's preferred temperature. |
+| **Window Opened** | The **window contact sensor** detects the window is open. | The thermostat pauses heating/cooling entirely to prevent wasting energy on the outdoors. |
+| **Window Closed** | The **window contact sensor** detects the window is closed. | Normal climate control resumes immediately. |
+
+---
+
+## 4. Check-Out and Departure
+
+The departure process is just as automated as the arrival:
+
+<Steps>
+  <Step title="Credentials Expire">
+    At the exact scheduled check-out time (e.g., 11:00 AM), the **Tuya PIN** and the **Mobile Key** are automatically revoked by the system. The guest can no longer enter the room.
+  </Step>
+
+  <Step title="Eco Mode Activates">
+    The room's thermostat is immediately switched to **Eco Mode** (minimum energy usage) to ensure no power is wasted while the room is vacant.
+  </Step>
+
+  <Step title="Housekeeping Notification">
+    The dashboard automatically updates the room status, signaling to housekeeping that the room is vacant and ready for cleaning.
+  </Step>
+
+  <Step title="Next Cycle Prepares">
+    Once cleaned, the room awaits the next incoming PMS webhook to begin the cycle again for the next guest.
+  </Step>
+</Steps>
+
+<Warning>
+  **For Help Centre staff:** If a guest says "I can't open my door," first verify in the dashboard:
+  1. Is the reservation currently active? (Check-in time has passed, check-out has not).
+  2. Does the lock show as **Online** with sufficient **Batterie**?
+  3. Has the access been successfully generated? (`Zugangsstatus` column).
+</Warning>
+
+<CardGroup cols={2}>
+  <Card title="Before Arrival" icon="plane-arrival" href="/guest-journey/before-arrival">
+    Review the pre-arrival automation steps.
+  </Card>
+  <Card title="Access Management" icon="key" href="/dashboard/access-management">
+    Deep dive into how PINs and Mobile Keys are generated.
+  </Card>
+</CardGroup>

@@ -1,0 +1,106 @@
+---
+title: "Energy Management"
+description: "Monitor and control energy usage across your property — room temperatures, energy modes, consumption trends, and smart automations."
+---
+
+The Energy Management section shows how heating, cooling, and lighting are being used across your entire property. This is where you see the direct impact of SUITEe's energy-saving automations.
+
+## What you can see
+
+| Metric | Description |
+| :--- | :--- |
+| **Current Room Temperatures** | Live temperature readings for all rooms with smart thermostats |
+| **Energy Mode per Room** | Whether each room is in "Guest Mode" (comfortable) or "Eco Mode" (energy saving) |
+| **Energy Consumption Trends** | Historical data showing energy usage over time (daily, weekly, monthly) |
+| **Active Automations** | Which energy rules are currently running across your property |
+
+<Frame>
+  <img src="/images/dashboard-device-cards.png" alt="SUITEe energy management dashboard showing room temperatures and energy modes" />
+</Frame>
+
+---
+
+## Energy modes explained
+
+SUITEe uses two primary energy modes for each room:
+
+| Mode | Temperature | When It's Active |
+| :--- | :--- | :--- |
+| **Guest Mode** | Comfortable (set by guest or default) | When a guest is checked in and the room is occupied |
+| **Eco Mode** | Energy-saving (minimal heating/cooling) | When the room is vacant, between stays, or when the guest leaves temporarily |
+
+<Info>
+  The switch between Guest Mode and Eco Mode happens **automatically** based on sensor data and reservation status. Staff can also manually override the mode from the dashboard if needed.
+</Info>
+
+---
+
+## How energy automation works
+
+SUITEe's energy automation responds to five key scenarios:
+
+<Steps>
+  <Step title="Guest checks in">
+    The room switches to **Guest Mode** with comfortable temperature settings. If pre-heating/cooling was scheduled, the room is already at the right temperature when the guest arrives.
+  </Step>
+
+  <Step title="Guest leaves the room temporarily">
+    The **occupancy sensor** detects that the room is empty. After a configurable delay, the thermostat adjusts to reduce energy consumption while keeping the room within a reasonable range.
+  </Step>
+
+  <Step title="Guest returns to the room">
+    The occupancy sensor detects the guest's return. The room **quickly returns to comfortable temperature** settings.
+  </Step>
+
+  <Step title="Guest opens a window">
+    The **window sensor** detects that a window is open. Heating or cooling **pauses automatically** to avoid wasting energy heating/cooling the outdoors.
+
+    <Tip>
+      When the window is closed again, the system resumes normal climate control. This single automation can save significant energy, especially in winter when guests open windows for fresh air while the heating runs.
+    </Tip>
+  </Step>
+
+  <Step title="Guest checks out">
+    The room immediately switches to **Eco Mode** with minimum energy usage. It stays in this mode until the next guest's check-in time approaches, when it begins pre-conditioning.
+  </Step>
+</Steps>
+
+---
+
+## Managing energy from the dashboard
+
+Staff can perform the following energy management actions:
+
+| Action | Description |
+| :--- | :--- |
+| **View all room temperatures** | See a grid or list of current temperatures across all rooms |
+| **Change room mode** | Manually switch a room between Guest Mode and Eco Mode |
+| **Adjust temperature** | Remotely set a specific temperature for any room |
+| **View consumption data** | Check energy usage trends and identify opportunities for savings |
+| **Configure automation rules** | Set up or modify the rules that drive automatic energy management |
+
+---
+
+## Energy savings impact
+
+The energy savings from SUITEe compound across your entire property:
+
+| Factor | Impact |
+| :--- | :--- |
+| **Vacant room detection** | Heating/cooling reduces when sensors detect empty rooms — even for a few hours |
+| **Window-open detection** | Prevents heating the outdoors — one of the biggest sources of energy waste |
+| **Between-stay Eco Mode** | Rooms use minimal energy between check-out and the next check-in |
+| **Pre-conditioning** | Rooms reach comfort just before the guest arrives — not hours before |
+
+<Warning>
+  **Important:** Energy savings depend on having sensors properly installed and online. If an occupancy sensor is offline, the system cannot detect whether a room is empty. Check device health regularly to ensure all sensors are operational.
+</Warning>
+
+<CardGroup cols={2}>
+  <Card title="Sensors" icon="satellite-dish" href="/devices/sensors">
+    Learn about the sensors that drive energy automation.
+  </Card>
+  <Card title="Smart Thermostats" icon="temperature-half" href="/devices/thermostats">
+    Understand how SUITEe's smart thermostats work.
+  </Card>
+</CardGroup>

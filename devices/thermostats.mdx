@@ -1,0 +1,104 @@
+---
+title: "Smart Thermostats"
+description: "How SUITEe's smart thermostats automate room climate — Guest Mode, Eco Mode, remote control, and pre-conditioning."
+---
+
+Smart thermostats are the heart of SUITEe's energy automation. They control heating and cooling in each room, automatically adjusting based on occupancy, reservations, and sensor data.
+
+## What are smart thermostats?
+
+SUITEe's smart thermostats are digital climate controls that:
+- **Automatically adjust temperature** based on whether a room is occupied or empty
+- Can be **controlled remotely** by staff from the dashboard
+- Allow **guests to adjust** their room temperature via the Guest Web App
+- **Pre-heat or pre-cool** rooms before a guest arrives
+
+---
+
+## Energy modes
+
+Every room with a smart thermostat operates in one of two modes:
+
+| Mode | Temperature | When It's Active | Purpose |
+| :--- | :--- | :--- | :--- |
+| **Guest Mode** | Comfortable (typically 20–24°C / 68–75°F) | When a guest is checked in | Maximum comfort for the guest |
+| **Eco Mode** | Energy-saving (typically 15–18°C / 59–64°F) | When the room is vacant | Minimum energy consumption |
+
+The switch between modes happens **automatically** based on:
+- Reservation data (check-in/check-out times)
+- Occupancy sensor readings (is someone in the room?)
+- Window sensor status (is a window open?)
+
+---
+
+## How temperature automation works
+
+<Steps>
+  <Step title="Before guest arrival">
+    Room stays in **Eco Mode** (minimal energy). Shortly before the guest's check-in time, the thermostat begins **pre-conditioning** — heating or cooling to a comfortable temperature so the room is ready when the guest walks in.
+  </Step>
+
+  <Step title="Guest is in the room">
+    Room operates in **Guest Mode**. The guest can adjust the temperature:
+    - Via the **Guest Web App** on their phone
+    - Some thermostats also have physical controls on the device
+
+    Staff can also adjust temperature remotely from the dashboard.
+  </Step>
+
+  <Step title="Guest leaves temporarily">
+    The **occupancy sensor** detects the room is empty. After a configurable delay (e.g., 15–30 minutes), the thermostat reduces heating/cooling to save energy — but doesn't go full Eco Mode, since the guest is still checked in.
+  </Step>
+
+  <Step title="Guest returns">
+    The occupancy sensor detects the guest's return. The thermostat **quickly restores** the comfortable temperature.
+  </Step>
+
+  <Step title="Window is opened">
+    The **window sensor** detects an open window. Heating or cooling **pauses immediately** to avoid wasting energy. When the window is closed, normal operation resumes.
+
+    <Tip>
+      This single automation can save significant energy. In winter, guests often open windows for fresh air while the heating runs full blast — the window sensor prevents this waste.
+    </Tip>
+  </Step>
+
+  <Step title="Guest checks out">
+    The room immediately switches to **Eco Mode**. It stays at minimum energy until the next guest's pre-conditioning period begins.
+  </Step>
+</Steps>
+
+---
+
+## Controlling thermostats from the dashboard
+
+Staff can manage thermostats across the entire property from the dashboard:
+
+| Action | Description |
+| :--- | :--- |
+| **View all temperatures** | See current temperature readings for every room |
+| **Adjust temperature** | Set a specific temperature for any room remotely |
+| **Switch mode** | Manually switch between Guest Mode and Eco Mode |
+| **View history** | See temperature changes over time for any room |
+| **Check device status** | Verify the thermostat is online and functioning |
+
+---
+
+## Guest temperature control
+
+Guests can adjust their room temperature from the **Guest Web App** on their smartphone:
+- No app download needed — works in the phone's browser
+- Simple interface with temperature up/down controls
+- Changes take effect within minutes
+
+<Info>
+  Guest temperature adjustments are **limited to a reasonable range** to prevent extreme settings. The exact range is configurable by the property manager.
+</Info>
+
+<CardGroup cols={2}>
+  <Card title="Sensors" icon="satellite-dish" href="/devices/sensors">
+    The sensors that feed data to the thermostats.
+  </Card>
+  <Card title="Energy Management" icon="leaf" href="/dashboard/energy-management">
+    Monitor energy savings across your property.
+  </Card>
+</CardGroup>

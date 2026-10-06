@@ -1,0 +1,187 @@
+---
+title: "Users & Teams"
+description: "Manage administrators, managers, and staff accounts in SUITEe — invite new team members, assign property access, configure roles, and control active dashboard access."
+---
+
+The **Users & Teams** page (labeled **Benutzer** in the dashboard) is the identity and access management hub for property staff. From here, administrators can invite team members, assign role-based permissions, restrict access to specific properties, monitor onboarding progress, and deactivate or edit user profiles.
+
+Navigate to this page at:
+
+```
+https://hotel.suite-e.com/users
+```
+
+---
+
+## Page overview
+
+<Frame>
+  <img src="/images/users-overview-table.png" alt="Users page showing title Benutzer, subtitle Benutzer verwalten, search bar, refresh button, Benutzer hinzufugen button, and team members table" />
+</Frame>
+
+### Page title and header controls
+
+- **Title & Subtitle**: The page heading displays **Benutzer** with the subtitle *Benutzer verwalten* (Manage users). An info tooltip **ⓘ** beside the subtitle provides guidance on staff administration.
+- **Add User Button (`+ Benutzer hinzufügen`)**: Located in the upper-right corner. Clicking this button opens the team invitation modal (explained in detail below).
+
+---
+
+## Search and toolbar controls
+
+Above the table is a streamlined toolbar for finding and managing team members:
+
+### Search bar (`Suche`)
+
+The search field features a multi-attribute query engine with the placeholder:
+
+```
+Nach Name, Rolle oder E-Mail suchen
+```
+
+You can search across three distinct fields simultaneously:
+
+1. **Name**: Search by the user's first or last name (e.g. `Pramod Thapa`, `developer`).
+2. **Role (`Rolle`)**: Type role titles such as `Property Admin`, `Manager`, or `Staff` to filter by permission level.
+3. **Email Address (`E-Mail`)**: Search by full or partial email address (e.g. `pramod@yopmail.com`, `developer@suite-e.com`).
+
+The search filters the table in real time as you type, with case-insensitive matching.
+
+---
+
+### Refresh button (`↻`)
+
+Located directly to the right of the search input is the circular refresh icon **`↻`**:
+
+- **Live Status Re-Query**: Clicking **`↻`** fetches the latest user statuses, onboarding confirmations, and property assignments from the identity server without requiring a full browser page reload.
+- **Instant Sync**: Use this button after an invited team member confirms they have completed their onboarding link.
+
+---
+
+## Users inventory table
+
+The table lists all registered staff accounts within your organization with complete role, contact, and status data:
+
+| Column | Sortable | Description |
+| :--- | :---: | :--- |
+| **Vollständiger Name** | **`⇅`** | The team member's profile picture / avatar, full name, and registered email address. Click the column header arrows to sort alphabetically. |
+| **Rolle** | — | The assigned permission tier (e.g. **`Property Admin`**), defining what actions the user can perform across the dashboard. |
+| **Telefon** | — | The contact telephone number registered for SMS notifications and two-factor authentication (2FA). |
+| **Zugeordnete Immobilien** | — | Black pill badges displaying the properties this user is authorized to manage (e.g. `Property No-PMS`, `Savoy Baker Street`). Users only see data for their assigned properties. |
+| **Onboarding** | — | Lifecycle status badge indicating whether the user has completed account activation (e.g. **`Onboarded`** in teal with a green outline). |
+| **Aktiv** | — | Interactive toggle switch (amber/orange when enabled). Allows administrators to instantly suspend or reactivate an account. |
+| **Erstellt von** | **`⇅`** | The administrator who originally created and invited this team member (e.g. `Kallola Bal`). |
+| **Erstellt am** | **`⇅`** | The calendar date when the user was invited or created (e.g. `19 Mar 2026`, `14 Apr 2026`). |
+| **Aktionen** | — | Three-dots menu **`⋮`** to edit user details or permanently delete the account. |
+
+---
+
+### Onboarding status
+
+The **Onboarding** column provides visibility into the user's account activation journey:
+
+- **`Onboarded` (Teal Badge)**: The user has received their invitation email, clicked the verification link, set their permanent password, and successfully logged into the dashboard.
+- **`Pending / Ausstehend`**: An invitation email has been dispatched, but the user has not yet completed their password setup.
+
+---
+
+### Active toggle switch (`Aktiv`)
+
+The **Aktiv** column features an instant toggle switch:
+
+- **Enabled (Orange Switch)**: The account is active. The user can log in, view dashboard metrics, and control devices according to their assigned role.
+- **Disabled (Grey Switch)**: The account is temporarily suspended. The user's active sessions are terminated immediately, and login attempts are blocked.
+- **Why Use Toggle Instead of Deleting**: When staff members take temporary leave (e.g. sabbatical or seasonal work), disabling their account revokes access instantly while preserving their full activity audit history in the [Activity Centre](/dashboard/activity-centre).
+
+---
+
+## Row actions menu (`Aktionen`)
+
+Clicking the three vertical dots **`⋮`** in the **Aktionen** column of any user row opens a context menu:
+
+<Frame>
+  <img src="/images/users-actions-menu.png" alt="Users actions dropdown menu showing Bearbeiten with pencil icon and Loschen with red trash icon" />
+</Frame>
+
+The menu provides two administrative options:
+
+### 1. Edit user (`Bearbeiten`)
+
+Clicking **Bearbeiten** (pencil icon) opens the user profile editor:
+- Update the team member's full name, phone number, and preferred language.
+- Modify their permission role (e.g. promoting a team member to *Property Admin*).
+- Reassign or expand property access permissions across your portfolio.
+
+### 2. Delete user (`Löschen`)
+
+Clicking **Löschen** (red trash icon) permanently deletes the user account:
+- Immediately and irreversibly revokes all dashboard access for the selected user.
+- A confirmation prompt ensures accounts are not deleted accidentally.
+- All historical logs previously created by this user (such as door unlocks or created PIN codes) remain preserved in the [Activity Centre](/dashboard/activity-centre) for compliance.
+
+---
+
+## Inviting new team members (`+ Benutzer hinzufügen`)
+
+To invite a new colleague to the platform, click the orange **`+ Benutzer hinzufügen`** button located in the toolbar:
+
+<Frame>
+  <img src="/images/users-btn-add-user.png" alt="Orange Benutzer hinzufugen button" />
+</Frame>
+
+Clicking this button launches the **Benutzer hinzufügen** (Add user) modal dialog.
+
+---
+
+### Step 1 — Profile picture and contact information
+
+The upper section of the modal collects the new team member's visual avatar and core contact details:
+
+<Frame>
+  <img src="/images/users-add-modal-profile-contact.png" alt="Add user modal upper section showing avatar upload with Min 400x400px requirement, Vollstandiger Name field, E-Mail field, and Telefon field with German country code selector" />
+</Frame>
+
+| Field | Required | Description |
+| :--- | :---: | :--- |
+| **Profilbild hochladen** | Optional | Upload a profile photo. Displays an avatar placeholder with the requirements: `Min. 400×400px, PNG oder JPEG · max. 1 MB`. Click **Hochladen** to select a photo from your computer. |
+| **Vollständiger Name** | Yes `*` | The user's full name (e.g. *Pramod Thapa*). This name appears in audit logs, team lists, and notifications. |
+| **E-Mail** | Yes `*` | The user's corporate email address. SUITEe sends an onboarding invitation link to this address to set up their account password. |
+| **Telefon** | Yes `*` | The user's direct mobile phone number. Includes an international country code dropdown selector (pre-set to Germany `🇩🇪 +49`). |
+
+---
+
+### Step 2 — Language, role, and property assignment
+
+Scrolling down in the modal reveals configuration options for localization and authorization:
+
+<Frame>
+  <img src="/images/users-add-modal-language-role-properties.png" alt="Add user modal lower section showing Bevorzugte Sprache dropdown set to English, Rolle dropdown, Zugeordnete Immobilien dropdown, and Abbrechen and Absenden buttons" />
+</Frame>
+
+| Field | Required | Description |
+| :--- | :---: | :--- |
+| **Bevorzugte Sprache** | Yes `*` | A dropdown selector to set the user's default dashboard interface language (e.g. **English** or **German**). The user can later adjust this in their personal [Account Settings](/account/settings). |
+| **Rolle** | Yes `*` | The role-based access control tier assigned to this user (e.g. *Property Admin*, *Property Manager*, *Staff*). Determines which dashboard pages and hardware controls they can access. |
+| **Zugeordnete Immobilien** | Yes `*` | A multi-select dropdown to assign one or multiple properties (e.g. `Property No-PMS`, `Savoy Baker Street`). Users will only see devices, rooms, bookings, and logs for properties assigned here. |
+
+---
+
+### Submitting the invitation
+
+- **Cancel (`Abbrechen`)**: Discards all entered information and closes the modal without saving.
+- **Submit (`Absenden`)**:
+  1. Creates the user profile in the SUITEe database.
+  2. Dispatches an automated onboarding invitation email containing a secure, time-limited activation link.
+  3. Adds the user to the table with an active status and a pending onboarding badge until they activate their account.
+
+---
+
+## Interconnected dashboard modules
+
+User Management controls who can interact with every operational layer of the property:
+
+- **[Dashboard Overview](/dashboard/overview)**: Users only see statistics and devices for properties assigned to them in their user profile.
+- **[Rooms](/dashboard/rooms)**: Room configurations and unit access permissions are restricted by property assignments made here.
+- **[Devices](/dashboard/devices)**: Device control permissions (e.g. unlocking doors or changing thermostat temperatures) depend on the user's assigned role.
+- **[Access Management](/dashboard/access-management)**: The `Erstellt von` column in the access credentials table logs which user created or revoked PIN codes.
+- **[Activity Centre](/dashboard/activity-centre)**: Every administrator action, login event, and device command is permanently attributed to the acting user's profile for compliance and auditing.
+- **[Account Settings](/account/settings)**: Individual team members can update their personal password, preferred language, and 2FA security settings.

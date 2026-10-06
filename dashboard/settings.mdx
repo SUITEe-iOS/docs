@@ -1,0 +1,501 @@
+---
+title: "Settings"
+description: "Configure property profiles, operational check-in/out schedules, PMS integrations, geolocation coordinates, multi-channel guest contacts, WiFi credentials, and IoT hardware settings."
+---
+
+The **Settings** module is SUITEe's central configuration hub for hotel operations, hardware connectivity, and administrative permissions. From here, hotel managers configure their property's public identity, synchronize operational timelines with their Property Management System (PMS), provide guest communication channels, and connect IoT gateway hardware.
+
+Access the property settings at:
+
+```
+https://hotel.suite-e.com/settings/property-account
+```
+
+---
+
+## Settings module navigation
+
+The Settings interface features a dedicated left-hand sub-sidebar organizing operational settings into five core phases:
+
+<Frame>
+  <img src="/images/settings-sidebar-navigation.png" alt="Settings left sidebar showing categories Immobilie with Konto and Stockwerksplan, E-Mail with SMTP-Manager, and Zugangsverwaltung with Rollenverwaltung" />
+</Frame>
+
+| Section | Menu Item | Status | Purpose |
+| :--- | :--- | :---: | :--- |
+| **Immobilie** | **Konto** | Phase 1 (Completed) | Property profile, branding, operational schedules, PMS type, address, GPS coordinates, contacts, and IoT credentials. |
+| **Immobilie** | **Stockwerksplan** | Phase 2 (Completed) | Interactive floor plan mapping, building level management, and room assignments. |
+| **E-Mail** | **SMTP-Manager** | Phase 3 (Completed) | Custom SMTP outbound mail server credentials, port routing, and security protocols. |
+| **Zugangsverwaltung** | **Rollenverwaltung** | **Phase 4 (Active)** | Granular role-based access control (RBAC), module permissions, and security policies. |
+
+---
+
+## Phase 1: Property Account (`Konto`)
+
+Selecting **Konto** under the **Immobilie** heading opens the master property profile. This configuration is organized into five functional cards:
+
+1. **Property Branding (`Immobilienbild`)**
+2. **Basic Information & Schedule (`Grundinformationen`)**
+3. **Address & Geolocation (`Adresse und Standort`)**
+4. **Contact Channels (`Kontakt`)**
+5. **Connectivity & IoT Infrastructure (`Konnektivität und IoT`)**
+
+---
+
+### 1. Property branding (`Immobilienbild`)
+
+The upper card manages the visual branding and identity for the property:
+
+<Frame>
+  <img src="/images/settings-property-account-image-basic.png" alt="Property Account upper view showing Immobilienbild upload section with 2 MB limit and Grundinformationen card with Name, Code, Firmenname, and Beschreibung" />
+</Frame>
+
+- **Avatar Placeholder**: Displays the current property logo or exterior photo.
+- **Upload Specifications**: Supports standard web raster formats (`PNG` or `JPEG`) with a maximum file size of `2 MB`.
+- **`Bild hochladen` Button**: Opens your local file browser to select and upload a new property photo.
+- **Guest App Integration**: This image serves as the primary hero header inside the mobile guest portal and appears on automated email notifications.
+
+---
+
+### 2. Basic information and operational schedule (`Grundinformationen`)
+
+The **Grundinformationen** section defines the property's organizational identity and automated operational timing:
+
+| Field | Icon | Required | Description |
+| :--- | :---: | :---: | :--- |
+| **Name** | 🏢 | Yes `*` | The public display name of the hotel or building (e.g. `Property No-PMS`, `Savoy Baker Street`). Visible to guests on the mobile portal and in booking confirmations. |
+| **Code** | `#` | Yes `*` | A unique property identifier code (e.g. `QHR`). Used for internal database routing, smart lock association, and multi-property reporting. |
+| **Firmenname** | 🏢 | Yes `*` | The legal company entity operating the property (e.g. `Ksolves`). Displayed on guest receipts, tax documents, and terms of service. |
+| **Beschreibung** | 📄 | Optional | General description of the property, its history, architecture, or amenities (e.g. `Ttest description`). |
+
+<Frame>
+  <img src="/images/settings-property-account-checkin-address.png" alt="Operational settings showing Check-in-Zeit, Check-out-Zeit, PMS-Typ, Zeitzone, and the Adresse und Standort card" />
+</Frame>
+
+#### Operational schedules and system integration
+
+| Setting | Icon | Required | Description |
+| :--- | :---: | :---: | :--- |
+| **Check-in-Zeit (HH:mm)** | 🕒 | Optional | The standard daily check-in time (e.g. `22:00` or `15:00`). Determines when digital mobile guest keys and smart lock PIN codes automatically become active on the guest's arrival date. |
+| **Check-out-Zeit (HH:mm)** | 🕒 | Optional | The standard daily check-out time (e.g. `11:00`). Dictates when guest digital keys and access codes are automatically revoked on departure day. |
+| **PMS-Typ** | — | Yes `*` | The Property Management System engine powering this location (e.g. `No-PMS`, `Mews`, `Apaleo`, `Cloudbeds`). Controls automated guest reservation synchronization. |
+| **Zeitzone** | 🌐 | Yes `*` | The operational timezone for the hotel (e.g. `Asia/Kolkata`, `Europe/Berlin`). Ensures precise execution of automated PIN generation, energy setback schedules, and audit timestamping. |
+
+---
+
+### 3. Address and geolocation (`Adresse und Standort`)
+
+Accurate location details ensure guests can navigate seamlessly to the property and receive accurate local recommendations:
+
+| Field | Icon | Required | Description |
+| :--- | :---: | :---: | :--- |
+| **Adresszeile 1** | 📍 | Yes `*` | Primary street address and building number (e.g. `Bahnhofstrasse 10c`). |
+| **Adresszeile 2** | — | Optional | Additional location notes such as building block, wing, or apartment suite number. |
+| **Stadt** | — | Yes `*` | The city where the hotel is located (e.g. `Munich`). |
+| **Bundesland** | — | Yes `*` | The federal state, region, or canton (e.g. `Bavaria`). |
+| **Land** | — | Yes `*` | The country of operation (e.g. `Germany`). |
+| **Postleitzahl** | — | Yes `*` | The postal code or ZIP code (e.g. `89219`). |
+
+<Frame>
+  <img src="/images/settings-property-account-gps-contact.png" alt="Settings view showing Breitengrad and Langengrad with Auf Karte anzeigen button, Kontakt section with email and phone numbers, and Konnektivitat und IoT section" />
+</Frame>
+
+#### Geolocation coordinates (`Breitengrad` & `Längengrad`)
+
+- **Breitengrad (Latitude)**: Decimal latitude coordinate (e.g. `48.2249833`).
+- **Längengrad (Longitude)**: Decimal longitude coordinate (e.g. `11.6747686`).
+- **`Auf Karte anzeigen` Button**: Clicking this orange-bordered button opens the coordinates on an interactive map, allowing operators to verify the exact building entrance pin used by guest GPS navigation.
+
+---
+
+### 4. Multi-channel guest communications (`Kontakt`)
+
+The **Kontakt** section configures direct support channels accessible to guests through their in-stay mobile web app:
+
+| Channel | Icon | Country Code | Description |
+| :--- | :---: | :---: | :--- |
+| **Kontakt-E-Mail** | ✉ | — | Official support email address (e.g. `admin@suite-e.com`). Receives guest inquiries, feedback, and automated delivery error reports. |
+| **WhatsApp-Nummer** | 📱 | Flag Selector (`🇺🇸 +1`) | Official property WhatsApp business phone number (e.g. `+1 (444) 444-4441`). Enables 1-click messaging from the guest concierge interface. |
+| **Kontakttelefon** | 📞 | Flag Selector (`🇺🇸 +1`) | General front desk or reception telephone number (e.g. `+1 (968) 524-5888`) for daytime guest calls. |
+| **Notfallnummer** | 🚨 | Flag Selector (`🇺🇸 +1`) | Urgent 24/7 emergency hotline (e.g. `+1 (200) 002-2221`). Displayed prominently in the guest portal for after-hours lockouts or critical building assistance. |
+
+---
+
+### 5. Guest connectivity and IoT infrastructure (`Konnektivität und IoT`)
+
+The bottom section manages guest wireless internet access and the hardware bridge connecting SUITEe to on-premise smart devices:
+
+<Frame>
+  <img src="/images/settings-property-account-iot-save.png" alt="Konnektivitat und IoT section showing WLAN-Name, WLAN-Passwort, IOT-Store-Code, and orange Anderungen speichern button" />
+</Frame>
+
+| Field | Icon | Required | Description |
+| :--- | :---: | :---: | :--- |
+| **WLAN-Name** | 📶 | Optional | The public guest WiFi network SSID (e.g. `nopmswifi`). Broadcast to guests in their mobile web app with 1-click connect and QR code pairing. |
+| **WLAN-Passwort** | 🔒 | Optional | The guest network password. Features a visibility toggle eye icon (`👁`) to inspect or conceal the network passphrase. |
+| **IOT-Store-Code** | 🖲 | Yes `*` | Unique hardware hub integration key (e.g. `2028783011310379008`). Binds this property to the central IoT cloud controller managing smart door locks, climate thermostats, and room sensors. |
+
+---
+
+### 6. Saving configuration changes (`Änderungen speichern`)
+
+Located at the bottom right of the page:
+
+- **Button**: Orange call-to-action button labeled **`💾 Änderungen speichern`** (Save changes).
+- **Validation**: Verifies all required inputs marked with an asterisk (`Name *`, `Code *`, `Firmenname *`, `PMS-Typ *`, `Zeitzone *`, `Adresszeile 1 *`, `Stadt *`, `Bundesland *`, `Land *`, `Postleitzahl *`, `IOT-Store-Code *`).
+- **Synchronization**: Once saved, updates take effect immediately across all operational modules, synchronization schedules, and guest-facing mobile web portals.
+
+---
+
+## Phase 2: Floor Plan (`Stockwerksplan`)
+
+Selecting **Stockwerksplan** under the **Immobilie** heading in the left sub-sidebar opens the building architecture visualizer. This view allows property managers to organize accommodations by physical floor levels and assign individual guest rooms to each level.
+
+Access the floor plan settings directly at:
+
+```
+https://hotel.suite-e.com/settings/floor-plan
+```
+
+### Page overview and floor hierarchy
+
+The **Stockwerksplan** dashboard provides a structured vertical representation of your hotel or apartment building:
+
+<Frame>
+  <img src="/images/settings-floorplan-overview.png" alt="Stockwerksplan page overview showing Ground floor with 3 Zimmer, New TEst with 0 Zimmer, and + Stockwerk hinzufugen button" />
+</Frame>
+
+#### Header controls
+- **Heading**: **Stockwerksplan**
+- **Subtitle**: *Organisieren Sie Ihre Unterkunft nach Stockwerken und weisen Sie jedem Stockwerk Zimmer zu.* (Organize your accommodation by floor and assign rooms to each floor.)
+- **Add Floor Button**: The prominent orange **`+ Stockwerk hinzufügen`** button in the upper-right corner launches the level creation modal.
+
+---
+
+### Floor card components
+
+Every configured building level is displayed as an independent, modular container card:
+
+| Element | Description |
+| :--- | :--- |
+| **Floor Title** | The custom name assigned to the level (e.g. `Ground floor`, `New TEst`, `1. Obergeschoss`, `Penthouse`). |
+| **Room Count Badge** | Displays the total number of guest rooms or suites currently assigned to this level (e.g. `3 Zimmer`, `0 Zimmer`). |
+| **Edit Name (`✏`)** | Clicking the pencil icon opens the **Stockwerk bearbeiten** modal dialog to rename the floor. |
+| **Actions Menu (`⋮`)** | The three vertical dots icon provides additional administrative controls, such as deleting an empty floor or adjusting vertical sort order. |
+| **`+ Zimmer hinzufügen`** | Clicking this button inside any floor card opens the room assignment interface to allocate new or unassigned guest rooms to this level. |
+
+---
+
+### Adding a new building floor (`+ Stockwerk hinzufügen`)
+
+To add a new level to your building, click the orange **`+ Stockwerk hinzufügen`** button located at the top right:
+
+<Frame>
+  <img src="/images/settings-floorplan-btn-add-floor.png" alt="Orange + Stockwerk hinzufugen button" />
+</Frame>
+
+Clicking this button opens the **Stockwerk hinzufügen** modal dialog:
+
+<Frame>
+  <img src="/images/settings-floorplan-add-modal.png" alt="Stockwerk hinzufugen modal showing Stockwerkname text field, Abbrechen button, and orange Speichern button" />
+</Frame>
+
+#### Modal fields and actions
+- **Icon & Title**: Stacked diamond layers icon with the title **Stockwerk hinzufügen**.
+- **Close Button (`✕`)**: Closes the modal without saving changes.
+- **`Stockwerkname`**: The name of the new building level. Common naming conventions include:
+  - Numerical / Standard: *Erdgeschoss*, *1. Stock*, *2. Stock*, *3. Stock*
+  - International: *Ground Floor*, *Level 1*, *Level 2*, *Penthouse*
+  - Facility-specific: *Untergeschoss (UG)*, *Wellness & Pool Level*, *Rooftop Terrace*
+- **`Abbrechen`**: Discards input and closes the creation dialog.
+- **`Speichern`**: Solid orange button that validates the entered floor name, creates the new floor card, and immediately adds it to the building layout.
+
+---
+
+### Editing an existing floor (`Stockwerk bearbeiten`)
+
+To rename a floor or update building level designations, click the pencil icon (**`✏`**) on the right side of any floor card:
+
+<Frame>
+  <img src="/images/settings-floorplan-edit-modal.png" alt="Stockwerk bearbeiten modal showing Stockwerkname input prefilled with Ground floor, Abbrechen, and Speichern buttons" />
+</Frame>
+
+#### Modal fields and actions
+- **Icon & Title**: Stacked diamond layers icon with the title **Stockwerk bearbeiten**.
+- **Close Button (`✕`)**: Closes the modal without altering the floor name.
+- **`Stockwerkname`**: Pre-populated with the current floor designation (e.g. `Ground floor`). Edit the text directly to update the name.
+- **`Abbrechen`**: Cancels editing and preserves the existing floor designation.
+- **`Speichern`**: Saves the updated designation and immediately updates all references across the dashboard and guest app.
+
+---
+
+### Room allocation workflow (`+ Zimmer hinzufügen`)
+
+Clicking **`+ Zimmer hinzufügen`** within any floor container links directly with the inventory management engine:
+
+- **Floor-Room Mapping**: Maps existing rooms created in [Rooms](/dashboard/rooms) to their physical vertical level.
+- **Smart Lock Association**: Automatically links corridor and room smart locks ([Smart Devices](/dashboard/devices)) to the corresponding floor, facilitating battery checks and signal diagnostics for maintenance teams.
+- **Guest Experience**: In-stay guests viewing their room key pass in the mobile web app can immediately see their assigned floor number, minimizing navigation friction upon arrival.
+
+---
+
+## Phase 3: Email & SMTP Manager (`SMTP-Manager`)
+
+Selecting **SMTP-Manager** under the **E-Mail** heading in the left sub-sidebar opens the email dispatch configuration console. This module controls the outbound mail server infrastructure responsible for sending automated guest communications, digital door PIN codes, booking confirmations, and staff alerts.
+
+<Frame>
+  <img src="/images/settings-smtp-sidebar.png" alt="Settings sidebar highlighting SMTP-Manager under the E-Mail category" />
+</Frame>
+
+Access email settings directly at:
+
+```
+https://hotel.suite-e.com/settings/email
+```
+
+### Sub-navigation tabs
+
+The **E-Mail (SMTP)** configuration header offers two operational tabs:
+
+1. **`SMTP-Konfiguration`**: Manages outbound email dispatch methods, sender identities, and SMTP server credentials.
+2. **`Test-E-Mail senden`**: Allows administrators to dispatch a live test message to verify server connectivity, authentication, and deliverability before putting settings live.
+
+---
+
+### Email dispatch options (`Versand der E-Mails`)
+
+The **Versand der E-Mails** card controls whether automated emails are delivered via SUITEe's built-in cloud email service or routed through your hotel's custom corporate mail server.
+
+It provides two mutually exclusive checkbox options:
+
+| Option | Mode | Editing Status | Description |
+| :--- | :--- | :---: | :--- |
+| **`Standard-Suite *`** | Built-in Cloud Relay | **Locked / Read-Only** | Uses SUITEe's managed cloud delivery infrastructure. All email and server fields below are automatically disabled and locked from editing. |
+| **`Eigenen SMTP verwenden`** | Custom Hotel Mail Server | **Unlocked / Fully Editable** | Unlocks all email sender details, CC recipients, and SMTP server credentials for custom configuration. |
+
+---
+
+### Option 1 — Managed delivery (`Standard-Suite *`)
+
+When **`Standard-Suite *`** is selected (indicated by an orange checked box):
+
+<Frame>
+  <img src="/images/settings-smtp-standard-suite.png" alt="Email settings with Standard-Suite enabled showing read-only locked fields in E-Mail-Informationen and SMTP sections" />
+</Frame>
+
+#### Features & locked state
+- **Zero Configuration Required**: SUITEe handles all outbound transactional messages out-of-the-box using pre-authenticated enterprise cloud relays.
+- **Fields Disabled**: All input fields across **E-Mail-Informationen** (`Absender-E-Mail`, `Absendername`, `CC-Adressen`) and **SMTP** (`Port`, `Host`, `Verschlüsselung`, `Benutzername`, `Passwort`) are disabled and rendered in dark read-only state.
+- **Optimized Deliverability**: Includes pre-configured SPF, DKIM, and DMARC alignment to ensure door unlock codes and check-in emails land reliably in guests' primary inboxes without being flagged as spam.
+- **Recommended For**: Properties without dedicated IT administrators or custom corporate email servers.
+
+---
+
+### Option 2 — Custom SMTP server (`Eigenen SMTP verwenden`)
+
+When administrators select **`Eigenen SMTP verwenden`**, the system unlocks the entire form, allowing hotels to route all communications through their own domain (e.g. `@grandhotel-savoy.com`):
+
+<Frame>
+  <img src="/images/settings-smtp-custom-top.png" alt="Email settings with Eigenen SMTP verwenden enabled showing editable E-Mail-Informationen and SMTP sections" />
+</Frame>
+
+#### Section A — Sender identity (`E-Mail-Informationen`)
+
+| Field | Required | Description |
+| :--- | :---: | :--- |
+| **Absender-E-Mail** | Yes `*` | The official "From" email address displayed to guests (e.g. `welcome@hotel-savoy.com`). Must match or be authorized by your custom SMTP server. |
+| **Absendername** | Yes `*` | The human-readable sender name displayed in email clients (e.g. `Grand Hotel Savoy Reservations`). |
+| **CC-Adressen (kommagetrennt)** | Optional | A comma-separated list of internal staff or department email addresses (placeholder: `ops@beispiel.de, buchhaltung@beispiel.de`). Every automated guest email sends a carbon copy (CC) to these addresses for auditing and bookkeeping. |
+
+---
+
+#### Section B — SMTP server credentials (`SMTP`)
+
+Operators configure their outbound mail server connection parameters:
+
+| Field | Default / Options | Required | Description |
+| :--- | :--- | :---: | :--- |
+| **Port** | `587` | Yes `*` | The network port used to connect to your SMTP server. Standard ports: `587` (STARTTLS / TLS), `465` (SSL), or `25` (unencrypted relay). |
+| **Host** | e.g. `smtp.office365.com` | Yes `*` | The fully qualified domain name (FQDN) or IP address of your outbound mail host. |
+| **Verschlüsselung** | Dropdown (`TLS`, `SSL`) | Yes `*` | The cryptographic protocol used to secure transit between SUITEe and your mail server. Defaults to `TLS`. |
+| **Benutzername** | Custom string | Yes `*` | The authentication username (typically your full email address) required by your mail server. |
+| **Passwort** | Password input | Yes `*` | The authentication password or application-specific password. Features an eye toggle icon (`👁`) to reveal or conceal characters. |
+
+---
+
+### Custom SMTP validation and error handling
+
+When **`Eigenen SMTP verwenden`** is checked, SUITEe enforces strict validation when administrators click the **`Aktualisieren`** button. If mandatory server credentials or hostname details are missing, specific error notices are displayed:
+
+<Frame>
+  <img src="/images/settings-smtp-custom-fields-errors.png" alt="Custom SMTP validation error state highlighting missing Host, Benutzername, and Passwort fields in red" />
+</Frame>
+
+The platform displays localized error messages in red:
+
+| Incomplete Field | Error Message | Explanation & Resolution |
+| :--- | :--- | :--- |
+| **`Host *`** | `SMTP-Host ist erforderlich, wenn Sie den eigenen Server nutzen.` | Enter the outbound hostname (e.g. `smtp.gmail.com`, `smtp.sendgrid.net`). |
+| **`Benutzername *`** | `SMTP-Benutzername ist erforderlich, wenn Sie den eigenen Server nutzen.` | Enter the account login username or API user identifier. |
+| **`Passwort *`** | `SMTP-Passwort ist erforderlich, wenn Sie den eigenen Server nutzen.` | Enter the mailbox password or API authentication secret key. |
+
+<Frame>
+  <img src="/images/settings-smtp-custom-auth-errors.png" alt="Custom SMTP authentication errors showing specific missing credentials under TLS encryption" />
+</Frame>
+
+#### Action buttons
+- **`Abbrechen`**: Discards any changes made to the SMTP configuration and reverts to the previously saved settings.
+- **`Aktualisieren`**: Validates all connection parameters and updates the active mail transport configuration.
+
+---
+
+### Sending a test email (`Test-E-Mail senden`)
+
+To verify that your custom SMTP credentials or standard relay deliver messages properly without waiting for real guest bookings, switch to the **`Test-E-Mail senden`** tab at the top of the page:
+
+<Frame>
+  <img src="/images/settings-smtp-test-email.png" alt="Test-E-Mail senden tab showing recipient An field, Betreff subject field, HTML-Inhalt body textarea, and Test senden button" />
+</Frame>
+
+The test email utility allows administrators to execute a dry run of the outbound email pipeline:
+
+| Field / Control | Required | Description |
+| :--- | :---: | :--- |
+| **`An *`** | Yes `*` | The recipient destination email address (e.g. `admin@hotel-savoy.com` or your personal inbox). Used to verify reception in a real mail client. |
+| **`Betreff *`** | Yes `*` | The email subject line (e.g. *SUITEe SMTP Test Delivery*). |
+| **`HTML-Inhalt *`** | Yes `*` | The body content of the test email. Supports both plain text and full HTML markup tags (e.g. `<h3>Testnachricht</h3><p>Verbindung erfolgreich.</p>`). |
+| **`Test senden` Button** | — | Triggers an immediate test transmission through the active mail transport. |
+
+#### Verification checklist during test dispatch
+
+Clicking **`Test senden`** performs a comprehensive end-to-end verification of the mail transport:
+
+1. **Network Connectivity**: Verifies TCP socket reachability to the specified mail host on port `587`, `465`, or `25`.
+2. **Cryptographic Handshake**: Validates TLS/SSL certificate negotiation and encryption ciphers.
+3. **Authentication Handshake**: Authenticates the provided username and password against the mail server.
+4. **Sender Authorization**: Confirms that the `Absender-E-Mail` is permitted to send mail through the authenticated mailbox or relay.
+5. **Inbox Reception**: Check your destination inbox to inspect email headers, verify DKIM/SPF alignment, and confirm layout rendering.
+
+#### Troubleshooting diagnostic feedback
+
+- **Success**: Displays a confirmation notification indicating that the SMTP server accepted the message for delivery (`250 2.0.0 OK`).
+- **Connection Error**: If the host is unreachable or blocked by a firewall, the system reports the timeout error, prompting you to verify the hostname and port.
+- **Authentication Failure**: If credentials are incorrect, the system reports standard SMTP response codes (e.g. `535 5.7.8 Authentication credentials invalid`), allowing quick correction without disturbing guest operations.
+
+---
+
+## Phase 4: Role Management (`Rollenverwaltung`)
+
+Selecting **Rollenverwaltung** under the **Zugangsverwaltung** heading in the left sub-sidebar opens the role-based access control (RBAC) management center. From here, administrators define custom staff roles, restrict sensitive configuration screens, and grant granular permissions across platform modules.
+
+<Frame>
+  <img src="/images/settings-roles-table-overview.png" alt="Rollenverwaltung table overview showing search bar, refresh button, + Rolle hinzufugen button, and roles table with Front Desk Test" />
+</Frame>
+
+Access role management directly at:
+
+```
+https://hotel.suite-e.com/settings/roles
+```
+
+---
+
+### Toolbar controls and search
+
+The toolbar directly above the roles table provides instant search and administrative actions:
+
+- **Search Bar (`Suche` / `Rollen suchen`)**:
+  - Located on the left with a magnifying glass icon and placeholder:
+    ```
+    Rollen suchen
+    ```
+  - **Live Querying**: Filters roles dynamically as keystrokes are entered across role names (e.g. `Front Desk Test`), descriptions, and module permissions.
+  - **Case-Insensitive**: Matches search terms regardless of upper or lowercase lettering.
+- **Refresh Button (`↻`)**: Re-queries the server database to synchronize role permissions and user assignments without requiring a full browser refresh.
+- **Add Role Button (`+ Rolle hinzufügen`)**: Prominent orange call-to-action button that opens the **`Rolle erstellen`** modal dialog.
+
+---
+
+### Roles inventory table
+
+The table catalogs all configured staff roles with their scope of authorization:
+
+| Column | Sortable | Description |
+| :--- | :---: | :--- |
+| **Rollenname** | **`⇅`** | The public identifier of the role (e.g. `Front Desk Test`, `Property Admin`, `Housekeeping Lead`). Click column header arrows to sort alphabetically. |
+| **Beschreibung** | — | A detailed description defining the role's operational scope, responsibilities, and restrictions (e.g. `Reception with no access to sensitive...`). |
+| **Bereiche / Modulzugriff** | — | Badges displaying the authorized modules and functional capabilities assigned to this role. |
+| **Erstellt von** | — | The team member or system administrator who authored the role (e.g. `Kallola Bal`). |
+| **Erstellungsdatum** | **`⇅`** | The exact date when the role was created (e.g. `25 Aug 2026`). Click column header arrows to sort chronologically. |
+| **Aktionen** | — | Three vertical dots menu (**`⋮`**) offering role management options. |
+
+#### Authorized module badges (`Bereiche / Modulzugriff`)
+
+Each badge chip represents an unlocked platform area:
+
+- **`Zugangsverwaltung`**: Access management, issuing PIN codes, and encoding guest keycards.
+- **`Buchungen`**: Reading and managing guest reservations, check-in statuses, and room allocation.
+- **`Geräte`**: Smart device monitoring, lock diagnostics, and thermostat controls.
+- **`E-Mail-Dienst`**: Viewing email templates and dispatch logs.
+- **`Rollen & Berechtigungen`**: Permission assignment privileges.
+- **`E-Mail (SMTP)`**: Access to outbound mail server configuration.
+
+#### Table pagination controls
+
+Located at the bottom of the table:
+- **`Zeilen pro Seite: 10 ⌄`**: Dropdown selector allowing operators to choose display density (10, 25, 50 rows per page).
+- **Record Counter**: Displays active viewing window and total entries (e.g. `1–1 of 1`).
+- **Page Selector**: Displays `Gehe zu Seite: 1 von 1` with previous (`<`) and next (`>`) navigation controls.
+
+#### Row actions menu (`⋮`)
+
+Clicking the three vertical dots **`⋮`** on any role row opens options to:
+- **Edit Role (`Bearbeiten`)**: Modify role name, description, or toggle module permissions.
+- **Duplicate Role (`Duplizieren`)**: Clone an existing role template to create specialized variations (e.g. Daytime Reception vs. Night Auditor).
+- **Delete Role (`Löschen`)**: Remove custom roles. (Protected: roles currently assigned to active team members cannot be deleted until users are reassigned).
+
+---
+
+### Creating a new role (`Rolle erstellen`)
+
+Clicking the orange **`+ Rolle hinzufügen`** button opens the creation modal dialog:
+
+<Frame>
+  <img src="/images/settings-roles-create-modal.png" alt="Rolle erstellen modal dialog showing Rollenname, Beschreibung, Bereiche / Modulzugriff dropdown, Abbrechen button, and orange ABSENDEN button" />
+</Frame>
+
+The modal features an intuitive form to configure permissions:
+
+| Field | Required | Description |
+| :--- | :---: | :--- |
+| **Rollenname** | Yes `*` | The official name of the staff role (e.g. `Night Auditor`, `Maintenance Lead`, `Concierge`). |
+| **Beschreibung** | Optional | Multi-line description clarifying operational boundaries and security policies for this role. |
+| **Bereiche / Modulzugriff** | Yes `*` | Multi-select dropdown with the placeholder `Bereiche auswählen`. Select which modules this role can access across the SUITEe platform. |
+
+#### Modal action buttons
+
+- **`Abbrechen`**: Closes the creation modal and discards all entered text without creating a role.
+- **`ABSENDEN`**: Solid orange button that validates required fields (`Rollenname *` and `Bereiche / Modulzugriff *`), creates the new role, and immediately updates the inventory table.
+
+---
+
+### Integration with user accounts
+
+Roles configured in **Rollenverwaltung** become instantly available in the **Rolle** dropdown inside [Users & Teams](/dashboard/users-management):
+
+- Assign custom roles to new hires during invitation.
+- Restrict sensitive hotel revenue data or device firmware controls from non-admin staff.
+- Ensure strict compliance and data protection by enforcing the principle of least privilege.
+
+---
+
+## Interconnected dashboard modules
+
+Settings configured across all four phases directly integrate with other SUITEe operational modules:
+
+- **[Users & Teams](/dashboard/users-management)**: Team members assigned to properties inherit permission boundaries defined in Rollenverwaltung.
+- **[Email Services](/dashboard/email-services)**: Automated guest journeys and notifications utilize the active transport configured in the SMTP-Manager.
+- **[Rooms](/dashboard/rooms)**: Physical room inventories map directly into the vertical floor hierarchy configured in the Stockwerksplan.
+- **[Access Management](/dashboard/access-management)**: Utilizes operational check-in/out times and IoT Store Code to schedule valid PIN codes and keycards.
+- **[Smart Devices](/dashboard/devices)**: Communicates with door locks and climate controls through the assigned IoT hardware gateway, organized by building floor.
+- **[Explore](/dashboard/explore)**: Anchors local partner business recommendations to the property's verified geographic address and coordinates.

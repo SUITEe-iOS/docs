@@ -1,0 +1,268 @@
+---
+title: "Rooms"
+description: "Create and manage all rooms and units in your property — view room counts, configure room details, and add new rooms directly from the dashboard."
+---
+
+The **Rooms** page is where you create, view, and manage every room or unit in your property. From here you can see how many rooms are active or inactive, and add new rooms with full configuration — basic information, access credentials, room layout, and IoT integration.
+
+Navigate to this page at:
+
+```
+https://hotel.suite-e.com/rooms
+```
+
+---
+
+## Page overview
+
+<Frame>
+  <img src="/images/rooms-overview.png" alt="Rooms page header showing title, subtitle, Add Room button, and three stat cards: total rooms 276, active 151, inactive 125" />
+</Frame>
+
+### Page title and subtitle
+
+The page heading reads **Zimmer** (Rooms) with the subtitle *Zimmer fur Ihre Immobilie verwalten* — manage rooms for your property.
+
+A small **info icon ⓘ** sits beside the subtitle — hovering over it shows a tooltip with additional context about what this page manages.
+
+---
+
+### Statistics cards
+
+At the top of the page, three summary cards give you an instant snapshot of all rooms in the property:
+
+| Card | Count | What it means |
+| :--- | :--- | :--- |
+| **Zimmer gesamt** | `276` | The total number of rooms and units registered under this property, across all floors and building areas. Every room — whether active, inactive, or being configured — counts here. |
+| **Aktive Zimmer** | `151` | Rooms that are currently enabled and usable — devices are assigned, access is configured, and guests can be booked into them. Shown with a green checkmark icon. |
+| **Inaktive Zimmer** | `125` | Rooms that exist in the system but are currently disabled — they cannot be booked or assigned to guests until reactivated. Shown with a strikethrough eye icon. Common reasons: under renovation, out of service, or not yet fully configured. |
+
+<Info>
+  Active and inactive rooms always add up to the total. If you see a mismatch after adding or deactivating rooms, refresh the page to update the counters.
+</Info>
+
+---
+
+### Add room button
+
+In the top-right corner of the page is the orange **+ Zimmer hinzufugen** button.
+
+Clicking this button opens the **Add Room** form — a multi-section modal where you configure all details of a new room before saving it to the system. The form has four sections: **Basic Information**, **Access Data**, **Room Configuration**, and **IoT Configuration**.
+
+The full form is explained in detail below.
+
+---
+
+## Add room form
+
+When you click **+ Zimmer hinzufugen**, a modal appears. It contains all the fields needed to configure a new room from scratch. Scroll down within the modal to fill in all sections.
+
+### Section 1 — Basic information
+
+<Frame>
+  <img src="/images/rooms-add-basic-info.png" alt="Add Room modal showing basic information section with property dropdown, room name and room code fields side by side, and description textarea" />
+</Frame>
+
+The first section collects the core identity of the room. All fields marked with `*` are required.
+
+| Field | Required | Description |
+| :--- | :--- | :--- |
+| **Immobilie** | Yes `*` | A dropdown pre-filled with the currently active property — e.g. **Property No-PMS**. If your account manages multiple properties, select which property this room belongs to. |
+| **Zimmername** | Yes `*` | The name of the room as it will appear throughout the system — e.g. `UNIT-3`, `Room 104`, `Parkplatz1`. This is how the room is identified in reservations, device assignments, and the activity feed. |
+| **Zimmencode** | Yes `*` | A unique short code for the room — shown with a `#` placeholder. This is a numeric or alphanumeric identifier used internally by SUITEe for PMS mapping, IoT routing, and access code generation. |
+| **Beschreibung** | Yes `*` | A free-text description of the room — e.g. its location in the building, special features, or notes for housekeeping and maintenance staff. |
+
+<Tip>
+  Use a consistent naming convention for room names and codes across all rooms — for example `UNIT-[number]` or `Floor-Room` — so rooms sort and filter predictably in lists and reports.
+</Tip>
+
+---
+
+### Section 2 — Access data and room configuration
+
+<Frame>
+  <img src="/images/rooms-add-access-config.png" alt="Add Room modal showing door password field with eye toggle, then bed type, floor plan, and room size fields" />
+</Frame>
+
+Scrolling down reveals two more sections.
+
+#### Access data
+
+| Field | Required | Description |
+| :--- | :--- | :--- |
+| **Turpasswort** | Optional | A PIN or password that can be used to unlock the room's smart lock manually — useful as a backup access method if a guest loses their digital key or the app is unavailable. The **eye icon** on the right toggles visibility so you can verify the entry before saving. Leave blank if you do not use PIN-based door access for this room. |
+
+#### Room configuration
+
+| Field | Required | Description |
+| :--- | :--- | :--- |
+| **Betttyp** | Optional | A dropdown to select the type of bed in the room — e.g. single, double, twin, king. This is used for PMS display and guest-facing communication. |
+| **Stockwerksplan** | Optional | A dropdown to assign the room to a floor plan layout. If you have uploaded building floor plans, this links the room to its physical location on the map. |
+| **Zimmergrosse (sq ft)** | Optional | The size of the room in square feet. The placeholder shows **z. B. 320** as an example. This value is shown to guests in pre-stay communications and the guest web app. |
+
+---
+
+### Section 3 — IoT configuration and submit
+
+<Frame>
+  <img src="/images/rooms-add-iot-submit.png" alt="Add Room modal showing IoT configuration section with IoT Room ID field and helper text, plus Cancel and Submit buttons at the bottom" />
+</Frame>
+
+The final section connects the room to your physical IoT devices and completes the form.
+
+#### IoT configuration
+
+| Field | Required | Description |
+| :--- | :--- | :--- |
+| **IoT-Zimmer-ID** | Yes `*` | A unique identifier that links this room to your IoT system — e.g. a smart home hub, building management system, or third-party IoT platform. The helper text below the field reads: *Eindeutige Kennung aus Ihrem IoT-System* (unique identifier from your IoT system). This ID is how SUITEe communicates with the physical devices installed in this room — smart locks, thermostats, sensors, and switches. Without a valid IoT Room ID, devices cannot be controlled remotely. |
+
+<Warning>
+  The **IoT-Zimmer-ID** must exactly match the room identifier used in your IoT system or hardware hub. An incorrect ID will prevent SUITEe from communicating with devices in this room — locks will not respond to remote unlock commands and energy controls will not function.
+</Warning>
+
+#### Form action buttons
+
+At the very bottom of the modal are two buttons:
+
+| Button | Action |
+| :--- | :--- |
+| **Abbrechen** | Closes the modal without saving anything. All entered data is discarded. |
+| **Absenden** (orange) | Saves the new room and adds it to the room list. The room will appear in the total count and as active or inactive depending on its configuration. After submitting, assign devices to it from the [Smart Devices](/devices/smart-locks) section. |
+
+<Info>
+  After saving a room, go to [Access Management](/dashboard/access-management) to create access grants, and to [Smart Devices](/devices/smart-locks) to assign and configure physical locks and sensors for the room.
+</Info>
+
+---
+
+## How Rooms connects to the rest of the platform
+
+<CardGroup cols={2}>
+  <Card title="Dashboard Overview" icon="house" href="/dashboard/overview">
+    The Buchungen and Turkschloss panels on the dashboard both reference room names. Rooms must exist here before they can be booked or have locks assigned.
+  </Card>
+  <Card title="Access Management" icon="key" href="/dashboard/access-management">
+    Every access grant is tied to a specific room. Create access grants for room-level entry after adding the room here.
+  </Card>
+  <Card title="Reservations" icon="calendar-check" href="/dashboard/reservations">
+    Guest reservations are linked to rooms. The room column in the bookings panel shows the room name configured here.
+  </Card>
+  <Card title="Smart Devices" icon="microchip" href="/devices/smart-locks">
+    Smart locks, thermostats, and sensors are assigned to rooms. The IoT-Zimmer-ID entered here connects a room to its physical devices.
+  </Card>
+</CardGroup>
+
+---
+
+## Room list table
+
+<Frame>
+  <img src="/images/rooms-list-table.png" alt="Room list showing filter tabs Alle 276, Aktiv 151, Inaktiv 125, search bar, refresh button, Zimmersynchronisation button, and table with Zimmername, Beschreibung, Geteilte Zimmer, Aktionen columns" />
+</Frame>
+
+Below the statistics cards is the **room list** — a table showing all rooms registered to the property. This is your main working view for browsing, searching, and managing individual rooms.
+
+---
+
+### Filter tabs
+
+At the very top of the list are three filter tabs:
+
+| Tab | Count | What it shows |
+| :--- | :--- | :--- |
+| **Alle** | `276` | All rooms regardless of status. This is the default view — every room in the system is shown. The active tab is highlighted in orange with an underline. |
+| **Aktiv** | `151` | Only active rooms — currently enabled, have devices assigned, and can accept guest bookings. |
+| **Inaktiv** | `125` | Only inactive rooms — disabled and cannot currently be booked or used. Click this tab to find rooms that need to be configured or reactivated. |
+
+Click any tab to instantly filter the list to that subset.
+
+---
+
+### Search bar
+
+Below the filter tabs is a search bar with the placeholder **Suche nach Name, Beschreibung...**.
+
+Type any keyword to search across room names (e.g. `Seminarraum3`, `102`) and room descriptions. Results filter in real time as you type. Use this to quickly locate a specific room without scrolling through all 276 entries.
+
+---
+
+### Refresh button
+
+To the right of the search bar is a circular **refresh icon (circled arrow)**.
+
+Clicking this reloads the room list from the server — fetching the latest data without a full page reload. Use this after:
+- Adding a new room via **+ Zimmer hinzufugen** to see it appear immediately
+- Editing a room so the updated data reflects in the table
+- Suspecting the displayed counts or status are out of date
+
+---
+
+### Zimmersynchronisation button
+
+Next to the refresh button is the orange **Zimmersynchronisation** button.
+
+Clicking this triggers a **manual sync between SUITEe and your connected PMS or IoT system**. During sync:
+- New rooms imported from your PMS appear in the list automatically (rooms showing **Imported direct...** as their description were created this way — not manually entered)
+- Room names, status, and configuration are updated to match the source system
+- Rooms removed from the PMS are flagged or deactivated
+
+The **info icon** beside the button provides additional guidance on how sync works for your property.
+
+<Info>
+  Rooms showing **Imported direct...** in the description were created automatically via Zimmersynchronisation from your PMS or building management system. You can edit these rooms to add more detail.
+</Info>
+
+---
+
+### Table columns
+
+The room list table has four columns:
+
+| Column | Description |
+| :--- | :--- |
+| **Zimmername** | The name of the room — e.g. **Seminarraum3**, **102**, **9**, **234**, **207**. A sort icon beside the column header lets you sort the list alphabetically or numerically. Click the header to toggle ascending/descending order. |
+| **Beschreibung** | The room description. Rooms synced from a PMS show **Imported direct...** as a truncated placeholder — click into the room to see or edit the full text. Manually added rooms show the description you entered in the form. |
+| **Geteilte Zimmer** | Shared Rooms — indicates whether this room shares devices or access with another unit. A dash `-` means the room is standalone. A value here indicates a shared-device or shared-access relationship between rooms. |
+| **Aktionen** | The actions column — contains a **three-dot menu** for each row. Click the three dots to open options for that room. |
+
+---
+
+### Three-dot actions menu
+
+<Frame>
+  <img src="/images/rooms-actions-menu.png" alt="Three-dot actions dropdown showing Bearbeiten with pencil icon, Gerate anzeigen with device icon, and Loschen in red with trash icon" />
+</Frame>
+
+Clicking the **three-dot (...)** button in the Aktionen column of any room opens a dropdown menu with three options:
+
+| Option | Icon | What it does |
+| :--- | :--- | :--- |
+| **Bearbeiten** | Pencil | Opens the room edit form — the same form as Add Room but pre-filled with the room's existing data. Use this to update the name, description, door password, bed type, floor plan, room size, or IoT Room ID. |
+| **Gerate anzeigen** | Device icon | Opens the device list filtered to only show smart devices assigned to this specific room — locks, thermostats, sensors linked to this room's IoT ID. This is a direct shortcut to the [Smart Devices](/devices/smart-locks) page scoped to that room. |
+| **Loschen** | Trash icon (red) | Permanently deletes the room. This removes it from all lists, unlinks assigned devices, and cancels active access grants tied to it. **This cannot be undone.** |
+
+<Warning>
+  **Loschen** permanently deletes the room. Before deleting, ensure no active guest reservations are linked to the room, no access grants are still valid, and no devices are solely assigned to it.
+</Warning>
+
+---
+
+### Room list and pagination
+
+<Frame>
+  <img src="/images/rooms-list-pagination.png" alt="Full room list showing 5 rooms with Imported direct descriptions and pagination bar at the bottom with Zeilen pro Seite 10, 1-10 of 276, Gehe zu Seite 1 von 28, and navigation arrows" />
+</Frame>
+
+The room list is paginated. At the bottom of the list are the pagination controls:
+
+| Control | Description |
+| :--- | :--- |
+| **Zeilen pro Seite: 10** | Dropdown on the bottom-left — controls how many rooms are shown per page. Options typically include `10`, `25`, and `50`. Increase this to browse more rooms without clicking through pages. |
+| **1–10 of 276** | Current page range — you are viewing rooms 1 through 10 out of 276 total. |
+| **Gehe zu Seite** | A "Go to page" input on the bottom-right. Type a page number and press Enter to jump directly to that page — e.g. type `5` to jump to page 5 of 28. |
+| **von 28** | Total pages — with 276 rooms and 10 per page, there are 28 pages in total. |
+| **< >** | Previous and next page arrows — `<` goes back, `>` goes forward. |
+
+<Tip>
+  Use **Gehe zu Seite** to jump to a specific page, or use the **Suche** search bar to find any room instantly by name — searching is almost always faster than browsing page by page.
+</Tip>

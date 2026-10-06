@@ -1,0 +1,120 @@
+---
+title: "Smart Door Locks"
+description: "Everything about SUITEe's smart door locks — how they work, where they're installed, mobile keys, PIN codes, battery management, and manual override."
+---
+
+Smart door locks are the cornerstone of SUITEe's access automation. They replace or enhance traditional door locks, enabling guests to open doors with their smartphone or a PIN code — no physical keys needed.
+
+## What are smart door locks?
+
+SUITEe's smart locks are **digital locks** that can be opened using:
+- A **mobile key** (via the guest's smartphone browser)
+- A **PIN code** (entered on the lock's keypad)
+- A **manual key** (physical override for emergencies)
+
+<Info>
+  Smart locks are **battery-powered** and work independently of Wi-Fi or internet. Even during an outage, guests can still use their PIN code to open doors.
+</Info>
+
+---
+
+## How they work
+
+<Steps>
+  <Step title="Reservation syncs from PMS">
+    When a booking is created in your PMS, SUITEe receives the reservation details and generates access credentials.
+  </Step>
+
+  <Step title="Access credentials are created">
+    SUITEe generates a **unique PIN code** and/or **mobile key** for the guest. These credentials are tied to the specific lock on the guest's assigned room door.
+  </Step>
+
+  <Step title="Credentials activate at check-in time">
+    At the scheduled check-in time, the credentials become active. The guest can now open their door.
+  </Step>
+
+  <Step title="Guest unlocks the door">
+    The guest either:
+    - Opens the **Guest Web App** on their phone and taps "Unlock", or
+    - Enters their **PIN code** on the lock's keypad
+  </Step>
+
+  <Step title="Credentials expire at check-out">
+    At check-out time, the PIN and mobile key automatically stop working. The lock remains secured for the next guest.
+  </Step>
+</Steps>
+
+---
+
+## Where smart locks are installed
+
+| Location | Purpose |
+| :--- | :--- |
+| **Room doors** | Primary guest access to their room |
+| **Building entrance doors** | Main entry to the property |
+| **Fire-rated doors** | Secure corridor and stairwell doors (fire-compliant) |
+| **Amenity area doors** | Spa, gym, pool, parking garage access |
+
+| **Amenity area doors** | Spa, gym, pool, parking garage access |
+
+---
+
+## Battery management
+
+Smart locks run on **standard batteries** (no wiring required). Here's what you need to know:
+
+| Aspect | Details |
+| :--- | :--- |
+| **Battery type** | Standard batteries (typically AA or CR123A, depending on the lock model) |
+| **Battery life** | Several months under normal usage |
+| **Low battery alerts** | The dashboard notifies you when a lock's battery is getting low |
+| **Replacement** | Replace batteries before they run out — the dashboard gives you advance warning |
+
+<Warning>
+  **Don't ignore low battery warnings.** If a lock's battery dies completely, guests won't be able to use their PIN code or mobile key. The lock can still be opened with the manual key, but this defeats the purpose of automation. Replace batteries as soon as you receive a low-battery alert.
+</Warning>
+
+---
+
+## Manual key override
+
+Every SUITEe smart lock has a **manual key override** — a traditional keyhole that can be used as a backup.
+
+- Staff should keep manual keys in a secure location
+- Use manual keys only when the digital methods fail (e.g., dead battery, system error)
+- Manual key openings are **not logged** in the same way as digital access — use them sparingly
+
+<Tip>
+  **Best practice:** Keep a set of manual override keys in a locked key cabinet at the reception or manager's office. Label them clearly by room number.
+</Tip>
+
+---
+
+## Monitoring lock status
+
+From the dashboard, you can monitor every smart lock in your property:
+
+| Column | Description |
+| :--- | :--- |
+| **Zimmername** | The room or unit the lock is assigned to |
+| **Gerät** | The name and category of the lock (e.g., *Haupttürschloss 85 German U*) |
+| **Batterie** | The current battery percentage (e.g., 86%). Warnings appear when this drops too low. |
+| **Verbindung** | Network status (Online or Offline). Indicates if the lock is communicating via the gateway. |
+| **Zustand** | The physical state of the lock (Locked/Unlocked) |
+
+### Remote Unlocking
+
+Staff can trigger a remote unlock directly from the dashboard if a guest is locked out or during an emergency. Clicking on a lock reveals the **Geräteaktionen** (Device Actions) panel with a prominent **Unlock door** button.
+
+<Frame>
+  <img src="/images/devices-detail-actions.png" alt="Smart lock device actions panel showing online status, battery level, and manual Unlock door button" />
+</Frame>
+
+<CardGroup cols={2}>
+  <Card title="Access Management" icon="key" href="/dashboard/access-management">
+    Learn how access credentials are managed for guests and staff.
+  </Card>
+  <Card title="Gateways" icon="tower-broadcast" href="/devices/gateways">
+    Understand how smart locks communicate with the dashboard.
+  </Card>
+</CardGroup>

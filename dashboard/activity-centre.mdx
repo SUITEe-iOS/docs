@@ -1,0 +1,254 @@
+---
+title: "Activity Centre"
+description: "Monitor and track every event across your property — bookings, device activity, and access events — all in one real-time feed."
+---
+
+The **Activity Centre** is the complete audit and event log for your entire property. While the [Dashboard Overview](/dashboard/overview#right-panel--aktivitat-activity-feed) shows a short preview of recent activity, the Activity Centre is the **full, unfiltered view** — every booking event, device state change, and access action recorded by SUITEe, paginated and searchable.
+
+Navigate to the Activity Centre by clicking the notification bell in the dashboard header and selecting **Alle Benachrichtigungen anzeigen**, or by going directly to:
+
+```
+https://hotel.suite-e.com/activity-center
+```
+
+---
+
+## Page header, statistics, and filters
+
+<Frame>
+  <img src="/images/activity-centre-overview.png" alt="Activity Centre page header with title, subtitle, Alle als gelesen markieren button, and five stat cards: Alle Aktivitaten 58, Ungelesen 48, Kritisch 0, Warnungen 0, Informativ 58" />
+</Frame>
+
+---
+
+### Page title and subtitle
+
+At the very top of the page, the heading reads **Aktivitatszentrum** with the subtitle:
+*Alle Aktivitaten Ihrer Immobilie uberwachen und verfolgen* (Monitor and track all activities of your property.)
+
+This confirms you are viewing the full property-wide audit log for the currently active property shown in the top-left selector (e.g. **Property No-PMS**).
+
+---
+
+### Mark all as read (Alle als gelesen markieren)
+
+In the top-right corner of the page header is the button **Alle als gelesen markieren** (Mark all as read).
+
+Clicking this button **immediately marks every unread notification and activity entry as read** across the entire Activity Centre. The **Ungelesen** (Unread) counter resets to `0`.
+
+Use this when:
+- You have reviewed all outstanding alerts and want to clear the unread badge
+- You are handing over a shift and want the incoming team to start with a clean slate
+- You want to reset the notification counter on the bell icon in the header
+
+<Warning>
+  This action cannot be undone. Once all items are marked as read, the unread counter resets. Only use it when you have actually reviewed the outstanding items or are intentionally clearing the log.
+</Warning>
+
+---
+
+### Statistics cards (Statistikkarten)
+
+Directly below the title are **five summary cards** that give you an instant count of activities by category and read status. Each card is interactive — clicking it filters the activity list below to show only that category.
+
+| Card | Count | What it shows |
+| :--- | :--- | :--- |
+| **Alle Aktivitaten** (All Activities) | `58` | The total number of all recorded activity events for this property across all categories. This is the default view. The currently active filter card is shown with an **orange border** around it. |
+| **Ungelesen** (Unread) | `48` | Activity entries not yet viewed or marked as read. This number matches the badge on the notification bell in the header. Click to filter the list to only unread items. |
+| **Kritisch** (Critical) | `0` | High-priority events requiring immediate attention — e.g. a device going offline unexpectedly, repeated failed access attempts, or a system integration failure. When this is above `0`, investigate immediately. |
+| **Warnungen** (Warnings) | `0` | Medium-priority alerts — e.g. a device battery dropping below a safe threshold or a PMS sync delay. Review within the current shift. |
+| **Informativ** (Informational) | `58` | Routine low-priority events — e.g. new bookings created, access codes generated, guest check-ins. These confirm the system is working normally. |
+
+<Info>
+  In the example shown, all 58 activities are **Informativ** and none are **Kritisch** or **Warnungen** — the property is operating normally with no urgent issues. If the **Kritisch** count rises above `0`, investigate immediately.
+</Info>
+
+---
+
+### Filter bar — date, category, priority, and status
+
+<Frame>
+  <img src="/images/activity-centre-filters.png" alt="Activity Centre filter bar with Datum- und Uhrzeitbereich, Kategorien, Alle Prioritaten, Alle Status dropdowns, search bar, Zurucksetzen and Filter anwenden buttons, and Buchung, Gerate, Zugang category tags" />
+</Frame>
+
+Below the statistics cards is a **two-row filter toolbar** that lets you narrow the activity list to exactly what you need. All filters work together — you can combine them.
+
+#### Date and time range (Datum- und Uhrzeitbereich)
+
+The first filter (clock icon, left) opens a date-time picker where you define a **custom time window** — a start and end date/time. The list will show only events that occurred within that range.
+
+Use this when:
+- Investigating an incident at a specific time (e.g. who unlocked the door at 02:00)
+- Reviewing activity during a particular guest's stay
+- Generating a shift report for a specific period
+
+#### Categories (Kategorien)
+
+The **Kategorien** dropdown filters by event category. Options include:
+- **Buchung** — booking creation, modification, cancellation
+- **Gerate** — device status changes, battery alerts, online/offline events
+- **Zugang** — door unlock events, access code generation, guest key issuance
+
+#### Priority filter (Alle Prioritaten)
+
+Filters by severity level:
+
+| Option | Meaning |
+| :--- | :--- |
+| **Alle Prioritaten** | Show all severity levels (default) |
+| **Kritisch** | Show only critical events |
+| **Warnungen** | Show only warning events |
+| **Informativ** | Show only informational events |
+
+#### Status filter (Alle Status)
+
+Filters by read/unread state:
+
+| Option | Meaning |
+| :--- | :--- |
+| **Alle Status** | Show everything regardless of read state (default) |
+| **Ungelesen** | Show only unread items |
+| **Gelesen** | Show only already-read items |
+
+---
+
+### Filter bar — search, reset, apply, and category tags
+
+#### Search bar (Aktivitaten suchen)
+
+The wide search input with placeholder **Aktivitaten suchen...** lets you full-text search across all activity entries by:
+- Guest name (e.g. "John")
+- Room or unit name (e.g. "UNIT-3", "Parkplatz1")
+- Device name (e.g. "Hauptturschloss")
+- Booking ID
+- Any part of the activity description
+
+Results narrow dynamically as you type.
+
+#### Reset (Zurucksetzen)
+
+The **Zurucksetzen** button (outlined) **clears all active filters at once** — date range, category, priority, status, and search text — returning the list to its default full view.
+
+#### Apply filter (Filter anwenden)
+
+The orange **Filter anwenden** button applies all currently selected filter criteria simultaneously. Set all filters first, then click once to execute the combined search.
+
+<Tip>
+  Set all your filter criteria first (date range, category, priority, status), then click **Filter anwenden** once. This is more efficient than applying filters one by one.
+</Tip>
+
+#### Category quick-filter tags
+
+In the bottom-right of the filter row are three **category tag buttons** for one-click filtering:
+
+| Tag | Icon | What it filters |
+| :--- | :--- | :--- |
+| **Buchung** | Calendar icon (teal) | Booking events only — new reservations, check-ins, check-outs, modifications, cancellations |
+| **Gerate** | Device icon (blue) | Device events only — online/offline changes, battery alerts, firmware updates, sensor triggers |
+| **Zugang** | Key icon (orange) | Access events only — door unlocks, code generation, guest digital keys, admin PIN usage |
+
+Click any tag to instantly filter. Click the active tag again to remove the filter.
+
+---
+
+## Activity list table
+
+<Frame>
+  <img src="/images/activity-centre-activity-list.png" alt="Activity Centre list table showing two Neue Buchung erstellt rows with columns Aktivitatsdetails, Kategorie, Unterkategorie, Zimmer/Standort, Benutzer, Quelle, Details, Auslöser-Zeit, Prioritat — plus Buchung, Gerate, Zugang tags and pagination showing 1–10 of 58" />
+</Frame>
+
+Below the filter toolbar is the **activity list table**. Every row is one recorded event. The table shows 10 rows per page by default (adjustable via **Zeilen pro Seite**) and covers all 58 total activities in the example shown.
+
+---
+
+### Table columns
+
+| Column | What it shows | Full detail |
+| :--- | :--- | :--- |
+| **Aktivitatsdetails** (Activity Details) | Primary description of the event | Shows the **event title** in bold (e.g. **Neue Buchung erstellt**) and below it a **full sentence** describing exactly what happened — e.g. *"Neue Buchung fur John Etwoeiovgnehno in Parkplatz1 erstellt"*. Below the description, one or more **grey tags** appear (e.g. `booking`, `booking-created`) — these are the internal event type labels used for filtering and API reference. |
+| **Kategorie** (Category) | High-level category of the event | Shown as a coloured pill badge: **Buchung** (teal/green, calendar icon) for booking events, **Gerate** (blue) for device events, **Zugang** (orange, key icon) for access events. Matches the three quick-filter tag buttons. |
+| **Unterkategorie** (Sub-category) | Specific event sub-type within the category | A more granular label — e.g. **Booking Created**, **Booking Modified**, **Door Unlocked**, **Device Offline**, **Code Generated**. |
+| **Zimmer / Standort** (Room / Location) | The room or area where the event occurred | Unit or location name — e.g. **Parkplatz1** (parking unit), **104** (room number), **Property No-PMS** (property-level event). Links to that unit in [Properties & Units](/dashboard/properties-and-units). |
+| **Benutzer** (User) | Who triggered the event | A circular avatar with the user's initials (e.g. **KB**) and full name beside it (e.g. **Kallola Bal**). For automated system events this may show **admin** or the integration name. |
+| **Quelle** (Source) | The system or integration that generated the event | Identifies where the event originated — e.g. **SUITEe-NoPMS** = created directly inside SUITEe with no external PMS. If a PMS is connected, this shows the PMS name (e.g. Mews, Opera, Cloudbeds). |
+| **Details** | Short preview of additional event metadata | A truncated snippet of the raw event payload or additional context. Click the row or a View action to expand the full detail. |
+| **Auslöser-Zeit** (Trigger Time) | Exact timestamp the event was recorded | The precise date and time SUITEe registered the event. Used for audit and incident investigation — combine with the **Datum- und Uhrzeitbereich** filter to pinpoint events to the exact second. |
+| **Prioritat** (Priority) | Severity level of the event | Matches the statistics cards: **Kritisch** (red — immediate action needed), **Warnungen** (amber — review this shift), **Informativ** (blue/grey — routine, no action needed). Most booking and access events are **Informativ**. |
+
+---
+
+### Reading a row — example breakdown
+
+Looking at the first row in the screenshot:
+
+| Field | Value | Meaning |
+| :--- | :--- | :--- |
+| Aktivitatsdetails | **Neue Buchung erstellt** · *"Neue Buchung fur John Etwoeiovgnehno in Parkplatz1 erstellt"* · tags: `booking`, `booking-created` | A new reservation was created for guest John Etwoeiovgnehno, assigned to the Parkplatz1 unit |
+| Kategorie | **Buchung** (green badge) | Booking-related event |
+| Unterkategorie | **Booking Created** | A new booking was created |
+| Zimmer / Standort | **Parkplatz1** — Property No-PMS | The booking is for the Parkplatz1 unit |
+| Benutzer | **KB** — Kallola Bal | Triggered by user Kallola Bal |
+| Quelle | **SUITEe-NoPMS** | Created directly inside SUITEe — no external PMS |
+| Prioritat | **Informativ** | Routine event — no action required |
+
+<Info>
+  Every booking that appears here is also visible in the [Buchungen panel on the Dashboard](/dashboard/overview#buchungen-panel-reservations-calendar) and in full detail on the [Reservations](/dashboard/reservations) page. Use the **Buchungs-ID** from Reservations to cross-reference with Activity Centre entries.
+</Info>
+
+---
+
+### Category quick-filter tags
+
+The three tag buttons repeat at the top-right of the list area for quick access:
+
+| Tag | Colour | What it filters | Related page |
+| :--- | :--- | :--- | :--- |
+| **Buchung** | Teal / calendar icon | Booking events — new reservations, check-ins, modifications | [Reservations](/dashboard/reservations) |
+| **Gerate** | Blue / device icon | Device events — online/offline changes, battery alerts, sensor triggers | [Smart Devices](/devices/smart-locks) |
+| **Zugang** | Orange / key icon | Access events — door unlocks, code generation, Entsperren actions | [Access Management](/dashboard/access-management) |
+
+Click any tag to instantly filter. Click it again to return to the full list.
+
+---
+
+### Pagination
+
+At the very bottom of the list are two controls:
+
+#### Rows per page (Zeilen pro Seite)
+
+The dropdown **Zeilen pro Seite: 10** on the bottom-left controls how many rows appear per page. Common options are `10`, `25`, and `50`. Increase this to see more events at once when investigating a batch of related incidents.
+
+#### Page navigation
+
+The indicator **1–10 of 58** on the bottom-right tells you:
+- Viewing rows **1 through 10**
+- **58 total entries** match the current filter
+- Use `<` and `>` arrows to navigate pages
+
+With `pageSize=10` and 58 entries there are **6 pages** total. The URL updates automatically — e.g. `?page=2&pageSize=10`.
+
+<Tip>
+  To investigate a specific incident: combine **Datum- und Uhrzeitbereich** with the **Zugang** tag to narrow to access events in a specific window, then set **Zeilen pro Seite** to 50 to see everything without paging.
+</Tip>
+
+---
+
+## How the Activity Centre connects to the dashboard
+
+The Activity Centre is directly linked to several other platform areas:
+
+<CardGroup cols={2}>
+  <Card title="Dashboard Overview" icon="house" href="/dashboard/overview">
+    The Aktivitat panel on the main dashboard shows the 5 most recent activity entries. Click **Alle Benachrichtigungen anzeigen** to open the full Activity Centre.
+  </Card>
+  <Card title="Access Management" icon="key" href="/dashboard/access-management">
+    Access events (door unlocks, code generation, Entsperren actions) all appear in the Activity Centre under the **Zugang** category.
+  </Card>
+  <Card title="Reservations" icon="calendar-check" href="/dashboard/reservations">
+    Every new booking created or synced from your PMS generates a **Neue Buchung erstellt** entry in the Activity Centre under the **Buchung** category.
+  </Card>
+  <Card title="Smart Devices" icon="microchip" href="/devices/smart-locks">
+    Device state changes — locks going offline, batteries dropping, sensors triggering — all appear under the **Gerate** category.
+  </Card>
+</CardGroup>

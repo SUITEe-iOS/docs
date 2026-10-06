@@ -1,0 +1,396 @@
+---
+title: "Dashboard Overview"
+description: "Your central command centre — a detailed walkthrough of every element of the SUITEe admin dashboard, from the header controls to the device status cards."
+---
+
+The **Admin Dashboard** is the first screen you see after logging in. It is the central command centre where property managers and staff monitor and control everything about their property in real time — guest access, device health, battery status, and more.
+
+<Frame>
+  <img src="/images/dashboard-overview-german.png" alt="SUITEe Admin Dashboard main overview screen in German showing greeting, device stats, Gerätezugang and Öffentliche Geräte panels" />
+</Frame>
+
+---
+
+## Header area
+
+The dashboard header runs across the very top of the screen. It contains the property selector on the left, the global search bar in the centre, and notification and account controls on the right.
+
+### Property selector (Immobilien-Auswahl)
+
+On the far left of the header, you will see a button displaying the **initials and name of the currently active property** — for example, **PN · Property No-PMS**. This is the property selector.
+
+<Frame>
+  <img src="/images/dashboard-property-switcher.png" alt="Property selector dropdown showing Immobilien suchen search field with properties: Property No-PMS, Savoy Baker Street, SUITEe Munich" />
+</Frame>
+
+Clicking the property selector opens a dropdown with:
+- An **Immobilien suchen** (Search Properties) input field — type part of a property name to instantly filter the list
+- A list of all properties your account has access to. The currently active property is highlighted (e.g. **Property No-PMS**)
+
+**How to switch properties:**
+1. Click the property selector button in the top-left corner
+2. Type part of the property name in the **Immobilien suchen** search field to filter
+3. Click the property you want to switch to
+4. The entire dashboard — device counts, access records, alerts — reloads for the selected property
+
+<Info>
+  You do **not** need to log out to switch between properties. Your session remains active and all property views are available under a single login.
+</Info>
+
+---
+
+### Global search bar (Suche)
+
+Directly in the centre of the header is a wide search bar labelled **Suche...** (Search).
+
+<Frame>
+  <img src="/images/dashboard-global-search.png" alt="SUITEe global search bar with placeholder text Suche..." />
+</Frame>
+
+The global search bar lets you find anything in the platform without navigating through menus. You can search across:
+- **Rooms and units** — find a specific room or apartment by name or number
+- **Devices** — locate a smart lock, thermostat, or sensor by its name or ID
+- **Guests and reservations** — look up a guest name or booking reference
+- **Users** — find a staff member or manager account
+- **Properties** — quickly jump to a different property configuration
+
+**How to use it:**
+1. Click anywhere on the **Suche...** bar (or press the keyboard shortcut if configured)
+2. Start typing your query — results appear dynamically as you type
+3. Click a result to navigate directly to that item's detail page
+
+<Tip>
+  Use the global search as a fast alternative to deep-navigation menus. For example, typing a guest's name instantly surfaces their reservation and room assignment without browsing through the Reservations section.
+</Tip>
+
+---
+
+### Notification bell and header controls
+
+In the top-right corner of the header you will see three controls:
+
+| Control | Description |
+| :--- | :--- |
+| **Bell icon (Benachrichtigungen)** | Notification bell. The orange badge shows the number of unread system alerts (e.g. `48`). Click to open the full notifications panel with device alerts, access events, and system messages. |
+| **Grid icon (Schnellzugriff)** | Quick Links shortcut button. Click to open the Schnellzugriff popup with one-click access to Öffentliche Geräte, Immobilie konfigurieren, and E-Mail-Dienst konfigurieren. |
+| **Language code (e.g. DE)** | Language selector. Displays your active language. Click to switch between English, Deutsch, Polski, and Română. |
+
+---
+
+## Welcome banner and system status
+
+Directly below the header is a personalised **welcome banner** that greets the logged-in user by name — for example, **Guten Morgen, Dolly Arc 123 👋**. A colour-coded status message below the greeting summarises the current state of the property:
+
+- **Alles sieht gut aus! Alle Systeme funktionieren einwandfrei.** — All systems are operating normally (green / no issues)
+- If any devices are offline or have low battery, an alternative warning message appears here instead
+
+On the right side of the banner are two important action buttons: **Admin-PIN** and **Web-App**.
+
+---
+
+### Admin-PIN
+
+The **Admin-PIN** button (on the right of the welcome banner) reveals the property's master administrator PIN code — a numeric code that can be used to manually unlock devices or override access without a digital key.
+
+Because this is a sensitive security credential, clicking **Admin-PIN** triggers an **identity verification step** before the PIN is displayed:
+
+<Frame>
+  <img src="/images/dashboard-admin-pin.png" alt="Identität bestätigen dialog requiring account password before revealing Admin-PIN, with Abbrechen and Bestätigen & PIN anzeigen buttons" />
+</Frame>
+
+**How the identity confirmation works:**
+1. Click the **Admin-PIN** button in the welcome banner
+2. A modal dialog titled **Identität bestätigen** (Confirm Identity) appears
+3. The dialog explains: *"Geben Sie aus Sicherheitsgründen Ihr Kontopasswort ein, um die Admin-PIN anzuzeigen."* (Enter your account password for security reasons to display the Admin PIN.)
+4. Enter your **Passwort** (account login password) in the password field — you can use the eye icon to toggle visibility
+5. Click **Bestätigen & PIN anzeigen** (Confirm & Show PIN) to reveal the Admin PIN, or click **Abbrechen** (Cancel) to dismiss the dialog without revealing anything
+
+<Warning>
+  The Admin PIN grants physical access override capability to any device configured to accept it. Never share the Admin PIN with guests or unauthorised staff. Only trusted property managers and administrators should have access to it.
+</Warning>
+
+---
+
+### Web-App button and dropdown
+
+The orange **Web-App** button (next to Admin-PIN) provides access to the guest-facing web application for this property.
+
+<Frame>
+  <img src="/images/dashboard-web-app-menu.png" alt="Web-App dropdown menu with options Web-App teilen (share) and Web-App öffnen (open)" />
+</Frame>
+
+Clicking **Web-App** opens a small dropdown menu with two options:
+
+| Option | Icon | Description |
+| :--- | :--- | :--- |
+| **Web-App teilen** | Share icon | Generates a shareable link to the guest web app for this property. Use this to send the web app URL to guests, front desk staff, or integrate it into onboarding materials. |
+| **Web-App öffnen** | External link icon | Opens the guest-facing web app directly in a new browser tab so you can preview and test the guest experience yourself. |
+
+<Info>
+  The guest Web-App is the interface your guests use for self-check-in, room access, and in-stay services. Use **Web-App öffnen** to verify it is working correctly from a guest perspective before a new arrival.
+</Info>
+
+---
+
+## Device status summary cards
+
+Below the welcome banner, four large summary cards provide an **at-a-glance overview of all devices** registered to the property:
+
+| Card | Label | Description |
+| :--- | :--- | :--- |
+| **Geräte gesamt** | Total Devices | The total number of all smart devices registered under this property (e.g. `12`). Click the arrow `>` to view the full device list. |
+| **Online-Geräte** | Online Devices | The number of devices currently connected and communicating normally (e.g. `11`). Shown with a green signal icon. Click to filter the device list to online-only. |
+| **Offline-Geräte** | Offline Devices | Devices that are not reachable or have lost connection (e.g. `01`). Shown with a strikethrough signal icon. Click to investigate which device is offline. |
+| **Niedriger Akkustand** | Low Battery | Summary of battery status across all battery-powered devices. If no device has a critically low battery, this displays **Alles in Ordnung** (All OK). If devices need attention, this card will highlight them. Click to view battery levels. |
+
+<Tip>
+  Check the **Offline-Geräte** card first every morning. A device going offline overnight could mean a lock needs a battery replacement, a gateway lost power, or a sensor has been physically tampered with.
+</Tip>
+
+---
+
+## Part 2 — Dashboard panels and widgets
+
+Below the device summary cards, the dashboard displays several interactive panels that give you operational control over your property. This section explains each panel in detail.
+
+---
+
+## Device status summary cards
+
+<Frame>
+  <img src="/images/dashboard-device-cards.png" alt="Four device status cards: Geräte gesamt 12, Online-Geräte 11, Offline-Geräte 01, Niedriger Akkustand — Alles in Ordnung" />
+</Frame>
+
+The four cards across the top of the panel area give you an immediate health snapshot of every smart device on the property. Each card is interactive — clicking the arrow `>` drills into the filtered device list.
+
+| Card | Value shown | What it means | What to do if there's an issue |
+| :--- | :--- | :--- | :--- |
+| **Geräte gesamt** (Total Devices) | `12` | The total count of all registered smart devices (locks, thermostats, sensors, gateways) under this property. | If the number is lower than expected, a device may have been unregistered or removed. Go to **Geräte** to audit the list. |
+| **Online-Geräte** (Online Devices) | `11` | Devices that are actively connected, communicating, and responding normally. Shown with a green WiFi icon. | This is your healthy count. Aim for this to equal **Geräte gesamt** at all times. |
+| **Offline-Geräte** (Offline Devices) | `01` | Devices that cannot be reached — they have lost connection or are powered off. Shown with a struck-through grey WiFi icon. | Click this card immediately to identify which device is offline. Check its power source and physical location. |
+| **Niedriger Akkustand** (Low Battery) | **Alles in Ordnung** | When all battery-powered devices have acceptable charge levels, this card displays **Alles in Ordnung** (All OK) in green text. If any device battery is critically low, this card will list the affected devices instead. | If a device appears here, schedule a battery replacement immediately — a dead lock battery means a guest cannot enter their room. |
+
+---
+
+### Gerätezugang and Öffentliche Geräte panels
+
+<Frame>
+  <img src="/images/dashboard-geraetezugang-public.png" alt="Gerätezugang panel showing Kein Gerätezugang empty state and Öffentliche Geräte panel showing Haupttürschloss Ger... with Online status, 79% battery, and orange Unlock door button" />
+</Frame>
+
+These two panels sit side by side in the middle section of the dashboard and give you direct operational control over device access.
+
+#### Left panel — Gerätezugang (Device Access)
+
+**Gerätezugang** means "device access" — it shows a list of **scheduled or active access grants** assigned to users for specific rooms or devices.
+
+The panel header has two controls:
+- **+ Zugang erstellen** (orange button) — Click this to create a new access grant. You will be prompted to select a user (Benutzername), a room or property unit (Zimmer-Immobilie), and an expiry date (Läuft ab am).
+- **Alle anzeigen →** — Click to open the full Access Management page where all past, active, and scheduled access records are listed.
+
+The table columns are:
+| Column | Meaning |
+| :--- | :--- |
+| **Benutzername** | The name of the user who has been granted access |
+| **Zimmer-Immobilie** | The specific room or property unit the access applies to |
+| **Läuft ab am** | The date and time when this access grant expires automatically |
+| **Ansehen** | A "View" action — click to see full details of the access record |
+| **Aktion** | Action buttons — typically options to edit, extend, or revoke the access |
+
+When no access grants exist for the current period, the panel displays an empty state icon and the message **Kein Gerätezugang** (No Device Access), meaning no access grants are currently configured for any user.
+
+<Info>
+  Use **+ Zugang erstellen** when a guest, cleaner, or maintenance technician needs temporary access to a room or device. The access grant expires automatically on the set date — you do not need to manually revoke it.
+</Info>
+
+#### Right panel — Öffentliche Geräte (Public Devices)
+
+**Öffentliche Geräte** means "public devices" — smart devices that are not tied to a specific private room but are instead available for shared, common-area, or front-desk use (for example a main entrance lock or lobby device).
+
+The subtitle reads: *"Geräte für den öffentlichen Zugang verfügbar"* (Devices available for public access).
+
+Each device card in this panel shows:
+
+| Element | Description |
+| :--- | :--- |
+| **Device icon** | A visual icon representing the device type (e.g. a padlock icon for a smart lock) |
+| **Device name** | The full name of the device — e.g. **Haupttürschloss Ger...** (Main Door Lock) |
+| **Online badge** | A green **Online** pill indicator confirming the device is currently connected and reachable |
+| **Battery level** | A battery icon showing the current charge percentage — e.g. **79%** (green = healthy) |
+| **Unlock door button** | An orange button labelled **🔒 Unlock door** |
+
+**What happens when you click the orange "Unlock door" button:**
+
+Clicking the **Unlock door** button sends an **instant remote unlock command** directly to that smart lock over the network. The lock receives the signal and physically retracts its latch — the door opens without needing a physical key, PIN, or card. This is useful when:
+
+- A guest is locked out and needs immediate entry
+- A delivery person or maintenance worker needs temporary access
+- A staff member is at the property and needs the main door opened remotely by someone at the desk
+
+<Warning>
+  Clicking **Unlock door** immediately and physically unlocks the device in real time. Only use this when you are certain of who is requesting access. The action is logged in the activity feed for audit purposes.
+</Warning>
+
+The **Alle anzeigen →** button in the top-right of the panel opens the full public device list page where all common-area devices are managed in detail.
+
+---
+
+### Türschloss and Aktivität panels
+
+<Frame>
+  <img src="/images/dashboard-tuerschloss-aktivitaet.png" alt="Türschloss panel showing UNIT-3 and UNIT-5 locks with battery percentages and orange Entsperren buttons, alongside Aktivität panel showing recent Neue Buchung erstellt notifications" />
+</Frame>
+
+These two panels sit below Gerätezugang and give you a live view of **individual room lock status** and a **live activity feed** of all events happening across the property.
+
+#### Left panel — Türschloss (Door Locks)
+
+**Türschloss** means "door lock". This panel lists all smart locks assigned to individual rooms in the property — distinct from the public devices panel above. Each row represents one lock in one room.
+
+| Column | Description |
+| :--- | :--- |
+| **Zimmer** | The room or unit the lock is installed in — e.g. `UNIT-3`, `UNIT-5` |
+| **Geräte** | The full device name — e.g. **Haupttürschloss 85 German U** |
+| **Batterie** | Current battery level shown as a coloured progress bar and percentage — e.g. **64%** (green), **86%** (green). Battery colour changes to amber and then red as it approaches zero. |
+| **Aktion** | An orange **🔒 Entsperren** (Unlock) button |
+
+**What happens when you click "Entsperren" (Unlock):**
+
+Clicking the orange **Entsperren** button sends an instant remote unlock command to that specific room's smart lock. The lock physically opens immediately — the door can then be pushed open from the outside. This gives you **remote, keyless entry control** for any individual room directly from the dashboard. Use cases include:
+
+- Letting a guest into their room when they cannot use their digital key
+- Allowing housekeeping to enter a room without a physical key card
+- Granting emergency access to maintenance during a fault
+
+The unlock is **not permanent** — the lock re-secures itself automatically after a configured hold-open time (typically a few seconds to a minute, depending on the lock model).
+
+The **Alle anzeigen →** button at the top right opens the full device management view filtered to door locks, where you can see all locks, their full battery history, and firmware status.
+
+<Tip>
+  Monitor battery percentages in the **Türschloss** panel closely. A lock at or below **20%** should be scheduled for battery replacement immediately. Locks that completely discharge will fail in the locked position — guests will not be able to enter their room.
+</Tip>
+
+#### Right panel — Aktivität (Activity Feed)
+
+**Aktivität** means "activity" — this panel is a **live event log** showing every significant action and system event happening across the property in chronological order.
+
+Each entry in the activity feed shows:
+- A **green icon** (e.g. a calendar icon for booking events, a lock icon for access events)
+- An **event title** in bold — e.g. **Neue Buchung erstellt** (New Booking Created)
+- A **detail line** describing the specific event — e.g. *"Neue Buchung für John Etwoeiovgnehno in Parkplatz1 erstellt"* (New booking created for John... in Parkplatz1)
+- A **relative timestamp** — e.g. *vor 2 Tagen* (2 days ago)
+
+Common activity event types you will see here:
+
+| Event | German Label | What it means |
+| :--- | :--- | :--- |
+| New booking created | **Neue Buchung erstellt** | A guest reservation was created or synced from your PMS |
+| Access granted | **Zugang gewährt** | A digital key or access code was issued to a guest or user |
+| Door unlocked | **Tür entsperrt** | A lock was unlocked (by key, code, or remote command) |
+| Device offline | **Gerät offline** | A device lost its connection |
+| Low battery | **Niedriger Akkustand** | A device battery dropped below the warning threshold |
+
+The **Alle Benachrichtigungen anzeigen** button at the bottom of the feed opens the full [Activity Centre](/dashboard/activity-centre) where you can review all past events, search by keyword, and filter by date, category, priority, and status.
+
+<Info>
+  The activity feed is real-time. Refresh or keep the dashboard open and you will see new events appear automatically as they happen — guest check-ins, remote unlocks, and device state changes all appear here within seconds.
+</Info>
+
+---
+
+### Buchungen panel (Reservations Calendar)
+
+<Frame>
+  <img src="/images/dashboard-buchungen.png" alt="Buchungen panel showing a horizontal weekly date navigator with SA 19 highlighted in orange, and a reservation table with columns Buchungs-ID, Zimmer, Einchecken, Auschecken, Kundenregistrierung, Code-Generierung, Pre-Stay, Gastinformationen" />
+</Frame>
+
+**Buchungen** means "reservations" or "bookings". This panel provides a **daily reservation view** for the property, organised around a scrollable date navigator.
+
+#### Date navigator
+
+At the top of the Buchungen panel is a horizontal date picker showing a rolling 9-day window. Today's date is highlighted in **orange** (e.g. **SA. 19** for Saturday the 19th). Dates in the past appear in lighter grey text. Navigation arrows `<` and `>` on either side let you scroll backward or forward through the calendar.
+
+Clicking on any date instantly filters the reservation table below to show only bookings active on that date.
+
+#### Reservation table columns
+
+When reservations exist for the selected date, they appear as rows in the table. Each column provides key information about that booking:
+
+| Column | German Label | What it shows |
+| :--- | :--- | :--- |
+| **Booking ID** | Buchungs-ID | The unique identifier for the reservation (used to cross-reference with your PMS) |
+| **Room** | Zimmer | The room or unit the guest is booked into |
+| **Check-in** | Einchecken | The guest's scheduled check-in date and time |
+| **Check-out** | Auschecken | The guest's scheduled check-out date and time |
+| **Guest Registration** | Kundenregistrierung | Status of the guest's pre-arrival registration form — whether completed or pending |
+| **Code Generation** | Code-Generierung | Whether a digital access code has been generated and sent to the guest |
+| **Pre-Stay** | Pre-Stay | Status of any pre-stay communication or preparation steps |
+| **Guest Information** | Gastinformationen | Any additional guest notes, preferences, or special requests attached to the booking |
+
+When no bookings exist for the selected date, the table shows **Keine Buchungen** (No Bookings).
+
+The **Alle anzeigen →** button in the top-right corner opens the full Reservations page where all bookings across all dates, rooms, and guests can be browsed, filtered, and managed in detail.
+
+<Info>
+  The Buchungen panel syncs directly with your connected Property Management System (PMS). New reservations made in your PMS appear here automatically — no manual entry required. If a booking is missing, check the PMS integration status under your property settings.
+</Info>
+
+
+The SUITEe dashboard is organised into several main sections, all accessible from the side navigation menu:
+
+<CardGroup cols={2}>
+  <Card title="Properties & Units" icon="building" href="/dashboard/properties-and-units">
+    Manage your buildings and individual rooms/apartments
+  </Card>
+  <Card title="Reservations" icon="calendar-check" href="/dashboard/reservations">
+    View and manage all guest bookings synced from your PMS
+  </Card>
+  <Card title="Access Management" icon="key" href="/dashboard/access-management">
+    Control who can enter which doors and when
+  </Card>
+  <Card title="Energy Management" icon="leaf" href="/dashboard/energy-management">
+    Monitor and control energy usage across all rooms
+  </Card>
+  <Card title="Users & Teams" icon="users" href="/dashboard/users-and-teams">
+    Manage team member accounts and permissions
+  </Card>
+  <Card title="Alerts" icon="bell" href="/dashboard/overview#alerts-and-notifications">
+    View and respond to system alerts and notifications
+  </Card>
+</CardGroup>
+
+---
+
+## Alerts and notifications
+
+The system continuously monitors your property and surfaces issues that need attention through the alerts system. The notification bell in the header shows the count of unread alerts.
+
+### Types of alerts
+
+| Alert Type | Examples |
+| :--- | :--- |
+| **Device Alerts** | Lock has low battery, thermostat offline, sensor not responding |
+| **Access Alerts** | Unusual door activity, failed access attempts |
+| **System Alerts** | Connection issues, PMS sync problems |
+| **Maintenance Alerts** | Device needs servicing, gateway disconnected |
+
+### How alerts work
+
+<Steps>
+  <Step title="System monitors continuously">
+    SUITEe monitors all devices, connections, and integrations in real time across your property. No manual checking is required.
+  </Step>
+  <Step title="Alert appears in the notification panel">
+    When something needs attention, an alert is created. The notification bell counter increments and the alert is visible in the notifications panel.
+  </Step>
+  <Step title="Notification sent (if configured)">
+    Depending on your account settings, you may also receive email or push notifications for critical alerts.
+  </Step>
+  <Step title="Take action and resolve">
+    View the alert details, take the appropriate action (e.g. replace a battery, restart a device), and mark the alert as resolved.
+  </Step>
+</Steps>
+
+<Tip>
+  **Best practice:** Check the dashboard at the start of every shift to review any alerts from overnight. Address critical items — like offline locks or very low battery warnings — before guests arrive.
+</Tip>

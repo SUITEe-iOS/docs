@@ -1,0 +1,238 @@
+---
+title: "Email Services"
+description: "Automate guest communication and transactional messaging — manage email templates, automated mailing triggers, delivery scheduling, and template lifecycle."
+---
+
+The **Email Services** page (labeled **Email-Service / E-Mail** in the platform) is SUITEe's automated guest messaging and transactional email engine. It enables property managers to design standardized email templates, schedule automated dispatches based on reservation milestones (pre-arrival, check-in, check-out), and monitor automated mailing statuses.
+
+Navigate to this page at:
+
+```
+https://hotel.suite-e.com/email-service/email
+```
+
+---
+
+## Page overview
+
+<Frame>
+  <img src="/images/email-services-overview.png" alt="Email services page overview showing breadcrumbs Email-Service / Email, E-Mail header, status filter tabs Alle, Aktiv, Inaktiv, search bar Vorlagen suchen, refresh button, Vorlage hinzufugen button, and template table" />
+</Frame>
+
+### Navigation and header controls
+
+- **Property Switcher**: The dropdown in the top-left corner (e.g. `Property No-PMS`) allows you to switch between properties when managing a multi-property hotel portfolio.
+- **Breadcrumbs**: Displays the navigation hierarchy `🏠 / Email-Service / Email`, linking back to main dashboard sections.
+- **Sub-Sidebar**: An internal navigation tab (`✉ E-Mail`) on the left highlights the active messaging service module.
+- **Page Heading**: Displays **E-Mail** as the central hub for automated correspondence.
+
+---
+
+### Status filter tabs
+
+Directly above the table, three filter tabs allow you to organize templates by their automation status:
+
+| Tab | Count | Description |
+| :--- | :---: | :--- |
+| **Alle** | `(0)` | Displays the complete catalog of email templates created for the property, regardless of whether they are active or disabled. |
+| **Aktiv** | `(0)` | Filters for templates currently enabled in the automated dispatch pipeline. When a reservation trigger occurs, active templates are sent automatically. |
+| **Inaktiv** | `(0)` | Filters for drafts, paused templates, or seasonal promotions that are temporarily disabled from automatic delivery. |
+
+---
+
+## Search and toolbar controls
+
+<Frame>
+  <img src="/images/email-services-toolbar-table.png" alt="Email services toolbar showing search bar with placeholder Vorlagen suchen, refresh button, and orange Vorlage hinzufugen button" />
+</Frame>
+
+The toolbar provides search, synchronization, and template creation controls:
+
+### Template search (`Suche`)
+
+<Frame>
+  <img src="/images/email-services-search-table.png" alt="Close-up of search bar showing Vorlagen suchen tooltip and empty template table with column headers" />
+</Frame>
+
+The search input features the placeholder:
+
+```
+Vorlagen suchen...
+```
+
+- **Multi-Field Matching**: Search across template names (e.g. *Pre-Arrival Welcome*, *Digital Check-in*, *Key PIN Delivery*) and email subject lines (`Betreff`).
+- **Instant Filtering**: The table dynamically updates in real time as you type, allowing operators to quickly locate specific guest messages.
+- **Case-Insensitive**: Queries match regardless of letter case.
+
+---
+
+### Refresh button (`↻`)
+
+Positioned immediately to the right of the search input is the circular refresh icon **`↻`**:
+
+- **Real-Time Synchronization**: Clicking **`↻`** re-queries the mail delivery broker and template database to refresh template statuses and recent dispatch counters without reloading the browser page.
+- **Post-Edit Verification**: Use this button after saving new template edits to verify that the template registry is up to date.
+
+---
+
+### Add template button (`+ Vorlage hinzufügen`)
+
+The orange button on the far right launches the template creation editor:
+
+- Opens the design workflow to configure email subject lines, body content, dynamic personalization tags (e.g. `{{guest_name}}`, `{{room_name}}`, `{{checkin_time}}`), and automated dispatch rules (detailed in subsequent phases).
+
+---
+
+## Email templates table structure
+
+The template inventory table displays all configured emails with their operational parameters:
+
+| Column | Sortable | Description |
+| :--- | :---: | :--- |
+| **Template Name** | **`⇅`** | The internal organizational name of the template (e.g. *Pre-Arrival Guide*, *Booking Confirmation*, *Departure Survey*). Click header arrows to sort alphabetically. |
+| **Betreff** | **`⇅`** | The subject line delivered to the guest's email inbox. Can include dynamic placeholders like guest name or property name. |
+| **Geplant für** | — | The automated trigger schedule defining when the email is dispatched (e.g. *3 days before check-in*, *Upon check-in verification*, *1 hour after check-out*). |
+| **Erstellt am** | **`⌄`** | The date and time when the template was created or last updated. |
+| **Aktiv** | — | An interactive toggle switch to enable or pause automated delivery without modifying or deleting the template content. |
+| **Auto Mailer** | — | Indicator confirming whether the background automated mailing worker is actively scheduled for this template. |
+| **Vorschau** | — | Quick preview button to inspect how the formatted HTML email renders on desktop and mobile email clients before sending. |
+| **Aktionen** | — | Context action menu (**`⋮`**) offering options to edit template content, clone/duplicate the template, or delete it. |
+
+---
+
+### Empty state and pagination
+
+- **Empty State (`Keine Daten verfügbar`)**: When no email templates have been configured yet for the selected property, the table displays *Keine Daten verfügbar* (No data available).
+- **Pagination Controls**:
+  - **Rows per Page (`Zeilen pro Seite: 10 ⌄`)**: Dropdown to toggle the number of visible templates per page (10, 25, 50).
+  - **Page Counter (`0–0 of 0`)**: Displays the current record range alongside navigation arrows (`< >`).
+
+---
+
+## Creating and designing email templates
+
+To create a new automated guest email, click the orange **`+ Vorlage hinzufügen`** button located on the right side of the toolbar:
+
+<Frame>
+  <img src="/images/email-template-btn-add.png" alt="Orange Vorlage hinzufugen button on the toolbar" />
+</Frame>
+
+Clicking this button navigates to the dedicated full-screen template editor:
+
+```
+https://hotel.suite-e.com/email-service/email/create
+```
+
+<Frame>
+  <img src="/images/email-template-editor-overview.png" alt="Full email template editor view showing E-Mail-Vorlage erstellen title, trigger configuration on the left, WYSIWYG email canvas in the center, and dynamic variables sidebar on the right" />
+</Frame>
+
+The editor is divided into three functional columns: **Trigger & Scheduling Settings** (left), **Visual Email Canvas** (center), and **Dynamic Variables Library** (right).
+
+---
+
+### Unsaved changes protection (`← Zurück`)
+
+If you begin editing a template and click the **`← Zurück`** (Back) button in the upper-left corner before saving, SUITEe displays an unsaved changes confirmation modal:
+
+<Frame>
+  <img src="/images/email-template-unsaved-modal.png" alt="Ungespeicherte Anderungen modal warning that changes will be lost, with Abbrechen and red Bestatigen buttons" />
+</Frame>
+
+- **Warning Prompt**: *Sie haben ungespeicherte Änderungen. Wirklich verlassen? Ihre Änderungen gehen verloren.* (You have unsaved changes. Really leave? Your changes will be lost).
+- **Options**:
+  - **`Abbrechen` (Cancel)**: Dismisses the modal and keeps you in the editor so no drafted content or styling is lost.
+  - **`Bestätigen` (Confirm)**: The red confirmation button discards all unsaved modifications and redirects back to the main [Email Services](/dashboard/email-services) template catalog.
+
+---
+
+### Header action buttons
+
+In the upper-right corner of the editor, two persistent control buttons assist in template development:
+
+<Frame>
+  <img src="/images/email-template-btn-save-fullscreen.png" alt="Top-right action buttons showing orange Speichern button with disk icon and fullscreen toggle button" />
+</Frame>
+
+1. **`Speichern` (Save Button)**: Validates all inputs and registers the template with the automated mail dispatch pipeline.
+2. **Fullscreen Toggle (`⛶`)**: Expands the visual email editor to fill the entire browser viewport for focused layout creation.
+
+---
+
+### Form validation requirements
+
+If you attempt to click **`Speichern`** before completing all mandatory fields, the editor displays clear inline error highlights in red:
+
+<Frame>
+  <img src="/images/email-template-validation-errors.png" alt="Editor showing red validation errors for Vorlagenname, Betreff, and Ausloser-Zeit" />
+</Frame>
+
+| Field | Error Message | Requirement |
+| :--- | :--- | :--- |
+| **Vorlagenname** | *Vorlagenname muss mindestens 3 Zeichen haben* | Must contain at least 3 characters. Provide a clear internal title so team members recognize its purpose. |
+| **Betreff** | *Betreff ist erforderlich* | The email subject line cannot be empty. |
+| **Auslöser-Zeit** | *Auslöserzeit ist erforderlich, wenn Vor oder Nach ausgewählt ist* | A relative offset (in hours and minutes) must be specified whenever **Vor** (Before) or **Nach** (After) is selected. |
+
+---
+
+### Left column — Automation triggers and scheduling
+
+The left panel configures when and under what circumstances the automated email is sent:
+
+- **Template Name (`Vorlagenname`)**: Internal name for organizing templates (e.g. `z. B. Willkommens-E-Mail nach Buchung`).
+- **Subject Line (`Betreff`)**: The email subject visible to the guest in their inbox (e.g. `Ihr Aufenthalt bei {property_name}`). Includes an indicator for recommended character length (`0 / 60 Zeichen`).
+- **Trigger Event (`Auslöser-Ereignis`)**: The milestone on the reservation lifecycle that activates this email:
+  - **`Buchungsbestätigung`**: Fired when a new reservation is confirmed in [Booking](/dashboard/booking).
+  - Additional events include guest check-in, check-out, and pre-arrival windows.
+- **Trigger Action (`Auslöser-Aktion`)**: Defines relative timing:
+  - **`Nach` (After)**: Delivers the email after the event occurs (e.g. 1 hour after check-in).
+  - **`Vor` (Before)**: Delivers the email prior to the event (e.g. 24 hours before arrival).
+- **Trigger Time (`Auslöser-Zeit`)**: A clock-picker field where you specify the exact hours and minutes of the offset.
+- **Helper Callout**: An informative callout dynamically summarizes your schedule: *Legen Sie eine Auslöserzeit fest, um diese E-Mail Nach Buchungsbestätigung zu planen.*
+
+---
+
+### Center column — Visual email canvas (WYSIWYG)
+
+The center panel features a rich-text visual HTML email designer built on the TinyMCE framework:
+
+- **Formatting Toolbar**:
+  - Text formatting: Headings (`Paragraph`, `H1`, `H2`), **Bold**, *Italic*, Text Color.
+  - Alignment: Left, Center, Right, Justified.
+  - Structure: Bulleted lists, numbered lists, indentation controls.
+  - Rich Media: Insert responsive images, tables, emojis, and hyperlinks.
+  - Developer Tools: Source code view (`<>`), preview render (`👁`), and visual guidelines.
+- **Branded Email Layout**:
+  - Pre-styled with the official **`SUITEe`** header logo.
+  - Customizable content container (*Add your email content here*) where you can write your message, insert dynamic door access credentials, and embed check-in buttons.
+- **Status Bar**: Displays word count and shortcut assistance (*Press Alt+0 for help*).
+
+---
+
+### Right column — Dynamic personalization tokens (`Verfügbare Variablen`)
+
+The right sidebar provides a library of dynamic merge tags that automatically pull live guest and reservation data at the exact moment the email is dispatched:
+
+<Info>
+  **How to insert variables**: You can type `{` anywhere inside the email editor to open an autocomplete dropdown of available tokens, or click directly on any variable in the right sidebar to insert it at your current cursor position.
+</Info>
+
+#### Guest tokens (`GAST`)
+
+| Variable Token | Placeholder Tag | Example Output | Description |
+| :--- | :--- | :--- | :--- |
+| **Vorname des Gastes** | `{vorname}` | *Max* | Injects the guest's first name for personal greetings (e.g. *Hallo {vorname}*). |
+| **Nachname des Gastes** | `{nachname}` | *Mustermann* | Injects the guest's last name for formal correspondence. |
+| **E-Mail-Adresse des Gastes** | `{gast_email}` | *john.doe@example.com* | Inserts the primary contact email registered on the reservation. |
+| **Telefonnummer des Gastes** | `{gast_telefon}` | *+49 170 1234567* | Injects the verified phone number associated with the booking. |
+
+---
+
+## Interconnected dashboard modules
+
+Email Services connects directly with key operational workflows across the platform:
+
+- **[Booking](/dashboard/booking)**: Reservation milestones (confirmed booking, digital check-in, check-out) serve as the primary triggers that automatically fire email templates.
+- **[Access Management](/dashboard/access-management)**: Door access PINs and digital keycard links generated in Access Management are dynamically merged into pre-arrival emails for contactless check-in.
+- **[Rooms](/dashboard/rooms)**: Room names and unit details configured in the Rooms module populate personalized template placeholders.
+- **[Dashboard Overview](/dashboard/overview)**: Summary metrics on guest activity and communication link back to the main control hub.

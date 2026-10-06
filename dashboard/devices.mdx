@@ -1,0 +1,236 @@
+---
+title: "Devices"
+description: "Monitor and manage all connected IoT devices in your property — filter by room and category, check live battery levels, inspect online connection status, and trigger hardware synchronization."
+---
+
+The **Devices** page is the central hardware command center in SUITEe. It gives property managers and operations teams real-time visibility into every smart device installed across rooms and common areas — from smart door locks and climate units to environmental sensors, lighting controllers, and IoT gateways.
+
+Navigate to this page at:
+
+```
+https://hotel.suite-e.com/devices
+```
+
+---
+
+## Page overview
+
+<Frame>
+  <img src="/images/devices-overview-table.png" alt="Devices dashboard page showing title Gerate, Synchronisieren button, status filter tabs Alle 12, Online 11, Offline 1, filter controls for room, category, device type, search bar, refresh button, and device inventory table" />
+</Frame>
+
+### Page title and header controls
+
+- **Title & Subtitle**: The page heading displays **Geräte** with the subtitle *Ihre Geräte verwalten* (Manage your devices). An info icon **ⓘ** beside the subtitle provides context on device fleet management.
+- **Synchronize Button (`SYNCHRONISIEREN`)**: Located in the top-right corner with a sync icon and an info tooltip **ⓘ**. Clicking this button initiates a full hardware sync cycle across all connected IoT gateways and third-party cloud bridges to discover new devices and update configuration states.
+
+---
+
+### Status filter tabs
+
+Above the filter controls, three status tabs let you quickly isolate devices by network health:
+
+| Tab | Count | Description |
+| :--- | :--- | :--- |
+| **Alle** | `12` | Shows the entire device fleet registered across the active property, regardless of connection state. |
+| **Online** | `11` | Filters for devices currently connected to their gateways, actively transmitting telemetry, and ready to receive remote commands. Marked with a green status indicator. |
+| **Offline** | `1` | Filters for devices that have lost connection to the network (due to depleted batteries, power outage, or gateway signal loss). Use this tab for quick maintenance troubleshooting. |
+
+<Tip>
+  Regularly check the **Offline** tab during morning operations to identify any smart door locks or climate sensors that require battery replacement before guest arrival.
+</Tip>
+
+---
+
+## Filtering and search controls
+
+The filter toolbar above the table allows you to pinpoint specific devices by room, category, sub-type, or keyword search.
+
+---
+
+### Filter 1 — Room selection (`Zimmer`)
+
+Clicking the **Zimmer auswählen** (Select room) dropdown opens a list of all configured rooms and units in the property.
+
+<Frame>
+  <img src="/images/devices-filter-room-dropdown.png" alt="Room filter dropdown showing list of units: 1, 101, 102, 103, 104, 105, 106" />
+</Frame>
+
+- **Select a Specific Unit**: Choose a unit (e.g. `101`, `102`, `UNIT-3`, `UNIT-5`) to restrict the table to only the devices installed in that individual room.
+- **Clear Filter**: Reset the selection to view devices across all units simultaneously.
+- **Connection to Rooms**: All room numbers and names shown here are configured in the [Rooms](/dashboard/rooms) management module.
+
+---
+
+### Filter 2 — Device category (`Gerätekategorie`)
+
+The second dropdown, **Gerätekategorie**, lets you filter devices by hardware function. Scrolling through the dropdown presents 16 distinct device categories supported by the SUITEe ecosystem:
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
+  <Frame>
+    <img src="/images/devices-category-dropdown-part1.png" alt="Device category dropdown part 1 showing Air Conditioner, Door Locks, Environment Sensor, Fire Fighting, Gateways, Household Appliances, Indoor Lighting" />
+  </Frame>
+  <Frame>
+    <img src="/images/devices-category-dropdown-part2.png" alt="Device category dropdown part 2 showing Kitchen Appliances, Meters, Miscellaneous, Outdoor Lighting, Protection Sensor, Routers, Switches" />
+  </Frame>
+  <Frame>
+    <img src="/images/devices-category-dropdown-part3.png" alt="Device category dropdown part 3 showing Miscellaneous, Outdoor Lighting, Protection Sensor, Routers, Switches, Thermostat, White Goods" />
+  </Frame>
+</div>
+
+The complete list of categories and their roles in your property:
+
+| Category | Description | Related Module |
+| :--- | :--- | :--- |
+| **Air Conditioner** | In-room AC split units, VRF systems, and heat pumps controlled via smart IR blasters or direct BACnet/Modbus bridges. | [Thermostats & Climate](/devices/thermostats) |
+| **Door Locks** | Smart electronic door locks, RFID handle sets, and PIN-code keypad locks. | [Smart Locks](/devices/smart-locks) & [Access Management](/dashboard/access-management) |
+| **Environment Sensor** | Room climate sensors measuring temperature, humidity, CO2, and indoor air quality (IAQ). | [Sensors](/devices/sensors) |
+| **Fire Fighting** | Connected smoke detectors, heat sensors, and fire alarm integration modules for safety compliance. | [Sensors](/devices/sensors) |
+| **Gateways** | Central Zigbee, Matter, and LoRaWAN gateways bridging room devices to the SUITEe cloud. | [Gateways](/devices/gateways) |
+| **Household Appliances** | Connected in-room equipment such as smart TVs, soundbars, or motorized curtains. | [Smart Devices](/devices/smart-locks) |
+| **Indoor Lighting** | Smart ceiling fixtures, dimmers, circadian LED panels, and ambient lighting circuits. | [Lights & Switches](/devices/lights-and-switches) |
+| **Kitchen Appliances** | Smart kitchen amenities (induction hobs, espresso machines, kettles) in serviced apartments. | [Smart Devices](/devices/smart-locks) |
+| **Meters** | Digital electricity sub-meters, water flow meters, and thermal energy consumption meters. | [Energy Management](/dashboard/energy-management) |
+| **Miscellaneous** | General connected accessories, wireless doorbells, and emergency call buttons. | [Smart Devices](/devices/smart-locks) |
+| **Outdoor Lighting** | Exterior pathway lights, facade illumination, parking lot lighting, and garden fixtures. | [Lights & Switches](/devices/lights-and-switches) |
+| **Protection Sensor** | Door/window magnetic contact sensors, motion/PIR presence detectors, and water leak detectors. | [Sensors](/devices/sensors) |
+| **Routers** | Managed Wi-Fi access points and local network routers providing building connectivity. | [Gateways](/devices/gateways) |
+| **Switches** | Smart wall switches, kinetic wireless switches, and in-wall relay actuators. | [Lights & Switches](/devices/lights-and-switches) |
+| **Thermostat** | Smart radiator thermostats (TRVs), wall thermostats, and underfloor heating manifolds. | [Thermostats](/devices/thermostats) & [Energy Management](/dashboard/energy-management) |
+| **White Goods** | Smart laundry washers, dryers, and commercial refrigerators in extended-stay units. | [Energy Management](/dashboard/energy-management) |
+
+---
+
+### Filter 3 — Device type (`Gerätetyp`)
+
+The third dropdown, **Gerätetyp** (*Zuerst eine Kategorie auswählen...*), is a dependent cascading filter:
+
+- It remains inactive until you select a **Gerätekategorie**.
+- Once a category is chosen, it populates with specific hardware models and product variants within that category (e.g. selecting *Door Locks* unlocks specific lock models like *Haupttürschloss 85 German U*).
+
+---
+
+### Search bar (`Suche`)
+
+The search field provides a 4-in-1 multi-field query engine with the placeholder:
+
+```
+Suche nach Name, Kategoriename, Immobilienname, Zimmername
+```
+
+You can search across four distinct fields simultaneously:
+
+1. **Device Name (`Name`)**: Search by specific hardware name (e.g. `Klimaanlage`, `Haupttürschloss 85 German U`, `Drahtloses Gateway`).
+2. **Category Name (`Kategoriename`)**: Type category keywords like `Door Locks`, `Air Conditioner`, or `Gateways`.
+3. **Property Name (`Immobilienname`)**: If your organization operates multiple properties, filter devices deployed at a specific location.
+4. **Room Name (`Zimmername`)**: Search by unit or room label (e.g. `UNIT-5`, `UNIT-3`, `102`).
+
+---
+
+### Refresh button (`↻`)
+
+Positioned directly to the right of the search input is the circular refresh icon **`↻`**:
+
+- **Instant Telemetry Refresh**: Clicking **`↻`** re-queries the latest device telemetry (online/offline status, battery levels, and operating state) directly from the IoT cloud broker without requiring a full browser page reload.
+- **Fast Status Verification**: Use this button after swapping batteries on a door lock or rebooting a gateway to confirm that the connection has been restored.
+
+---
+
+## Device inventory table
+
+The table displays every device meeting the active filter criteria with full operational details:
+
+| Column | Description |
+| :--- | :--- |
+| **Zimmername** | The room or unit where the device is physically installed (e.g. `UNIT-5`, `UNIT-3`). Click the column header arrows **`⇅`** to sort alphabetically. |
+| **Gerät** | The registered name of the device and its primary category (e.g. `Name: Klimaanlage / Kategorie: Air Conditioner` or `Name: Haupttürschloss 85 German U / Kategorie: Door Locks`). |
+| **Batterie** | The current battery percentage indicator with an icon (e.g. `86%`, `64%` in green). Battery levels are displayed for wireless devices; hardwired devices (such as AC units and gateways) leave this field blank. |
+| **Verbindung** | Live network status badge. Displays **`● Online`** in green when the device is responding, or **`Offline`** when unreachable. Click the column header arrows **`⇅`** to sort by connectivity. |
+| **Zustand** | Current functional condition or operating mode of the device (or `-` when idle). Click the column header arrows **`⇅`** to sort by state. |
+| **Control** | Action button with adjustment sliders icon **`⊸`**. Clicking opens device controls and configuration parameters (e.g. lock/unlock doors, adjust setpoint temperatures, or view signal diagnostics). |
+
+---
+
+## Device detail view and remote actions
+
+Clicking on any device entry in the inventory table (or its control button) opens the dedicated **Device Details** view for that specific hardware unit:
+
+```
+https://hotel.suite-e.com/devices/{device-id}?tab=actions
+```
+
+<Frame>
+  <img src="/images/devices-detail-actions.png" alt="Device detail page for Hauptturschloss 85 German U showing back button Zuruck zu Geraten, device name with edit pencil, room name UNIT-5, Gerateaktionen tab, battery percentage at 86 percent, and orange Unlock door button" />
+</Frame>
+
+### Header and navigation
+
+- **Back Button (`← Zurück zu Geräten`)**: Positioned in the upper-left corner. Clicking this button immediately returns you to the main [Devices](/dashboard/devices) table.
+- **Device Heading & Edit Pencil (`✏`)**: Shows the official hardware name (e.g. `Haupttürschloss 85 German U`). Clicking the **pencil icon** enables you to rename the device to a custom friendly name (e.g. *Unit 5 Main Door*).
+- **Network Status Badge**: A green **`Online`** pill badge confirms the hardware is actively communicating with its gateway. If communication fails, it transitions to a grey/red **`Offline`** state.
+- **Room Assignment (`Zimmername`)**: Displays which room the device is linked to (e.g. `Zimmername: UNIT-5`). Linked directly to [Rooms](/dashboard/rooms).
+
+---
+
+### Detail tabs
+
+The detail view provides two dedicated operational tabs:
+
+1. **`Geräteaktionen` (Device Actions)**: The primary operational panel (shown above) containing real-time status indicators and remote action controls.
+2. **`Geräteprotokoll` (Device Log)**: The audit history tab displaying an chronological event log specific to this device — including past unlock events, PIN entries, battery percentage reports, tamper alarms, and connectivity changes. All events are synchronized with the central [Activity Centre](/dashboard/activity-centre).
+
+---
+
+### Device action card
+
+Under the **Geräteaktionen** tab, an action card displays live hardware telemetry and control triggers:
+
+- **Icon & Classification**: A circular door icon with the subtitle `Room Door Lock` confirms the functional role of the device.
+- **Online Indicator**: Confirms that cloud-to-gateway commands can be delivered instantly.
+
+---
+
+### Battery level monitoring (e.g. 86%)
+
+Next to the connection status badge is the real-time battery indicator (e.g. **`86%`** with a green battery icon):
+
+| Battery Level | Status | Operational Meaning | Action Required |
+| :--- | :--- | :--- | :--- |
+| **50% – 100%** | **Healthy** | Normal, reliable operating range. | No action required. Lock operates at peak wireless responsiveness. |
+| **20% – 49%** | **Moderate** | Standard operational degradation. | Monitor during regular room inspections. |
+| **< 20%** | **Low / Critical** | Battery power is nearing exhaustion. | **Immediate maintenance required**: Swap with fresh batteries (e.g. 4x AA) before a guest experiences an access lockout. Low battery warnings are automatically dispatched to the [Activity Centre](/dashboard/activity-centre). |
+
+<Info>
+  Hardwired devices such as air conditioner controllers, wired gateways, and smart light switches do not display a battery percentage since they draw continuous mains power.
+</Info>
+
+---
+
+### Remote action button — `🔒 Unlock door`
+
+Spanning the bottom of the action card is the prominent orange **`🔒 Unlock door`** button.
+
+#### What happens when you click this button?
+
+1. **Instant Command Dispatch**: Clicking the button sends an encrypted, over-the-air (OTA) unlock request from the SUITEe cloud through the property's local gateway to the smart door lock.
+2. **Physical Latch Retraction**: The smart lock's motorized drive engages immediately and retracts the deadbolt/latch, allowing the door to be opened from the outside without a physical key or numeric PIN.
+3. **Audit Logging**: The remote unlock event is immediately written to both the device's **Geräteprotokoll** (Device Log) and the platform-wide [Activity Centre](/dashboard/activity-centre), recording the exact timestamp, administrator account, and unlocked unit.
+
+#### Common operational use cases
+
+- **Guest Assistance**: Remotely unlock the door for a guest who forgot their access PIN, has a depleted smartphone battery, or arrives before their digital check-in is processed.
+- **Housekeeping & Maintenance Staff**: Grant instant access to maintenance personnel, cleaning staff, or contractors without issuing permanent keys or sharing master PIN codes.
+- **Emergency Access**: Property managers can open any room door instantly from any desktop or mobile browser during emergency situations.
+
+---
+
+## Interconnected dashboard modules
+
+The Devices management module is tightly integrated with the rest of the SUITEe platform:
+
+- **[Rooms](/dashboard/rooms)**: Physical rooms must be created before devices can be assigned to them during onboarding.
+- **[Dashboard Overview](/dashboard/overview)**: Quick device counts and property health widgets on the main dashboard pull data directly from this fleet.
+- **[Activity Centre](/dashboard/activity-centre)**: Hardware events such as door unlock triggers, battery warnings, and gateway reconnects are logged here.
+- **[Access Management](/dashboard/access-management)**: Door locks managed here are provisioned with PIN codes and digital keys in access management.
+- **[Energy Management](/dashboard/energy-management)**: Thermostats, AC units, and sub-meters visible on this page feed automated energy-saving schedules.
+- **[Smart Locks](/devices/smart-locks)**: Hardware specifications and physical installation guides for the electronic door locks configured on this page.

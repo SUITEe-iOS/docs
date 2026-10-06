@@ -1,0 +1,95 @@
+---
+title: "OTP Verification"
+description: "Understand how SUITEe's One-Time Password (OTP) verification works — an extra layer of security for your account."
+---
+
+For added security, SUITEe may require you to verify your identity using a **One-Time Password (OTP)** after you enter your login credentials. This ensures that even if someone knows your password, they cannot access your account without access to your email or phone.
+
+## What is an OTP?
+
+An OTP (One-Time Password) is a **temporary security code** — usually 4 to 6 digits — sent to your registered email address or phone number. Each code:
+
+- Is **unique** and can only be used once
+- **Expires** after a few minutes
+- Is **generated automatically** by the system
+
+<Info>
+  OTP verification is a standard security practice used by banks, airlines, and major platforms worldwide. It adds a second layer of protection beyond your password.
+</Info>
+
+## How OTP verification works
+
+<Steps>
+  <Step title="Enter your login credentials">
+    On the login page, enter your **email** and **password** as usual, then click **"Log In"** (or **"Anmelden"** in German).
+  </Step>
+
+  <Step title="OTP verification screen appears">
+    Instead of going directly to the dashboard, you'll see the **OTP verification screen** — titled **"E-Mail verifizieren"**. A green confirmation banner confirms the code has been sent to your email:
+
+    > *"Ein Bestätigungscode wurde an Ihre E-Mail-Adresse gesendet. Bitte überprüfen Sie Ihren Posteingang."*
+    > *(A confirmation code has been sent to your email address. Please check your inbox.)*
+
+    <Frame>
+      <img src="/images/otp-verification-actual.png" alt="SUITEe OTP verification screen — E-Mail verifizieren with Bestätigungscode input field" />
+    </Frame>
+  </Step>
+
+  <Step title="Open your email inbox">
+    Go to the email account registered with your SUITEe account. Look for an email from SUITEe containing your **verification code (Bestätigungscode)**.
+
+    The email will contain something like:
+    > **Your SUITEe verification code is: 482916**
+    > This code expires in 5 minutes.
+
+    <Tip>
+      Can't find the email? Check your **spam or junk folder**. The email is sent immediately after you log in.
+    </Tip>
+  </Step>
+
+  <Step title="Enter the OTP code">
+    Return to the SUITEe verification screen. In the **"Bestätigungscode"** field, type the code exactly as it appears in your email — no spaces, no extra characters.
+  </Step>
+
+  <Step title="Click 'Bestätigen' (Confirm)">
+    Click the orange **"Bestätigen"** button. If the code is correct and hasn't expired, you will be taken directly to the **Admin Dashboard**.
+  </Step>
+</Steps>
+
+## What if the OTP expires?
+
+OTP codes are time-sensitive and typically expire after **3–5 minutes**. If your code has expired:
+
+1. Click the **"Code erneut senden"** *(Resend Code)* link on the verification screen
+2. A **new code** will be sent to your email
+3. Use the **new code** — the old one is no longer valid
+
+<Warning>
+  Do not share your OTP code with anyone. SUITEe team members will **never** ask you for your OTP. If someone asks for it, do not provide it and report the incident to your administrator.
+</Warning>
+
+## Troubleshooting OTP issues
+
+<AccordionGroup>
+  <Accordion title="I didn't receive the OTP code">
+    - Check your **spam/junk** email folder
+    - Make sure the email address on your account is correct
+    - Wait 1–2 minutes — sometimes delivery can be slightly delayed
+    - Click **"Code erneut senden"** *(Resend Code)* to request a new one
+    - If using SMS, ensure your phone has signal
+  </Accordion>
+
+  <Accordion title="The code I entered says 'invalid'">
+    - Make sure you're entering the **most recent** code (if you clicked "Resend", use the newest one)
+    - Check for typos — the code is usually 4–6 digits with no letters or spaces
+    - If the code has **expired**, request a new one using **"Code erneut senden"**
+  </Accordion>
+
+  <Accordion title="I keep getting locked out after multiple failed OTP attempts">
+    After several failed attempts, the system may temporarily lock OTP verification for security. Wait **5–10 minutes** and try again, or contact your property administrator for assistance.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  **Pro tip:** Keep your registered email inbox open in another tab when logging in. The OTP step takes only a few seconds once you have the code.
+</Tip>

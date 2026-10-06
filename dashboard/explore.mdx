@@ -1,0 +1,327 @@
+---
+title: "Explore"
+description: "Curate local businesses, partner recommendations, and guest amenities — manage business listings, category tags, active publication toggles, and duplicate entries."
+---
+
+The **Explore** page (labeled **Explore Unternehmen** in the platform) is SUITEe's local area concierge and business directory engine. From here, property managers curate local partner businesses, restaurants, tourist attractions, bike rentals, and neighborhood amenities that guests can browse directly inside their mobile guest portal during their stay.
+
+Navigate to this page at:
+
+```
+https://hotel.suite-e.com/explore/businesses
+```
+
+---
+
+## Page overview
+
+<Frame>
+  <img src="/images/explore-businesses-overview.png" alt="Explore businesses page overview showing breadcrumbs Explore / Businesses, header Explore Unternehmen, filter bar, + Unternehmen hinzufugen button, and business table" />
+</Frame>
+
+### Navigation and header controls
+
+- **Property Switcher**: Located in the upper-left corner (e.g. `Property No-PMS`), allowing property groups to curate neighborhood recommendations tailored to each specific hotel or apartment building.
+- **Breadcrumbs**: Displays the location hierarchy `🏠 / Explore / Businesses`.
+- **Sub-Sidebar**: The `🏬 Unternehmen` (Businesses) navigation tab on the left highlights the active directory module.
+- **Page Heading & Subtitle**: Displays **Explore Unternehmen** with the subtitle *Explore-Unternehmen verwalten* (Manage Explore businesses). An info tooltip **ⓘ** provides guidance on managing local recommendations.
+
+---
+
+## Filter and search toolbar
+
+<Frame>
+  <img src="/images/explore-businesses-toolbar.png" alt="Toolbar controls showing Status dropdown set to Alle, search bar Unternehmen suchen, refresh button, and + Unternehmen hinzufugen button" />
+</Frame>
+
+Above the business table is a streamlined toolbar for filtering and managing directory entries:
+
+### Status filter dropdown (`Status`)
+
+The **Status** dropdown allows operators to filter businesses by publication state:
+
+| Option | Description |
+| :--- | :--- |
+| **Alle...** | Displays all business listings regardless of whether they are active or disabled. |
+| **Aktiv** | Filters for businesses currently published and visible to in-house guests in the mobile guest app. |
+| **Inaktiv** | Filters for drafted, paused, or seasonally closed businesses that are hidden from guests. |
+
+---
+
+### Business search (`Suche`)
+
+The search input features the placeholder:
+
+```
+Unternehmen suchen
+```
+
+- **Instant Querying**: Search across business names, primary categories, or subcategories in real time.
+- **Case-Insensitive**: Matches query terms regardless of capitalization.
+- **Dynamic Table Trimming**: The table filters rows dynamically as each keystroke is entered.
+
+---
+
+### Refresh button (`↻`)
+
+The circular refresh icon **`↻`** beside the search bar re-queries the database:
+
+- Updates publication statuses and syncs recent edits without requiring a full browser reload.
+
+---
+
+### Add business button (`+ Unternehmen hinzufügen`)
+
+The orange **`+ Unternehmen hinzufügen`** button on the far right launches the business creation modal:
+
+- Opens the creation dialog to publish new local recommendations.
+- For a comprehensive walkthrough of all fields, bilingual editors, category selectors, and opening hours, see [Adding new business recommendations](#adding-new-business-recommendations-unternehmen-hinzufugen) below.
+
+---
+
+## Businesses inventory table
+
+<Frame>
+  <img src="/images/explore-businesses-table.png" alt="Explore businesses table showing columns Bild, Unternehmen, Kategorie, Unterkategorie, Aktiv toggle, Erstellt von, Erstellt am, and Aktionen" />
+</Frame>
+
+The table presents every curated business entry with its media, taxonomy, publication status, and administrative attribution:
+
+| Column | Sortable | Description |
+| :--- | :---: | :--- |
+| **Bild** | — | Displays the business logo or thumbnail image shown to guests in their mobile concierge feed (e.g. corporate logo or storefront graphic). |
+| **Unternehmen** | **`⇅`** | The public display name of the business (e.g. `Pascale Mccarty`, `Orla Griffin`, `Moses Rios (Copy)`). Click column header arrows to sort alphabetically. |
+| **Kategorie** | — | The top-level industry classification (e.g. *Dining*, *Activities*, *Shopping*, *Transportation*, *Wellness*). |
+| **Unterkategorie** | — | The specific sub-type classification (e.g. *Italian Bistro*, *Bike Rental*, *Bakery*, *Museum*). |
+| **Aktiv** | — | An interactive toggle switch controlling guest visibility in the mobile web app. |
+| **Erstellt von** | — | The staff member or manager who authored the listing (e.g. `Sagar Property`, `Kallola Bal`). |
+| **Erstellt am** | **`⇅`** | The date when the business was added to the directory (e.g. `09 Sep 2026`, `08 Sep 2026`). Click column header arrows to sort chronologically. |
+| **Aktionen** | — | Three-dots action menu (**`⋮`**) offering management operations. |
+
+---
+
+### Active publication toggle (`Aktiv`)
+
+The **Aktiv** column features an instant toggle switch:
+
+- **Enabled (Orange Switch)**: The business listing is actively published. Guests staying at this property can view the business profile, contact details, and promotions in their mobile guest app.
+- **Disabled (Grey Switch)**: The listing is hidden from the guest portal.
+- **Seasonal & Temporary Pausing**: When a local partner business undergoes renovations or closes for off-season months, managers can flip the switch to grey without deleting the listing.
+
+---
+
+## Row actions menu (`Aktionen`)
+
+Clicking the three vertical dots **`⋮`** in the **Aktionen** column of any business row opens a context menu:
+
+<Frame>
+  <img src="/images/explore-businesses-actions-menu.png" alt="Actions dropdown menu showing Bearbeiten with pencil icon, Duplizieren with copy icon, and Loschen with red trash icon" />
+</Frame>
+
+The menu provides three administrative operations:
+
+### 1. Edit business (`Bearbeiten`)
+
+Clicking **Bearbeiten** (pencil icon) opens the business editor:
+- Modify business name, category, or subcategory classification.
+- Replace or update the promotional image or logo.
+- Update contact details, opening times, Google Maps links, and exclusive guest perks.
+
+### 2. Duplicate business (`Duplizieren`)
+
+Clicking **Duplizieren** (copy icon) clones the selected business entry:
+- Creates an exact copy of the business listing with `(Copy)` appended to the name (e.g. `Moses Rios (Copy)`).
+- **Multi-Branch Efficiency**: Useful when working with partner chains (e.g. multiple bakery or bike rental branches in the neighborhood) or copying recommendations across multiple properties.
+
+### 3. Delete business (`Löschen`)
+
+Clicking **Löschen** (red trash icon) removes the listing:
+- Permanently deletes the business entry from the directory and removes it from all guest apps.
+- Prompts a safety confirmation to prevent accidental removals.
+
+---
+
+## Adding new business recommendations (`+ Unternehmen hinzufügen`)
+
+To curate a new partner venue, restaurant, or neighborhood amenity for your guests, click the orange **`+ Unternehmen hinzufügen`** button located in the upper-right toolbar:
+
+<Frame>
+  <img src="/images/explore-btn-add-business.png" alt="Orange + Unternehmen hinzufugen button" />
+</Frame>
+
+Clicking this button opens the comprehensive **Unternehmen hinzufügen** modal dialog. The modal allows property operators to configure rich-text bilingual descriptions, multi-property assignments, category taxonomy, storefront imagery, and operating hours.
+
+---
+
+### Step 1 — Business identity, rich-text description, and core details
+
+The main modal layout provides fields for business naming, rich-text bilingual descriptions, and primary venue details:
+
+<Frame>
+  <img src="/images/explore-modal-add-business-main.png" alt="Unternehmen hinzufugen modal showing Name field, bilingual TinyMCE rich text editor with Englisch and Deutsch tabs, and right-hand metadata fields" />
+</Frame>
+
+The left pane of the modal contains the business name and an advanced bilingual content editor:
+
+| Field / Control | Required | Description |
+| :--- | :---: | :--- |
+| **Name** | Yes `*` | The public display name of the venue (e.g. *Savoy Bistro*, *Alpine Bike Rental*). Placeholder: `Unternehmen benennen`. |
+| **Beschreibung** | Yes `*` | Detailed description of the business, its atmosphere, offerings, special recommendations, and instructions for hotel guests. |
+| **Bilingual Tabs** | Yes | Features dedicated **Englisch** and **Deutsch** tabs. Managers can write localized descriptions in both English and German, ensuring international and domestic guests receive tailored recommendations in their preferred language. |
+| **Rich-Text WYSIWYG Editor** | — | Powered by TinyMCE, offering an extensive formatting ribbon to create engaging, beautifully styled descriptions for the mobile guest app. |
+
+#### TinyMCE editor formatting controls
+
+The rich-text editor includes a full formatting toolbar directly above the text editing canvas:
+
+- **History**: Undo (`↶`) and Redo (`↷`) to revert or reapply recent formatting changes.
+- **Paragraph Styling**: Format selector dropdown (`Paragraph`, Headings `H1`–`H6`, blockquotes, or preformatted blocks).
+- **Text Formatting**: Bold (**B**) and Italic (*I*) controls for typographic emphasis.
+- **Text Color**: Palette picker (`A ▼`) to highlight special promotions, guest discounts, or key recommendations.
+- **Text Alignment**: Left align, center align, right align, and full justify options.
+- **Lists**: Bulleted unordered lists and numbered ordered lists.
+- **Indentation**: Decrease indent and increase indent buttons.
+- **Media & Components**: Insert inline images, tables, emojis (`😊`), and horizontal dividers.
+- **Utility Tools**: Find and replace (`🔍`), clear formatting (`Tx`), and keyboard shortcuts guide (`?`).
+- **Code & View Modes**: HTML source code editor (`<>`), guest rendering preview (`👁`), fullscreen distraction-free mode (`⛶`), and show paragraph boundary markers (`¶`).
+
+---
+
+### Step 2 — Property assignment and category classification
+
+The right-hand panel of the modal controls portfolio visibility, taxonomy classification, address, and telephone contact:
+
+#### Property assignment dropdown (`Immobilie *`)
+
+Clicking the **Immobilie \*** field opens a multi-select dropdown listing all properties in your portfolio:
+
+<Frame>
+  <img src="/images/explore-modal-property-dropdown.png" alt="Immobilie dropdown menu displaying selectable properties such as Savoy Baker Street and SUITEe Munich" />
+</Frame>
+
+- **Multi-Property Selection**: You can assign the recommendation to one or more properties simultaneously (e.g. `Property No-PMS`, `Savoy Baker Street`, `SUITEe Munich`).
+- **Removable Tag Badges**: Selected properties appear as badge chips with a close icon (e.g. `Property No-PMS ✕`). Click the **✕** on any badge to detach the business from that property.
+- **Cross-Property Efficiency**: Perfect for city-wide partner businesses (e.g. taxi companies, bike rental networks, or restaurant groups) that cater to guests across multiple locations.
+
+#### Category and subcategory classification (`Kategorie *` & `Unterkategorie *`)
+
+Clicking the **Kategorie \*** field opens the top-level classification menu:
+
+<Frame>
+  <img src="/images/explore-modal-category-dropdown.png" alt="Kategorie dropdown menu displaying available categories like Shopping DE, Plzae, Essen, and park" />
+</Frame>
+
+- **Primary Category (`Kategorie *`)**: Select from system-wide and customized categories such as `Essen` (Dining), `Shopping DE`, `park` (Recreation), and custom hotel categories.
+- **Validation Enforcement**: If submitted without a category, a red warning prompt (`Kategorie ist erforderlich`) prevents form submission until a category is chosen.
+- **Dependent Subcategory (`Unterkategorie *`)**: The subcategory dropdown dynamically activates based on the chosen primary category. Before selecting a category, the dropdown remains locked with the helper placeholder:
+  ```
+  Zuerst eine Kategorie auswählen
+  ```
+  Once a primary category is selected, the subcategory dropdown populates with specific venue types (e.g. *Italian Bistro*, *Bakery*, *Museum*, *Pharmacy*).
+
+#### Location and contact information
+
+Directly below the classification selectors:
+
+| Field | Required | Description |
+| :--- | :---: | :--- |
+| **Standort** | Yes `*` | The street address, neighborhood, or geographical location of the business (e.g. *Baker Street 221B, London* or *Marienplatz 1, Munich*). Used by guests for navigation and Google Maps directions. |
+| **Telefon** | Optional | The direct contact phone number for the business, allowing guests to tap and call directly from the mobile guest app for reservations or inquiries. |
+
+---
+
+### Step 3 — Media upload and weekly operating hours
+
+Scrolling down the right-hand panel displays the media upload dropzone and day-by-day operating schedule:
+
+<Frame>
+  <img src="/images/explore-modal-opening-hours.png" alt="Right-hand panel lower section showing Bild drag-and-drop dropzone and 7-day Offnungszeiten weekly schedule with toggle switches" />
+</Frame>
+
+#### Promotional image upload (`Bild`)
+
+The **Bild** upload container manages storefront photos and logos displayed to guests in their mobile concierge feed:
+
+- **Drag-and-Drop Dropzone**: Drag an image file directly into the container or click **Bild hochladen** to open your local file browser.
+- **Supported Formats**: `PNG` or `JPEG`.
+- **File Size Limit**: Maximum file size of `10 MB`.
+- **Quality Recommendation**: High-resolution landscape images provide the sharpest appearance inside guest recommendation cards.
+
+#### Weekly operating schedule (`Öffnungszeiten`)
+
+The **Öffnungszeiten** section features a 7-day schedule controller from Monday to Sunday:
+
+| Day (`Tag`) | Default State | Description |
+| :--- | :---: | :--- |
+| **Montag** | `Geschlossen` (Toggle Off) | Monday operating hours. |
+| **Dienstag** | `Geschlossen` (Toggle Off) | Tuesday operating hours. |
+| **Mittwoch** | `Geschlossen` (Toggle Off) | Wednesday operating hours. |
+| **Donnerstag** | `Geschlossen` (Toggle Off) | Thursday operating hours. |
+| **Freitag** | `Geschlossen` (Toggle Off) | Friday operating hours. |
+| **Samstag** | `Geschlossen` (Toggle Off) | Saturday operating hours. |
+| **Sonntag** | `Geschlossen` (Toggle Off) | Sunday operating hours. |
+
+- **Day Toggle Switches**: Each day has an independent switch. By default, days are set to `Geschlossen` (Closed) with a grey switch.
+- **Configuring Active Hours**: Clicking a day's toggle switch activates time selectors, allowing managers to specify exact opening and closing hours (e.g. `09:00 - 22:00`).
+- **Guest App Indicator**: In the mobile guest portal, SUITEe calculates whether the venue is currently open or closed and displays an active status badge (*Open Now* / *Closed*) based on local property time.
+
+---
+
+### Modal actions: Save or cancel
+
+The upper-right header of the modal contains the primary confirmation actions:
+
+<Frame>
+  <img src="/images/explore-modal-buttons-cancel-submit.png" alt="Abbrechen and Absenden buttons in the modal header" />
+</Frame>
+
+| Button | Style | Action & Behavior |
+| :--- | :--- | :--- |
+| **`Abbrechen`** | White outlined button | **Cancel & Redirect**: Immediately discards all entered text, uploaded images, and configuration changes, closes the modal dialog, and redirects the user back to the main Explore page (`/explore/businesses`). No data is written to the database. |
+| **`Absenden`** | Solid orange button | **Submit & Validate**: Submits the form data for validation. If any mandatory fields are missing or invalid, client-side validation triggers an error state. If all required fields are valid, the business is saved and published. |
+
+---
+
+### Form validation and required fields error state
+
+If an operator clicks the orange **`Absenden`** button before all mandatory fields have been completed, the modal remains open and triggers instant form validation:
+
+<Frame>
+  <img src="/images/explore-modal-validation-errors.png" alt="Unternehmen hinzufugen modal validation error state highlighting missing required fields in red" />
+</Frame>
+
+The platform highlights each incomplete required field with a prominent red outline and displays localized error messages directly beneath the offending inputs:
+
+| Field | Error Indicator | Error Message | How to Resolve |
+| :--- | :--- | :--- | :--- |
+| **`Name *`** | Red input border | `Name ist erforderlich` | Enter the business display name (e.g. *Savoy Bistro*, *Alpine Bike Rental*) into the text field. |
+| **`Beschreibung *`** | Red label & editor border | `Beschreibung ist erforderlich` | Add description text in the rich-text editor under either the **Englisch** or **Deutsch** tab. |
+| **`Kategorie *`** | Red input border | `Kategorie ist erforderlich` | Open the category dropdown and select a primary taxonomy classification (e.g. *Essen*, *Shopping DE*, *park*). |
+| **`Unterkategorie *`** | Red input border | `Unterkategorie ist erforderlich` | Select a primary category first to unlock this field, then select the specific venue subtype. (Displays helper text `Zuerst eine Kategorie auswählen`). |
+| **`Standort *`** | Red input border | `Standort ist erforderlich` | Enter the physical address or landmark location for guest GPS and map directions. |
+
+#### Optional and pre-filled fields during validation
+
+- **`Immobilie *`**: If a property is already selected (e.g. `Property No-PMS ✕`), it passes validation. If no property tag is present, property assignment is required before submission.
+- **`Telefon`**: Optional contact field. Leaving this field blank does not trigger an error.
+- **`Bild`**: If no image is uploaded, the business can still be saved and assigned a default placeholder thumbnail until an official image is added.
+
+#### Successful submission workflow
+
+Once all required fields have valid data:
+1. Click **`Absenden`**.
+2. The modal closes automatically.
+3. The platform creates the new business listing in the database.
+4. The user is redirected back to the Explore page (`/explore/businesses`), where the new recommendation appears at the top of the inventory table with its active publication toggle set.
+5. In-house guests at the assigned property instantly see the recommendation in their mobile guest concierge feed.
+
+---
+
+## Interconnected dashboard modules
+
+The Explore module connects seamlessly with guest-facing and operational features in SUITEe:
+
+- **[Guest Journey & Stay](/guest-journey/check-in-and-stay)**: Curated businesses appear directly in the in-stay mobile web app used by guests to unlock their doors and control room climate.
+- **[Booking](/dashboard/booking)**: Once a booking is checked in, guests gain instant access to the property's local Explore recommendations.
+- **[Dashboard Overview](/dashboard/overview)**: Navigation hub connecting property managers to the Explore module.
+- **[Users & Teams](/dashboard/users-management)**: Team members assigned to properties can author and manage business recommendations.

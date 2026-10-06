@@ -1,0 +1,126 @@
+---
+title: "Reservations Management"
+description: "How reservations flow into SUITEe from your PMS — viewing, tracking, and managing guest bookings and access status."
+---
+
+Reservations in SUITEe are **automatically synced from your PMS** (Property Management System). You generally do not need to create reservations manually — the data flows in automatically from your booking system.
+
+<Info>
+  SUITEe is designed to work **alongside** your PMS, not replace it. All bookings, modifications, and cancellations happen in your PMS first, and SUITEe syncs automatically.
+</Info>
+
+## How reservations get into SUITEe
+
+<Steps>
+  <Step title="Booking is made">
+    A guest books through any channel — your website, Booking.com, Airbnb, a travel agent, or a walk-in. The booking is recorded in your PMS.
+  </Step>
+
+  <Step title="PMS sends data to SUITEe">
+    Your PMS automatically sends the booking details to SUITEe:
+    - Guest name and contact details
+    - Room/unit assignment
+    - Check-in date and time
+    - Check-out date and time
+    - Reservation status (confirmed, modified, cancelled)
+  </Step>
+
+  <Step title="SUITEe creates the reservation">
+    SUITEe creates a reservation record and begins preparing:
+    - Digital access credentials (PIN code or mobile key) are generated
+    - Room climate preparation is scheduled
+    - Check-in instructions are queued for the guest
+  </Step>
+
+  <Step title="Access is activated at check-in time">
+    When the guest's check-in time arrives, their access credentials become active and they receive their check-in instructions.
+  </Step>
+
+  <Step title="Access expires at check-out">
+    At the scheduled check-out time, the guest's access automatically expires. No manual action needed.
+  </Step>
+</Steps>
+
+---
+
+## Viewing reservations
+
+The Reservations section organises bookings into three categories:
+
+| Category | What It Shows |
+| :--- | :--- |
+| **Upcoming Reservations** | Guests who will arrive in the coming days |
+| **Current Reservations** | Guests who are currently checked in and staying |
+| **Past Reservations** | Completed stays — available for reference and reporting |
+
+### Reservation details
+
+For each reservation, you can view:
+
+| Field | Description |
+| :--- | :--- |
+| **Guest Name** | The name of the guest (from PMS) |
+| **Room/Unit** | Which room or apartment is assigned |
+| **Check-in Date & Time** | When the guest is expected to arrive |
+| **Check-out Date & Time** | When the guest is expected to depart |
+| **Access Status** | Whether the digital key/PIN has been generated and sent |
+| **Reservation Status** | Confirmed, checked-in, checked-out, or cancelled |
+
+<Frame>
+  <img src="/images/dashboard-buchungen.png" alt="SUITEe reservations list showing upcoming, current, and past bookings" />
+</Frame>
+
+---
+
+## What happens when reservations change
+
+SUITEe handles reservation changes automatically:
+
+| Change in PMS | What SUITEe Does |
+| :--- | :--- |
+| **Reservation modified** (dates changed) | Access credentials are updated to match new dates |
+| **Room changed** | Access is moved to the new room automatically |
+| **Reservation cancelled** | Access credentials are revoked immediately |
+| **Guest name updated** | Guest information is updated in SUITEe |
+| **New booking added** | New reservation record is created with fresh access credentials |
+
+<Warning>
+  **Important:** Always make reservation changes in your **PMS first**. SUITEe syncs from the PMS — do not try to change booking dates or room assignments directly in SUITEe. The PMS is the source of truth.
+</Warning>
+
+---
+
+## Access status tracking
+
+One of the most important fields in the reservation view is the **Access Status**, which tells you whether the guest can access their room:
+
+| Access Status | Meaning |
+| :--- | :--- |
+| **Pending** | Access credentials have been created but are not yet active (before check-in time) |
+| **Active** | Guest can currently open their door — credentials are live |
+| **Expired** | Check-out time has passed — credentials are no longer valid |
+| **Revoked** | Access was manually revoked by staff |
+
+<Tip>
+  If a guest contacts you saying they can't access their room, the **first thing to check** is the Access Status in the reservation details. If it shows "Pending", their check-in time may not have arrived yet.
+</Tip>
+
+---
+
+## Manual actions
+
+While most reservation management is automated, staff can perform certain manual actions when needed:
+
+- **Resend access credentials** — If a guest didn't receive their access information, you can resend it
+- **Generate a new PIN code** — If a guest forgot their PIN, generate a fresh one
+- **Extend access** — If a guest's stay is extended, update it in the PMS and SUITEe will sync
+- **Revoke access** — Immediately disable a guest's access in emergency situations
+
+<CardGroup cols={2}>
+  <Card title="Access Management" icon="key" href="/dashboard/access-management">
+    Deep dive into access types, PIN codes, and mobile keys.
+  </Card>
+  <Card title="PMS Integration" icon="plug" href="/guest-journey/pms-integration">
+    How the data flow between your PMS and SUITEe works.
+  </Card>
+</CardGroup>

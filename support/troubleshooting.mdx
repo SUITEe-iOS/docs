@@ -1,0 +1,118 @@
+---
+title: "Troubleshooting"
+description: "Quick diagnostic checklists for the most common SUITEe issues — door access, offline devices, temperature problems, missing access codes, and PMS sync."
+---
+
+This page provides step-by-step diagnostic checklists for the most common issues encountered when using SUITEe. Follow the steps in order — most problems are resolved within the first few checks.
+
+## Guest cannot open their door
+
+This is the most common support request. Follow this checklist:
+
+| Step | What to Check | Action |
+| :--- | :--- | :--- |
+| 1 | Is the guest using the **correct PIN code or mobile key**? | Verify the code matches what was sent |
+| 2 | Has the **reservation started**? (Check the check-in time) | If check-in time hasn't arrived, access is still pending |
+| 3 | Is the **reservation still active**? | Check it hasn't been cancelled in the PMS |
+| 4 | Is the **lock online**? | Check device status in the dashboard |
+| 5 | Does the lock have **sufficient battery**? | Check battery level in the dashboard |
+| 6 | Ask the guest to **try again** | Sometimes a brief retry resolves intermittent issues |
+| 7 | **Generate a new access code** | Create a fresh PIN from the dashboard |
+| 8 | Use the **manual key override** | As a last resort, use the physical backup key |
+
+<Warning>
+  If a guest is locked out and cannot wait, use the **manual key override** immediately to get them into their room. Then diagnose the issue afterwards.
+</Warning>
+
+---
+
+## A device shows "Offline" in the dashboard
+
+When a device (lock, thermostat, or sensor) shows as offline:
+
+| Step | What to Check | Action |
+| :--- | :--- | :--- |
+| 1 | Is the **gateway online**? | All devices communicate through the gateway — if it's offline, all devices will appear offline |
+| 2 | Is the property's **Wi-Fi/internet working**? | Test the internet connection at the property |
+| 3 | Has the device **battery run out**? | Check battery level (for battery-powered devices) |
+| 4 | Is the device **in range** of the gateway? | Ensure the device is within the gateway's coverage area |
+| 5 | **Restart the gateway** | Power off, wait 30 seconds, power back on |
+| 6 | **Contact SUITEe support** | If the problem persists after all checks |
+
+<Info>
+  The gateway is the most common single point of failure. If multiple devices go offline simultaneously, the gateway is almost always the cause. Check it first.
+</Info>
+
+---
+
+## Room temperature is not adjusting
+
+When a guest or staff member reports that the room temperature isn't changing:
+
+| Step | What to Check | Action |
+| :--- | :--- | :--- |
+| 1 | Is the **thermostat online**? | Check device status in the dashboard |
+| 2 | Is a **window open**? | The window sensor may have paused heating/cooling |
+| 3 | What **mode** is the room in? | Guest Mode vs Eco Mode — the temperature target is different |
+| 4 | Has the temperature been **changed manually**? | Check if someone adjusted it on the physical device |
+| 5 | Is the **occupancy sensor working**? | If it's offline, the system may not know someone is in the room |
+| 6 | Try adjusting **remotely from the dashboard** | Use the dashboard to set a specific temperature |
+
+<Tip>
+  **Quick fix:** If a guest says the room is too cold/hot, first try adjusting the temperature remotely from the dashboard. This confirms whether the thermostat is responding to commands.
+</Tip>
+
+---
+
+## Guest did not receive their access code
+
+When a guest says they never received their check-in instructions or access code:
+
+| Step | What to Check | Action |
+| :--- | :--- | :--- |
+| 1 | Is the **reservation confirmed** in the PMS? | Cancelled or unconfirmed reservations don't generate access |
+| 2 | Has the PMS **synced** the reservation to SUITEe? | Check if the reservation appears in SUITEe's reservations list |
+| 3 | Is the guest's **email/phone correct**? | Verify contact details in the reservation |
+| 4 | Was the **access code generated**? | Check Access Management section in the dashboard |
+| 5 | Has the **check-in time arrived**? | Codes are activated at check-in time — they may have been sent but aren't active yet |
+| 6 | **Resend access information** | Use the dashboard to manually resend the access details |
+
+---
+
+## PMS data is not syncing to SUITEe
+
+When bookings from your PMS aren't appearing in SUITEe:
+
+| Step | What to Check | Action |
+| :--- | :--- | :--- |
+| 1 | Is the **PMS integration active**? | Check Settings → Integrations in the dashboard |
+| 2 | Are there **error messages** in the Alerts section? | Look for integration-specific error alerts |
+| 3 | Is the **PMS system itself online**? | Verify your PMS is functioning normally |
+| 4 | Try **manually triggering a sync** | If the option is available in the dashboard |
+| 5 | **Contact SUITEe support** | If the issue persists after these checks |
+
+<Warning>
+  PMS sync issues can prevent guests from receiving access codes. If you discover a sync problem, manually check upcoming reservations and generate access codes if needed to ensure no guest is affected.
+</Warning>
+
+---
+
+## General troubleshooting tips
+
+<AccordionGroup>
+  <Accordion title="When in doubt, check the gateway first">
+    The gateway is the communication hub. If it's offline, nothing works properly. Check gateway status before investigating individual device issues.
+  </Accordion>
+
+  <Accordion title="Check the Alerts section regularly">
+    Many issues generate alerts before they become problems. A "low battery" alert gives you time to replace the battery before the device dies.
+  </Accordion>
+
+  <Accordion title="Use the manual override when a guest is waiting">
+    If a guest is standing at their door and can't get in, use the manual key immediately. Diagnose the technical issue after the guest is in their room.
+  </Accordion>
+
+  <Accordion title="Keep SUITEe support contact information handy">
+    For issues you can't resolve, contact [SUITEe support](https://suite-e.com/contact-us/). You'll speak directly with the team — not a call centre.
+  </Accordion>
+</AccordionGroup>
