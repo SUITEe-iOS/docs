@@ -175,8 +175,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/suitee-light.svg",
+    "dark": "/logo/suitee-dark.svg"
   },
   "navbar": {
     "links": [
