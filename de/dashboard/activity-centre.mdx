@@ -21,7 +21,7 @@ Ganz oben auf der Seite lautet die Überschrift **Aktivitätszentrum** mit dem U
 
 *Alle Aktivitäten Ihrer Immobilie überwachen und verfolgen*
 
-Dies bestätigt, dass Sie das vollständige unterkunftsweite Audit-Protokoll für die aktuell aktive Unterkunft anzeigen, die im Auswähler oben links angezeigt wird (z. B. **Property No-PMS**).
+Dies bestätigt, dass Sie das vollständige unterkunftsweite Audit-Protokoll für die aktuell aktive Unterkunft anzeigen, die im Auswähler oben links angezeigt wird (z. B. **Property No-PMS (Demo)** oder **Grand Horizon Hotel**).
 
 ---
 
@@ -185,7 +185,7 @@ Betrachten wir beispielhaft eine Zeile mit einer neu erstellten Buchung:
 | Aktivitätsdetails | **Neue Buchung erstellt** · *"Neue Buchung für John Etwoeiovgnehno in Parkplatz1 erstellt"* · Tags: `booking`, `booking-created` | Eine neue Reservierung wurde für den Gast erstellt und der Einheit Parkplatz1 zugewiesen |
 | Kategorie | **Buchung** | Buchungsbezogenes Ereignis |
 | Unterkategorie | **Booking Created** | Eine neue Buchung wurde erstellt |
-| Zimmer / Standort | **Parkplatz1** — Property No-PMS | Die Buchung gilt für die Einheit Parkplatz1 |
+| Zimmer / Standort | **Parkplatz1** — Property No-PMS (Demo) | Die Buchung gilt für die Einheit Parkplatz1 |
 | Benutzer | **KB** — Kallola Bal | Benutzer, der die Aktion ausgelöst hat |
 | Quelle | **SUITEe-NoPMS** | Direkt in SUITEe erstellt — kein externes PMS |
 | Priorität | **Informativ** | Routineereignis — kein Handeln erforderlich |
@@ -193,6 +193,20 @@ Betrachten wir beispielhaft eine Zeile mit einer neu erstellten Buchung:
 <Info>
   Jede Buchung, die hier erscheint, ist auch im [Panel Buchungen auf dem Dashboard](/de/dashboard/overview#panel-buchungen-reservierungskalender) und in vollem Detail auf der Seite [Reservierungen](/de/dashboard/reservations) sichtbar. Nutzen Sie die **Buchungs-ID** aus den Reservierungen zur Abstimmung mit den Einträgen im Aktivitätszentrum.
 </Info>
+
+#### Beispiel-Aktivitätsprotokolleinträge (Demodaten)
+
+Die folgende Tabelle zeigt typische operative Ereignisse, Energieanpassungen und Zugangsaktionen:
+
+| Auslöser-Zeit | Kategorie | Unterkategorie | Zimmer / Standort | Ereignis & Beschreibung | Benutzer / Quelle | Priorität |
+| :--- | :--- | :--- | :--- | :--- | :--- | :---: |
+| **16.10. 14:32:10** | `Zugang` | Smart Lock Opened | Zimmer 101 | Tür durch Gast-PIN erfolgreich entriegelt | Gast (Digitaler PIN) | `Informativ` |
+| **16.10. 14:15:02** | `Buchung` | Check-In Processed | Zimmer 101 | Gast Maximilian Krause eingecheckt · PIN aktiviert | Rezeption (Lisa Weber) | `Informativ` |
+| **16.10. 13:48:22** | `Geräte` | Battery Warning | Zimmer 108 | Balkontür Fenstersensor Batteriestand kritisch (12%) | System (Zigbee Gateway) | `Warnungen` |
+| **16.10. 12:05:44** | `Energie` | Setback Activated | Suite 204 | Fenster geöffnet erkannt · Thermostat auf 17.0 °C Eco gesenkt | Auto-Eco Engine | `Informativ` |
+| **16.10. 11:30:19** | `Zugang` | Admin Unlock | Zimmer 205 | Tür über Dashboard durch Personal entriegelt | Personal (Stefan Keller) | `Informativ` |
+| **16.10. 09:12:05** | `Buchung` | Reservation Created | Zimmer 302 | Neue Buchung #GH-8430 für Sarah Lindner synchronisiert | Mews PMS Sync | `Informativ` |
+| **16.10. 03:14:50** | `Geräte` | Device Offline | Suite 310 | Smart Lock Gateway Verbindung unterbrochen | Systemwarnung | `Kritisch` |
 
 ---
 

@@ -35,13 +35,13 @@ When you navigate to the Booking page, the interface presents a complete operati
 ## Property switcher
 
 <Frame>
-  <img src="/images/booking-property-switcher.png" alt="Property switcher dropdown showing SUITEe Munich, Property No-PMS, and Savoy Baker Street" />
+  <img src="/images/booking-property-switcher.png" alt="Property switcher dropdown showing example properties: Grand Horizon Hotel, Property No-PMS, and Alpine Vista Suites" />
 </Frame>
 
 The **Property Switcher** dropdown in the top-left corner determines which property's bookings are displayed in the table below. It includes a search bar (`Immobilien suchen`) to quickly find a property.
 
 - **Single Property View**: Only bookings belonging to the selected property are shown at any time.
-- **Dynamic Reload**: Selecting a different property (e.g. switching from `Property No-PMS` to `SUITEe Munich`) triggers a complete reload of:
+- **Dynamic Reload**: Selecting a different property (e.g. switching from `Property No-PMS` to `Grand Horizon Hotel` or `Alpine Vista Suites`) triggers a complete reload of:
   - The status summary cards (counts update to reflect the new property).
   - The booking table data.
   - The available action buttons.
@@ -161,6 +161,18 @@ Each row in the booking table represents a single reservation. The following col
 | **Zugangsstatus** | Access Status | Indicates the state of the guest's digital access credentials (e.g., `Teilweise` for partial access, `Gelöscht` for deleted). |
 | **Reg.-Status** | Registration Status | Indicates the state of the digital guest registration (e.g., `Übersprungen` if skipped or bypassed). |
 | **Quelle** | Source | The origin of the booking (e.g., `Direkt` for direct bookings). |
+
+#### Sample reservation records (demo data)
+
+The following dummy records show how real reservations are formatted across different booking channels and lifecycle states:
+
+| Buchungs-ID | Externe ID | Gast | Aufenthaltsdaten | Zimmer | Zugangsstatus | Reg.-Status | Quelle |
+| :--- | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
+| **GH-8421** | `BKG-99214` | Sarah Jenkins *(2 Gäste)* | 16. Oct 15:00 – 19. Oct 11:00 | **104** | `Aktiv (PIN)` | `Abgeschlossen` | Booking.com |
+| **GH-8422** | `OTA-77312` | Maximilian Weber *(1 Gast)* | 16. Oct 15:00 – 18. Oct 10:00 | **202** | `Aktiv (Key)` | `Abgeschlossen` | Mews Direct |
+| **GH-8423** | `—` | Elena Rostova *(2 Gäste)* | 17. Oct 15:00 – 21. Oct 11:00 | **305** | `Ausstehend` | `Ausstehend` | Direkt |
+| **GH-8424** | `EXP-44109` | Lucas Moreau *(1 Gast)* | 14. Oct 15:00 – 16. Oct 11:00 | **108** | `Abgelaufen` | `Abgeschlossen` | Expedia |
+| **GH-8425** | `BKG-11082` | Clara Fischer *(2 Gäste)* | 18. Oct 15:00 – 22. Oct 11:00 | **210** | `Storniert` | `—` | Booking.com |
 
 ### Row interactions
 

@@ -225,6 +225,19 @@ Die Zimmerlistentabelle hat vier Spalten:
 | **Geteilte Zimmer** | Zeigt an, ob dieses Zimmer Geräte oder Zugänge mit einer anderen Einheit teilt. Ein Bindestrich `-` bedeutet, dass das Zimmer eigenständig ist. |
 | **Aktionen** | Enthält ein **Drei-Punkte-Menü** für jede Zeile. Klicken Sie auf die drei Punkte, um die verfügbaren Optionen für dieses Zimmer zu öffnen. |
 
+#### Beispiel-Zimmerbestand und IoT-Hardware-Zuordnung (Dummy-Daten)
+
+Die nachfolgenden Beispieldatensätze zeigen, wie Zimmereinheiten registriert, beschrieben und mit IoT-IDs verknüpft sind:
+
+| Zimmername | Beschreibung | Zimmertyp / Betten | IoT Room ID | Geteilte Zimmer | Status |
+| :--- | :--- | :--- | :--- | :---: | :---: |
+| **101** | Standard Doppelzimmer *(1. OG)* | Doppelbett (King) | `IOT-RM-101-LOK` | — | `Aktiv` |
+| **102** | Superior King Zimmer *(1. OG)* | King-Bett + Schreibtisch | `IOT-RM-102-LOK` | — | `Aktiv` |
+| **201** | Panorama Suite *(2. OG)* | Schlafzimmer + Balkon | `IOT-STE-201-ALL` | — | `Aktiv` |
+| **204** | Familienzimmer mit Verbindungstür A | Queen-Bett | `IOT-RM-204-CONN` | `Einheit 205` | `Aktiv` |
+| **205** | Familienzimmer mit Verbindungstür B | 2x Einzelbetten | `IOT-RM-205-CONN` | `Einheit 204` | `Aktiv` |
+| **301** | Penthouse Loft *(Wartungsarbeiten)* | Komplettes Apartment | `IOT-LFT-301-OFF` | — | `Inaktiv` |
+
 ---
 
 ### Drei-Punkte-Aktionsmenü

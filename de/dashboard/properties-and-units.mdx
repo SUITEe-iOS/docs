@@ -11,8 +11,8 @@ Bevor Sie beginnen, sind zwei Begriffe wichtig:
 
 | Begriff | Bedeutung | Beispiel |
 | :--- | :--- | :--- |
-| **Immobilie** | Das Gebäude oder der Standort, den Sie verwalten | „Hotel Sunrise Vienna“, „Lakeside Apartments Munich“ |
-| **Einheit** | Ein einzelnes Zimmer, Apartment oder ein anderer Bereich innerhalb einer Immobilie | „Zimmer 101“, „Suite 305“, „Apartment A2“ |
+| **Immobilie** | Das Gebäude oder der Standort, den Sie verwalten | „Grand Horizon Hotel“, „Alpine Vista Suites“, „Urban Boutique Loft“ |
+| **Einheit** | Ein einzelnes Zimmer, Apartment oder ein anderer Bereich innerhalb einer Immobilie | „Zimmer 101 (Deluxe)“, „Suite 305 (Panoramablick)“, „Studio Loft A“ |
 
 Eine Immobilie kann mehrere Einheiten enthalten. Wenn Sie mehrere Gebäude oder Standorte verwalten, können diese als separate Immobilien in SUITEe angelegt werden.
 
@@ -27,6 +27,18 @@ Je nach Konfiguration stehen Ihnen dort Informationen zur Immobilie und den zuge
 <Frame>
   <img src="/images/rooms-overview.png" alt="SUITEe Übersicht der Zimmer und Einheiten einer Immobilie" />
 </Frame>
+
+#### Beispiel-Portfolio verwalteter Unterkünfte (Dummy-Daten)
+
+Die nachfolgende Tabelle zeigt beispielhaft, wie Unterkünfte in einem Multi-Property-Portfolio angeordnet sind:
+
+| Unterkunfts-ID | Name der Unterkunft | Adresse | Einheiten | Auslastung | PMS-Anbindung | Geräteflotte |
+| :--- | :--- | :--- | :---: | :---: | :--- | :---: |
+| **PROP-101** | **Grand Horizon Hotel** | Sonnenstraße 19, 80331 München | 84 | 88% *(74 / 84)* | Mews PMS | 168 Online |
+| **PROP-102** | **Alpine Vista Suites** | Zugspitzstraße 45, 82467 Garmisch | 32 | 94% *(30 / 32)* | Apaleo | 64 Online |
+| **PROP-103** | **Urban Boutique Loft** | Friedrichstraße 102, 10117 Berlin | 18 | 72% *(13 / 18)* | Cloudbeds | 36 Online |
+| **PROP-104** | **Riverside Aparthotel** | Rheinweg 12, 50667 Köln | 24 | 83% *(20 / 24)* | 3RPMS | 48 Online |
+| **PROP-000** | **Property No-PMS (Demo)** | Test-Campus 1, 80335 München | 6 | 50% *(3 / 6)* | Direkt / Standalone | 12 Online |
 
 <Info>
   Die detaillierten Stammdaten einer Immobilie — beispielsweise Name, Adresse, Kontaktinformationen, Check-in-Zeit und PMS-Typ — werden unter [Einstellungen](/de/dashboard/settings) verwaltet.
@@ -206,6 +218,19 @@ Um Informationen einer vorhandenen Einheit zu ändern:
 <Warning>
   Seien Sie besonders vorsichtig, wenn Sie Zimmernamen oder Zimmernummern ändern, während aktive oder zukünftige Buchungen vorhanden sind. Bei einer PMS-Integration können Zimmerinformationen mit den entsprechenden Daten des PMS verknüpft sein.
 </Warning>
+
+#### Beispiel-Zimmerbestand und Hardware-Zuordnung (Dummy-Daten)
+
+Die Tabelle zeigt exemplarisch die Zimmerkonfiguration für eine Unterkunft (**Grand Horizon Hotel**):
+
+| Einheit | Kategorie / Zimmertyp | Etage | Smart Lock | Thermostat | Fenstersensor | Status |
+| :---: | :--- | :---: | :--- | :--- | :--- | :--- |
+| **101** | Standard Doppelzimmer | 1. OG | Smart Lock Pro `[Online 94%]` | Zigbee-Thermostat `[21,5 °C]` | Kontaktsensor `[Zu]` | `Belegt` |
+| **102** | Superior King Zimmer | 1. OG | Smart Lock Pro `[Online 88%]` | Zigbee-Thermostat `[18,0 °C]` | Kontaktsensor `[Zu]` | `Reinigung` |
+| **201** | Panorama Suite | 2. OG | Smart Lock Pro `[Online 91%]` | Smart TRV Duo `[22,0 °C]` | Doppel-Sensor `[Zu]` | `Belegt` |
+| **202** | Executive Studio | 2. OG | Smart Lock Pro `[Online 86%]` | Smart TRV Duo `[17,5 °C]` | Kontaktsensor `[Zu]` | `Frei` |
+| **301** | Penthouse Loft Suite | 3. OG | Smart Lock Pro `[Online 96%]` | Smart Climate Core `[16,0 °C]` | Balkon-Sensor `[Offen]` | `Wartung` |
+
 
 ---
 

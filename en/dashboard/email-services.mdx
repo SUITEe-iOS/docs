@@ -34,9 +34,21 @@ Directly above the table, three filter tabs allow you to organize templates by t
 
 | Tab | Count | Description |
 | :--- | :---: | :--- |
-| **Alle** | `(0)` | Displays the complete catalog of email templates created for the property, regardless of whether they are active or disabled. |
-| **Aktiv** | `(0)` | Filters for templates currently enabled in the automated dispatch pipeline. When a reservation trigger occurs, active templates are sent automatically. |
-| **Inaktiv** | `(0)` | Filters for drafts, paused templates, or seasonal promotions that are temporarily disabled from automatic delivery. |
+| **Alle** | `(5)` | Displays the complete catalog of email templates created for the property, regardless of whether they are active or disabled. |
+| **Aktiv** | `(4)` | Filters for templates currently enabled in the automated dispatch pipeline. When a reservation trigger occurs, active templates are sent automatically. |
+| **Inaktiv** | `(1)` | Filters for drafts, paused templates, or seasonal promotions that are temporarily disabled from automatic delivery. |
+
+#### Sample automated guest email catalog (demo data)
+
+The following dummy templates illustrate how automated guest communications are configured in a live property:
+
+| Template Name | Category / Trigger | Send Schedule | Language | Status |
+| :--- | :--- | :--- | :---: | :---: |
+| **Pre-Arrival Digital Check-in** | `Before Arrival` | 24 Hours before Check-in (15:00) | `EN / DE` | `Aktiv` |
+| **Your Digital Key & Room PIN** | `Access Delivery` | 2 Hours before Arrival (13:00) | `EN / DE` | `Aktiv` |
+| **Welcome to Grand Horizon** | `Check-in Completed`| Immediately upon First Door Unlock | `EN / DE` | `Aktiv` |
+| **Express Check-out & Receipt** | `Departure` | 08:00 AM on Departure Day | `EN / DE` | `Aktiv` |
+| **Summer Season Guest Survey** | `Post-Stay` | 2 Hours after Check-out | `EN / DE` | `Inaktiv (Draft)` |
 
 ---
 

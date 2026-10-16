@@ -79,6 +79,18 @@ Mitarbeiter können folgende Energiemanagement-Aktionen durchführen:
 | **Verbrauchsdaten anzeigen** | Prüfen Sie Energieverbrauchstrends und identifizieren Sie Einsparmöglichkeiten |
 | **Automatisierungsregeln konfigurieren** | Erstellen oder ändern Sie Regeln für das automatische Energiemanagement |
 
+#### Beispiel-Raumklima- & Energietelemetrie (Dummy-Daten: Alpine Vista Suites)
+
+Die nachfolgende Tabelle veranschaulicht Live-Telemetriedaten intelligenter Thermostate und Sensoren über mehrere Mustereinheiten:
+
+| Einheit | Belegungsstatus | Aktiver Modus | Ziel-Temp. | Ist-Temp. | Fenstersensor | Präsenzsensor | Einsparung |
+| :---: | :--- | :--- | :---: | :---: | :---: | :--- | :---: |
+| **Zimmer 101** | `Eingecheckt` | `Gästemodus` | 21,5 °C | 21,4 °C | Kontakt Zu | Bewegung erkannt *(vor 2 Min.)* | **14,2%** |
+| **Zimmer 102** | `Eingecheckt` | `Abwesend (Eco)` | 18,5 °C | 19,1 °C | Kontakt Zu | Keine Bewegung *(3 Std. 20 Min.)* | **32,8%** |
+| **Suite 201** | `Eingecheckt` | `Heizung pausiert`| Aus | 17,8 °C | **Fenster geöffnet ⚠️** | Bewegung erkannt | **48,0%** |
+| **Suite 202** | `Frei / Leer` | `Deep Eco Modus` | 16,0 °C | 16,2 °C | Kontakt Zu | Keine Bewegung *(seit 2 Tagen)* | **62,5%** |
+| **Loft 301** | `Vorklimatisierung`| `Aufheiz-Plan` | 21,0 °C | 19,8 °C | Kontakt Zu | Check-in in 45 Min. | **22,0%** |
+
 ---
 
 ## Auswirkungen auf die Energieeinsparung

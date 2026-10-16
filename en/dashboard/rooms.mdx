@@ -225,6 +225,19 @@ The room list table has four columns:
 | **Geteilte Zimmer** | Shared Rooms — indicates whether this room shares devices or access with another unit. A dash `-` means the room is standalone. A value here indicates a shared-device or shared-access relationship between rooms. |
 | **Aktionen** | The actions column — contains a **three-dot menu** for each row. Click the three dots to open options for that room. |
 
+#### Sample room inventory and IoT hardware links (demo data)
+
+The following dummy records show how room units are registered, described, and linked to IoT room identifiers:
+
+| Zimmername | Beschreibung | Zimmertyp / Betten | IoT Room ID | Geteilte Zimmer | Status |
+| :--- | :--- | :--- | :--- | :---: | :---: |
+| **101** | Standard Double Room *(Floor 1)* | King Bed | `IOT-RM-101-LOK` | — | `Aktiv` |
+| **102** | Superior King Room *(Floor 1)* | King Bed + Work Desk | `IOT-RM-102-LOK` | — | `Aktiv` |
+| **201** | Alpine Panorama Suite *(Floor 2)* | Master Bedroom + Balcony | `IOT-STE-201-ALL` | — | `Aktiv` |
+| **204** | Connecting Family Room A | Queen Bed | `IOT-RM-204-CONN` | `Unit 205` | `Aktiv` |
+| **205** | Connecting Family Room B | 2x Single Beds | `IOT-RM-205-CONN` | `Unit 204` | `Aktiv` |
+| **301** | Penthouse Loft *(Under Renovation)* | Full Apartment | `IOT-LFT-301-OFF` | — | `Inaktiv` |
+
 ---
 
 ### Three-dot actions menu

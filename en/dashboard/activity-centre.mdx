@@ -26,7 +26,7 @@ https://hotel.suite-e.com/activity-center
 At the very top of the page, the heading reads **Aktivitatszentrum** with the subtitle:
 *Alle Aktivitaten Ihrer Immobilie uberwachen und verfolgen* (Monitor and track all activities of your property.)
 
-This confirms you are viewing the full property-wide audit log for the currently active property shown in the top-left selector (e.g. **Property No-PMS**).
+This confirms you are viewing the full property-wide audit log for the currently active property shown in the top-left selector (e.g. **Property No-PMS (Demo)** or **Grand Horizon Hotel**).
 
 ---
 
@@ -186,7 +186,7 @@ Looking at the first row in the screenshot:
 | Aktivitatsdetails | **Neue Buchung erstellt** · *"Neue Buchung fur John Etwoeiovgnehno in Parkplatz1 erstellt"* · tags: `booking`, `booking-created` | A new reservation was created for guest John Etwoeiovgnehno, assigned to the Parkplatz1 unit |
 | Kategorie | **Buchung** (green badge) | Booking-related event |
 | Unterkategorie | **Booking Created** | A new booking was created |
-| Zimmer / Standort | **Parkplatz1** — Property No-PMS | The booking is for the Parkplatz1 unit |
+| Zimmer / Standort | **Parkplatz1** — Property No-PMS (Demo) | The booking is for the Parkplatz1 unit |
 | Benutzer | **KB** — Kallola Bal | Triggered by user Kallola Bal |
 | Quelle | **SUITEe-NoPMS** | Created directly inside SUITEe — no external PMS |
 | Prioritat | **Informativ** | Routine event — no action required |
@@ -194,6 +194,20 @@ Looking at the first row in the screenshot:
 <Info>
   Every booking that appears here is also visible in the [Buchungen panel on the Dashboard](/dashboard/overview#buchungen-panel-reservations-calendar) and in full detail on the [Reservations](/dashboard/reservations) page. Use the **Buchungs-ID** from Reservations to cross-reference with Activity Centre entries.
 </Info>
+
+#### Sample activity audit log entries (demo data)
+
+The following dummy records illustrate the diverse operational, energy, and access events recorded across connected properties:
+
+| Auslöser-Zeit | Kategorie | Unterkategorie | Zimmer / Standort | Ereignis & Beschreibung | Benutzer / Quelle | Priorität |
+| :--- | :--- | :--- | :--- | :--- | :--- | :---: |
+| **16.10. 14:32:10** | `Zugang` | Smart Lock Opened | Room 101 | Tür durch Gast-PIN erfolgreich entriegelt | Guest (Digital PIN) | `Informativ` |
+| **16.10. 14:15:02** | `Buchung` | Check-In Processed | Room 101 | Gast Maximilian Krause eingecheckt · PIN aktiviert | Front Desk (Lisa Weber) | `Informativ` |
+| **16.10. 13:48:22** | `Geräte` | Battery Warning | Room 108 | Balkontür Fenstersensor Batteriestand kritisch (12%) | System (Zigbee Gateway) | `Warnungen` |
+| **16.10. 12:05:44** | `Energie` | Setback Activated | Suite 204 | Fenster geöffnet erkannt · Thermostat auf 17.0 °C Eco gesenkt | Auto-Eco Engine | `Informativ` |
+| **16.10. 11:30:19** | `Zugang` | Admin Unlock | Room 205 | Tür über Dashboard durch Personal entriegelt | Staff (Stefan Keller) | `Informativ` |
+| **16.10. 09:12:05** | `Buchung` | Reservation Created | Room 302 | Neue Buchung #GH-8430 für Sarah Lindner synchronisiert | Mews PMS Sync | `Informativ` |
+| **16.10. 03:14:50** | `Geräte` | Device Offline | Suite 310 | Smart Lock Gateway Verbindung unterbrochen | System Alert | `Kritisch` |
 
 ---
 

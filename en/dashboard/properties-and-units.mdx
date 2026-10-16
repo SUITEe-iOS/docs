@@ -11,8 +11,8 @@ Before diving in, let's clarify two important terms:
 
 | Term | What It Means | Example |
 | :--- | :--- | :--- |
-| **Property** | The building or location you manage | "Hotel Sunrise Vienna", "Lakeside Apartments Munich" |
-| **Unit** | An individual room, apartment, or space within a property | "Room 101", "Suite 305", "Apartment A2" |
+| **Property** | The building or location you manage | "Grand Horizon Hotel", "Alpine Vista Suites", "Urban Boutique Loft" |
+| **Unit** | An individual room, apartment, or space within a property | "Room 101 (Deluxe)", "Suite 305 (Panoramic)", "Studio Loft A" |
 
 A single property can contain many units. If you manage multiple buildings, each building is a separate property.
 
@@ -30,6 +30,18 @@ When you navigate to the Properties section, you'll see a **list of all properti
 <Frame>
   <img src="/images/rooms-overview.png" alt="SUITEe properties list showing multiple managed properties" />
 </Frame>
+
+#### Sample managed properties portfolio (demo data)
+
+The following table demonstrates how properties appear in a multi-property operational portfolio:
+
+| Property ID | Property Name | Address | Units | Occupancy | PMS Connection | Connected Devices |
+| :--- | :--- | :--- | :---: | :---: | :--- | :---: |
+| **PROP-101** | **Grand Horizon Hotel** | Sonnenstraße 19, 80331 Munich | 84 | 88% *(74 / 84)* | Mews PMS | 168 Online |
+| **PROP-102** | **Alpine Vista Suites** | Zugspitzstraße 45, 82467 Garmisch | 32 | 94% *(30 / 32)* | Apaleo | 64 Online |
+| **PROP-103** | **Urban Boutique Loft** | Friedrichstraße 102, 10117 Berlin | 18 | 72% *(13 / 18)* | Cloudbeds | 36 Online |
+| **PROP-104** | **Riverside Aparthotel** | Rheinweg 12, 50667 Cologne | 24 | 83% *(20 / 24)* | 3RPMS | 48 Online |
+| **PROP-000** | **Property No-PMS (Demo)** | Test-Campus 1, 80335 Munich | 6 | 50% *(3 / 6)* | Direct / Manual | 12 Online |
 
 ---
 
@@ -137,3 +149,16 @@ Each unit in the dashboard shows its current status:
 <Tip>
   Use the unit status view to quickly identify which rooms need housekeeping attention and which are ready for the next guest. This is especially useful during high-turnover periods.
 </Tip>
+
+#### Sample unit inventory and hardware mapping (demo data)
+
+The table below illustrates sample units configured for a property (**Grand Horizon Hotel**):
+
+| Unit Code | Category / Type | Floor | Lock Hardware | Thermostat | Window Sensor | Live Status |
+| :---: | :--- | :---: | :--- | :--- | :--- | :--- |
+| **101** | Standard Double Room | 1st Floor | Smart Lock Pro `[Online 94%]` | Zigbee Thermostat `[21.5 °C]` | Contact Sensor `[Closed]` | `Occupied` |
+| **102** | Superior King Room | 1st Floor | Smart Lock Pro `[Online 88%]` | Zigbee Thermostat `[18.0 °C]` | Contact Sensor `[Closed]` | `Cleaning` |
+| **201** | Alpine Panorama Suite | 2nd Floor | Smart Lock Pro `[Online 91%]` | Smart TRV Duo `[22.0 °C]` | Dual Window Sensor `[Closed]` | `Occupied` |
+| **202** | Executive Studio | 2nd Floor | Smart Lock Pro `[Online 86%]` | Smart TRV Duo `[17.5 °C]` | Contact Sensor `[Closed]` | `Vacant` |
+| **301** | Penthouse Loft Suite | 3rd Floor | Smart Lock Pro `[Online 96%]` | Smart Climate Core `[16.0 °C]` | Quad Balcony Sensor `[Open]` | `Maintenance` |
+

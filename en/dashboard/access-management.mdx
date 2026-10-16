@@ -280,6 +280,18 @@ Every column in the Access Management table serves a specific operational purpos
 | **Erstellt am** | **`⇅`** | The exact creation timestamp when the credential was requested in SUITEe. |
 | **Aktion** | — | Action controls to edit validity parameters, resend code credentials to guests, or revoke/delete access immediately. |
 
+#### Sample active access credentials (demo data)
+
+The following dummy records illustrate live guest, staff, and service credentials synchronized across connected smart door locks:
+
+| Benutzername | Passwort | Typ | Zimmer | Geräte | Zugangsstatus | Erstellt von | Gültig ab | Läuft ab am |
+| :--- | :---: | :---: | :--- | :--- | :---: | :--- | :--- | :--- |
+| **Maximilian Krause (#GH-8421)** | `482910` 👁 ❐ | `PIN` | Room 101 | Haupttürschloss Pro v2 | `● Erstellt` | Mews PMS Sync | 16.10. 15:00 | 19.10. 11:00 |
+| **Elena Rostova (#AVS-1044)** | `719302` 👁 ❐ | `PIN` | Suite 204 | Haupttürschloss Pro v2 | `● Erstellt` | Apaleo PMS Sync | 15.10. 16:00 | 18.10. 10:30 |
+| **Housekeeping (Team A)** | `109284` 👁 ❐ | `PIN` | Alle Einheiten (2F) | 12x Flurtüren / Zimmer | `● Erstellt` | Stefan Keller | 16.10. 08:00 | 16.10. 17:00 |
+| **Techniker (Firma Schindler)** | `883100` 👁 ❐ | `PIN` | Aufzug & Technikraum | Aufzugschloss Relais | `● Erstellt` | Marcus Vance | 16.10. 13:00 | 16.10. 18:00 |
+| **Arthur Pendelton (#UBL-302)** | `-` | `CARD` | Penthouse Loft | NFC Keycard Reader v3 | `● Erstellt` | Cloudbeds PMS | 14.10. 14:00 | 21.10. 11:00 |
+
 ---
 
 ## Creating new credentials (`+ Zugangsdaten hinzufügen`)
