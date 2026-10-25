@@ -33,13 +33,13 @@ Wenn Sie zur Seite Buchung navigieren, bietet die Benutzeroberfläche eine volls
 ## Immobilien-Auswahl
 
 <Frame>
-  <img src="/images/booking-property-switcher.png" alt="Immobilien-Auswahl Dropdown zeigt SUITEe Munich, Property No-PMS und Savoy Baker Street" />
+  <img src="/images/booking-property-switcher.png" alt="Immobilien-Auswahl Dropdown zeigt Beispiel-Unterkünfte wie Grand Horizon Hotel, Property No-PMS und Alpine Vista Suites" />
 </Frame>
 
 Das Dropdown-Menü der **Immobilien-Auswahl** in der oberen linken Ecke bestimmt, welche Buchungen der Unterkunft in der Tabelle darunter angezeigt werden. Es enthält ein Suchfeld (`Immobilien suchen`), um schnell eine Unterkunft zu finden.
 
 - **Einzelunterkunfts-Ansicht** — Es werden jeweils nur Buchungen angezeigt, die zur ausgewählten Unterkunft gehören.
-- **Dynamisches Neuladen** — Das Auswählen einer anderen Unterkunft löst ein vollständiges Neuladen der Status-Zusammenfassungskarten, Buchungstabelle und verfügbaren Aktionen aus.
+- **Dynamisches Neuladen** — Das Auswählen einer anderen Unterkunft (z. B. der Wechsel von `Property No-PMS` zu `Grand Horizon Hotel` oder `Alpine Vista Suites`) löst ein vollständiges Neuladen der Status-Zusammenfassungskarten, Buchungstabelle und verfügbaren Aktionen aus.
 - **PMS-Typ-Erkennung** — Das System erkennt den PMS-Typ der ausgewählten Unterkunft automatisch. Dies bestimmt, welche Synchronisations-Pipeline aktiv ist und ob die manuelle Erstellung von Reservierungen erlaubt ist.
 
 ---
@@ -148,6 +148,18 @@ Jede Zeile in der Buchungstabelle stellt eine einzelne Reservierung dar.
 | **Zugangsstatus** | Status der digitalen Zugangsdaten des Gastes. |
 | **Reg.-Status** | Status der digitalen Gästeregistrierung. |
 | **Quelle** | Herkunft der Buchung, beispielsweise eine Direktbuchung oder ein verbundenes PMS. |
+
+#### Beispiel-Buchungsdatensätze (Dummy-Daten)
+
+Die folgende Tabelle zeigt beispielhaft, wie reale Reservierungsdatensätze in der Buchungsübersicht strukturiert sind:
+
+| Buchungs-ID | Externe ID | Gast | Aufenthaltsdaten | Zimmer | Zugangsstatus | Reg.-Status | Quelle |
+| :--- | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
+| **GH-8421** | `BKG-99214` | Sarah Jenkins *(2 Gäste)* | 16. Okt. 15:00 – 19. Okt. 11:00 | **104** | `Aktiv (PIN)` | `Abgeschlossen` | Booking.com |
+| **GH-8422** | `OTA-77312` | Maximilian Weber *(1 Gast)* | 16. Okt. 15:00 – 18. Okt. 10:00 | **202** | `Aktiv (Key)` | `Abgeschlossen` | Mews Direct |
+| **GH-8423** | `—` | Elena Rostova *(2 Gäste)* | 17. Okt. 15:00 – 21. Okt. 11:00 | **305** | `Ausstehend` | `Ausstehend` | Direkt |
+| **GH-8424** | `EXP-44109` | Lucas Moreau *(1 Gast)* | 14. Okt. 15:00 – 16. Okt. 11:00 | **108** | `Abgelaufen` | `Abgeschlossen` | Expedia |
+| **GH-8425** | `BKG-11082` | Clara Fischer *(2 Gäste)* | 18. Okt. 15:00 – 22. Okt. 11:00 | **210** | `Storniert` | `—` | Booking.com |
 
 ### Zeilen-Interaktionen
 

@@ -67,7 +67,7 @@ Im Bereich **Grundinformationen** konfigurieren Sie die grundlegenden Daten Ihre
 
 | Feld | Erforderlich | Beschreibung |
 | :--- | :---: | :--- |
-| **Name** | Ja `*` | Name der Unterkunft, z. B. `Property No-PMS` oder `Savoy Baker Street`. |
+| **Name** | Ja `*` | Name der Unterkunft, z. B. `Property No-PMS (Demo)`, `Grand Horizon Hotel` oder `Alpine Vista Suites`. |
 | **Code** | Ja `*` | Eindeutiger interner Code der Unterkunft. |
 | **Firmenname** | Ja `*` | Name des Unternehmens, das die Unterkunft betreibt. |
 | **Beschreibung** | Optional | Allgemeine Beschreibung der Unterkunft und ihrer Besonderheiten. |
@@ -216,6 +216,17 @@ Dazu gehören je nach aktueller Konfiguration unter anderem:
 - IOT-Store-Code
 
 Wenn erforderliche Informationen fehlen, werden die entsprechenden Felder zur Korrektur markiert.
+
+#### Beispiel-Konfigurationsprofile für Unterkünfte (Demodaten)
+
+Die folgende Tabelle zeigt typische Konfigurationen aus verschiedenen Beispielunterkünften:
+
+| Immobilie | Code | PMS-Typ | Check-in / Out | Zeitzone | WLAN-SSID | Ausgehende E-Mail |
+| :--- | :--- | :--- | :---: | :--- | :--- | :--- |
+| **Grand Horizon Hotel** | `QHR-01` | Mews PMS | `15:00 / 11:00` | Europe/Berlin | `Horizon-Guest-HighSpeed` | Eigener SMTP (`@grandhorizon-hotel.com`) |
+| **Alpine Vista Suites** | `AVS-02` | Apaleo PMS | `16:00 / 10:30` | Europe/Berlin | `AlpineVista-Lodge-WiFi` | SUITEe Cloud Relay |
+| **Urban Boutique Loft** | `UBL-03` | Cloudbeds | `14:00 / 11:00` | Europe/Berlin | `UrbanLoft-Public` | Eigener SMTP (`@urbanloft-berlin.de`) |
+| **Property No-PMS (Demo)** | `PN-00` | Manuell / Direkt | `15:00 / 11:00` | Europe/Berlin | `DemoTest-WiFi-Guest` | SUITEe Cloud Relay |
 
 ---
 
@@ -386,8 +397,8 @@ Dadurch werden die E-Mail- und SMTP-Felder zur Bearbeitung freigegeben.
 
 | Feld | Erforderlich | Beschreibung |
 | :--- | :---: | :--- |
-| **Absender-E-Mail** | Ja `*` | E-Mail-Adresse, die als Absender verwendet wird, z. B. `welcome@hotel-savoy.com` |
-| **Absendername** | Ja `*` | Anzeigename des Absenders, z. B. `Grand Hotel Savoy` |
+| **Absender-E-Mail** | Ja `*` | E-Mail-Adresse, die als Absender verwendet wird, z. B. `welcome@grandhorizon-hotel.com` |
+| **Absendername** | Ja `*` | Anzeigename des Absenders, z. B. `Grand Horizon Hotel` |
 | **CC-Adressen (kommagetrennt)** | Optional | Zusätzliche E-Mail-Adressen, die als CC-Empfänger hinterlegt werden sollen |
 
 Beispiel für mehrere CC-Adressen:

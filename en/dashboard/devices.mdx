@@ -149,6 +149,20 @@ The table displays every device meeting the active filter criteria with full ope
 | **Zustand** | Current functional condition or operating mode of the device (or `-` when idle). Click the column header arrows **`⇅`** to sort by state. |
 | **Control** | Action button with adjustment sliders icon **`⊸`**. Clicking opens device controls and configuration parameters (e.g. lock/unlock doors, adjust setpoint temperatures, or view signal diagnostics). |
 
+#### Sample device inventory and telemetry status (demo data)
+
+The following dummy records illustrate hardware telemetry from connected locks, climate units, and sensors in a demo property (**Grand Horizon Hotel**):
+
+| Zimmername | Gerät & Modell | Kategorie | Batterie | Verbindung | Zustand | Aktionen |
+| :--- | :--- | :--- | :---: | :---: | :---: | :---: |
+| **Room 101** | Haupttürschloss Pro v2 | `Door Locks` | `92% 🟢` | `● Online` | Verriegelt | `⊸ Control` |
+| **Room 101** | Radiator Smart Thermostat | `Thermostat` | `88% 🟢` | `● Online` | 21.5 °C (Heizen) | `⊸ Control` |
+| **Room 101** | Multi-Sensor (PIR / Lux) | `Protection Sensor` | `94% 🟢` | `● Online` | Belegt | `⊸ Control` |
+| **Suite 204** | Haupttürschloss Pro v2 | `Door Locks` | `24% 🟡` | `● Online` | Verriegelt | `⊸ Control` |
+| **Suite 204** | Air Conditioner Split-Unit | `Air Conditioner` | `AC Power` | `● Online` | 20.0 °C (Kühlen) | `⊸ Control` |
+| **Gateway 2F**| IoT Ethernet/Zigbee Hub | `Gateways` | `Mains` | `● Online` | 32 Geräte aktiv | `⊸ Control` |
+| **Room 108** | Balkontür Fenstersensor | `Protection Sensor` | `12% 🔴` | `Offline` | Unbekannt | `⊸ Control` |
+
 ---
 
 ## Device detail view and remote actions

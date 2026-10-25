@@ -63,7 +63,7 @@ The **Grundinformationen** section defines the property's organizational identit
 
 | Field | Icon | Required | Description |
 | :--- | :---: | :---: | :--- |
-| **Name** | 🏢 | Yes `*` | The public display name of the hotel or building (e.g. `Property No-PMS`, `Savoy Baker Street`). Visible to guests on the mobile portal and in booking confirmations. |
+| **Name** | 🏢 | Yes `*` | The public display name of the hotel or building (e.g. `Property No-PMS (Demo)`, `Grand Horizon Hotel`, `Alpine Vista Suites`). Visible to guests on the mobile portal and in booking confirmations. |
 | **Code** | `#` | Yes `*` | A unique property identifier code (e.g. `QHR`). Used for internal database routing, smart lock association, and multi-property reporting. |
 | **Firmenname** | 🏢 | Yes `*` | The legal company entity operating the property (e.g. `Ksolves`). Displayed on guest receipts, tax documents, and terms of service. |
 | **Beschreibung** | 📄 | Optional | General description of the property, its history, architecture, or amenities (e.g. `Ttest description`). |
@@ -144,6 +144,17 @@ Located at the bottom right of the page:
 - **Button**: Orange call-to-action button labeled **`💾 Änderungen speichern`** (Save changes).
 - **Validation**: Verifies all required inputs marked with an asterisk (`Name *`, `Code *`, `Firmenname *`, `PMS-Typ *`, `Zeitzone *`, `Adresszeile 1 *`, `Stadt *`, `Bundesland *`, `Land *`, `Postleitzahl *`, `IOT-Store-Code *`).
 - **Synchronization**: Once saved, updates take effect immediately across all operational modules, synchronization schedules, and guest-facing mobile web portals.
+
+#### Sample property configuration profiles (demo data)
+
+The following dummy property profiles demonstrate realistic operational setups across diverse hotel concepts:
+
+| Immobilie | Code | PMS-Typ | Check-in / Out | Zeitzone | WLAN-SSID | Outbound Mail |
+| :--- | :--- | :--- | :---: | :--- | :--- | :--- |
+| **Grand Horizon Hotel** | `QHR-01` | Mews PMS | `15:00 / 11:00` | Europe/Berlin | `Horizon-Guest-HighSpeed` | Custom SMTP (`@grandhorizon-hotel.com`) |
+| **Alpine Vista Suites** | `AVS-02` | Apaleo PMS | `16:00 / 10:30` | Europe/Berlin | `AlpineVista-Lodge-WiFi` | SUITEe Cloud Relay |
+| **Urban Boutique Loft** | `UBL-03` | Cloudbeds | `14:00 / 11:00` | Europe/Berlin | `UrbanLoft-Public` | Custom SMTP (`@urbanloft-berlin.de`) |
+| **Property No-PMS (Demo)** | `PN-00` | Direct / Manual | `15:00 / 11:00` | Europe/Berlin | `DemoTest-WiFi-Guest` | SUITEe Cloud Relay |
 
 ---
 
@@ -293,7 +304,7 @@ When **`Standard-Suite *`** is selected (indicated by an orange checked box):
 
 ### Option 2 — Custom SMTP server (`Eigenen SMTP verwenden`)
 
-When administrators select **`Eigenen SMTP verwenden`**, the system unlocks the entire form, allowing hotels to route all communications through their own domain (e.g. `@grandhotel-savoy.com`):
+When administrators select **`Eigenen SMTP verwenden`**, the system unlocks the entire form, allowing hotels to route all communications through their own domain (e.g. `@grandhorizon-hotel.com`):
 
 <Frame>
   <img src="/images/settings-smtp-custom-top.png" alt="Email settings with Eigenen SMTP verwenden enabled showing editable E-Mail-Informationen and SMTP sections" />
@@ -303,8 +314,8 @@ When administrators select **`Eigenen SMTP verwenden`**, the system unlocks the 
 
 | Field | Required | Description |
 | :--- | :---: | :--- |
-| **Absender-E-Mail** | Yes `*` | The official "From" email address displayed to guests (e.g. `welcome@hotel-savoy.com`). Must match or be authorized by your custom SMTP server. |
-| **Absendername** | Yes `*` | The human-readable sender name displayed in email clients (e.g. `Grand Hotel Savoy Reservations`). |
+| **Absender-E-Mail** | Yes `*` | The official "From" email address displayed to guests (e.g. `welcome@grandhorizon-hotel.com`). Must match or be authorized by your custom SMTP server. |
+| **Absendername** | Yes `*` | The human-readable sender name displayed in email clients (e.g. `Grand Horizon Hotel Reservations`). |
 | **CC-Adressen (kommagetrennt)** | Optional | A comma-separated list of internal staff or department email addresses (placeholder: `ops@beispiel.de, buchhaltung@beispiel.de`). Every automated guest email sends a carbon copy (CC) to these addresses for auditing and bookkeeping. |
 
 ---
@@ -361,7 +372,7 @@ The test email utility allows administrators to execute a dry run of the outboun
 
 | Field / Control | Required | Description |
 | :--- | :---: | :--- |
-| **`An *`** | Yes `*` | The recipient destination email address (e.g. `admin@hotel-savoy.com` or your personal inbox). Used to verify reception in a real mail client. |
+| **`An *`** | Yes `*` | The recipient destination email address (e.g. `admin@grandhorizon-hotel.com` or your personal inbox). Used to verify reception in a real mail client. |
 | **`Betreff *`** | Yes `*` | The email subject line (e.g. *SUITEe SMTP Test Delivery*). |
 | **`HTML-Inhalt *`** | Yes `*` | The body content of the test email. Supports both plain text and full HTML markup tags (e.g. `<h3>Testnachricht</h3><p>Verbindung erfolgreich.</p>`). |
 | **`Test senden` Button** | — | Triggers an immediate test transmission through the active mail transport. |

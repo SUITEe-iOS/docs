@@ -32,11 +32,23 @@ Direkt oberhalb der Tabelle befinden sich drei Tabs, mit denen Sie Vorlagen nach
 
 | Tab | Beschreibung |
 | :--- | :--- |
-| **Alle** | Zeigt alle E-Mail-Vorlagen der ausgewählten Unterkunft unabhängig von ihrem Status. |
-| **Aktiv** | Zeigt Vorlagen, die aktuell für den automatisierten Versand aktiviert sind. |
-| **Inaktiv** | Zeigt deaktivierte oder pausierte Vorlagen, die derzeit nicht automatisch versendet werden. |
+| **Alle** | Zeigt alle E-Mail-Vorlagen der ausgewählten Unterkunft unabhängig von ihrem Status (z. B. `5`). |
+| **Aktiv** | Zeigt Vorlagen, die aktuell für den automatisierten Versand aktiviert sind (z. B. `4`). |
+| **Inaktiv** | Zeigt deaktivierte oder pausierte Vorlagen, die derzeit nicht automatisch versendet werden (z. B. `1`). |
 
 Die Zahl neben jedem Tab zeigt an, wie viele Vorlagen sich aktuell in der jeweiligen Kategorie befinden.
+
+#### Beispiel-Vorlagenkatalog für automatisierte Gästekommunikation (Dummy-Daten)
+
+Die folgende Tabelle zeigt beispielhaft, wie automatisierte E-Mail-Vorlagen für einen Hotelbetrieb konfiguriert werden:
+
+| Vorlagenname | Kategorie / Auslöser | Sendezeitpunkt | Sprache | Status |
+| :--- | :--- | :--- | :---: | :---: |
+| **Digitaler Check-in vor Anreise** | `Vor der Ankunft` | 24 Stunden vor Check-in (15:00 Uhr) | `DE / EN` | `Aktiv` |
+| **Ihr digitaler Schlüssel & PIN** | `Zugangsbereitstellung`| 2 Stunden vor Anreise (13:00 Uhr) | `DE / EN` | `Aktiv` |
+| **Willkommen im Grand Horizon** | `Check-in abgeschlossen`| Sofort nach erster Türöffnung | `DE / EN` | `Aktiv` |
+| **Express Check-out & Rechnung** | `Abreise` | 08:00 Uhr am Abreisetag | `DE / EN` | `Aktiv` |
+| **Gästebefragung Sommeraufenthalt** | `Nach dem Aufenthalt`| 2 Stunden nach dem Check-out | `DE / EN` | `Inaktiv (Entwurf)` |
 
 ---
 

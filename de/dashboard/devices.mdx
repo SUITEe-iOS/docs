@@ -149,6 +149,20 @@ Die Tabelle zeigt jedes Gerät an, das den aktiven Filterkriterien entspricht, z
 | **Zustand** | Zeigt den aktuellen funktionalen Zustand oder Betriebsmodus des Geräts, sofern verfügbar. |
 | **Control** | Öffnet die für diesen Gerätetyp verfügbaren Steuerungs- und Aktionsmöglichkeiten. |
 
+#### Beispiel-Gerätebestand & Telemetriestatus (Demodaten)
+
+Die folgenden Beispieldaten veranschaulichen die Hardware-Telemetrie vernetzter Schlösser, Klimageräte und Sensoren für ein Beispielobjekt (**Grand Horizon Hotel**):
+
+| Zimmername | Gerät & Modell | Kategorie | Batterie | Verbindung | Zustand | Aktionen |
+| :--- | :--- | :--- | :---: | :---: | :---: | :---: |
+| **Zimmer 101** | Haupttürschloss Pro v2 | `Door Locks` | `92% 🟢` | `● Online` | Verriegelt | `⊸ Control` |
+| **Zimmer 101** | Radiator Smart Thermostat | `Thermostat` | `88% 🟢` | `● Online` | 21.5 °C (Heizen) | `⊸ Control` |
+| **Zimmer 101** | Multi-Sensor (PIR / Lux) | `Protection Sensor` | `94% 🟢` | `● Online` | Belegt | `⊸ Control` |
+| **Suite 204** | Haupttürschloss Pro v2 | `Door Locks` | `24% 🟡` | `● Online` | Verriegelt | `⊸ Control` |
+| **Suite 204** | Klimagerät Split-Inverter | `Air Conditioner` | `Netzstrom` | `● Online` | 20.0 °C (Kühlen) | `⊸ Control` |
+| **Gateway 2. OG** | IoT Ethernet/Zigbee Hub | `Gateways` | `Netzstrom` | `● Online` | 32 Geräte aktiv | `⊸ Control` |
+| **Zimmer 108** | Balkontür-Fenstersensor | `Protection Sensor` | `12% 🔴` | `Offline` | Unbekannt | `⊸ Control` |
+
 ---
 
 ## Gerätedetailansicht und Fernaktionen

@@ -98,6 +98,18 @@ The table presents every curated business entry with its media, taxonomy, public
 | **Erstellt am** | **`⇅`** | The date when the business was added to the directory (e.g. `09 Sep 2026`, `08 Sep 2026`). Click column header arrows to sort chronologically. |
 | **Aktionen** | — | Three-dots action menu (**`⋮`**) offering management operations. |
 
+#### Sample local partner recommendations (demo data)
+
+The following dummy directory records illustrate typical curated partner businesses published to the mobile guest portal:
+
+| Unternehmen | Kategorie | Unterkategorie | Gast-Vorteil | Aktiv | Erstellt von | Gültig für |
+| :--- | :--- | :--- | :--- | :---: | :--- | :--- |
+| **Horizon Bistro & Wine Bar** | `Dining` | Gourmet Mediterranean | 10% mit Zimmerkarte | `Aktiv (An)` | Lisa Weber | Grand Horizon Hotel |
+| **Bavarian Alpine Bike Rental** | `Activities` | E-Bike & Mountainbike | Kostenloser Helm & Schloss | `Aktiv (An)` | Stefan Keller | Alpine Vista Suites |
+| **Urban Roast Specialty Coffee** | `Dining` | Café & Roastery | 15% Welcome-Rabatt | `Aktiv (An)` | Marcus Vance | Grand Horizon Hotel, Urban Loft |
+| **Skyline Wellness & Day Spa** | `Wellness` | Sauna & Massage | 20 € Treatment-Voucher | `Aktiv (An)` | Sarah Jenkins | Grand Horizon Hotel |
+| **City Tour Shuttle Service** | `Transportation` | Airport & Sightseeing | Exklusiver Festpreis | `Inaktiv (Pause)` | Thomas Maier | Alle Standorte |
+
 ---
 
 ### Active publication toggle (`Aktiv`)
@@ -165,7 +177,7 @@ The left pane of the modal contains the business name and an advanced bilingual 
 
 | Field / Control | Required | Description |
 | :--- | :---: | :--- |
-| **Name** | Yes `*` | The public display name of the venue (e.g. *Savoy Bistro*, *Alpine Bike Rental*). Placeholder: `Unternehmen benennen`. |
+| **Name** | Yes `*` | The public display name of the venue (e.g. *Horizon Bistro*, *Alpine Bike Rental*). Placeholder: `Unternehmen benennen`. |
 | **Beschreibung** | Yes `*` | Detailed description of the business, its atmosphere, offerings, special recommendations, and instructions for hotel guests. |
 | **Bilingual Tabs** | Yes | Features dedicated **Englisch** and **Deutsch** tabs. Managers can write localized descriptions in both English and German, ensuring international and domestic guests receive tailored recommendations in their preferred language. |
 | **Rich-Text WYSIWYG Editor** | — | Powered by TinyMCE, offering an extensive formatting ribbon to create engaging, beautifully styled descriptions for the mobile guest app. |
@@ -196,10 +208,10 @@ The right-hand panel of the modal controls portfolio visibility, taxonomy classi
 Clicking the **Immobilie \*** field opens a multi-select dropdown listing all properties in your portfolio:
 
 <Frame>
-  <img src="/images/explore-modal-property-dropdown.png" alt="Immobilie dropdown menu displaying selectable properties such as Savoy Baker Street and SUITEe Munich" />
+  <img src="/images/explore-modal-property-dropdown.png" alt="Immobilie dropdown menu displaying selectable properties such as Grand Horizon Hotel and Alpine Vista Suites" />
 </Frame>
 
-- **Multi-Property Selection**: You can assign the recommendation to one or more properties simultaneously (e.g. `Property No-PMS`, `Savoy Baker Street`, `SUITEe Munich`).
+- **Multi-Property Selection**: You can assign the recommendation to one or more properties simultaneously (e.g. `Property No-PMS (Demo)`, `Grand Horizon Hotel`, `Alpine Vista Suites`).
 - **Removable Tag Badges**: Selected properties appear as badge chips with a close icon (e.g. `Property No-PMS ✕`). Click the **✕** on any badge to detach the business from that property.
 - **Cross-Property Efficiency**: Perfect for city-wide partner businesses (e.g. taxi companies, bike rental networks, or restaurant groups) that cater to guests across multiple locations.
 
@@ -225,7 +237,7 @@ Directly below the classification selectors:
 
 | Field | Required | Description |
 | :--- | :---: | :--- |
-| **Standort** | Yes `*` | The street address, neighborhood, or geographical location of the business (e.g. *Baker Street 221B, London* or *Marienplatz 1, Munich*). Used by guests for navigation and Google Maps directions. |
+| **Standort** | Yes `*` | The street address, neighborhood, or geographical location of the business (e.g. *Sonnenstraße 19, Munich* or *Ludwigstraße 4, Garmisch*). Used by guests for navigation and Google Maps directions. |
 | **Telefon** | Optional | The direct contact phone number for the business, allowing guests to tap and call directly from the mobile guest app for reservations or inquiries. |
 
 ---
@@ -294,7 +306,7 @@ The platform highlights each incomplete required field with a prominent red outl
 
 | Field | Error Indicator | Error Message | How to Resolve |
 | :--- | :--- | :--- | :--- |
-| **`Name *`** | Red input border | `Name ist erforderlich` | Enter the business display name (e.g. *Savoy Bistro*, *Alpine Bike Rental*) into the text field. |
+| **`Name *`** | Red input border | `Name ist erforderlich` | Enter the business display name (e.g. *Horizon Bistro*, *Alpine Bike Rental*) into the text field. |
 | **`Beschreibung *`** | Red label & editor border | `Beschreibung ist erforderlich` | Add description text in the rich-text editor under either the **Englisch** or **Deutsch** tab. |
 | **`Kategorie *`** | Red input border | `Kategorie ist erforderlich` | Open the category dropdown and select a primary taxonomy classification (e.g. *Essen*, *Shopping DE*, *park*). |
 | **`Unterkategorie *`** | Red input border | `Unterkategorie ist erforderlich` | Select a primary category first to unlock this field, then select the specific venue subtype. (Displays helper text `Zuerst eine Kategorie auswählen`). |

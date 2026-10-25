@@ -79,6 +79,18 @@ Staff can perform the following energy management actions:
 | **View consumption data** | Check energy usage trends and identify opportunities for savings |
 | **Configure automation rules** | Set up or modify the rules that drive automatic energy management |
 
+#### Sample room climate & energy telemetry (demo data: Alpine Vista Suites)
+
+The table below illustrates real-time telemetry from smart climate controllers and environmental sensors across demo units:
+
+| Unit | Guest Status | Active Mode | Target Temp | Current Temp | Window Sensor | Motion Sensor | Daily Savings |
+| :---: | :--- | :--- | :---: | :---: | :---: | :--- | :---: |
+| **Room 101** | `Checked-in` | `Guest Mode` | 21.5 °C | 21.4 °C | Contact Closed | Motion Detected *(2m ago)* | **14.2%** |
+| **Room 102** | `Checked-in` | `Away Mode (Eco)` | 18.5 °C | 19.1 °C | Contact Closed | No Motion *(3h 20m)* | **32.8%** |
+| **Suite 201** | `Checked-in` | `HVAC Paused` | Off | 17.8 °C | **Window Open ⚠️** | Motion Detected | **48.0%** |
+| **Suite 202** | `Vacant` | `Deep Eco Mode` | 16.0 °C | 16.2 °C | Contact Closed | No Motion *(2d)* | **62.5%** |
+| **Loft 301** | `Pre-Conditioning` | `Pre-Heat Schedule`| 21.0 °C | 19.8 °C | Contact Closed | Check-in in 45m | **22.0%** |
+
 ---
 
 ## Energy savings impact
