@@ -68,6 +68,13 @@
             ]
           },
           {
+            "group": "Guest Web App",
+            "pages": [
+              "en/guest-web-app/overview",
+              "en/guest-web-app/guest-web-app"
+            ]
+          },
+          {
             "group": "Setup & Security",
             "pages": [
               "en/operations/installation",
@@ -139,6 +146,13 @@
               "de/guest-journey/before-arrival",
               "de/guest-journey/check-in-and-stay",
               "de/guest-journey/pms-integration"
+            ]
+          },
+          {
+            "group": "Gäste-Web-App",
+            "pages": [
+              "de/guest-web-app/overview",
+              "de/guest-web-app/guest-web-app"
             ]
           },
           {
